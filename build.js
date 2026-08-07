@@ -3,15 +3,16 @@ const path = require("path");
 
 /* ══════════════ config ══════════════ */
 const SRC = path.join(__dirname, "outline.md");
-const OUT = path.join(__dirname, "index.html");
+const OUT = path.join(__dirname, "public", "index.html");
 const REPO = "https://github.com/sugaroverflow/sparkle-bureaucracy-site/blob/main";
 const VIDEO_EMBED = "";
 const SERIAL = "SB/NWSPK/2026/01";
 const SUBMIT_DATE = "10 Aug 2026";
 
-/* Hypothesis annotation layer. Create a private group at hypothes.is,
-   then paste the group invite link here so the Annotate button appears. */
-const HYP_GROUP_URL = "";
+/* On-page comment register: per-part threads served by /api/comments
+   (Vercel function + Neon Postgres). Reviewers need no account — name +
+   comment, with any highlighted page text attached as a quote. */
+const COMMENTS = true;
 
 /* Permit fields shown in the hero. Kept here, not in the template, so the
    numbers can't drift from the outline silently.
@@ -234,6 +235,21 @@ const PART_HUE = parts.map((_, i) => HUES[i % 5]);
 const label = (P) => P.num ? "Part " + pad(P.num) : P.label;
 const navShort = (P) => P.num ? P.label.replace(/^(The|A)\s+/i, "") : P.label;
 
+const cmt = (P) => `
+  <div class="cmt" data-part="${P.id}">
+    <div class="cmt-head"><b>Comment register · ${label(P)}</b><span class="cmt-count">0</span></div>
+    <ol class="cmt-list"></ol>
+    <form class="cmt-form" autocomplete="off">
+      <div class="cmt-chip" hidden><span></span><button type="button" aria-label="Remove quoted selection">✕</button></div>
+      <label>Name<input name="name" required maxlength="80"></label>
+      <label>Comment<textarea name="body" required maxlength="4000" placeholder="Highlight text on the page first to quote it here."></textarea></label>
+      <input class="hp" name="fax" tabindex="-1" aria-hidden="true">
+      <button class="cmt-send" type="submit">Lodge comment</button>
+      <p class="cmt-note">No account needed. Comments are visible to everyone with the link.</p>
+      <noscript><p class="cmt-note">The comment register needs JavaScript.</p></noscript>
+    </form>
+  </div>`;
+
 const nav = parts.map((P, i) =>
   '<a href="#' + P.id + '" data-hue="' + PART_HUE[i] + '"><i>' +
   (P.num ? pad(P.num) : "▸") + "</i>" + navShort(P) + "</a>").join("");
@@ -260,7 +276,7 @@ const sections = parts.map((P, i) => {
         (P.budget ? '<span class="budget">target ≈ ' + esc(P.budget) + "</span>" : "") + "</div>"
       : "") +
     "\n  </header>" +
-    '\n  <div class="part-body">' + renderPart(P) + "</div>\n</section>";
+    '\n  <div class="part-body">' + renderPart(P) + (COMMENTS ? cmt(P) : "") + "</div>\n</section>";
 }).join("\n");
 
 const html = `<!DOCTYPE html>
@@ -274,7 +290,6 @@ const html = `<!DOCTYPE html>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,300..900;1,14..32,300..700&display=swap" rel="stylesheet">
-<script src="https://hypothes.is/embed.js" async></script>
 <style>
 :root{
   --magenta:#FF3399; --magenta-ink:#A80C59; --magenta-tint:#FFE7F1;
@@ -612,6 +627,41 @@ footer{border-top:2px solid var(--ink);background:var(--midnight);color:#E7E4F4}
   .tbl{box-shadow:none;overflow:visible}
   .tbl table,.tbl.narrow table{min-width:0}
 }
+
+/* ── comment register ────────────────────────────────────── */
+.cmt{margin-top:2.6rem;border:2px solid var(--ink);background:#fff;box-shadow:6px 6px 0 var(--h);max-width:52rem}
+.cmt-head{display:flex;justify-content:space-between;align-items:center;gap:1rem;
+  padding:.7rem 1rem;background:var(--ht);border-bottom:2px solid var(--ink)}
+.cmt-head b{font:600 .6875rem/1.4 var(--util);letter-spacing:.12em;text-transform:uppercase}
+.cmt-count{font:600 .625rem/1 var(--util);background:#fff;border:2px solid var(--ink);
+  border-radius:999px;padding:.35em .6em}
+.cmt-list{list-style:none;margin:0;padding:0}
+.cmt-list li{padding:.85rem 1rem;border-bottom:2px solid var(--line)}
+.cmt-meta{font:600 .625rem/1.4 var(--util);letter-spacing:.08em;text-transform:uppercase;
+  color:var(--hi);margin:0 0 .3rem}
+.cmt-meta time{color:var(--soft);font-weight:400;margin-left:.6em;text-transform:none;letter-spacing:.02em}
+.cmt-quote{font:400 .8125rem/1.5 var(--util);color:var(--soft);border-left:4px solid var(--h);
+  padding:.15rem 0 .15rem .6rem;margin:.2rem 0 .45rem}
+.cmt-body{font-size:.9375rem;line-height:1.55;margin:0;white-space:pre-wrap;overflow-wrap:anywhere}
+.cmt-form{padding:.9rem 1rem 1rem;display:grid;gap:.6rem}
+.cmt-form label{display:grid;gap:.3rem;font:600 .5625rem/1.4 var(--util);letter-spacing:.13em;
+  text-transform:uppercase;color:var(--soft)}
+.cmt-form input,.cmt-form textarea{font:inherit;font-size:.9375rem;border:2px solid var(--ink);
+  background:var(--page);padding:.5rem .65rem;width:100%}
+.cmt-form textarea{min-height:5.2rem;resize:vertical}
+.cmt-chip{display:flex;align-items:flex-start;gap:.5rem;font:400 .8125rem/1.5 var(--util);
+  background:var(--gold-tint);border:2px dashed var(--gold-ink);padding:.45rem .6rem;color:#6A5200}
+.cmt-chip span{flex:1 1 auto;overflow-wrap:anywhere}
+.cmt-chip button{flex:none;font:600 .75rem/1 var(--util);background:#fff;border:1px solid var(--gold-ink);
+  color:var(--gold-ink);padding:.2em .45em;cursor:pointer}
+.cmt-send{justify-self:start;font:600 .625rem/1 var(--util);letter-spacing:.1em;text-transform:uppercase;
+  color:var(--ink);background:var(--gold);border:2px solid var(--ink);border-radius:999px;
+  padding:.7rem 1rem;box-shadow:3px 3px 0 var(--ink);cursor:pointer}
+.cmt-send:hover{transform:translate(1px,1px);box-shadow:2px 2px 0 var(--ink)}
+.cmt-send:disabled{opacity:.55;cursor:wait;transform:none}
+.cmt-note{font:400 .75rem/1.6 var(--util);color:var(--soft);margin:0}
+.hp{position:absolute;left:-5000px;width:1px;height:1px;overflow:hidden}
+@media print{.cmt{display:none}}
 </style>
 </head>
 <body>
@@ -619,7 +669,6 @@ footer{border-top:2px solid var(--ink);background:var(--midnight);color:#E7E4F4}
 <div class="rail">
   <div class="rail-in">
     <nav aria-label="Sections">${nav}</nav>
-    ${HYP_GROUP_URL ? `<a class="discuss" href="${HYP_GROUP_URL}" title="Join the Hypothesis review group, then highlight any text to comment">Annotate</a>` : ""}
   </div>
 </div>
 
@@ -679,7 +728,7 @@ ${sections}
     <p><span class="foot-stars">★★★★★</span><br>
       Sparkle Bureaucracy · ${SERIAL}<br>
       Open diary <a href="${REPO}/lore">lore/</a> · Site <a href="https://sparklebureaucracy.org">sparklebureaucracy.org</a></p>
-    <p>To comment: highlight any text on this page — annotations run on <a href="https://web.hypothes.is">Hypothesis</a>${HYP_GROUP_URL ? ` · <a href="${HYP_GROUP_URL}">join the review group</a>` : ""}.</p>
+    <p>${COMMENTS ? `Comments are lodged directly on this page — each part has a comment register.<br>Highlight text before you type to quote it. No account needed.` : `Comment link to follow.`}</p>
   </div>
 </footer>
 
@@ -698,9 +747,78 @@ ${sections}
   document.querySelectorAll('section.part').forEach(function(s){io.observe(s);});
 })();
 </script>
+${COMMENTS ? `<script>
+(function(){
+  var API="/api/comments";
+  var lastSel={part:null,text:""};
+  document.addEventListener("selectionchange",function(){
+    var s=document.getSelection();
+    if(!s||s.isCollapsed)return;
+    var t=s.toString().trim();
+    if(!t)return;
+    var n=s.anchorNode;n=n&&n.nodeType===1?n:n&&n.parentElement;
+    var sec=n&&n.closest("section.part");
+    if(sec&&!n.closest(".cmt"))lastSel={part:sec.id,text:t.slice(0,600)};
+  });
+  function el(tag,cls,text){var e=document.createElement(tag);if(cls)e.className=cls;if(text!=null)e.textContent=text;return e}
+  function fmt(iso){try{return new Date(iso).toLocaleString("en-GB",{day:"numeric",month:"short",hour:"2-digit",minute:"2-digit"})}catch(e){return""}}
+  function row(c){
+    var li=el("li");
+    var m=el("p","cmt-meta",c.name);
+    var t=el("time",null,fmt(c.created_at));t.setAttribute("datetime",c.created_at);m.appendChild(t);
+    li.appendChild(m);
+    if(c.quote)li.appendChild(el("p","cmt-quote",c.quote));
+    li.appendChild(el("p","cmt-body",c.body));
+    return li;
+  }
+  function bump(box,d){var c=box.querySelector(".cmt-count");c.textContent=(parseInt(c.textContent,10)||0)+d}
+  var boxes={};
+  [].forEach.call(document.querySelectorAll(".cmt"),function(box){
+    var part=box.getAttribute("data-part");
+    boxes[part]=box;
+    var form=box.querySelector("form"),ta=form.querySelector("textarea"),
+        chip=box.querySelector(".cmt-chip"),chipTxt=chip.querySelector("span"),
+        note=box.querySelector(".cmt-note"),quote="";
+    ta.addEventListener("focus",function(){
+      if(!quote&&lastSel.part===part&&lastSel.text){
+        quote=lastSel.text;chipTxt.textContent="\\u201C"+quote+"\\u201D";chip.hidden=false;
+      }
+    });
+    chip.querySelector("button").addEventListener("click",function(){quote="";chip.hidden=true});
+    form.addEventListener("submit",function(ev){
+      ev.preventDefault();
+      var name=form.querySelector('input[name="name"]').value.trim(),body=ta.value.trim();
+      if(!name||!body){note.textContent="Name and comment are both required.";return}
+      var btn=form.querySelector(".cmt-send");btn.disabled=true;
+      fetch(API,{method:"POST",headers:{"Content-Type":"application/json"},
+        body:JSON.stringify({part:part,name:name,body:body,quote:quote,
+          fax:form.querySelector('input[name="fax"]').value})})
+      .then(function(r){if(!r.ok)throw 0;return r.json()})
+      .then(function(c){
+        box.querySelector(".cmt-list").appendChild(row(c));bump(box,1);
+        ta.value="";quote="";chip.hidden=true;
+        note.textContent="Filed. Thank you.";
+      })
+      .catch(function(){note.textContent="Couldn\\u2019t reach the register \\u2014 please try again."})
+      .then(function(){btn.disabled=false});
+    });
+  });
+  fetch(API).then(function(r){if(!r.ok)throw 0;return r.json()}).then(function(rows){
+    rows.forEach(function(c){
+      var b=boxes[c.part];
+      if(b){b.querySelector(".cmt-list").appendChild(row(c));bump(b,1)}
+    });
+  }).catch(function(){
+    Object.keys(boxes).forEach(function(k){
+      boxes[k].querySelector(".cmt-note").textContent="Comment register offline right now \\u2014 comments will still be accepted once it wakes.";
+    });
+  });
+})();
+</script>` : ""}
 </body>
 </html>`;
 
+fs.mkdirSync(path.dirname(OUT), { recursive: true });
 fs.writeFileSync(OUT, html);
 console.log("mode:", MODE, "| parts:", parts.length, "| flags:", flagLines.length,
   "| links rewritten:", rewritten, "| bytes:", html.length);

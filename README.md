@@ -10,8 +10,10 @@ without moving the page faculty are annotating.
 
 - `outline.md` — source of truth. Structure, status tags (`[KEEP]` /
   `[REVISE]` / `[NEW]`), word budgets, and `⚑` verification flags.
-- `build.js` — zero-dependency generator (Node, no npm install).
-- `index.html` — the built page. Never hand-edit; always rebuild.
+- `build.js` — the generator (plain Node, no deps; `npm run build`).
+- `public/index.html` — the built page. Never hand-edit; always rebuild.
+- `api/comments.js` — the comment register API (Vercel function backed by
+  Neon Postgres; the only npm dependency).
 
 ## Build
 
@@ -26,35 +28,57 @@ claim without its caveat (e.g. a name used without confirmed permission).
 Resolve the flag in the markdown — verify it, cite it, or remove the claim —
 then rebuild.
 
-## Comments (Hypothesis)
+## Comments (on-page register)
 
-Faculty comment via [Hypothesis](https://web.hypothes.is) — the embed script
-is already on the page, so no browser extension is needed; readers highlight
-any text and annotate in place.
+Every part ends with a **comment register**: reviewers type a name and a
+comment — no account, no third-party service. If they highlight text on the
+page before typing, the selection is attached to the comment as a quote.
+Comments are stored in this project's own Neon Postgres database and are
+visible to everyone with the link.
 
-One-time setup:
+- `GET /api/comments` — all comments (JSON).
+- `POST /api/comments` — `{part, name, body, quote?}`; honeypot field `fax`
+  must be empty; lengths capped server-side.
+- `DELETE /api/comments?id=N` — moderation; requires the `x-admin-token`
+  header. The token lives in `.admin-token` locally (gitignored) and in the
+  `ADMIN_TOKEN` Vercel env var.
 
-1. Create a Hypothesis account, then a **private group** (e.g. "SB faculty
-   review") at hypothes.is → Groups → Create new group.
-2. Copy the group's invite link into `HYP_GROUP_URL` in `build.js` and
-   rebuild. This makes the "Annotate" button appear in the rail and adds the
-   join link to the footer.
-3. Reviewers join the group once via that link, then pick the group in the
-   Hypothesis sidebar before annotating. Annotations in a private group are
-   visible only to members.
+Moderate from the terminal:
 
-Note: anyone who obtains the invite link can join the group.
+```sh
+curl -X DELETE "https://sb-prototype-submission.vercel.app/api/comments?id=N" \
+  -H "x-admin-token: $(cat .admin-token)"
+```
 
-## Deploy (GitHub Pages)
+Export the register for the record (e.g. after assessment):
 
-The page has `<meta name="robots" content="noindex">`, but Pages URLs are
-public to anyone with the link. **Before deploying**, clear the permission
-flags in `outline.md` (Oxfam naming, the "five months of research"
-attribution) — the flag gate enforces this for submission mode.
+```sh
+curl -s https://sb-prototype-submission.vercel.app/api/comments > comments-export.json
+```
 
-1. Repo → Settings → Pages → Deploy from branch → `main` / root.
-2. Commit a rebuilt `index.html` (it is the served artifact).
-3. Optional: a `CNAME` for e.g. `submission.sparklebureaucracy.org` later.
+## Deploy (Vercel)
+
+Live at **https://sb-prototype-submission.vercel.app** (project
+`sb-prototype-submission`, team `sugaroverflow`; Neon database
+`neon-charcoal-village` via the Vercel Marketplace integration — `DATABASE_URL`
+is set on the project, and `.env.local` has a copy for `vercel dev`).
+
+```sh
+vercel deploy --prod --yes   # ships current committed + local state
+vercel dev                   # full stack locally (page + API)
+```
+
+Vercel runs `npm run build` (build mode) on deploy. The page is noindexed but
+the URL is public: **the Oxfam and attribution ⚑ flags should be resolved
+before the link is shared beyond faculty.** The flag gate enforces this for
+submission mode; build mode is on you.
+
+To ship the faculty-facing version: `vercel env add MODE production` with
+value `submission`, then deploy — the build will **fail on purpose** until
+every ⚑ flag is resolved in `outline.md`.
+
+GitHub (`sugaroverflow/sb-prototype-submission`, private) stays the source of
+truth; deploys are manual from the working tree for now.
 
 ## Relationship to the record
 

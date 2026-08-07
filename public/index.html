@@ -9,7 +9,6 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,300..900;1,14..32,300..700&display=swap" rel="stylesheet">
-<script src="https://hypothes.is/embed.js" async></script>
 <style>
 :root{
   --magenta:#FF3399; --magenta-ink:#A80C59; --magenta-tint:#FFE7F1;
@@ -347,6 +346,41 @@ footer{border-top:2px solid var(--ink);background:var(--midnight);color:#E7E4F4}
   .tbl{box-shadow:none;overflow:visible}
   .tbl table,.tbl.narrow table{min-width:0}
 }
+
+/* ── comment register ────────────────────────────────────── */
+.cmt{margin-top:2.6rem;border:2px solid var(--ink);background:#fff;box-shadow:6px 6px 0 var(--h);max-width:52rem}
+.cmt-head{display:flex;justify-content:space-between;align-items:center;gap:1rem;
+  padding:.7rem 1rem;background:var(--ht);border-bottom:2px solid var(--ink)}
+.cmt-head b{font:600 .6875rem/1.4 var(--util);letter-spacing:.12em;text-transform:uppercase}
+.cmt-count{font:600 .625rem/1 var(--util);background:#fff;border:2px solid var(--ink);
+  border-radius:999px;padding:.35em .6em}
+.cmt-list{list-style:none;margin:0;padding:0}
+.cmt-list li{padding:.85rem 1rem;border-bottom:2px solid var(--line)}
+.cmt-meta{font:600 .625rem/1.4 var(--util);letter-spacing:.08em;text-transform:uppercase;
+  color:var(--hi);margin:0 0 .3rem}
+.cmt-meta time{color:var(--soft);font-weight:400;margin-left:.6em;text-transform:none;letter-spacing:.02em}
+.cmt-quote{font:400 .8125rem/1.5 var(--util);color:var(--soft);border-left:4px solid var(--h);
+  padding:.15rem 0 .15rem .6rem;margin:.2rem 0 .45rem}
+.cmt-body{font-size:.9375rem;line-height:1.55;margin:0;white-space:pre-wrap;overflow-wrap:anywhere}
+.cmt-form{padding:.9rem 1rem 1rem;display:grid;gap:.6rem}
+.cmt-form label{display:grid;gap:.3rem;font:600 .5625rem/1.4 var(--util);letter-spacing:.13em;
+  text-transform:uppercase;color:var(--soft)}
+.cmt-form input,.cmt-form textarea{font:inherit;font-size:.9375rem;border:2px solid var(--ink);
+  background:var(--page);padding:.5rem .65rem;width:100%}
+.cmt-form textarea{min-height:5.2rem;resize:vertical}
+.cmt-chip{display:flex;align-items:flex-start;gap:.5rem;font:400 .8125rem/1.5 var(--util);
+  background:var(--gold-tint);border:2px dashed var(--gold-ink);padding:.45rem .6rem;color:#6A5200}
+.cmt-chip span{flex:1 1 auto;overflow-wrap:anywhere}
+.cmt-chip button{flex:none;font:600 .75rem/1 var(--util);background:#fff;border:1px solid var(--gold-ink);
+  color:var(--gold-ink);padding:.2em .45em;cursor:pointer}
+.cmt-send{justify-self:start;font:600 .625rem/1 var(--util);letter-spacing:.1em;text-transform:uppercase;
+  color:var(--ink);background:var(--gold);border:2px solid var(--ink);border-radius:999px;
+  padding:.7rem 1rem;box-shadow:3px 3px 0 var(--ink);cursor:pointer}
+.cmt-send:hover{transform:translate(1px,1px);box-shadow:2px 2px 0 var(--ink)}
+.cmt-send:disabled{opacity:.55;cursor:wait;transform:none}
+.cmt-note{font:400 .75rem/1.6 var(--util);color:var(--soft);margin:0}
+.hp{position:absolute;left:-5000px;width:1px;height:1px;overflow:hidden}
+@media print{.cmt{display:none}}
 </style>
 </head>
 <body>
@@ -354,7 +388,6 @@ footer{border-top:2px solid var(--ink);background:var(--midnight);color:#E7E4F4}
 <div class="rail">
   <div class="rail-in">
     <nav aria-label="Sections"><a href="#front-matter" data-hue="magenta"><i>▸</i>Front matter</a><a href="#part-2" data-hue="violet"><i>02</i>Introducing the project</a><a href="#part-3" data-hue="aqua"><i>03</i>What got built</a><a href="#part-4" data-hue="cyan"><i>04</i>timeline</a><a href="#part-5" data-hue="gold"><i>05</i>learnings</a><a href="#part-6" data-hue="magenta"><i>06</i>roadmap</a><a href="#part-7" data-hue="violet"><i>07</i>Addressing the criteria</a><a href="#part-8" data-hue="aqua"><i>08</i>Evidence shelf</a><a href="#build-order" data-hue="cyan"><i>▸</i>Build order</a></nav>
-    
   </div>
 </div>
 
@@ -423,7 +456,20 @@ footer{border-top:2px solid var(--ink);background:var(--midnight);color:#E7E4F4}
   <div class="part-body"><div class="reading wide-ok"><div class="status" data-tag="keep"><span class="tag">keep</span><div class="txt"><p>Name · Project title · Project URL · Faculty advisor and mentors.</p></div></div>
 <div class="status" data-tag="revise"><span class="tag">revise</span><div class="txt"><p><em>A note on format, for faculty.</em> Existing version is good. Pull the template-mapping table directly underneath it, and add one sentence naming the objection the way the video does — a prototype that is not a tool, assessed against criteria that mostly describe tools.</p></div></div>
 <div class="status" data-tag="keep"><span class="tag">keep</span><div class="txt"><p>The eleven-row template mapping table. Load-bearing: it lets a faculty member verify nothing is missing.</p></div></div>
-<div class="status" data-tag="keep"><span class="tag">keep</span><div class="txt"><p>The paragraph on counting convening alongside experiments, and the paragraph on what is deliberately excluded.</p></div></div></div></div>
+<div class="status" data-tag="keep"><span class="tag">keep</span><div class="txt"><p>The paragraph on counting convening alongside experiments, and the paragraph on what is deliberately excluded.</p></div></div></div>
+  <div class="cmt" data-part="front-matter">
+    <div class="cmt-head"><b>Comment register · Front matter</b><span class="cmt-count">0</span></div>
+    <ol class="cmt-list"></ol>
+    <form class="cmt-form" autocomplete="off">
+      <div class="cmt-chip" hidden><span></span><button type="button" aria-label="Remove quoted selection">✕</button></div>
+      <label>Name<input name="name" required maxlength="80"></label>
+      <label>Comment<textarea name="body" required maxlength="4000" placeholder="Highlight text on the page first to quote it here."></textarea></label>
+      <input class="hp" name="fax" tabindex="-1" aria-hidden="true">
+      <button class="cmt-send" type="submit">Lodge comment</button>
+      <p class="cmt-note">No account needed. Comments are visible to everyone with the link.</p>
+      <noscript><p class="cmt-note">The comment register needs JavaScript.</p></noscript>
+    </form>
+  </div></div>
 </section>
 
 <section class="part" id="part-2" data-hue="violet">
@@ -442,7 +488,20 @@ footer{border-top:2px solid var(--ink);background:var(--midnight);color:#E7E4F4}
 <div class="status" data-tag="revise"><span class="tag">revise</span><div class="txt"><p><strong>The bar an experiment must clear.</strong> The four parts, plus the fifth condition: can the experiment detect its own defectors? Date it as an August addition from the birthday and reunion evidence — the date is the point, because it shows the bar adapting.</p></div></div>
 <div class="status" data-tag="new"><span class="tag">new</span><div class="txt"><p><strong>What the network needs to become: the room.</strong> Two paragraphs. A room is not a venue; it's a group that has settled that it wants to be there. Every activation that worked this year worked because that was already true. The roadmap rests on this and it currently exists nowhere in the submission.</p></div></div>
 <div class="status" data-tag="revise"><span class="tag">revise</span><div class="txt"><p><strong>What the prototype consists of.</strong> Network / experiments / diary — but replace the one-line artifact list with a pointer to Part 3, which now does this properly.</p></div></div>
-<div class="status" data-tag="keep"><span class="tag">keep</span><div class="txt"><p>The honest caveat about the name.</p></div></div></div></div>
+<div class="status" data-tag="keep"><span class="tag">keep</span><div class="txt"><p>The honest caveat about the name.</p></div></div></div>
+  <div class="cmt" data-part="part-2">
+    <div class="cmt-head"><b>Comment register · Part 02</b><span class="cmt-count">0</span></div>
+    <ol class="cmt-list"></ol>
+    <form class="cmt-form" autocomplete="off">
+      <div class="cmt-chip" hidden><span></span><button type="button" aria-label="Remove quoted selection">✕</button></div>
+      <label>Name<input name="name" required maxlength="80"></label>
+      <label>Comment<textarea name="body" required maxlength="4000" placeholder="Highlight text on the page first to quote it here."></textarea></label>
+      <input class="hp" name="fax" tabindex="-1" aria-hidden="true">
+      <button class="cmt-send" type="submit">Lodge comment</button>
+      <p class="cmt-note">No account needed. Comments are visible to everyone with the link.</p>
+      <noscript><p class="cmt-note">The comment register needs JavaScript.</p></noscript>
+    </form>
+  </div></div>
 </section>
 
 <section class="part" id="part-3" data-hue="aqua">
@@ -515,7 +574,20 @@ footer{border-top:2px solid var(--ink);background:var(--midnight);color:#E7E4F4}
 <div class="reading wide-ok"><div class="status" data-tag="new"><span class="tag">new</span><div class="txt"><p>Two sets, and they're different vintages — worth showing both, because the second supersedes the first and that's evidence of learning:</p></div></div>
 <ul class="bullets"><li><strong>19–23 June sprint:</strong> Verification Queue · Consultation Customs · Hybrid Delegation Assembly · Agent-Assisted Lab Clerk.</li><li><strong>23 June idea bank, nine ranked candidates:</strong> Public Voice Customs · Mirror Commons · The Exception Window · Permission Passport Office · The Value Court · Claw Civil Service · Shadow Labour Claims Office · Liquid Mandate Assembly · Sparkle Border Field Kit. Each with a smallest-credible-run spec, artifacts, evidence list and named risks.</li></ul></div>
 <h2 class="bare"><span>Talks and workshops</span></h2>
-<div class="reading wide-ok"><div class="status" data-tag="new"><span class="tag">new</span><div class="txt"><p>Agent Craft 2026 keynote · CHEW Festival "Evaluation 2030" keynote · OpenClaw 101 for Campaign Lab · Clawcon London co-organised. These are artifacts too — they're where translation actually happened, and two of them produced inbound leads.</p></div></div></div></div>
+<div class="reading wide-ok"><div class="status" data-tag="new"><span class="tag">new</span><div class="txt"><p>Agent Craft 2026 keynote · CHEW Festival "Evaluation 2030" keynote · OpenClaw 101 for Campaign Lab · Clawcon London co-organised. These are artifacts too — they're where translation actually happened, and two of them produced inbound leads.</p></div></div></div>
+  <div class="cmt" data-part="part-3">
+    <div class="cmt-head"><b>Comment register · Part 03</b><span class="cmt-count">0</span></div>
+    <ol class="cmt-list"></ol>
+    <form class="cmt-form" autocomplete="off">
+      <div class="cmt-chip" hidden><span></span><button type="button" aria-label="Remove quoted selection">✕</button></div>
+      <label>Name<input name="name" required maxlength="80"></label>
+      <label>Comment<textarea name="body" required maxlength="4000" placeholder="Highlight text on the page first to quote it here."></textarea></label>
+      <input class="hp" name="fax" tabindex="-1" aria-hidden="true">
+      <button class="cmt-send" type="submit">Lodge comment</button>
+      <p class="cmt-note">No account needed. Comments are visible to everyone with the link.</p>
+      <noscript><p class="cmt-note">The comment register needs JavaScript.</p></noscript>
+    </form>
+  </div></div>
 </section>
 
 <section class="part" id="part-4" data-hue="cyan">
@@ -534,7 +606,20 @@ footer{border-top:2px solid var(--ink);background:var(--midnight);color:#E7E4F4}
 <div class="status" data-tag="new"><span class="tag">new</span><div class="txt"><p><strong>A visible inflection marker at term 2.</strong> Short block, not a full entry: the decision to stop asking the house to settle the legitimacy question and go find rooms where it was settled. Then what the dates show — from February the centre of gravity moves outward, and the house appears as venue rather than jurisdiction.</p></div></div>
 <div class="flagbox"><span class="fm">⚑</span><div><p>Verify term 2 dates. Earliest hard evidence is Clawclub #1, 17 February.</p></div></div>
 <div class="status" data-tag="revise"><span class="tag">revise</span><div class="txt"><p><strong>Birthday Passports and Cohort Reunion.</strong> Leave as written. The participation caveat belongs in Learnings as a later finding — more honest about when you saw it.</p></div></div>
-<div class="status" data-tag="keep"><span class="tag">keep</span><div class="txt"><p>What's deliberately not in this timeline.</p></div></div></div></div>
+<div class="status" data-tag="keep"><span class="tag">keep</span><div class="txt"><p>What's deliberately not in this timeline.</p></div></div></div>
+  <div class="cmt" data-part="part-4">
+    <div class="cmt-head"><b>Comment register · Part 04</b><span class="cmt-count">0</span></div>
+    <ol class="cmt-list"></ol>
+    <form class="cmt-form" autocomplete="off">
+      <div class="cmt-chip" hidden><span></span><button type="button" aria-label="Remove quoted selection">✕</button></div>
+      <label>Name<input name="name" required maxlength="80"></label>
+      <label>Comment<textarea name="body" required maxlength="4000" placeholder="Highlight text on the page first to quote it here."></textarea></label>
+      <input class="hp" name="fax" tabindex="-1" aria-hidden="true">
+      <button class="cmt-send" type="submit">Lodge comment</button>
+      <p class="cmt-note">No account needed. Comments are visible to everyone with the link.</p>
+      <noscript><p class="cmt-note">The comment register needs JavaScript.</p></noscript>
+    </form>
+  </div></div>
 </section>
 
 <section class="part" id="part-5" data-hue="gold">
@@ -551,7 +636,20 @@ footer{border-top:2px solid var(--ink);background:var(--midnight);color:#E7E4F4}
 <div class="status" data-tag="new"><span class="tag">new</span><div class="txt"><p><strong>Whimsy and rigour run on the same substrate.</strong> From the Claw agents finding — the playful agents generated real social engagement, the research agents generated real evidence, same technical base. It's the strongest available argument that the 80/20 ratio is a method rather than a tone, and it's in no learnings list.</p></div></div>
 <div class="status" data-tag="keep"><span class="tag">keep</span><div class="txt"><p>Transparency isn't trust · The inference is not consent · Translation beats evangelism · Affect is broader than delight, and its named failure mode · The three registers don't need collapsing · The lab's own bureaucracy is an experiment.</p></div></div>
 <div class="status" data-tag="revise"><span class="tag">revise</span><div class="txt"><p><strong>The resistance is information.</strong> Trim. With #1 in place it only needs the concealment loop and the <em>legitimacy is constructed</em> resolution.</p></div></div>
-<div class="status" data-tag="keep"><span class="tag">keep</span><div class="txt"><p><strong>What the communities around the work taught me</strong> — the full bulleted list.</p></div></div></div></div>
+<div class="status" data-tag="keep"><span class="tag">keep</span><div class="txt"><p><strong>What the communities around the work taught me</strong> — the full bulleted list.</p></div></div></div>
+  <div class="cmt" data-part="part-5">
+    <div class="cmt-head"><b>Comment register · Part 05</b><span class="cmt-count">0</span></div>
+    <ol class="cmt-list"></ol>
+    <form class="cmt-form" autocomplete="off">
+      <div class="cmt-chip" hidden><span></span><button type="button" aria-label="Remove quoted selection">✕</button></div>
+      <label>Name<input name="name" required maxlength="80"></label>
+      <label>Comment<textarea name="body" required maxlength="4000" placeholder="Highlight text on the page first to quote it here."></textarea></label>
+      <input class="hp" name="fax" tabindex="-1" aria-hidden="true">
+      <button class="cmt-send" type="submit">Lodge comment</button>
+      <p class="cmt-note">No account needed. Comments are visible to everyone with the link.</p>
+      <noscript><p class="cmt-note">The comment register needs JavaScript.</p></noscript>
+    </form>
+  </div></div>
 </section>
 
 <section class="part" id="part-6" data-hue="magenta">
@@ -563,7 +661,20 @@ footer{border-top:2px solid var(--ink);background:var(--midnight);color:#E7E4F4}
   </header>
   <div class="part-body"><div class="reading wide-ok"><div class="status" data-tag="new"><span class="tag">new</span><div class="txt"><p>One opening paragraph: why a network and not a product. Pull from Part 2's room paragraph. Turns the roadmap from a wish list into the conclusion of the argument.</p></div></div>
 <div class="status" data-tag="keep"><span class="tag">keep</span><div class="txt"><p>Near term · flagship candidates and the two routes · the rhythm · scope, in and out.</p></div></div>
-<div class="status" data-tag="revise"><span class="tag">revise</span><div class="txt"><p><strong>Open questions carried forward.</strong> Same four, reframed: the flagship stays open <em>because</em> of learning #1, not despite it.</p></div></div></div></div>
+<div class="status" data-tag="revise"><span class="tag">revise</span><div class="txt"><p><strong>Open questions carried forward.</strong> Same four, reframed: the flagship stays open <em>because</em> of learning #1, not despite it.</p></div></div></div>
+  <div class="cmt" data-part="part-6">
+    <div class="cmt-head"><b>Comment register · Part 06</b><span class="cmt-count">0</span></div>
+    <ol class="cmt-list"></ol>
+    <form class="cmt-form" autocomplete="off">
+      <div class="cmt-chip" hidden><span></span><button type="button" aria-label="Remove quoted selection">✕</button></div>
+      <label>Name<input name="name" required maxlength="80"></label>
+      <label>Comment<textarea name="body" required maxlength="4000" placeholder="Highlight text on the page first to quote it here."></textarea></label>
+      <input class="hp" name="fax" tabindex="-1" aria-hidden="true">
+      <button class="cmt-send" type="submit">Lodge comment</button>
+      <p class="cmt-note">No account needed. Comments are visible to everyone with the link.</p>
+      <noscript><p class="cmt-note">The comment register needs JavaScript.</p></noscript>
+    </form>
+  </div></div>
 </section>
 
 <section class="part" id="part-7" data-hue="violet">
@@ -576,7 +687,20 @@ footer{border-top:2px solid var(--ink);background:var(--midnight);color:#E7E4F4}
   <div class="part-body"><div class="reading wide-ok"><div class="status" data-tag="revise"><span class="tag">revise</span><div class="txt"><p><strong>1. Qualifies as political technology.</strong> Now much stronger — point at Part 3. Nine deployed applications, not five — plus print artifacts, four lab experiments that ran, thirteen specified, and a documented failure log.</p></div></div>
 <div class="status" data-tag="keep"><span class="tag">keep</span><div class="txt"><p><strong>2. Public web presence</strong> · <strong>3. Originality</strong> · <strong>4. Non-redundancy.</strong></p></div></div>
 <div class="status" data-tag="revise"><span class="tag">revise</span><div class="txt"><p><strong>5. Active user community.</strong> Add the distinction the year produced — attendance versus inhabited participation, and that you now measure the difference. Pre-empts the sharpest attack on a network-as-prototype claim, which is that a headcount is not a user base.</p></div></div>
-<div class="status" data-tag="revise"><span class="tag">revise</span><div class="txt"><p><strong>6. No clear methodological failure.</strong> Strongest section, gets stronger: the fifth condition arrived at from your own data; the instrument gap named rather than hidden; the December note as evidence the environmental constraint was diagnosed early and in public; four lab experiments that ran with human approval gates; and the record visibly correcting its own earlier claims.</p></div></div></div></div>
+<div class="status" data-tag="revise"><span class="tag">revise</span><div class="txt"><p><strong>6. No clear methodological failure.</strong> Strongest section, gets stronger: the fifth condition arrived at from your own data; the instrument gap named rather than hidden; the December note as evidence the environmental constraint was diagnosed early and in public; four lab experiments that ran with human approval gates; and the record visibly correcting its own earlier claims.</p></div></div></div>
+  <div class="cmt" data-part="part-7">
+    <div class="cmt-head"><b>Comment register · Part 07</b><span class="cmt-count">0</span></div>
+    <ol class="cmt-list"></ol>
+    <form class="cmt-form" autocomplete="off">
+      <div class="cmt-chip" hidden><span></span><button type="button" aria-label="Remove quoted selection">✕</button></div>
+      <label>Name<input name="name" required maxlength="80"></label>
+      <label>Comment<textarea name="body" required maxlength="4000" placeholder="Highlight text on the page first to quote it here."></textarea></label>
+      <input class="hp" name="fax" tabindex="-1" aria-hidden="true">
+      <button class="cmt-send" type="submit">Lodge comment</button>
+      <p class="cmt-note">No account needed. Comments are visible to everyone with the link.</p>
+      <noscript><p class="cmt-note">The comment register needs JavaScript.</p></noscript>
+    </form>
+  </div></div>
 </section>
 
 <section class="part" id="part-8" data-hue="aqua">
@@ -588,7 +712,20 @@ footer{border-top:2px solid var(--ink);background:var(--midnight);color:#E7E4F4}
   </header>
   <div class="part-body"><div class="reading wide-ok"><div class="status" data-tag="keep"><span class="tag">keep</span><div class="txt"><p>All existing quotes, the people list, partners, the inspired-by constellation.</p></div></div>
 <div class="status" data-tag="new"><span class="tag">new</span><div class="txt"><p>Add from the December field note: <em>even if you were dictator and there was a signed charter, why would we follow the rules?</em> · <em>those are very different constitutional assumptions</em> · <em>I would rather people opt in.</em></p></div></div>
-<div class="flagbox"><span class="fm">⚑</span><div><p>Outstanding: the "five months of research" attribution <em>(get name/permission)</em> · whether a debrief card can be reproduced · participant evidence for Birthday Passports was never preserved and the record already says so — leave that admission in.</p></div></div></div></div>
+<div class="flagbox"><span class="fm">⚑</span><div><p>Outstanding: the "five months of research" attribution <em>(get name/permission)</em> · whether a debrief card can be reproduced · participant evidence for Birthday Passports was never preserved and the record already says so — leave that admission in.</p></div></div></div>
+  <div class="cmt" data-part="part-8">
+    <div class="cmt-head"><b>Comment register · Part 08</b><span class="cmt-count">0</span></div>
+    <ol class="cmt-list"></ol>
+    <form class="cmt-form" autocomplete="off">
+      <div class="cmt-chip" hidden><span></span><button type="button" aria-label="Remove quoted selection">✕</button></div>
+      <label>Name<input name="name" required maxlength="80"></label>
+      <label>Comment<textarea name="body" required maxlength="4000" placeholder="Highlight text on the page first to quote it here."></textarea></label>
+      <input class="hp" name="fax" tabindex="-1" aria-hidden="true">
+      <button class="cmt-send" type="submit">Lodge comment</button>
+      <p class="cmt-note">No account needed. Comments are visible to everyone with the link.</p>
+      <noscript><p class="cmt-note">The comment register needs JavaScript.</p></noscript>
+    </form>
+  </div></div>
 </section>
 
 <section class="part" id="build-order" data-hue="cyan">
@@ -597,7 +734,20 @@ footer{border-top:2px solid var(--ink);background:var(--midnight);color:#E7E4F4}
     <p class="eyebrow">Build order</p>
     <h1>Build order</h1>
   </header>
-  <div class="part-body"><ol class="order"><li><span><strong>Part 3</strong> — the inventory and the Campaign Lab case study. Highest return, and mostly assembly rather than writing.</span></li><li><span><strong>Part 2</strong> — the restructure everything else has to agree with.</span></li><li><span><strong>Part 7</strong>, criteria 1, 5 and 6.</span></li><li><span><strong>Part 5</strong> — learnings #1, the games revision, the whimsy/rigour addition.</span></li><li><span><strong>Part 4</strong> — the December entry, the term-2 marker, the Topic blurb. Everything else is written.</span></li><li><span><strong>Part 6</strong> — one new paragraph.</span></li><li><span><strong>Part 8</strong> — three quotes.</span></li><li><span>Photos into the <code>Add to the doc</code> slots last, one pass.</span></li></ol></div>
+  <div class="part-body"><ol class="order"><li><span><strong>Part 3</strong> — the inventory and the Campaign Lab case study. Highest return, and mostly assembly rather than writing.</span></li><li><span><strong>Part 2</strong> — the restructure everything else has to agree with.</span></li><li><span><strong>Part 7</strong>, criteria 1, 5 and 6.</span></li><li><span><strong>Part 5</strong> — learnings #1, the games revision, the whimsy/rigour addition.</span></li><li><span><strong>Part 4</strong> — the December entry, the term-2 marker, the Topic blurb. Everything else is written.</span></li><li><span><strong>Part 6</strong> — one new paragraph.</span></li><li><span><strong>Part 8</strong> — three quotes.</span></li><li><span>Photos into the <code>Add to the doc</code> slots last, one pass.</span></li></ol>
+  <div class="cmt" data-part="build-order">
+    <div class="cmt-head"><b>Comment register · Build order</b><span class="cmt-count">0</span></div>
+    <ol class="cmt-list"></ol>
+    <form class="cmt-form" autocomplete="off">
+      <div class="cmt-chip" hidden><span></span><button type="button" aria-label="Remove quoted selection">✕</button></div>
+      <label>Name<input name="name" required maxlength="80"></label>
+      <label>Comment<textarea name="body" required maxlength="4000" placeholder="Highlight text on the page first to quote it here."></textarea></label>
+      <input class="hp" name="fax" tabindex="-1" aria-hidden="true">
+      <button class="cmt-send" type="submit">Lodge comment</button>
+      <p class="cmt-note">No account needed. Comments are visible to everyone with the link.</p>
+      <noscript><p class="cmt-note">The comment register needs JavaScript.</p></noscript>
+    </form>
+  </div></div>
 </section>
 
 <footer>
@@ -606,7 +756,7 @@ footer{border-top:2px solid var(--ink);background:var(--midnight);color:#E7E4F4}
     <p><span class="foot-stars">★★★★★</span><br>
       Sparkle Bureaucracy · SB/NWSPK/2026/01<br>
       Open diary <a href="https://github.com/sugaroverflow/sparkle-bureaucracy-site/blob/main/lore">lore/</a> · Site <a href="https://sparklebureaucracy.org">sparklebureaucracy.org</a></p>
-    <p>To comment: highlight any text on this page — annotations run on <a href="https://web.hypothes.is">Hypothesis</a>.</p>
+    <p>Comments are lodged directly on this page — each part has a comment register.<br>Highlight text before you type to quote it. No account needed.</p>
   </div>
 </footer>
 
@@ -623,6 +773,74 @@ footer{border-top:2px solid var(--ink);background:var(--midnight);color:#E7E4F4}
     });
   },{rootMargin:'-45% 0px -50% 0px'});
   document.querySelectorAll('section.part').forEach(function(s){io.observe(s);});
+})();
+</script>
+<script>
+(function(){
+  var API="/api/comments";
+  var lastSel={part:null,text:""};
+  document.addEventListener("selectionchange",function(){
+    var s=document.getSelection();
+    if(!s||s.isCollapsed)return;
+    var t=s.toString().trim();
+    if(!t)return;
+    var n=s.anchorNode;n=n&&n.nodeType===1?n:n&&n.parentElement;
+    var sec=n&&n.closest("section.part");
+    if(sec&&!n.closest(".cmt"))lastSel={part:sec.id,text:t.slice(0,600)};
+  });
+  function el(tag,cls,text){var e=document.createElement(tag);if(cls)e.className=cls;if(text!=null)e.textContent=text;return e}
+  function fmt(iso){try{return new Date(iso).toLocaleString("en-GB",{day:"numeric",month:"short",hour:"2-digit",minute:"2-digit"})}catch(e){return""}}
+  function row(c){
+    var li=el("li");
+    var m=el("p","cmt-meta",c.name);
+    var t=el("time",null,fmt(c.created_at));t.setAttribute("datetime",c.created_at);m.appendChild(t);
+    li.appendChild(m);
+    if(c.quote)li.appendChild(el("p","cmt-quote",c.quote));
+    li.appendChild(el("p","cmt-body",c.body));
+    return li;
+  }
+  function bump(box,d){var c=box.querySelector(".cmt-count");c.textContent=(parseInt(c.textContent,10)||0)+d}
+  var boxes={};
+  [].forEach.call(document.querySelectorAll(".cmt"),function(box){
+    var part=box.getAttribute("data-part");
+    boxes[part]=box;
+    var form=box.querySelector("form"),ta=form.querySelector("textarea"),
+        chip=box.querySelector(".cmt-chip"),chipTxt=chip.querySelector("span"),
+        note=box.querySelector(".cmt-note"),quote="";
+    ta.addEventListener("focus",function(){
+      if(!quote&&lastSel.part===part&&lastSel.text){
+        quote=lastSel.text;chipTxt.textContent="\u201C"+quote+"\u201D";chip.hidden=false;
+      }
+    });
+    chip.querySelector("button").addEventListener("click",function(){quote="";chip.hidden=true});
+    form.addEventListener("submit",function(ev){
+      ev.preventDefault();
+      var name=form.querySelector('input[name="name"]').value.trim(),body=ta.value.trim();
+      if(!name||!body){note.textContent="Name and comment are both required.";return}
+      var btn=form.querySelector(".cmt-send");btn.disabled=true;
+      fetch(API,{method:"POST",headers:{"Content-Type":"application/json"},
+        body:JSON.stringify({part:part,name:name,body:body,quote:quote,
+          fax:form.querySelector('input[name="fax"]').value})})
+      .then(function(r){if(!r.ok)throw 0;return r.json()})
+      .then(function(c){
+        box.querySelector(".cmt-list").appendChild(row(c));bump(box,1);
+        ta.value="";quote="";chip.hidden=true;
+        note.textContent="Filed. Thank you.";
+      })
+      .catch(function(){note.textContent="Couldn\u2019t reach the register \u2014 please try again."})
+      .then(function(){btn.disabled=false});
+    });
+  });
+  fetch(API).then(function(r){if(!r.ok)throw 0;return r.json()}).then(function(rows){
+    rows.forEach(function(c){
+      var b=boxes[c.part];
+      if(b){b.querySelector(".cmt-list").appendChild(row(c));bump(b,1)}
+    });
+  }).catch(function(){
+    Object.keys(boxes).forEach(function(k){
+      boxes[k].querySelector(".cmt-note").textContent="Comment register offline right now \u2014 comments will still be accepted once it wakes.";
+    });
+  });
 })();
 </script>
 </body>
