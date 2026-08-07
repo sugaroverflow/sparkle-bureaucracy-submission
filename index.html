@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
+<title>25-26 Newspeak House - Prototype Submission: Sparkle Bureaucracy</title>
+<meta name="description" content="A network for closing the AI gap for civic communities, run as an experiment lab. Prototype submission, Newspeak House Political Technology Programme 2025-26.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,300..900;1,14..32,300..700&display=swap" rel="stylesheet">
+<script src="https://hypothes.is/embed.js" async></script>
+<style>
+:root{
+  --magenta:#FF3399; --magenta-ink:#A80C59; --magenta-tint:#FFE7F1;
+  --violet:#B266FF;  --violet-ink:#5F27AE;  --violet-tint:#F2E8FF;
+  --aqua:#00E5CC;    --aqua-ink:#07766A;    --aqua-tint:#D8FAF4;
+  --cyan:#22D3EE;    --cyan-ink:#08657B;    --cyan-tint:#DDF6FD;
+  --gold:#FFC93C;    --gold-ink:#7E5900;    --gold-tint:#FFF2D2;
+
+  --page:#FFFBF8; --ink:#17122C; --soft:#585272; --line:#17122c26;
+  --midnight:#0A0E27;
+
+  /* same stacks as sparklebureaucracy.org */
+  --display:"Inter",ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  --text:var(--display);
+  --util:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
+  --measure:36rem; --pad:clamp(1rem,4vw,2.5rem); --wrap:78rem;
+  --foil:linear-gradient(95deg,var(--magenta),var(--violet),var(--cyan),var(--aqua),var(--gold),var(--magenta));
+}
+[data-hue=magenta]{--h:var(--magenta);--hi:var(--magenta-ink);--ht:var(--magenta-tint)}
+[data-hue=violet]{--h:var(--violet);--hi:var(--violet-ink);--ht:var(--violet-tint)}
+[data-hue=aqua]{--h:var(--aqua);--hi:var(--aqua-ink);--ht:var(--aqua-tint)}
+[data-hue=cyan]{--h:var(--cyan);--hi:var(--cyan-ink);--ht:var(--cyan-tint)}
+[data-hue=gold]{--h:var(--gold);--hi:var(--gold-ink);--ht:var(--gold-tint)}
+
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--page);color:var(--ink);font:400 1.0625rem/1.62 var(--text);letter-spacing:-.006em}
+::selection{background:var(--gold)}
+h1,h2,h3{font-family:var(--display);font-weight:800;line-height:1.15;letter-spacing:-.022em;margin:0}
+p{margin:0 0 1.05rem}
+a{color:var(--hi,var(--magenta-ink));text-decoration-thickness:.07em;text-underline-offset:.16em}
+a:hover{color:var(--ink);background:var(--ht,var(--gold-tint))}
+:focus-visible{outline:3px solid var(--magenta);outline-offset:2px}
+code{font:400 .84em/1.3 var(--util);background:#17122c0f;padding:.16em .38em;border-radius:3px;
+  overflow-wrap:anywhere;word-break:break-word}
+.wrap{max-width:var(--wrap);margin:0 auto;padding-inline:var(--pad)}
+.eyebrow{font:600 .625rem/1.4 var(--util);letter-spacing:.2em;text-transform:uppercase;
+  color:var(--hi,var(--soft));margin:0 0 .9rem}
+
+.foil{height:6px;background:var(--foil);background-size:300% 100%}
+@media(prefers-reduced-motion:no-preference){
+  .hero-foil{animation:shift 16s linear infinite}
+  @keyframes shift{to{background-position:300% 0}}
+}
+
+
+.rail{position:sticky;top:0;z-index:30;background:#fffbf8f2;backdrop-filter:blur(10px);
+  border-bottom:2px solid var(--ink)}
+.rail-in{max-width:var(--wrap);margin:0 auto;padding:.45rem var(--pad);display:flex;gap:1rem;
+  align-items:center;justify-content:space-between}
+.rail nav{display:flex;gap:.2rem;overflow-x:auto;scrollbar-width:none;min-width:0;flex:1 1 auto;
+  mask-image:linear-gradient(to right,transparent,#000 .8rem,#000 calc(100% - .8rem),transparent)}
+.rail nav::-webkit-scrollbar{display:none}
+.rail nav a{font:600 .625rem/1 var(--util);letter-spacing:.07em;text-transform:uppercase;
+  color:var(--soft);text-decoration:none;white-space:nowrap;padding:.55rem .65rem;border-radius:999px;
+  border:2px solid transparent}
+.rail nav a i{font-style:normal;color:var(--hi);margin-right:.45em}
+.rail nav a:hover{background:var(--ht);color:var(--ink)}
+.rail nav a[aria-current=true]{background:var(--h);border-color:var(--ink);color:var(--ink)}
+.rail nav a[aria-current=true] i{color:var(--ink)}
+.discuss{font:600 .625rem/1 var(--util);letter-spacing:.1em;text-transform:uppercase;color:var(--ink);
+  text-decoration:none;white-space:nowrap;background:var(--gold);border:2px solid var(--ink);
+  border-radius:999px;padding:.55rem .85rem;box-shadow:3px 3px 0 var(--ink)}
+.discuss:hover{transform:translate(1px,1px);box-shadow:2px 2px 0 var(--ink);background:var(--gold)}
+
+.hero{padding-block:clamp(2.25rem,6vw,4rem) clamp(1.5rem,4vw,2.5rem)}
+.wordmark{font-size:clamp(2.7rem,10.5vw,7.4rem);line-height:.94;letter-spacing:-.046em;font-weight:900;margin:0 0 1.1rem}
+.wordmark span{display:block}
+.wordmark .b{color:var(--magenta);-webkit-text-stroke:2px var(--ink);paint-order:stroke fill}
+.lede{font-size:clamp(1.08rem,2.3vw,1.35rem);line-height:1.48;letter-spacing:-.014em;max-width:34rem;margin:0 0 2.2rem;color:#3A3355}
+.hero-top{display:grid;gap:1.4rem 2.5rem;align-items:start;margin-bottom:2.2rem}
+@media(min-width:64rem){.hero-top{grid-template-columns:minmax(0,1fr) auto}}
+
+.permit{position:relative;border:2px solid var(--ink);background:#fff;box-shadow:8px 8px 0 var(--ink);
+  max-width:66rem;overflow:hidden}
+.permit>.foil{height:10px}
+.permit-grid{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);
+  gap:clamp(1.1rem,3vw,2rem);padding:clamp(1.1rem,2.6vw,1.7rem)}
+@media(min-width:46.01rem){.permit-grid{padding-bottom:clamp(2.2rem,4vw,3.2rem)}}
+.window{position:relative;aspect-ratio:16/10;background:var(--midnight);border:2px solid var(--ink);overflow:hidden}
+.window iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.ph{position:absolute;inset:0;display:grid;place-content:center;gap:.85rem;text-align:center;padding:1rem}
+.ph p{margin:0;font:600 .625rem/1.7 var(--util);letter-spacing:.14em;text-transform:uppercase;color:#8B93C4}
+.play{width:3.4rem;height:3.4rem;margin:0 auto;border-radius:50%;background:var(--foil);
+  background-size:200%;display:grid;place-content:center}
+.play::after{content:"";width:0;height:0;margin-left:.25rem;border-left:.8rem solid var(--midnight);
+  border-top:.5rem solid transparent;border-bottom:.5rem solid transparent}
+.cap-field{margin:.75rem 0 0;padding-top:.55rem;border-top:2px solid var(--line)}
+.cap-field dt{margin:0 0 .18rem;font:600 .5625rem/1.4 var(--util);letter-spacing:.14em;
+  text-transform:uppercase;color:var(--magenta-ink)}
+.cap-field dd{margin:0;font:400 .8125rem/1.4 var(--util);color:var(--soft)}
+.fields{display:grid;grid-template-columns:1fr 1fr;gap:0 1.3rem;margin:0;align-content:start}
+.fields div{padding:.4rem 0 .5rem;border-bottom:2px solid var(--line)}
+.fields div.wide{grid-column:1/-1}
+.fields dt{margin:0 0 .15rem;font:600 .5625rem/1.4 var(--util);letter-spacing:.14em;
+  text-transform:uppercase;color:var(--soft)}
+.fields dd{margin:0;font:400 .875rem/1.4 var(--util)}
+.fields dd b{color:var(--magenta-ink)}
+.stamp{position:absolute;z-index:3;right:clamp(1rem,3vw,2.2rem);bottom:clamp(1.6rem,3vw,2.2rem);
+  width:clamp(7.5rem,11vw,9.5rem);aspect-ratio:1;display:grid;place-content:center;gap:.3rem;
+  text-align:center;padding:.9rem;color:var(--magenta-ink);border:3px double var(--magenta-ink);
+  border-radius:50%;transform:rotate(-9deg);mix-blend-mode:multiply;opacity:.9}
+.stamp b{font:600 .6875rem/1.3 var(--util);letter-spacing:.05em;text-transform:uppercase}
+.stamp small{font:400 .5625rem/1.3 var(--util);letter-spacing:.1em;text-transform:uppercase;opacity:.8}
+@media(prefers-reduced-motion:no-preference){
+  .stamp{animation:land .65s cubic-bezier(.2,1.5,.4,1) .4s both}
+  @keyframes land{0%{transform:rotate(-28deg) scale(2);opacity:0}
+    70%{transform:rotate(-7deg) scale(.96);opacity:.95}to{transform:rotate(-9deg) scale(1);opacity:.9}}
+}
+.mrz{margin:0;padding:.65rem var(--pad);border-top:2px solid var(--ink);background:var(--ht,#F4F2FA);
+  font:400 clamp(.58rem,1.45vw,.78rem)/1.5 var(--util);letter-spacing:.04em;color:var(--hi,var(--soft));
+  white-space:nowrap;overflow:hidden}
+.permit .mrz{padding-inline:clamp(1.1rem,2.6vw,1.7rem)}
+@media(max-width:46rem){
+  .permit-grid{grid-template-columns:1fr}
+  .stamp{position:static;margin:1.2rem 0 0 auto;right:auto;bottom:auto;width:8.5rem}
+}
+
+.contents{padding-block:clamp(2rem,5vw,3.5rem)}
+.contents ol{list-style:none;margin:0;padding:0;display:grid;gap:.75rem;
+  grid-template-columns:repeat(auto-fill,minmax(min(100%,17rem),1fr))}
+.contents a{display:block;height:100%;padding:1rem;text-decoration:none;color:inherit;
+  background:var(--ht);border:2px solid var(--ink);box-shadow:4px 4px 0 var(--ink)}
+.contents a:hover{transform:translate(2px,2px);box-shadow:2px 2px 0 var(--ink);background:var(--h)}
+.contents i{font-style:normal;display:block;font:600 .625rem/1 var(--util);letter-spacing:.14em;
+  color:var(--hi);margin-bottom:.55rem}
+.contents b{display:block;font-weight:800;font-size:1rem;line-height:1.28;letter-spacing:-.021em;margin-bottom:.35rem}
+.contents em{font-size:.875rem;color:var(--soft);font-style:normal;line-height:1.45}
+
+.part{border-top:2px solid var(--ink)}
+.part>.mrz{border-top:0;border-bottom:2px solid var(--ink)}
+.part-head{max-width:var(--wrap);margin:0 auto;padding:clamp(2rem,5vw,3.25rem) var(--pad) 0}
+.part-head h1{font-size:clamp(1.85rem,4.6vw,2.9rem);letter-spacing:-.034em;font-weight:900;margin-bottom:.75rem}
+.part-head .intro{max-width:38rem;color:var(--soft);margin:0}
+.part-body{max-width:var(--wrap);margin:0 auto;min-width:0;
+  padding:clamp(1.6rem,3.5vw,2.5rem) var(--pad) clamp(3rem,7vw,5rem)}
+
+.reading{max-width:var(--measure)}
+.reading.lead{margin-bottom:2rem}
+.reading h3{font-size:1.0625rem;margin:1.8rem 0 .45rem}
+.sub{margin-bottom:2.4rem}
+h2{font-size:1.4rem;letter-spacing:-.026em;margin:0 0 .6rem;display:flex;gap:.65rem;align-items:baseline}
+h2.bare{margin:2.4rem 0 1rem}
+h2 .num{font:600 .6875rem/1.9 var(--util);color:var(--hi);font-style:normal;flex:none}
+.thesis{font-weight:800;font-size:1.22rem;line-height:1.38;letter-spacing:-.021em;border-left:6px solid var(--h,var(--magenta));padding-left:1rem}
+.aside{color:var(--soft);font-size:.9375rem}
+.broll{font:600 .625rem/1.6 var(--util);letter-spacing:.1em;text-transform:uppercase;
+  color:var(--magenta-ink);margin:1.2rem 0}
+.broll::before{content:"★ "}
+.bullets,.ord{list-style:none;padding:0;margin:0 0 1.05rem}
+.bullets li,.ord li{position:relative;padding-left:1.5rem;margin-bottom:.55rem}
+.bullets li::before{content:"◆";position:absolute;left:0;top:.05em;font-size:.62em;color:var(--h,var(--magenta))}
+.ord{counter-reset:o}
+.ord li{counter-increment:o;padding-left:2.1rem}
+.ord li::before{content:counter(o,decimal-leading-zero);position:absolute;left:0;top:.12em;
+  font:600 .6875rem/1.7 var(--util);color:var(--hi,var(--magenta-ink))}
+.slot{font-size:.875rem;line-height:1.5;background:var(--gold-tint);border:2px dashed var(--gold-ink);
+  padding:.6rem .8rem;color:#6A5200}
+.slot b{display:inline-block;font:600 .5625rem/1 var(--util);letter-spacing:.12em;text-transform:uppercase;
+  background:var(--gold);border:1px solid var(--gold-ink);padding:.3em .45em;margin-right:.5em;
+  vertical-align:.08em;color:var(--ink)}
+
+.slip{margin:1.5rem 0;padding:1.1rem 1.25rem;background:var(--ht,var(--gold-tint));
+  border:2px solid var(--ink);box-shadow:5px 5px 0 var(--h,var(--gold));transform:rotate(var(--rot,-.5deg));
+  font-weight:600;font-size:1.03rem;line-height:1.48;letter-spacing:-.011em}
+.slip::before{content:"\201C";font-size:2.4rem;line-height:0;vertical-align:-.35em;
+  color:var(--h,var(--gold));margin-right:.08em}
+.slip p{margin:0}
+.slips{display:grid;align-items:start;gap:1.5rem;grid-template-columns:repeat(auto-fill,minmax(min(100%,21rem),1fr))}
+.slips .slip{margin:0}
+
+.visa-grid{display:grid;align-items:start;gap:1.7rem;grid-template-columns:repeat(auto-fill,minmax(min(100%,24rem),1fr))}
+.visa{position:relative;background:#fff;border:2px solid var(--ink);box-shadow:6px 6px 0 var(--h);
+  transform:rotate(var(--rot,0deg));display:flex;flex-direction:column}
+.visa>header{display:flex;justify-content:space-between;align-items:center;gap:.6rem;background:var(--h);
+  border-bottom:2px solid var(--ink);padding:.5rem .85rem}
+.visa-date{font:600 .75rem/1 var(--util);letter-spacing:.05em;text-transform:uppercase;color:var(--ink)}
+.visa-date i{font-style:normal;opacity:.55;margin-left:.4em}
+.visa-serial{font:400 .625rem/1 var(--util);letter-spacing:.1em;color:#17122cb3}
+.visa-body{padding:1rem 1.1rem 1.2rem;flex:1}
+.visa-body h3{font-size:1.1rem;letter-spacing:-.024em;margin:0 0 .6rem}
+.visa-body p{font-size:.9375rem;line-height:1.6;margin-bottom:.8rem}
+.visa-body>*:last-child{margin-bottom:0}
+.visa-body .slip{font-size:1rem;box-shadow:3px 3px 0 var(--h);margin:1rem 0}
+.perf{height:9px;border-top:2px dashed var(--ink);
+  background:radial-gradient(circle at 6px 4.5px,var(--page) 3.5px,#0000 3.6px) 0 0/12px 9px}
+
+.card-grid{display:grid;align-items:start;gap:1.6rem;grid-template-columns:repeat(auto-fill,minmax(min(100%,20rem),1fr))}
+.lcard{position:relative;background:var(--ht);border:2px solid var(--ink);box-shadow:6px 6px 0 var(--h);
+  padding:1.5rem 1.25rem 1.3rem}
+.lnum{position:absolute;top:-.85rem;left:1rem;font:600 .75rem/1 var(--util);background:var(--h);
+  border:2px solid var(--ink);border-radius:999px;padding:.45em .7em}
+.lcard h3{font-size:1.1rem;letter-spacing:-.024em;margin:.35rem 0 .6rem}
+.lcard p{font-size:.9375rem;line-height:1.6;margin-bottom:.8rem}
+.lcard>*:last-child{margin-bottom:0}
+
+.sheet{list-style:none;margin:0;padding:0;display:grid;gap:1.3rem}
+.crit{display:grid;grid-template-columns:6.5rem 1fr;background:#fff;border:2px solid var(--ink);
+  box-shadow:6px 6px 0 var(--h)}
+.crit-mark{background:var(--ht);border-right:2px solid var(--ink);padding:1.1rem .8rem;display:grid;
+  place-content:center;text-align:center;gap:.25rem}
+.crit-mark span{font-weight:900;font-size:2.15rem;line-height:1;letter-spacing:-.045em;color:var(--hi)}
+.crit-mark i{font:600 .5rem/1 var(--util);letter-spacing:.14em;text-transform:uppercase;color:var(--soft);
+  font-style:normal}
+.crit-body{padding:1.15rem 1.35rem 1.25rem;min-width:0}
+.crit-body h3{font-size:1.15rem;letter-spacing:-.026em;margin:0 0 .5rem}
+.crit-body p{font-size:.9375rem;line-height:1.6;margin-bottom:.8rem}
+.crit-body>*:last-child{margin-bottom:0}
+@media(max-width:34rem){.crit{grid-template-columns:1fr}
+  .crit-mark{border-right:0;border-bottom:2px solid var(--ink);grid-auto-flow:column;
+    justify-content:start;gap:.7rem;align-items:center;padding:.6rem .9rem}}
+
+.panel{background:var(--ht);border:2px solid var(--ink);box-shadow:6px 6px 0 var(--h);
+  padding:1.35rem 1.45rem;margin-bottom:1.7rem;max-width:52rem}
+.panel>.reading{max-width:none}
+.chip-block{margin:0 0 1.9rem;max-width:60rem}
+.chip-lead{max-width:var(--measure);margin-bottom:.7rem}
+.chips{display:flex;flex-wrap:wrap;gap:.5rem}
+.chips.wide{margin:.4rem 0 1.8rem}
+.chip{font:600 .75rem/1.35 var(--text);background:#fff;border:2px solid var(--ink);
+  border-radius:999px;padding:.5em .9em;max-width:100%}
+.chip:nth-child(5n+1){box-shadow:2px 2px 0 var(--magenta)}
+.chip:nth-child(5n+2){box-shadow:2px 2px 0 var(--violet)}
+.chip:nth-child(5n+3){box-shadow:2px 2px 0 var(--aqua)}
+.chip:nth-child(5n+4){box-shadow:2px 2px 0 var(--cyan)}
+.chip:nth-child(5n+5){box-shadow:2px 2px 0 var(--gold)}
+.scope{display:grid;gap:1.5rem;grid-template-columns:repeat(auto-fit,minmax(min(100%,20rem),1fr));
+  margin-bottom:1.8rem}
+.scope-panel{background:var(--ht);border:2px solid var(--ink);box-shadow:6px 6px 0 var(--h);
+  padding:1.25rem 1.35rem}
+.scope-panel h3{font-size:1.1rem;margin:0 0 .85rem}
+
+.transcript summary{cursor:pointer;list-style:none;display:inline-block;font:600 .6875rem/1 var(--util);
+  letter-spacing:.12em;text-transform:uppercase;background:var(--h);border:2px solid var(--ink);
+  border-radius:999px;padding:.8rem 1.15rem;box-shadow:4px 4px 0 var(--ink)}
+.transcript summary::-webkit-details-marker{display:none}
+.transcript summary span::after{content:"  +"}
+.transcript[open] summary span::after{content:"  \2013"}
+.transcript summary:hover{transform:translate(2px,2px);box-shadow:2px 2px 0 var(--ink)}
+.transcript .reading{padding-top:2rem}
+
+footer{border-top:2px solid var(--ink);background:var(--midnight);color:#E7E4F4}
+.foot-in{max-width:var(--wrap);margin:0 auto;padding:clamp(2rem,5vw,3rem) var(--pad);display:flex;
+  flex-wrap:wrap;gap:1.5rem 2rem;justify-content:space-between;align-items:flex-end}
+.foot-in p{margin:0;font:400 .75rem/1.9 var(--util);color:#ABA5C9}
+.foot-in a{color:var(--gold)}
+.foot-in a:hover{background:#0000;color:#fff}
+.foot-stars{font-size:1.15rem;letter-spacing:.4em;
+  background:var(--foil);-webkit-background-clip:text;background-clip:text;color:#0000}
+
+@media(max-width:34rem){
+  .status{grid-template-columns:1fr;gap:.45rem}
+  .status>.tag{justify-self:start;margin-top:0}
+}
+@media print{
+  .rail,.discuss,.foil{display:none}
+  body{background:#fff}
+  .visa,.lcard,.crit,.panel,.slip,.permit,.scope-panel{box-shadow:none;transform:none;break-inside:avoid}
+  .part{break-before:page}
+  a{color:var(--ink)}
+}
+/* ── build apparatus ─────────────────────────────────────── */
+.status{display:grid;grid-template-columns:5.6rem minmax(0,1fr);gap:0 1rem;align-items:start;
+  margin:0 0 1.15rem;max-width:calc(var(--measure) + 6.6rem)}
+.status>.tag{font:600 .5625rem/1 var(--util);letter-spacing:.12em;text-transform:uppercase;
+  border:2px solid var(--ink);padding:.42em .3em;text-align:center;margin-top:.22em}
+.status[data-tag=keep]>.tag{background:var(--aqua-tint);color:var(--aqua-ink)}
+.status[data-tag=revise]>.tag{background:var(--gold-tint);color:var(--gold-ink)}
+.status[data-tag=new]>.tag{background:var(--magenta-tint);color:var(--magenta-ink)}
+.status>.txt>*:last-child{margin-bottom:0}
+.status.plain{grid-template-columns:1fr;max-width:var(--measure)}
+.status.plain>.tag{display:none}
+
+.flagbox{display:grid;grid-template-columns:1.8rem minmax(0,1fr);gap:0 .7rem;margin:1.15rem 0 1.5rem;
+  max-width:calc(var(--measure) + 2.8rem);background:var(--cyan-tint);
+  border:2px solid var(--ink);border-left-width:7px;padding:.85rem 1rem}
+.flagbox>.fm{font:600 1rem/1.2 var(--util);color:var(--cyan-ink);text-align:center}
+.flagbox p{margin:0 0 .5rem;font-size:.9375rem;line-height:1.55}
+.flagbox p:last-child{margin-bottom:0}
+.flag-inline{display:inline-block;font:600 .6875rem/1.4 var(--util);color:var(--cyan-ink);
+  background:var(--cyan-tint);border:1px solid var(--cyan-ink);padding:.1em .4em;margin:0 .15em}
+
+.budget{font:600 .5625rem/1 var(--util);letter-spacing:.13em;text-transform:uppercase;
+  color:var(--hi);border:2px solid var(--ink);background:var(--ht);padding:.5em .65em;
+  display:inline-block;margin-top:.9rem}
+
+/* ── tables ──────────────────────────────────────────────── */
+.tbl{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:1.3rem 0 1.9rem;
+  border:2px solid var(--ink);box-shadow:6px 6px 0 var(--h);background:#fff;
+  max-width:100%;width:100%}
+.tbl table{border-collapse:collapse;width:100%;min-width:52rem;font-size:.875rem}
+.tbl.narrow table{min-width:34rem}
+.tbl th{background:var(--h);border-bottom:2px solid var(--ink);text-align:left;
+  padding:.6rem .8rem;font:600 .5625rem/1.3 var(--util);letter-spacing:.13em;
+  text-transform:uppercase;color:var(--ink);vertical-align:bottom}
+.tbl td{border-bottom:2px solid var(--line);border-right:2px solid var(--line);
+  padding:.75rem .8rem;vertical-align:top;line-height:1.55}
+.tbl td:last-child,.tbl th:last-child{border-right:0}
+.tbl tr:last-child td{border-bottom:0}
+.tbl td:first-child{background:var(--ht);font-weight:600;white-space:normal;width:14%;min-width:8.5rem}
+.tbl.narrow td:first-child{min-width:7rem;font:600 .8125rem/1.5 var(--util)}
+.tbl code{font-size:.8em}
+
+/* ── build order ─────────────────────────────────────────── */
+.order{list-style:none;margin:0;padding:0;display:grid;gap:.7rem;counter-reset:bo}
+.order li{counter-increment:bo;display:grid;grid-template-columns:2.6rem minmax(0,1fr);gap:0 .9rem;
+  align-items:center;background:var(--ht);border:2px solid var(--ink);
+  box-shadow:4px 4px 0 var(--h);padding:.85rem 1rem;max-width:52rem}
+.order li::before{content:counter(bo,decimal-leading-zero);font:600 1.15rem/1 var(--util);
+  color:var(--hi);text-align:center}
+.order li>span{font-size:.9375rem;line-height:1.55}
+
+/* ── part meta row ───────────────────────────────────────── */
+.part-meta{display:flex;flex-wrap:wrap;gap:.6rem;align-items:center;margin:0 0 .8rem}
+.was{font:600 .5625rem/1 var(--util);letter-spacing:.12em;text-transform:uppercase;
+  color:var(--soft);border:2px solid var(--line);padding:.45em .6em}
+.newpart{font:600 .5625rem/1 var(--util);letter-spacing:.12em;text-transform:uppercase;
+  color:var(--magenta-ink);background:var(--magenta-tint);border:2px solid var(--ink);padding:.45em .6em}
+.sub-h{font-size:1.05rem;margin:1.9rem 0 .5rem;letter-spacing:-.02em}
+.spine{max-width:38rem;font-size:1.02rem;line-height:1.6;margin:0 0 1.6rem;color:#3A3355}
+.draftnote{font:400 .75rem/1.7 var(--util);color:var(--soft);max-width:44rem;margin:0 0 1.6rem}
+.hero-part{font:600 .5625rem/1 var(--util);letter-spacing:.14em;text-transform:uppercase;
+  color:var(--magenta-ink);margin:0 0 .5rem}
+
+/* text keeps its measure; tables and lists of cards use the full column */
+.reading.wide-ok{max-width:none;min-width:0}
+.reading.wide-ok>p,.reading.wide-ok>.bullets,.reading.wide-ok>.ord,
+.reading.wide-ok>h3,.reading.wide-ok>blockquote{max-width:var(--measure)}
+.reading.wide-ok>.tbl{max-width:none}
+.draftnote{margin-top:2.4rem}
+
+/* print: let tables wrap instead of clipping at the page edge */
+@media print{
+  .tbl{box-shadow:none;overflow:visible}
+  .tbl table,.tbl.narrow table{min-width:0}
+}
+</style>
+</head>
+<body>
+
+<div class="rail">
+  <div class="rail-in">
+    <nav aria-label="Sections"><a href="#front-matter" data-hue="magenta"><i>▸</i>Front matter</a><a href="#part-2" data-hue="violet"><i>02</i>Introducing the project</a><a href="#part-3" data-hue="aqua"><i>03</i>What got built</a><a href="#part-4" data-hue="cyan"><i>04</i>timeline</a><a href="#part-5" data-hue="gold"><i>05</i>learnings</a><a href="#part-6" data-hue="magenta"><i>06</i>roadmap</a><a href="#part-7" data-hue="violet"><i>07</i>Addressing the criteria</a><a href="#part-8" data-hue="aqua"><i>08</i>Evidence shelf</a><a href="#build-order" data-hue="cyan"><i>▸</i>Build order</a></nav>
+    
+  </div>
+</div>
+
+<div class="foil hero-foil" aria-hidden="true"></div>
+
+<header class="hero wrap" data-hue="magenta">
+  <p class="eyebrow">Newspeak House · Political Technology Programme · Cohort 2025–26</p>
+  <h1 class="wordmark"><span>Sparkle</span><span class="b">Bureaucracy</span></h1>
+  <p class="spine">I came to find my mission. I found it. Here is what I built, the practice that proves it, the room it now needs, and the two decisions I am deliberately leaving open.</p>
+
+  <div class="permit">
+    <div class="foil" aria-hidden="true"></div>
+    <div class="permit-grid">
+      <div>
+        <p class="hero-part">Part 01 · Video intro</p>
+        <div class="window">
+          <div class="ph"><div class="play"></div><p>Official introduction<br>Recording in progress</p></div>
+        </div>
+        <dl class="cap-field">
+          <dt>Official introduction</dt>
+          <dd>Runtime 4 min · to be viewed before the record</dd>
+        </dl>
+      </div>
+      <dl class="fields">
+        <div class="wide"><dt>Fellowship candidate</dt><dd>Fatima Sarah Khalid</dd></div>
+        <div><dt>Class</dt><dd>2025–2026</dd></div>
+        <div><dt>Serial</dt><dd>SB/NWSPK/2026/01</dd></div>
+        <div class="wide"><dt>Composition</dt><dd><b>80%</b> credible institution · <b>20%</b> sparkle</dd></div>
+        <div><dt>Activations run</dt><dd>20+</dd></div>
+        <div><dt>Period of validity</dt><dd>Feb – Aug 2026</dd></div>
+        <div><dt>Projects evaluated</dt><dd>321</dd></div>
+        <div><dt>Experiments specified</dt><dd>9</dd></div>
+        <div class="wide"><dt>Public web presence</dt><dd><a href="https://sparklebureaucracy.org">sparklebureaucracy.org</a></dd></div>
+      </dl>
+    </div>
+    <div class="stamp"><b>Submitted<br>for<br>assessment</b><small>10 Aug 2026</small></div>
+    <p class="mrz" aria-hidden="true">PTGBRSPARKLE&lt;BUREAUCRACY&lt;&lt;PROTOTYPE&lt;SUBMISSION&lt;&lt;</p>
+  </div>
+
+  <p class="draftnote">Draft 2, 7 August 2026. Derived from a full read of <code>sparkle-bureaucracy.md</code>. Status tags: <strong>[KEEP]</strong> exists and stands · <strong>[REVISE]</strong> exists but the new spine changes it · <strong>[NEW]</strong> needs writing. Word budgets are pacing guides, not targets.</p>
+</header>
+
+<section class="contents wrap" aria-label="Contents">
+  <p class="eyebrow" style="--hi:var(--soft)">Contents</p>
+  <ol><li data-hue="magenta"><a href="#front-matter">
+    <i>Front matter</i><b>Front matter</b></a></li><li data-hue="violet"><a href="#part-2">
+    <i>Part 02</i><b>Introducing the project</b></a></li><li data-hue="aqua"><a href="#part-3">
+    <i>Part 03</i><b>What got built</b><em>New part</em></a></li><li data-hue="cyan"><a href="#part-4">
+    <i>Part 04</i><b>The timeline</b><em>was part 03</em></a></li><li data-hue="gold"><a href="#part-5">
+    <i>Part 05</i><b>The learnings</b><em>was part 04</em></a></li><li data-hue="magenta"><a href="#part-6">
+    <i>Part 06</i><b>The roadmap</b><em>was part 05</em></a></li><li data-hue="violet"><a href="#part-7">
+    <i>Part 07</i><b>Addressing the criteria</b><em>was part 06</em></a></li><li data-hue="aqua"><a href="#part-8">
+    <i>Part 08</i><b>Evidence shelf</b><em>was part 07</em></a></li><li data-hue="cyan"><a href="#build-order">
+    <i>Build order</i><b>Build order</b></a></li></ol>
+  <div class="flagbox" style="margin-top:1.6rem"><span class="fm">▸</span><div><p><strong>Change from draft 1.</strong> a new Part 3, <em>What got built</em>. The timeline is organised by activation, which scatters the working artifacts across 20+ entries so no reader ever sees the volume. The timeline tells the story; an inventory proves the output. Both are needed. Parts 3–7 shift to 4–8.</p></div></div>
+</section>
+
+
+<section class="part" id="front-matter" data-hue="magenta">
+  <p class="mrz" aria-hidden="true">PTSB&lt;FRONT&lt;MATTER&lt;&lt;FRONT&lt;MATTER&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;</p>
+  <header class="part-head">
+    <p class="eyebrow">Front matter</p>
+    <h1>Front matter</h1>
+    <div class="part-meta"><span class="budget">target ≈ 400 words</span></div>
+  </header>
+  <div class="part-body"><div class="reading wide-ok"><div class="status" data-tag="keep"><span class="tag">keep</span><div class="txt"><p>Name · Project title · Project URL · Faculty advisor and mentors.</p></div></div>
+<div class="status" data-tag="revise"><span class="tag">revise</span><div class="txt"><p><em>A note on format, for faculty.</em> Existing version is good. Pull the template-mapping table directly underneath it, and add one sentence naming the objection the way the video does — a prototype that is not a tool, assessed against criteria that mostly describe tools.</p></div></div>
+<div class="status" data-tag="keep"><span class="tag">keep</span><div class="txt"><p>The eleven-row template mapping table. Load-bearing: it lets a faculty member verify nothing is missing.</p></div></div>
+<div class="status" data-tag="keep"><span class="tag">keep</span><div class="txt"><p>The paragraph on counting convening alongside experiments, and the paragraph on what is deliberately excluded.</p></div></div></div></div>
+</section>
+
+<section class="part" id="part-2" data-hue="violet">
+  <p class="mrz" aria-hidden="true">PTSB&lt;PART02&lt;&lt;INTRODUCING&lt;THE&lt;PROJECT&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;</p>
+  <header class="part-head">
+    <p class="eyebrow">Part 02</p>
+    <h1>Introducing the project</h1>
+    <div class="part-meta"><span class="budget">target ≈ 900 words</span></div>
+  </header>
+  <div class="part-body"><div class="reading wide-ok"><p>The part that needs restructuring rather than editing. Current version leads with the bureaucracy bet and bolts the gap on afterwards; the video now does the reverse and the two should agree.</p>
+<div class="status" data-tag="revise"><span class="tag">revise</span><div class="txt"><p><strong>The problem, first.</strong> The gap — AI arriving the way a country arrives, credentials that don't parse, the communities most likely to be priced out. Then the four-point problem statement.</p></div></div>
+<div class="status" data-tag="revise"><span class="tag">revise</span><div class="txt"><p><strong>The origin, second.</strong> Same skeleton, different intent, as where the name came from rather than as the mission. The 80/20 ratio. Ed's line at the birthday.</p></div></div>
+<div class="status" data-tag="keep"><span class="tag">keep</span><div class="txt"><p><strong>The three registers</strong> — method / moment / horizon, and that they don't need collapsing.</p></div></div>
+<div class="status" data-tag="keep"><span class="tag">keep</span><div class="txt"><p><strong>The two questions.</strong> </p></div></div>
+<div class="status" data-tag="keep"><span class="tag">keep</span><div class="txt"><p><strong>What "sparkle" means, precisely</strong> — the working definition from the 100-case sprint.</p></div></div>
+<div class="status" data-tag="revise"><span class="tag">revise</span><div class="txt"><p><strong>The bar an experiment must clear.</strong> The four parts, plus the fifth condition: can the experiment detect its own defectors? Date it as an August addition from the birthday and reunion evidence — the date is the point, because it shows the bar adapting.</p></div></div>
+<div class="status" data-tag="new"><span class="tag">new</span><div class="txt"><p><strong>What the network needs to become: the room.</strong> Two paragraphs. A room is not a venue; it's a group that has settled that it wants to be there. Every activation that worked this year worked because that was already true. The roadmap rests on this and it currently exists nowhere in the submission.</p></div></div>
+<div class="status" data-tag="revise"><span class="tag">revise</span><div class="txt"><p><strong>What the prototype consists of.</strong> Network / experiments / diary — but replace the one-line artifact list with a pointer to Part 3, which now does this properly.</p></div></div>
+<div class="status" data-tag="keep"><span class="tag">keep</span><div class="txt"><p>The honest caveat about the name.</p></div></div></div></div>
+</section>
+
+<section class="part" id="part-3" data-hue="aqua">
+  <p class="mrz" aria-hidden="true">PTSB&lt;PART03&lt;&lt;WHAT&lt;GOT&lt;BUILT&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;</p>
+  <header class="part-head">
+    <p class="eyebrow">Part 03</p>
+    <h1>What got built</h1>
+    <div class="part-meta"><span class="newpart">new part</span><span class="budget">target ≈ 1,200 words</span></div>
+  </header>
+  <div class="part-body"><div class="reading wide-ok"><div class="status" data-tag="new"><span class="tag">new</span><div class="txt"><p>A build inventory, before the narrative timeline. For each: what it is, what it was for, what it proved, where it lives — and <strong>who authored it</strong>. The authorship column is not a disclaimer. Criterion 3 asks for collaborations credited, and "built to a partner's brief" is stronger evidence than "built from my own idea," because it means someone trusted you enough to commission it.</p></div></div></div>
+<h2 class="bare"><span>Deployed applications</span></h2>
+<div class="reading wide-ok"><div class="tbl"><table><thead><tr><th></th><th>Authorship</th><th>What it is</th><th>Evidence</th></tr></thead><tbody><tr><td><strong>Sparkle Border Authority</strong></td><td>Conceived, built, maintained</td><td>End-to-end border ritual as live software. React/TypeScript/Vite. Applicant flow, manual visa creation, visitor signup, checkpoint assistance, admin overrides, reprints, live stats dashboard. Seven-step flow from 4-character code to A6 sticker print to arrival tracking.</td><td>Deployed; open-sourced at Anouk's request</td></tr><tr><td><strong>Project Mirror + the V1–V15 pipeline</strong></td><td>Led and built; named cohort contributions to the pipeline</td><td>321 projects, fifteen published algorithm versions, 18 inferred evaluator constitutions with value modifiers and a popularity discount, Borda-count grand jury with strategic reasoning</td><td><code>2025.newspeak.house/awards</code>; every version on GitHub</td></tr><tr><td><strong>Campaign Factory</strong></td><td><strong>Concept, system design and build mine.</strong> Hannah O'Rourke set the goal — demo multi-agents, make campaigners take agents seriously — and supplied her campaign-building knowledge base, which is embedded in the product. Ideas originated by me, refined with her.</td><td>Give it a UK local or policy problem and a place; it researches the decision route, maps power and pressure, proposes strategy and tactics, drafts materials — showing the work as it happens. ~122 commits in a ten-day sprint</td><td>Deployed; Campaign Lab subsidises access on the house key</td></tr><tr><td><strong>Conference Pulse</strong></td><td>Built and maintained <strong>to a written brief from Hannah O'Rourke</strong> <span class="flag-inline">⚑ verify</span> <em>cite the brief doc — it's evidence</em></td><td>Live conference companion — schedule, anonymous per-panel comments, votes, organiser dashboard, big-screen room view</td><td>Ran the AI &amp; Campaigning conference; produced the 19-ballot vote</td></tr><tr><td><strong>Topic</strong> (topic.forum)</td><td>Engineer; Ed Saperia product owner</td><td>Collaborative forum software — propose topics, vote with hearts, share availability, shape a schedule together. 43 commits day one, then finished like a product through July: QA sprints, feeds, CI, docs</td><td>Deployed</td></tr><tr><td><strong>NHIFA Field Console</strong></td><td>Conceived, built, ran</td><td>The spy-reunion app — in-app mission reveals, keyword guesses, handler bonus codes, timed submission lock, paced projector reveal, post-event debrief page</td><td>Ran 13 May</td></tr><tr><td><strong>sparklebureaucracy.org</strong></td><td>Built and maintained; started from an AI-generated design, migrated to Astro</td><td>Astro site with a Buttondown mailing list behind a provider-adapter API</td><td>Live since May</td></tr><tr><td><strong>Red Team, Blue Team</strong></td><td>Built for the Ration Club crowd</td><td>Live team button game</td><td><code>nwspk/ration-club-button-game</code></td></tr><tr><td><strong>Claw agents</strong></td><td>Built, inside the Clawclub community</td><td>Moltbook interactions, penpals, research and analysis pipelines — whimsical and instrumented on the same substrate</td><td>Built during the Clawclub series</td></tr></tbody></table></div></div>
+<h2 class="bare"><span>The pattern in the authorship column</span></h2>
+<div class="reading wide-ok"><div class="status" data-tag="new"><span class="tag">new</span><div class="txt"><p>Worth naming directly, because it is the strongest evidence in the submission and it is currently invisible.</p></div></div>
+<p>Faculty brought me work three times, and the depth of my authorship varies across them — which is worth showing rather than flattening:</p>
+<ul class="bullets"><li><strong>Topic</strong> — Ed set product direction; the engineering and system design are mine.</li><li><strong>Conference Pulse</strong> — Hannah wrote a brief; I built and maintained it. The brief document is citable evidence and should be cited.</li><li><strong>Campaign Factory</strong> — Hannah set a goal and supplied a knowledge base; the concept, the ideas, the system design and the build are mine. This is originating a product against a provocation, not implementing a spec.</li></ul>
+<p>Two faculty members, independently, brought me things and treated me as the person who could build them. Nobody asked me to justify my standing first — the commission settled that question before the work started. That is a different kind of evidence than a testimonial: it is demonstrated demand for a specific capability, from inside the institution, and it is dated in the commit history.</p>
+<p>It also connects to learning #1. The rooms that worked were rooms where the legitimacy question was already settled, and a commission is one way it gets settled — which is why these three shipped while the governance experiments did not.</p></div>
+<h2 class="bare"><span>Campaign Factory: the method, commissioned</span></h2>
+<div class="reading wide-ok"><div class="status" data-tag="new"><span class="tag">new</span><div class="txt"><p>The point that changes where this artifact sits in the submission.</p></div></div>
+<p>Hannah's ask was not "build a campaign tool." It was <strong>demo multi-agents and make campaigners take agents seriously</strong> — a brief whose success condition was <em>affective</em>. She commissioned productive alarm.</p>
+<p>Which means Campaign Factory is the one artifact in the record where a practitioner commissioned designed affect inside a consequential procedure — the working definition of sparkle, asked for by someone else, in their own domain, using their own knowledge base. The research finding that affect is broader than delight, and that moral discomfort counts, is not only my theory. A practitioner requested it.</p>
+<p>It clears the four-part bar, and this has never been stated:</p>
+<ul class="bullets"><li><strong>Institutional skeleton</strong> — campaign planning's decision routes, power maps, deliverables</li><li><strong>Affective re-skin</strong> — the work shown as it happens, legible without pretending the capability isn't alarming</li><li><strong>Decision pressure</strong> — it proposes strategy and can be wrong; the slop-plans warning is that pressure being real</li><li><strong>Durable artifact</strong> — the replay at <code>campaign-factory.vercel.app/factory/replay/conference</code>, plus the drafted materials</li></ul>
+<div class="flagbox"><span class="fm">⚑</span><div><p>The replay does not appear anywhere in <code>sparkle-bureaucracy.md</code>. It is the most demonstrable artifact in the record and it is undocumented.</p></div></div>
+<p><strong>And it is the fourth delivery of one argument.</strong> The CHEW keynote, the Agent Craft keynote, the OpenClaw 101 workshop and Campaign Factory all make the same case: articulate your work as a system, so you know where agents fit before someone arrives selling you something. Campaign Factory is the strongest of the four because it is the only one that leaves an artifact behind after the room empties — Ed's 28 April principle applied to my own translation work.</p>
+<p><strong>The mechanism, stated plainly for learning #5:</strong> meeting a community inside its own work means embedding a practitioner's knowledge base in the system. That is replicable, and it is why this one landed.</p>
+<p>One honest note: "and then I added the multi-agent flair" undersells it. The multi-agent decomposition is what makes the work showable and replayable. The architecture <em>is</em> the pedagogy — without it there is an output but no visible system, and the whole point was the visible system.</p></div>
+<h2 class="bare"><span>Built by others, with my support</span></h2>
+<div class="reading wide-ok"><div class="status" data-tag="new"><span class="tag">new</span><div class="txt"><p>A short block, and it strengthens rather than weakens the claim. The awards pipeline pulled the cohort in — Davit on values taxonomy, Gamithra's ITN/A framework, Alexandra on aggregation, Jamie on synthetic users, Fran on People's Choice. Credit each by name, describe what they built, don't claim it.</p></div></div>
+<p>The <strong>People's Choice system</strong> — audience criteria submitted by QR code, an agent generating a live ranking of the shortlist, results processed in the break and announced live — was <strong>built by Fran, with my support</strong>, inside an evaluation architecture I led.</p>
+<div class="flagbox"><span class="fm">⚑</span><div><p>Your existing Part I already names all five of these people, so anonymising here would be inconsistent with what's already written — name her.</p></div></div>
+<p>On "support": describe what you actually did rather than the relationship. Unblocked the agent step, reviewed the ranking logic, made room for it in the showcase run of play — whichever is true. That's verifiable and it's sufficient. "Mentored" is a claim about how someone else experienced you, and it can be remembered differently.</p>
+<p>This block is also the clearest evidence for the thesis you state up front: building your thing while building the cohort at the same time.</p></div>
+<h2 class="bare"><span>Worked case study: the Campaign Lab arc</span></h2>
+<div class="reading wide-ok"><div class="status" data-tag="new"><span class="tag">new</span><div class="txt"><p>The submission's centrepiece, and currently scattered across five sections. Seven months with one partner community, producing three artifacts, hard metrics, onward demand, and two instructive failures. If you'd rather promote this to its own Part, it stands alone — but it belongs next to the inventory because it is the argument the inventory is evidence for.</p></div></div>
+<p>Campaign Factory stays the centrepiece. The arc is the case around it.</p></div>
+<h3 class="sub-h">The arc, dated</h3>
+<div class="reading wide-ok"><div class="tbl narrow"><table><thead><tr><th></th><th></th></tr></thead><tbody><tr><td><strong>2 April</strong></td><td>Prototype Previews. Hannah offers intros and pilots, says "we will have people up for piloting things," points at Campaign Lab's <code>pipresist.uk</code> (Tyrone's), offers help with experiments and evaluation frameworks. Logged as <em>acted on</em>.</td></tr><tr><td><span class="flag-inline">⚑ verify</span> <strong>April–May</strong></td><td><strong>Gap in the record.</strong> Your weekly entry says the relationship "goes back at least to" 24 May and "how it started before that is still unrecorded." Fill this — it's the origin of your biggest partnership.</td></tr><tr><td><strong>24 May</strong></td><td><strong>OpenClaw 101 workshop</strong>, run for Campaign Lab. Slidev deck: agents, skills, factories, and the future of AI workflows (<code>sugaroverflow/openclaw101-workshop</code>). The hack-night teaching thread formalised.</td></tr><tr><td><strong>12–17 July</strong></td><td><strong>Campaign Factory</strong> built (<code>CampaignLab/campaign-factory</code>) — ~122 commits, 60 on 15 July alone <span class="flag-inline">⚑ verify</span> <em>verify against the repo</em>. Launched requiring the user's own Anthropic or OpenRouter key.</td></tr><tr><td><strong>15–16 July</strong></td><td><strong>Conference Pulse</strong> built in parallel (<code>CampaignLab/conference-pulse</code>), to Hannah's written brief.</td></tr><tr><td><strong>16 July</strong></td><td><strong>The AI &amp; Campaigning Conference</strong> at Newspeak House. Nine sessions. Both artifacts run live.</td></tr><tr><td><strong>week of 20 July</strong></td><td>Free-access code goes onto the house key — "bring your own API key" stops being the price of admission, with a kill-switch as the safety valve.</td></tr><tr><td><strong>20 July</strong></td><td>Campaign Lab newsletters Campaign Factory out to their list.</td></tr><tr><td><strong>17–21 July</strong></td><td>Civic Tech Field Guide: theory-of-change material offered for Campaign Factory's strategy section, a request to share it onward, and an invitation to demo with Hannah at a vibe-code show &amp; tell.</td></tr><tr><td><strong>20 July – 3 August</strong></td><td><strong>Oxfam GB.</strong> Campaign engagement manager writes unprompted after seeing it at the conference; requests a team demo and Q&amp;A; a September workshop is being organised with Asil Sidahmed. <span class="flag-inline">⚑ verify</span> <em>Thread private — anecdotal summary only, and check whether she's happy to be named.</em></td></tr><tr><td><strong>31 July</strong></td><td>The session with Hannah that produced the problem statement and three registers. The partnership also produced the mission clarity.</td></tr></tbody></table></div></div>
+<h3 class="sub-h">What it produced</h3>
+<div class="reading wide-ok"><p>Three artifacts, two repos in the partner's organisation, one workshop deck, and a live instrument. Note the repo location as a point in your favour rather than a caveat: a partner org hosting your code is a stronger trust signal than self-hosting.</p></div>
+<h3 class="sub-h">The numbers</h3>
+<div class="reading wide-ok"><p>From the Conference Pulse production database, 16 July, nine sessions:</p>
+<ul class="bullets"><li><strong>240 votes · 263 comments · 28 private feedback messages</strong></li><li><strong>67 unique voting devices · 45 unique commenting devices.</strong> Comments are anonymous, so total unique participants sits between 67 and 112, likely near the lower end.</li><li>AI live-take summaries generated for <strong>7 of the 9</strong> active sessions.</li><li><strong>Retention: 49 of 67 voters (73%) voted in two or more panels. 25 voted in five or more. Three voted in all eight</strong> that had voting open.</li><li>Your own panel — Agents: working tools or over-hyped?, with Hannah and Ed — returned <strong>19 votes, 12 comments, 47% "could work."</strong></li></ul>
+<p>Keep your own caveat: unique devices counts nobody who only watched the projector, so it is a floor on reach, not attendance. Stating that makes the rest more credible.</p>
+<p><strong>Where campaigners think agents are real</strong> — measured by your instrument, and useful as field research rather than as reaction to your session:</p>
+<p><em>Already real</em> — social listening 88%, AI content 76%, "anyone can build it" 67%. <em>Could work</em> — AI persuasion bot 73%, canvass coach game 58%, agents 47%. <em>Just hype</em> — election prediction 82%, synthetic personas 52%.</p>
+<p>That last one is a direct input to the flagship decision: the community you'd run Public Voice Customs or Mirror Commons with is currently split on whether synthetic representation is real at all.</p></div>
+<h3 class="sub-h">What it proves</h3>
+<div class="reading wide-ok"><ul class="bullets"><li><strong>Translation beats evangelism, with a stated mechanism.</strong> Meeting a community inside its own work meant embedding a practitioner's knowledge base in the system. That's replicable, and it's why this landed where a talk wouldn't have.</li><li><strong>The affect was commissioned, not asserted.</strong> Hannah's ask had an affective success condition. Designed charge in a consequential procedure, requested by a practitioner in her own domain.</li><li><strong>Sparkle sometimes removes a ritual.</strong> The free-access code deleted a gate rather than decorating one — the research finding, live, with a kill-switch.</li><li><strong>Repeat participation, measured.</strong> 73% returning is the hardest thing to prove for a civic tool, and it's the evidence a network-as-prototype claim actually needs.</li><li><strong>An instrument that can see disengagement.</strong> Pulse sampled repeatedly rather than at entry, and the four comments between 14:00 and 16:00 match the independent feedback complaints about heat and breaks. It detected a room condition through participation data. That's the transferable design principle behind the fifth condition — and it's demonstrated rather than proposed.</li><li><strong>The pull is the product.</strong> Newsletter, Civic Tech Field Guide, Oxfam — all inbound, none solicited.</li></ul></div>
+<h3 class="sub-h">What failed</h3>
+<div class="reading wide-ok"><ul class="bullets"><li><strong>240 votes, 2 mailing-list signups.</strong> The most useful number in the record. An instrument used 240 times converted almost nobody into the network.</li><li><strong>And there's a probable cause, which makes it a better failure.</strong> Matt Stempeck reported that the newsletter signup form blocked him — <em>"Suspicious activity detected."</em> A form that rejects people is a mechanical explanation for the conversion, not just a strategic one. Fix it, and report both together.</li><li><strong>Your own panel was the least emphatic result of the day.</strong> 12 comments, 47% "could work." Include it. The honest context helps: it ran at 17:00 after the dead zone, and vote participation had declined from 45 in the first panel to 15 in the last, so 19 was above the trailing trend. Reporting the weak number is what makes the strong ones believable.</li><li><strong>The launch gate.</strong> Campaign Factory shipped requiring users to bring their own API key — an accessibility failure you identified and fixed within a week.</li><li><strong>The data nearly didn't survive.</strong> The panel feedback was recovered from the production database ahead of a 30-day purge. No retention policy existed for the instrument's own evidence.</li></ul></div>
+<h3 class="sub-h">Unresolved</h3>
+<div class="reading wide-ok"><p>The sharpest question from the comment wall — how do you stop people's first experience being slop campaign plans? — is Campaign Factory's quality bar and it is not yet answered. Say so, and say what you'd do about it.</p></div>
+<h3 class="sub-h">Artifacts to link</h3>
+<div class="reading wide-ok"><p><code>campaign-factory.vercel.app</code> · the conference replay at <code>/factory/replay/conference</code> <span class="flag-inline">⚑ verify</span> <em>absent from your record entirely</em> · <code>CampaignLab/campaign-factory</code> · <code>CampaignLab/conference-pulse</code> · the OpenClaw 101 deck · Hannah's Conference Pulse brief <span class="flag-inline">⚑ verify</span> <em>cite it</em> · the full panel feedback capture.</p></div>
+<h2 class="bare"><span>Physical and print artifacts</span></h2>
+<div class="reading wide-ok"><div class="status" data-tag="new"><span class="tag">new</span><div class="txt"><p>Printed A6 visa stickers · dossier mini-zines via an A6-onto-A3 imposition pipeline · mission cards · reset slips · debrief cards. Worth its own short block: the durable-artifact principle from Ed's 28 April note, made physical.</p></div></div></div>
+<h2 class="bare"><span>What didn't work</span></h2>
+<div class="reading wide-ok"><div class="status" data-tag="new"><span class="tag">new</span><div class="txt"><p>The section the template asks for — 3.5, <em>What Broke / Failed / Felt Wrong</em>, annotated "(This is <em>good</em> — faculty want to see adaptation.)" It doesn't currently exist anywhere in the submission, and you have real material. For each: what it was, what went wrong, what you did about it.</p></div></div>
+<ul class="bullets"><li><strong>The interactive lab wiki</strong> (23 June). A dependency-free static lab notebook with experiment search, status filters, detail views, a local note queue, and the public/private boundary rendered in the interface. It didn't work as intended. Your own execution journal already logged why in advance — content duplicated from the markdown would drift, the <code>localStorage</code> note queue was a sketch and not collaboration infrastructure, and the thing was a prototype shell needing real links and dates. Worth keeping precisely because the risks were named before the attempt and then materialised.</li><li><strong>The assessment log dragged UX</strong>, and the file size caused page-load crashes; patched with lazy-loading.</li><li><strong>The governance experiments produced a lot of process and sometimes very little outcome.</strong> Already in your sensemaking map.</li><li><strong>Participant evidence for Birthday Passports was never preserved.</strong> The record already admits this. Leave the admission in.</li><li><strong>The instrument gap</strong> — the dashboard and the Field Console counted intake, not inhabitation. Cross-reference to learnings.</li><li><strong>The site restructure, paused 31 July</strong> pending the mission question, and still paused.</li><li><strong>The governance and community writing, unpublished.</strong> You called it the most honest thinking you did this year and it never went out. Say so.</li></ul>
+<p>This section is a direct feed to criterion 6 — reference it from there rather than repeating it.</p></div>
+<h2 class="bare"><span>Lab infrastructure — four experiments that actually ran</span></h2>
+<div class="reading wide-ok"><div class="status" data-tag="new"><span class="tag">new</span><div class="txt"><p>Distinct from the nine prospective ones, and currently invisible in the submission. From <code>experiments.md</code>, each with hypothesis, method, what happened, what was learned, evidence, risks and faculty questions:</p></div></div>
+<ol class="ord"><li><strong>Agent-Assisted Prototype Diary</strong> — notes, commits and logs into structured, human-approved entries. This submission package is its first real run.</li><li><strong>Faculty Feedback Loop</strong> — feedback tracked to action.</li><li><strong>Collaborator and Prior-Art Scout</strong></li><li><strong>Sparkle Bureaucracy Experiment Cards</strong></li></ol>
+<p>This is the lab practising its own bureaucracy, and it's the cleanest proof that the method isn't only aimed outward.</p></div>
+<h2 class="bare"><span>Research corpus</span></h2>
+<div class="reading wide-ok"><div class="status" data-tag="new"><span class="tag">new</span><div class="txt"><p>Four linked longlists of 25 (projects, organisations, directories, people/networks) · three deep-evidence lanes · the movements-and-tactics lane · calibration · <code>website-selection.md</code> and the seven founder questions it left open · the prior-art log · the research inventory built from the 294-message field-notes export.</p></div></div></div>
+<h2 class="bare"><span>Specified but not yet run</span></h2>
+<div class="reading wide-ok"><div class="status" data-tag="new"><span class="tag">new</span><div class="txt"><p>Two sets, and they're different vintages — worth showing both, because the second supersedes the first and that's evidence of learning:</p></div></div>
+<ul class="bullets"><li><strong>19–23 June sprint:</strong> Verification Queue · Consultation Customs · Hybrid Delegation Assembly · Agent-Assisted Lab Clerk.</li><li><strong>23 June idea bank, nine ranked candidates:</strong> Public Voice Customs · Mirror Commons · The Exception Window · Permission Passport Office · The Value Court · Claw Civil Service · Shadow Labour Claims Office · Liquid Mandate Assembly · Sparkle Border Field Kit. Each with a smallest-credible-run spec, artifacts, evidence list and named risks.</li></ul></div>
+<h2 class="bare"><span>Talks and workshops</span></h2>
+<div class="reading wide-ok"><div class="status" data-tag="new"><span class="tag">new</span><div class="txt"><p>Agent Craft 2026 keynote · CHEW Festival "Evaluation 2030" keynote · OpenClaw 101 for Campaign Lab · Clawcon London co-organised. These are artifacts too — they're where translation actually happened, and two of them produced inbound leads.</p></div></div></div></div>
+</section>
+
+<section class="part" id="part-4" data-hue="cyan">
+  <p class="mrz" aria-hidden="true">PTSB&lt;PART04&lt;&lt;THE&lt;TIMELINE&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;</p>
+  <header class="part-head">
+    <p class="eyebrow">Part 04</p>
+    <h1>The timeline</h1>
+    <div class="part-meta"><span class="was">was part 03</span><span class="budget">target ≈ 2,000 words</span></div>
+  </header>
+  <div class="part-body"><div class="reading wide-ok"><p>Chronological, one <code>Add to the doc</code> slot per entry. Now free to be narrative, because Part 3 carries the inventory.</p>
+<div class="status" data-tag="new"><span class="tag">new</span><div class="txt"><p><strong>Open with 15 December 2025 — the legitimacy field note.</strong> Currently buried in the appendix transcript; it should be the first dated entry, quoted. It establishes that the year's central finding was diagnosed in week three and published in public. Include the <em>why would we follow the rules</em> line, the constitutional-assumptions passage, and <em>I would rather people opt in.</em></p></div></div>
+<div class="flagbox"><span class="fm">⚑</span><div><p>Verify the fellowship start date before calling it "week three."</p></div></div>
+<div class="status" data-tag="keep"><span class="tag">keep</span><div class="txt"><p>All existing entries in sequence, plus</p></div></div>
+<div class="status" data-tag="new"><span class="tag">new</span><div class="txt"><p>the June Topic entry, which is currently marked <em>Blurb TBD</em>.</p></div></div>
+<div class="flagbox"><span class="fm">⚑</span><div><p>Settle the activation count — "21" and "20+" are both in circulation.</p></div></div>
+<div class="status" data-tag="new"><span class="tag">new</span><div class="txt"><p><strong>A visible inflection marker at term 2.</strong> Short block, not a full entry: the decision to stop asking the house to settle the legitimacy question and go find rooms where it was settled. Then what the dates show — from February the centre of gravity moves outward, and the house appears as venue rather than jurisdiction.</p></div></div>
+<div class="flagbox"><span class="fm">⚑</span><div><p>Verify term 2 dates. Earliest hard evidence is Clawclub #1, 17 February.</p></div></div>
+<div class="status" data-tag="revise"><span class="tag">revise</span><div class="txt"><p><strong>Birthday Passports and Cohort Reunion.</strong> Leave as written. The participation caveat belongs in Learnings as a later finding — more honest about when you saw it.</p></div></div>
+<div class="status" data-tag="keep"><span class="tag">keep</span><div class="txt"><p>What's deliberately not in this timeline.</p></div></div></div></div>
+</section>
+
+<section class="part" id="part-5" data-hue="gold">
+  <p class="mrz" aria-hidden="true">PTSB&lt;PART05&lt;&lt;THE&lt;LEARNINGS&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;</p>
+  <header class="part-head">
+    <p class="eyebrow">Part 05</p>
+    <h1>The learnings</h1>
+    <div class="part-meta"><span class="was">was part 04</span><span class="budget">target ≈ 2,000 words</span></div>
+  </header>
+  <div class="part-body"><div class="reading wide-ok"><p>Nine becomes eleven, with one substantially rewritten.</p>
+<div class="status" data-tag="new"><span class="tag">new</span><div class="txt"><p><strong>#1 — Legitimacy has to be settled before design can be debated.</strong> The lead learning; it explains the shape of the year. Where the frame is unsettled every proposal snaps back to <em>why should this bind me</em> and the design argument never happens. Where it's settled you go straight to implementation. Note that it generalises — same mechanism as consultation flooding, and as transparency failing to produce trust.</p></div></div>
+<div class="status" data-tag="keep"><span class="tag">keep</span><div class="txt"><p><strong>Same skeleton, different intent.</strong> </p></div></div>
+<div class="status" data-tag="revise"><span class="tag">revise</span><div class="txt"><p><strong>Games lower the bar — to entry, not to consent.</strong> The correction, dated August as a revision of the earlier entries. Games don't manufacture consent to the frame and they hide its absence, because signing up looks like playing. Name the instrument gap: the dashboard and the Field Console counted intake, not inhabitation. Then the fifth condition. Keep it constitutional, no names.</p></div></div>
+<div class="status" data-tag="new"><span class="tag">new</span><div class="txt"><p><strong>Whimsy and rigour run on the same substrate.</strong> From the Claw agents finding — the playful agents generated real social engagement, the research agents generated real evidence, same technical base. It's the strongest available argument that the 80/20 ratio is a method rather than a tone, and it's in no learnings list.</p></div></div>
+<div class="status" data-tag="keep"><span class="tag">keep</span><div class="txt"><p>Transparency isn't trust · The inference is not consent · Translation beats evangelism · Affect is broader than delight, and its named failure mode · The three registers don't need collapsing · The lab's own bureaucracy is an experiment.</p></div></div>
+<div class="status" data-tag="revise"><span class="tag">revise</span><div class="txt"><p><strong>The resistance is information.</strong> Trim. With #1 in place it only needs the concealment loop and the <em>legitimacy is constructed</em> resolution.</p></div></div>
+<div class="status" data-tag="keep"><span class="tag">keep</span><div class="txt"><p><strong>What the communities around the work taught me</strong> — the full bulleted list.</p></div></div></div></div>
+</section>
+
+<section class="part" id="part-6" data-hue="magenta">
+  <p class="mrz" aria-hidden="true">PTSB&lt;PART06&lt;&lt;THE&lt;ROADMAP&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;</p>
+  <header class="part-head">
+    <p class="eyebrow">Part 06</p>
+    <h1>The roadmap</h1>
+    <div class="part-meta"><span class="was">was part 05</span><span class="budget">target ≈ 700 words</span></div>
+  </header>
+  <div class="part-body"><div class="reading wide-ok"><div class="status" data-tag="new"><span class="tag">new</span><div class="txt"><p>One opening paragraph: why a network and not a product. Pull from Part 2's room paragraph. Turns the roadmap from a wish list into the conclusion of the argument.</p></div></div>
+<div class="status" data-tag="keep"><span class="tag">keep</span><div class="txt"><p>Near term · flagship candidates and the two routes · the rhythm · scope, in and out.</p></div></div>
+<div class="status" data-tag="revise"><span class="tag">revise</span><div class="txt"><p><strong>Open questions carried forward.</strong> Same four, reframed: the flagship stays open <em>because</em> of learning #1, not despite it.</p></div></div></div></div>
+</section>
+
+<section class="part" id="part-7" data-hue="violet">
+  <p class="mrz" aria-hidden="true">PTSB&lt;PART07&lt;&lt;ADDRESSING&lt;THE&lt;CRITERIA&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;</p>
+  <header class="part-head">
+    <p class="eyebrow">Part 07</p>
+    <h1>Addressing the criteria</h1>
+    <div class="part-meta"><span class="was">was part 06</span><span class="budget">target ≈ 1,200 words</span></div>
+  </header>
+  <div class="part-body"><div class="reading wide-ok"><div class="status" data-tag="revise"><span class="tag">revise</span><div class="txt"><p><strong>1. Qualifies as political technology.</strong> Now much stronger — point at Part 3. Nine deployed applications, not five — plus print artifacts, four lab experiments that ran, thirteen specified, and a documented failure log.</p></div></div>
+<div class="status" data-tag="keep"><span class="tag">keep</span><div class="txt"><p><strong>2. Public web presence</strong> · <strong>3. Originality</strong> · <strong>4. Non-redundancy.</strong></p></div></div>
+<div class="status" data-tag="revise"><span class="tag">revise</span><div class="txt"><p><strong>5. Active user community.</strong> Add the distinction the year produced — attendance versus inhabited participation, and that you now measure the difference. Pre-empts the sharpest attack on a network-as-prototype claim, which is that a headcount is not a user base.</p></div></div>
+<div class="status" data-tag="revise"><span class="tag">revise</span><div class="txt"><p><strong>6. No clear methodological failure.</strong> Strongest section, gets stronger: the fifth condition arrived at from your own data; the instrument gap named rather than hidden; the December note as evidence the environmental constraint was diagnosed early and in public; four lab experiments that ran with human approval gates; and the record visibly correcting its own earlier claims.</p></div></div></div></div>
+</section>
+
+<section class="part" id="part-8" data-hue="aqua">
+  <p class="mrz" aria-hidden="true">PTSB&lt;PART08&lt;&lt;EVIDENCE&lt;SHELF&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;</p>
+  <header class="part-head">
+    <p class="eyebrow">Part 08</p>
+    <h1>Evidence shelf</h1>
+    <div class="part-meta"><span class="was">was part 07</span><span class="budget">target ≈ 600 words</span></div>
+  </header>
+  <div class="part-body"><div class="reading wide-ok"><div class="status" data-tag="keep"><span class="tag">keep</span><div class="txt"><p>All existing quotes, the people list, partners, the inspired-by constellation.</p></div></div>
+<div class="status" data-tag="new"><span class="tag">new</span><div class="txt"><p>Add from the December field note: <em>even if you were dictator and there was a signed charter, why would we follow the rules?</em> · <em>those are very different constitutional assumptions</em> · <em>I would rather people opt in.</em></p></div></div>
+<div class="flagbox"><span class="fm">⚑</span><div><p>Outstanding: the "five months of research" attribution <em>(get name/permission)</em> · whether a debrief card can be reproduced · participant evidence for Birthday Passports was never preserved and the record already says so — leave that admission in.</p></div></div></div></div>
+</section>
+
+<section class="part" id="build-order" data-hue="cyan">
+  <p class="mrz" aria-hidden="true">PTSB&lt;BUILD&lt;ORDER&lt;&lt;BUILD&lt;ORDER&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;</p>
+  <header class="part-head">
+    <p class="eyebrow">Build order</p>
+    <h1>Build order</h1>
+  </header>
+  <div class="part-body"><ol class="order"><li><span><strong>Part 3</strong> — the inventory and the Campaign Lab case study. Highest return, and mostly assembly rather than writing.</span></li><li><span><strong>Part 2</strong> — the restructure everything else has to agree with.</span></li><li><span><strong>Part 7</strong>, criteria 1, 5 and 6.</span></li><li><span><strong>Part 5</strong> — learnings #1, the games revision, the whimsy/rigour addition.</span></li><li><span><strong>Part 4</strong> — the December entry, the term-2 marker, the Topic blurb. Everything else is written.</span></li><li><span><strong>Part 6</strong> — one new paragraph.</span></li><li><span><strong>Part 8</strong> — three quotes.</span></li><li><span>Photos into the <code>Add to the doc</code> slots last, one pass.</span></li></ol></div>
+</section>
+
+<footer>
+  <div class="foil" aria-hidden="true"></div>
+  <div class="foot-in">
+    <p><span class="foot-stars">★★★★★</span><br>
+      Sparkle Bureaucracy · SB/NWSPK/2026/01<br>
+      Open diary <a href="https://github.com/sugaroverflow/sparkle-bureaucracy-site/blob/main/lore">lore/</a> · Site <a href="https://sparklebureaucracy.org">sparklebureaucracy.org</a></p>
+    <p>To comment: highlight any text on this page — annotations run on <a href="https://web.hypothes.is">Hypothesis</a>.</p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var links={},all=[].slice.call(document.querySelectorAll('.rail nav a'));
+  all.forEach(function(a){links[a.getAttribute('href').slice(1)]=a;});
+  var io=new IntersectionObserver(function(es){
+    es.forEach(function(e){
+      var a=links[e.target.id];if(!a||!e.isIntersecting)return;
+      all.forEach(function(l){l.removeAttribute('aria-current');});
+      a.setAttribute('aria-current','true');
+      a.scrollIntoView({block:'nearest',inline:'nearest'});
+    });
+  },{rootMargin:'-45% 0px -50% 0px'});
+  document.querySelectorAll('section.part').forEach(function(s){io.observe(s);});
+})();
+</script>
+</body>
+</html>
