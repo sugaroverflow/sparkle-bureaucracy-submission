@@ -28,33 +28,38 @@ claim without its caveat (e.g. a name used without confirmed permission).
 Resolve the flag in the markdown — verify it, cite it, or remove the claim —
 then rebuild.
 
-## Comments (on-page register)
+## Annotations (inline, no accounts)
 
-Every part ends with a **comment register**: reviewers type a name and a
-comment — no account, no third-party service. If they highlight text on the
-page before typing, the selection is attached to the comment as a quote.
-Comments are stored in this project's own Neon Postgres database and are
-visible to everyone with the link.
+Reviewers sign the **visitors' book** (bottom-right card) with just a display
+name — remembered in `localStorage`, no account — then highlight any text on
+the page and a comment popup appears at the selection. Annotations render as
+highlights for everyone with the link. Built on
+[RecogitoJS](https://github.com/recogito/recogito-js) 1.8.4 (BSD-3-Clause),
+self-hosted in `public/vendor/` — deliberately chosen over its maintained
+successor `@recogito/text-annotator` because RecogitoJS bundles the complete
+editor popup (the successor is headless); it's archived upstream, which is
+acceptable for a page that lives a few weeks.
 
-- `GET /api/comments` — all comments (JSON).
-- `POST /api/comments` — `{part, name, body, quote?}`; honeypot field `fax`
-  must be empty; lengths capped server-side.
-- `DELETE /api/comments?id=N` — moderation; requires the `x-admin-token`
-  header. The token lives in `.admin-token` locally (gitignored) and in the
-  `ADMIN_TOKEN` Vercel env var.
+- `GET /api/annotations` — all live annotations (W3C Web Annotation JSON).
+- `POST` / `PUT /api/annotations` — upsert by the annotation's client id.
+- `DELETE /api/annotations?id=X` — **tombstone, not a hard delete**: rows are
+  flagged `deleted`, never destroyed, so no reviewer action can erase
+  evidence. Resurrect or hard-delete via SQL in the Neon dashboard.
 
-Moderate from the terminal:
+Known trade-offs: identity is honor-system (any reviewer could edit another's
+note — tombstones are the backstop); annotations anchor to the page text, so
+**annotations made on the build-mode draft may not re-anchor after the
+submission-mode flip** — ask faculty to annotate only the final version.
+
+Export for the record after assessment:
 
 ```sh
-curl -X DELETE "https://sb-prototype-submission.vercel.app/api/comments?id=N" \
-  -H "x-admin-token: $(cat .admin-token)"
+curl -s https://sb-prototype-submission.vercel.app/api/annotations > annotations-export.json
 ```
 
-Export the register for the record (e.g. after assessment):
-
-```sh
-curl -s https://sb-prototype-submission.vercel.app/api/comments > comments-export.json
-```
+The earlier per-part comment threads (`api/comments.js`, `COMMENTS` flag in
+`build.js`) are off but intact; don't run both — the registers mutate the DOM
+inside the annotatable container, which risks mis-anchoring annotations.
 
 ## Deploy (Vercel)
 

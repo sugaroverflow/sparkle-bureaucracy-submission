@@ -9,10 +9,16 @@ const VIDEO_EMBED = "";
 const SERIAL = "SB/NWSPK/2026/01";
 const SUBMIT_DATE = "10 Aug 2026";
 
-/* On-page comment register: per-part threads served by /api/comments
-   (Vercel function + Neon Postgres). Reviewers need no account — name +
-   comment, with any highlighted page text attached as a quote. */
-const COMMENTS = true;
+/* Inline annotations (RecogitoJS, self-hosted in public/vendor/): highlight
+   any text → popup at the selection → comment, saved to /api/annotations.
+   Reviewers give a display name once (kept in localStorage) — no accounts. */
+const ANNOTATIONS = true;
+
+/* Legacy per-part comment threads (/api/comments). Superseded by the
+   annotation layer; flip back on if inline annotation ever comes out —
+   but not both: the registers mutate the DOM inside the annotatable
+   container, which risks mis-anchoring stored annotations. */
+const COMMENTS = false;
 
 /* Permit fields shown in the hero. Kept here, not in the template, so the
    numbers can't drift from the outline silently.
@@ -285,11 +291,13 @@ const html = `<!DOCTYPE html>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="robots" content="noindex">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>✨</text></svg>">
 <title>25-26 Newspeak House - Prototype Submission: Sparkle Bureaucracy</title>
 <meta name="description" content="A network for closing the AI gap for civic communities, run as an experiment lab. Prototype submission, Newspeak House Political Technology Programme 2025-26.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,300..900;1,14..32,300..700&display=swap" rel="stylesheet">
+${ANNOTATIONS ? `<link rel="stylesheet" href="/vendor/recogito.min.css">` : ""}
 <style>
 :root{
   --magenta:#FF3399; --magenta-ink:#A80C59; --magenta-tint:#FFE7F1;
@@ -628,6 +636,33 @@ footer{border-top:2px solid var(--ink);background:var(--midnight);color:#E7E4F4}
   .tbl table,.tbl.narrow table{min-width:0}
 }
 
+/* ── visitors' book (annotation sign-in) ─────────────────── */
+.vbook{position:fixed;right:1rem;bottom:1rem;z-index:40;width:min(19rem,calc(100vw - 2rem));
+  background:#fff;border:2px solid var(--ink);box-shadow:5px 5px 0 var(--ink)}
+.vbook-head{font:600 .625rem/1 var(--util);letter-spacing:.13em;text-transform:uppercase;
+  background:var(--gold);border-bottom:2px solid var(--ink);padding:.55rem .75rem}
+.vbook-body{padding:.7rem .75rem .8rem}
+.vbook-note{font:400 .75rem/1.55 var(--util);color:var(--soft);margin:0 0 .55rem}
+.vbook form{display:flex;gap:.45rem}
+.vbook input{flex:1 1 auto;min-width:0;font:inherit;font-size:.875rem;border:2px solid var(--ink);
+  background:var(--page);padding:.4rem .55rem}
+.vbook form button{font:600 .625rem/1 var(--util);letter-spacing:.1em;text-transform:uppercase;
+  color:var(--ink);background:var(--gold);border:2px solid var(--ink);border-radius:999px;
+  padding:.55rem .8rem;box-shadow:2px 2px 0 var(--ink);cursor:pointer}
+.vbook form button:hover{transform:translate(1px,1px);box-shadow:1px 1px 0 var(--ink)}
+.vbook-as{font:400 .75rem/1.55 var(--util);color:var(--soft);margin:0}
+.vbook-as b{color:var(--ink)}
+.vbook-as button{font:inherit;color:var(--magenta-ink);background:none;border:0;padding:0;
+  text-decoration:underline;cursor:pointer}
+.vbook-err{font:400 .75rem/1.55 var(--util);color:var(--magenta-ink);margin:.45rem 0 0}
+.vbook.done .vbook-note,.vbook.done form{display:none}
+@media print{.vbook{display:none}}
+
+/* recogito: match the page's ink-and-gold system */
+.r6o-annotation,.r6o-selection{background:#ffc93c59;border-bottom:2px solid var(--gold-ink)}
+.r6o-editor{font-family:var(--text);z-index:50}
+.r6o-editor .r6o-btn{background:var(--magenta);border-color:var(--magenta)}
+
 /* ── comment register ────────────────────────────────────── */
 .cmt{margin-top:2.6rem;border:2px solid var(--ink);background:#fff;box-shadow:6px 6px 0 var(--h);max-width:52rem}
 .cmt-head{display:flex;justify-content:space-between;align-items:center;gap:1rem;
@@ -674,6 +709,7 @@ footer{border-top:2px solid var(--ink);background:var(--midnight);color:#E7E4F4}
 
 <div class="foil hero-foil" aria-hidden="true"></div>
 
+<main id="annotatable">
 <header class="hero wrap" data-hue="magenta">
   <p class="eyebrow">Newspeak House · Political Technology Programme · Cohort 2025–26</p>
   <h1 class="wordmark"><span>Sparkle</span><span class="b">Bureaucracy</span></h1>
@@ -721,6 +757,20 @@ footer{border-top:2px solid var(--ink);background:var(--midnight);color:#E7E4F4}
 </section>
 
 ${sections}
+</main>
+
+${ANNOTATIONS ? `<aside class="vbook" id="vbook" aria-label="Annotation sign-in">
+  <div class="vbook-head">Visitors&rsquo; book</div>
+  <div class="vbook-body">
+    <p class="vbook-note" id="vbook-note">Sign in to annotate — highlight any text on the page to leave a note. No account needed.</p>
+    <form id="vbook-form">
+      <input id="vbook-name" maxlength="80" placeholder="Your name" aria-label="Your name">
+      <button type="submit">Begin</button>
+    </form>
+    <p class="vbook-as" id="vbook-as" hidden>Annotating as <b></b> · <button type="button" id="vbook-change">change</button></p>
+    <p class="vbook-err" id="vbook-err" hidden></p>
+  </div>
+</aside>` : ""}
 
 <footer>
   <div class="foil" aria-hidden="true"></div>
@@ -728,7 +778,7 @@ ${sections}
     <p><span class="foot-stars">★★★★★</span><br>
       Sparkle Bureaucracy · ${SERIAL}<br>
       Open diary <a href="${REPO}/lore">lore/</a> · Site <a href="https://sparklebureaucracy.org">sparklebureaucracy.org</a></p>
-    <p>${COMMENTS ? `Comments are lodged directly on this page — each part has a comment register.<br>Highlight text before you type to quote it. No account needed.` : `Comment link to follow.`}</p>
+    <p>${ANNOTATIONS ? `To comment: sign the visitors&rsquo; book (bottom right), then highlight any text<br>and leave a note right there. No account needed.` : COMMENTS ? `Comments are lodged directly on this page — each part has a comment register.<br>Highlight text before you type to quote it. No account needed.` : `Comment link to follow.`}</p>
   </div>
 </footer>
 
@@ -813,6 +863,51 @@ ${COMMENTS ? `<script>
       boxes[k].querySelector(".cmt-note").textContent="Comment register offline right now \\u2014 comments will still be accepted once it wakes.";
     });
   });
+})();
+</script>` : ""}
+${ANNOTATIONS ? `<script src="/vendor/recogito.min.js"></script>
+<script>
+(function(){
+  var API="/api/annotations",KEY="sb-reviewer-name";
+  var box=document.getElementById("vbook"),form=document.getElementById("vbook-form"),
+      input=document.getElementById("vbook-name"),asLine=document.getElementById("vbook-as"),
+      err=document.getElementById("vbook-err");
+  var r=null;
+  function send(method,url,body){
+    return fetch(url,{method:method,headers:{"Content-Type":"application/json"},
+      body:body?JSON.stringify(body):undefined}).then(function(x){if(!x.ok)throw 0;return x});
+  }
+  function oops(){err.hidden=false;err.textContent="Couldn\\u2019t save that annotation \\u2014 check your connection and try again."}
+  function start(name){
+    if(r){try{r.destroy()}catch(e){}}
+    r=Recogito.init({content:document.getElementById("annotatable"),widgets:["COMMENT"],readOnly:!name});
+    if(name)r.setAuthInfo({id:name.toLowerCase().replace(/[^a-z0-9]+/g,"-")||"reviewer",displayName:name});
+    fetch(API).then(function(x){if(!x.ok)throw 0;return x.json()})
+      .then(function(a){r.setAnnotations(a)})
+      .catch(function(){err.hidden=false;err.textContent="Annotation register offline right now."});
+    r.on("createAnnotation",function(a){send("POST",API,a).catch(oops)});
+    r.on("updateAnnotation",function(a){send("PUT",API,a).catch(oops)});
+    r.on("deleteAnnotation",function(a){send("DELETE",API+"?id="+encodeURIComponent(a.id)).catch(oops)});
+  }
+  function done(name){
+    box.classList.add("done");
+    asLine.hidden=false;
+    asLine.querySelector("b").textContent=name;
+  }
+  form.addEventListener("submit",function(ev){
+    ev.preventDefault();
+    var name=input.value.trim();
+    if(!name)return;
+    try{localStorage.setItem(KEY,name)}catch(e){}
+    done(name);start(name);
+  });
+  document.getElementById("vbook-change").addEventListener("click",function(){
+    try{localStorage.removeItem(KEY)}catch(e){}
+    box.classList.remove("done");asLine.hidden=true;start(null);input.focus();
+  });
+  var saved=null;
+  try{saved=localStorage.getItem(KEY)}catch(e){}
+  if(saved){done(saved);start(saved)}else{start(null)}
 })();
 </script>` : ""}
 </body>
