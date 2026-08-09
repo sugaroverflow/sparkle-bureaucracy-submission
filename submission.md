@@ -456,6 +456,7 @@ Working in the open wasn't a publishing chore — it was the method. The thinkin
 
 Before the diary was a diary, it was a room: `field-notes: fatima`, public by design, with an explicit contract that anything posted could become public. **294 field notes · 15 arXiv papers · 10 external repos · ~30 tools logged.** The room's own marker taxonomy tells the story of a year's attention: 📔 field notes ×137, 🔗 links ×41, 📥 papers ×37, 💾 tools ×20, 💡 ideas ×15, ❓ questions ×4. The notes themselves, in order, by kind:
 
++++ Field notes
 + 14 Dec 2025 | field notes room opens publicly | Fatima launches a public Matrix field-notes channel with open history so bots can read it and posts can be shared.
 + 14 Dec 2025 | Mastodon hires for trust and safety | Field note on Mastodon hiring a Community Director focused on Trust and Safety to reflect its many communities' needs.
 + 14 Dec 2025 | Hannah Aubry and decentralised social platforms | Curiosity about Hannah's career path, plus Fatima's older Open Source Summit talk on Mastodon, Bluesky and decentralised protocols.
@@ -554,8 +555,7 @@ Before the diary was a diary, it was a room: `field-notes: fatima`, public by de
 + 1 Apr 2026 | two untagged link drops | Shares two x.com links with no commentary.
 + 1 Apr 2026 | the Claude Code source leak | Wants to play with the leaked Claude Code source, via Latent Space's writeup.
 
-#### Ideas
-
++++ Ideas
 + 14 Dec 2025 | idea: newsletters piped into Matrix | An app that forwards newsletters sent to a dedicated Gmail alias into her Matrix channel and eventually her blog.
 + 14 Dec 2025 | idea: algorithmic pricing watchdog | A system that monitors retailers, scrapes prices and flags patterns suggesting personalised or dynamic pricing.
 + 14 Dec 2025 | idea: dynamic pricing auditor | A tool simulating multiple personas across locations, devices and histories to test whether prices are adjusted unfairly.
@@ -571,8 +571,7 @@ Before the diary was a diary, it was a room: `field-notes: fatima`, public by de
 + 10 Mar 2026 | idea: a house guide one-pager | Suggests a short house guide on the cohort website; Ed notes the example is for a coworking space.
 + 10 Mar 2026 | idea: zapier for agent swarms | Wants visual orchestration for swarms, then finds aitable, dazl, deforge, mindpal, langflow and sim already doing it.
 
-#### Papers
-
++++ Papers
 + 14 Dec 2025 | HBS paper on dynamic pricing harm | Harvard Business School paper arguing pricing algorithms pose policy problems far broader than the collusion regulators currently focus on.
 + 14 Dec 2025 | arXiv: EU and US pricing regulation | Comparative working paper on whether EU and US privacy law, DSA and DMA restrain online algorithmic pricing.
 + 14 Dec 2025 | arXiv: the RLHF trilemma | Paper formalising that representativeness, tractability and robustness cannot all hold at once, explaining RLHF pathologies via complexity bounds.
@@ -588,8 +587,7 @@ Before the diary was a diary, it was a room: `field-notes: fatima`, public by de
 + 9 Mar 2026 | bare arXiv paper drop | Shares arXiv 2505.04171 with no commentary.
 + 19 Mar 2026 | arXiv: corrigibility in multi-agent games | Shares a paper on corrigibility and alignment in multi agent games.
 
-#### Tools
-
++++ Tools
 + 14 Dec 2025 | tool: CLoD multi-model gateway | One API to 26 plus models with built-in programmable cost, safety and compliance controls.
 + 14 Dec 2025 | tool: Labelbox data labelling | Labelbox labels data and evaluates models, tagging images, rating responses and transcribing audio for more accurate systems.
 + 14 Dec 2025 | tool: Mira recording smart glasses | Glasses that record conversations and surface details through a private display, from the team behind the viral spy glasses.
@@ -740,33 +738,25 @@ Each event type does a different job, learned from what worked this year:
 | month | title | description |
 | --- | --- | --- |
 | Aug 2026 | Prototype assessment | This submission; the record freezes, the network doesn't. |
-| Aug–Sep 2026 | The owed outputs | Demo Campaign Factory with Hannah at the Civic Tech Field Guide's vibe-code session; write the Evaluation 2030 follow-up blog for CHEW. |
+| Late Aug 2026 | Campaign Factory demo at CTFG | The vibe-code show & tell at the Civic Tech Field Guide, with Hannah. |
+| Aug 2026 | CHEW follow-up blog | The Evaluation 2030 write-up the festival has asked for three times. |
 | Sep 2026 | AI agents for good — hackathon | The network's first event under its own banner: prototype a different future, with suggested civic topics and challenges. |
 | Sep 2026 | Oxfam GB workshop | Campaign Factory with Oxfam's campaign engagement team, co-run with Asil Sidahmed — inbound from the Campaign Factory demo at the conference. |
 | Sep–Dec 2026 | Hack nights, monthly | The Clawclub rhythm under the network's own banner — build together, share what's new, bring hardware. |
 | Oct 2026 | Demo night | Projects from the hackathon, plus anyone else with something to show. |
-| Oct 2026 | Lovelace brown-bag + team talks | The Lovelace AI-optimism debate (an invitation that came out of the Evaluation 2030 keynote) and Paul Silcock's team session (from Agent Craft). |
-| Oct 2026 | Faculty flagship brainstorm | The flagship chosen with faculty against the written criteria: clearest civic community, smallest credible version, strongest evidence path. |
+| Oct 2026 | Lovelace brown-bag | The AI-optimism debate with Lovelace's researchers — an invitation that came out of the Evaluation 2030 keynote. |
+| Oct 2026 | Paul Silcock team session | The production-agents team presentation — an invitation from Agent Craft 2026. |
+| Autumn 2026 | The name decision | Whether "Sparkle Bureaucracy" stays the network's name follows what the flagship becomes. |
 | Nov–Dec 2026 | Flagship: smallest credible run | The chosen experiment runs at its smallest honest size, evidence-first. |
 | Dec 2026 | Winter social, built as an experience | The experiments are the social infrastructure — game night rules apply. |
-| Winter 2026–27 | The name decision | Whether "Sparkle Bureaucracy" stays the network's name follows what the flagship becomes. |
-
-#### The flagship — what it is, and why it matters
-
-The network needs one tangible artifact that headlines it — its pol.is, in the vTaiwan analogy. This is a credibility decision as much as a product decision: a network described in words asks people to trust the founder's judgment; a network with a flagship shows it. (The whole year's hardest learning was about exactly this.) The candidates, from the Hannah session: **reimagining grant-making** · **Campaign Factory, grown up** — already live, already partnered, already testimonialed · **a game** · and Peyman's nudge, **"What can AI do for me?" as a product** — an agent that shadows your working patterns and suggests the tools, workflows, and skills that would amplify you: an upskilling diagnostic that meets people inside their actual work.
-
-Behind these sit the nine specified experiments with their two recommended routes: the **canonical tool route** (Public Voice Customs — "pol.is for synthetic-voice-era consultations"; Mirror Commons — consentful synthetic representation; The Exception Window) and the **fellowship evidence route** (The Exception Window first — the verification/exception ritual that inherits Sparkle Border Authority's grammar). Each candidate already has a smallest-credible-run spec, artifacts, evidence lists, and named risks — the decision is deliberately queued with faculty rather than made alone.
-
-#### Named potential partners and sponsors
-
-Public in the diary since April: Faculty · TPXimpact · Creative Bureaucracy Festival · Studio Sanshin · OneTeamGov · MHCLG Local AI · Google.org AI Government Innovation · Knight Foundation · James Plunkett / Kinship Works · UKAuthority.
 
 #### Open questions carried forward
 
 ? The name | "Sparkle Bureaucracy" may not be the network's next-phase name; the mission is settled even if the label isn't. The rename decision follows the flagship decision.
-? The flagship | To be chosen with faculty input against the selection criteria already written: clearest civic community, smallest credible version, strongest evidence path.
+? The flagship | The network needs one tangible artifact that headlines it — its pol.is, in the vTaiwan analogy — and it's a credibility decision as much as a product one. Candidates from the Hannah session: reimagining grant-making · Campaign Factory, grown up · a game · "What can AI do for me?" as a product. Behind them sit the nine specified experiments; chosen with faculty against the written criteria.
 ? The seven founder questions | Left open by the research sprint on purpose — is emerging technology part of sparkle's definition or just its current material? Can moral discomfort count as sparkle? Must power be transferred, or is making it legible enough?
 ? The horizon | Govtech. The window work of the next year builds the network and credibility the horizon work will need.
+? Partners & sponsors | Named potentials, public in the diary since April: Faculty · TPXimpact · Creative Bureaucracy Festival · Studio Sanshin · OneTeamGov · MHCLG Local AI · Google.org · Knight Foundation · James Plunkett / Kinship Works · UKAuthority.
 
 ## 06 | Addressing the criteria
 

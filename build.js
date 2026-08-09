@@ -134,10 +134,19 @@ for (const ln of raw) {
     else { flushBuf(); buf = { k: "table", rows: [t] }; }
     continue;
   }
-  if ((m = /^\+\s+([^|]+)\|([^|]+)\|(.+)$/.exec(t))) {
+  if ((m = /^\+\+\+\s+(.*)$/.exec(t))) {
     flushBuf();
-    (drawer ? drawer.blocks : node ? node.blocks : P.blocks).push(
-      { k: "note", d: m[1].trim(), title: m[2].trim(), sum: m[3].trim() });
+    (drawer ? drawer.blocks : node ? node.blocks : P.blocks).push({ k: "ngroup", t: m[1].trim() });
+    continue;
+  }
+  if ((m = /^\+\s+(.+)$/.exec(t)) && !t.startsWith("+++")) {
+    flushBuf();
+    const seg = m[1].split("|").map((x) => x.trim());
+    if (seg.length >= 3) {
+      (drawer ? drawer.blocks : node ? node.blocks : P.blocks).push(
+        { k: "note", d: seg[0], title: seg[1], sum: seg[2],
+          url: seg[3] && seg[3] !== "-" ? seg[3] : "", body: seg[4] || "" });
+    }
     continue;
   }
   if ((m = /^\?\s+([^|]+)\|(.+)$/.exec(t))) {
@@ -182,7 +191,7 @@ function renderMonths(rows) {
     `<div class="mcard" data-hue="${HUES[i % HUES.length]}">
       <span class="m-when">${inline(r[0])}</span>
       <b>${inline(r[1])}</b>
-      <p>${inline(r[2] || "")}</p>
+      ${r[2] ? `<details class="m-more"><summary>details</summary><p>${inline(r[2])}</p></details>` : ""}
     </div>`).join("") + "</div>";
 }
 
@@ -196,6 +205,16 @@ function renderTable(rows) {
   const th = head.map((h) => "<th>" + (h ? inline(h) : "") + "</th>").join("");
   const tb = body.map((r) => "<tr>" + r.map((c) => "<td>" + inline(c) + "</td>").join("") + "</tr>").join("");
   return '<div class="tbl' + (narrow ? " narrow" : "") + '"><table><thead><tr>' + th + "</tr></thead><tbody>" + tb + "</tbody></table></div>";
+}
+
+function renderNote(b) {
+  const head = '<span class="fn-d">' + inline(b.d) + '</span><div class="fn-b"><b>' +
+    inline(b.title) + "</b><span>" + inline(b.sum) + "</span></div>";
+  if (!b.body && !b.url) return '<div class="fnote">' + head + "</div>";
+  const link = b.url ? ' <a href="' + b.url.replace(/"/g, "&quot;") + '">' +
+    esc(b.url.replace(/^https?:\/\/(www\.)?/, "").split("/")[0]) + " ↗</a>" : "";
+  return '<details class="fnote fnx"><summary>' + head + '</summary><p class="fn-full">' +
+    inline(b.body || b.sum) + link + "</p></details>";
 }
 
 function renderBlocks(blocks) {
@@ -213,13 +232,21 @@ function renderBlocks(blocks) {
   const closeN = () => { if (notes.length) { out.push('<div class="fnotes">' + notes.join("") + "</div>"); notes = []; } };
   const closeQ = () => { if (qcs.length) { out.push('<div class="qcards">' + qcs.join("") + "</div>"); qcs = []; } };
   const closeAll = () => { closeL(); closeF(); closeO(); closeN(); closeQ(); };
-  for (const b of blocks) {
+  for (let bi = 0; bi < blocks.length; bi++) {
+    const b = blocks[bi];
+    if (b.k === "ngroup") {
+      closeAll();
+      const rows = [];
+      while (bi + 1 < blocks.length && blocks[bi + 1].k === "note") rows.push(renderNote(blocks[++bi]));
+      out.push('<details class="fncat"><summary><span>' + inline(b.t) + "</span><i>" + rows.length +
+        " entries</i></summary><div class=\"fnotes\">" + rows.join("") + "</div></details>");
+      continue;
+    }
     if (b.k === "li") { closeF(); closeO(); closeN(); closeQ(); list.push("<li>" + inline(b.t) + "</li>"); continue; }
     if (b.k === "oli") { closeF(); closeL(); closeN(); closeQ(); ol.push("<li>" + inline(b.t) + "</li>"); continue; }
     if (b.k === "note") {
       closeL(); closeF(); closeO(); closeQ();
-      notes.push('<div class="fnote"><span class="fn-d">' + inline(b.d) +
-        '</span><div class="fn-b"><b>' + inline(b.title) + "</b><span>" + inline(b.sum) + "</span></div></div>");
+      notes.push(renderNote(b));
       continue;
     }
     if (b.k === "qc") {
@@ -447,8 +474,10 @@ code{font:400 .84em/1.3 var(--util);background:#17122c0f;padding:.16em .38em;bor
 .hero{padding-block:clamp(2.25rem,6vw,4rem) clamp(1.5rem,4vw,2.5rem)}
 .presub{font:600 .6875rem/1.4 var(--util);letter-spacing:.24em;text-transform:uppercase;
   color:var(--gold);margin:0 0 .6rem}
-.subname{font:900 clamp(1.15rem,2.6vw,1.7rem)/1.2 var(--display);letter-spacing:.16em;
-  text-transform:uppercase;color:var(--gold);margin:.2rem 0 1rem}
+.lockup{font:900 clamp(1.25rem,3vw,2rem)/1.3 var(--display);letter-spacing:.05em;
+  text-transform:uppercase;color:#fff;margin:0 0 1.1rem}
+.lockup .sep{color:var(--gold);margin:0 .3em;font-weight:800}
+.lockup .b{color:var(--magenta);-webkit-text-stroke:1.5px var(--ink);paint-order:stroke fill}
 .wordmark{font-size:clamp(2.7rem,10.5vw,6.8rem);line-height:.94;letter-spacing:-.046em;font-weight:900;
   margin:0 0 1.1rem;color:#fff}
 .wordmark span{display:block}
@@ -655,6 +684,24 @@ h2.bare{margin:2.4rem 0 1rem}
   font:600 .6875rem/1.7 var(--util);color:var(--h,var(--gold))}
 
 /* ── field notes ─────────────────────────────────────────── */
+.fncat{margin:.8rem 0;max-width:56rem;border:2px solid var(--edge)}
+.fncat>summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;
+  align-items:center;gap:1rem;padding:.75rem .9rem}
+.fncat>summary::-webkit-details-marker{display:none}
+.fncat>summary:hover{background:#ffffff0d}
+.fncat>summary span{font:800 .9375rem/1.3 var(--display);letter-spacing:-.01em;color:var(--light)}
+.fncat>summary span::after{content:"  +";color:var(--gold)}
+.fncat[open]>summary span::after{content:"  \\2013"}
+.fncat>summary i{font:600 .625rem/1 var(--util);letter-spacing:.1em;text-transform:uppercase;
+  font-style:normal;color:var(--gold);border:1px solid var(--edge);border-radius:999px;padding:.4em .7em}
+.fncat[open]>summary{border-bottom:2px solid var(--edge)}
+.fncat .fnotes{border:0;margin:0;max-height:34rem;overflow-y:auto}
+.fnx>summary{cursor:pointer;list-style:none}
+.fnx>summary::-webkit-details-marker{display:none}
+.fn-full{margin:0;padding:.15rem .8rem .75rem 9.1rem;font-size:.8438rem;line-height:1.6;
+  color:var(--light)}
+.fn-full a{color:var(--gold)}
+@media(max-width:40rem){.fn-full{padding-left:.8rem}}
 .fnotes{margin:1.3rem 0 1.8rem;max-width:56rem;border:2px solid var(--edge)}
 .fnote{display:grid;grid-template-columns:7.5rem minmax(0,1fr);gap:.8rem;align-items:baseline;
   padding:.55rem .8rem;border-bottom:1px solid var(--edge)}
@@ -679,14 +726,21 @@ h2.bare{margin:2.4rem 0 1rem}
 .qcard b{display:block;font-size:1rem;letter-spacing:-.018em;margin-bottom:.4rem}
 .qcard p{margin:0;font-size:.875rem;line-height:1.55}
 
-/* ── month roadmap timeline ──────────────────────────────── */
-.mroad{position:relative;display:grid;gap:1.4rem;max-width:46rem;
-  margin:1.6rem 0 2.4rem;padding-left:clamp(1.4rem,3vw,2.2rem)}
-.mroad::before{content:"";position:absolute;left:0;top:.6rem;bottom:.6rem;width:3px;background:var(--edge)}
-.mcard{position:relative;background:var(--paper);color:var(--ink);border:2px solid var(--ink);
-  box-shadow:5px 5px 0 var(--h);padding:0 0 .9rem}
-.mcard::after{content:"";position:absolute;left:calc(-1 * clamp(1.4rem,3vw,2.2rem) - 6px);top:.85rem;
+/* ── month roadmap: sideways timeline ────────────────────── */
+.mroad{position:relative;display:grid;grid-auto-flow:column;grid-auto-columns:minmax(13.5rem,15rem);
+  gap:1rem;margin:1.6rem 0 2.4rem;padding:1.7rem .3rem 1.2rem;overflow-x:auto;
+  scroll-snap-type:x proximity;scrollbar-width:thin;align-items:start}
+.mroad::before{content:"";position:absolute;left:0;right:0;top:.6rem;height:3px;background:var(--edge)}
+.mcard{position:relative;scroll-snap-align:start;background:var(--paper);color:var(--ink);
+  border:2px solid var(--ink);box-shadow:5px 5px 0 var(--h);padding:0 0 .7rem}
+.mcard::after{content:"";position:absolute;left:.85rem;top:-1.62rem;
   width:14px;height:14px;border-radius:50%;background:var(--h);border:3px solid var(--midnight)}
+.m-more summary{cursor:pointer;list-style:none;font:600 .5625rem/1 var(--util);letter-spacing:.12em;
+  text-transform:uppercase;color:var(--hi);padding:.15rem .85rem .1rem}
+.m-more summary::-webkit-details-marker{display:none}
+.m-more summary::after{content:" +"}
+.m-more[open] summary::after{content:" \\2013"}
+.m-more p{margin:.3rem 0 0;padding:0 .85rem;font-size:.8438rem;line-height:1.55;color:var(--soft)}
 .m-when{display:block;font:600 .625rem/1 var(--util);letter-spacing:.13em;text-transform:uppercase;
   background:var(--h);border-bottom:2px solid var(--ink);padding:.5rem .8rem;margin-bottom:.7rem}
 .mcard b{display:block;font-size:1rem;letter-spacing:-.018em;padding:0 .85rem;margin-bottom:.35rem}
@@ -695,7 +749,9 @@ h2.bare{margin:2.4rem 0 1rem}
 /* ── thank-you cards ─────────────────────────────────────── */
 #part-08 .bullets{display:grid;gap:1rem;grid-template-columns:repeat(auto-fill,minmax(min(100%,17rem),1fr));
   max-width:none;align-items:start}
-@media(min-width:64rem){#part-08 .bullets{grid-template-columns:repeat(3,1fr)}}
+@media(min-width:64rem){#part-08 .bullets{grid-template-columns:repeat(3,1fr)}
+  #part-08 .bullets li:nth-child(7n+1){grid-column:span 2;font-size:.9375rem;padding:1.15rem 1.2rem}
+  #part-08 .bullets li:nth-child(9n+5){font-size:.8125rem}}
 #part-08 .bullets li{background:var(--paper);color:var(--ink);border:2px solid var(--ink);
   box-shadow:4px 4px 0 var(--h,var(--gold));padding:.95rem 1rem;margin:0;font-size:.875rem;
   line-height:1.55;transform:rotate(var(--rot,0deg))}
@@ -813,8 +869,7 @@ footer{border-top:2px solid var(--edge);background:#060919;color:#E7E4F4}
 <main id="annotatable">
 <header class="hero wrap" data-hue="magenta" id="part-00">
   <p class="eyebrow">Newspeak House · Political Technology Programme · Cohort 2025–26</p>
-  <h1 class="wordmark"><span>Prototype</span><span class="b">Submission</span></h1>
-  <p class="subname">Sparkle Bureaucracy</p>
+  <h1 class="lockup">Prototype Submission <span class="sep">»</span> <span class="b">Sparkle Bureaucracy</span></h1>
   ${missionBlocks.map((b, i) => `<p class="spine">${inline(b.t)}</p>`).join("\n  ")}
 
   <div class="permit">
