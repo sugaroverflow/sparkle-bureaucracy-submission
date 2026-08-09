@@ -207,6 +207,7 @@ function renderTable(rows) {
   return '<div class="tbl' + (narrow ? " narrow" : "") + '"><table><thead><tr>' + th + "</tr></thead><tbody>" + tb + "</tbody></table></div>";
 }
 
+let gCat = 0;
 function renderNote(b) {
   const head = '<span class="fn-d">' + inline(b.d) + '</span><div class="fn-b"><b>' +
     inline(b.title) + "</b><span>" + inline(b.sum) + "</span></div>";
@@ -238,8 +239,9 @@ function renderBlocks(blocks) {
       closeAll();
       const rows = [];
       while (bi + 1 < blocks.length && blocks[bi + 1].k === "note") rows.push(renderNote(blocks[++bi]));
-      out.push('<details class="fncat"><summary><span>' + inline(b.t) + "</span><i>" + rows.length +
-        " entries</i></summary><div class=\"fnotes\">" + rows.join("") + "</div></details>");
+      const hue = ["magenta", "gold", "violet", "aqua"][gCat++ % 4];
+      out.push('<details class="fncat" data-hue="' + hue + '"><summary><span class="fnc-l">' + inline(b.t) +
+        "</span><i>" + rows.length + " entries</i></summary><div class=\"fnotes\">" + rows.join("") + "</div></details>");
       continue;
     }
     if (b.k === "li") { closeF(); closeO(); closeN(); closeQ(); list.push("<li>" + inline(b.t) + "</li>"); continue; }
@@ -535,8 +537,8 @@ code{font:400 .84em/1.3 var(--util);background:#17122c0f;padding:.16em .38em;bor
   letter-spacing:.12em;text-transform:uppercase;color:var(--ink);background:var(--gold);border:2px solid var(--ink);
   border-radius:999px;padding:.8rem 1.15rem;box-shadow:4px 4px 0 var(--violet)}
 .xwalk summary::-webkit-details-marker{display:none}
-.xwalk summary span::after{content:"  +"}
-.xwalk[open] summary span::after{content:"  \\2013"}
+.xwalk summary>span::after{content:"  +"}
+.xwalk[open] summary>span::after{content:"  \\2013"}
 .xwalk summary:hover{transform:translate(2px,2px);box-shadow:2px 2px 0 var(--ink)}
 .xwalk>div{padding-top:1.2rem}
 
@@ -684,23 +686,29 @@ h2.bare{margin:2.4rem 0 1rem}
   font:600 .6875rem/1.7 var(--util);color:var(--h,var(--gold))}
 
 /* ── field notes ─────────────────────────────────────────── */
-.fncat{margin:.8rem 0;max-width:56rem;border:2px solid var(--edge)}
+.fncat{margin:1.2rem 0;max-width:56rem;background:var(--paper);color:var(--ink);
+  border:2px solid var(--ink);box-shadow:6px 6px 0 var(--h)}
 .fncat>summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;
-  align-items:center;gap:1rem;padding:.75rem .9rem}
+  align-items:center;gap:1rem;padding:.55rem .9rem;background:var(--h)}
 .fncat>summary::-webkit-details-marker{display:none}
-.fncat>summary:hover{background:#ffffff0d}
-.fncat>summary span{font:800 .9375rem/1.3 var(--display);letter-spacing:-.01em;color:var(--light)}
-.fncat>summary span::after{content:"  +";color:var(--gold)}
-.fncat[open]>summary span::after{content:"  \\2013"}
-.fncat>summary i{font:600 .625rem/1 var(--util);letter-spacing:.1em;text-transform:uppercase;
-  font-style:normal;color:var(--gold);border:1px solid var(--edge);border-radius:999px;padding:.4em .7em}
-.fncat[open]>summary{border-bottom:2px solid var(--edge)}
-.fncat .fnotes{border:0;margin:0;max-height:34rem;overflow-y:auto}
+.fnc-l{font:800 1rem/1.3 var(--display);letter-spacing:-.015em;color:var(--ink)}
+.fncat>summary>i{font:600 .625rem/1 var(--util);letter-spacing:.1em;text-transform:uppercase;
+  font-style:normal;background:#fff;border:2px solid var(--ink);border-radius:999px;
+  padding:.45em .7em;color:var(--ink);white-space:nowrap}
+.fncat>summary>i::after{content:" +"}
+.fncat[open]>summary>i::after{content:" \\2013"}
+.fncat[open]>summary{border-bottom:2px solid var(--ink)}
+.fncat .fnotes{border:0;margin:0;max-height:32rem;overflow-y:auto}
+.fncat .fnote{border-bottom:1px solid var(--line)}
+.fncat .fnote:hover{background:var(--gold-tint)}
+.fncat .fn-d{color:var(--hi)}
+.fncat .fn-b b{color:var(--ink)}
+.fncat .fn-b span{color:var(--soft)}
 .fnx>summary{cursor:pointer;list-style:none}
 .fnx>summary::-webkit-details-marker{display:none}
-.fn-full{margin:0;padding:.15rem .8rem .75rem 9.1rem;font-size:.8438rem;line-height:1.6;
-  color:var(--light)}
-.fn-full a{color:var(--gold)}
+.fnx[open]{background:var(--gold-tint)}
+.fn-full{margin:0;padding:.15rem .8rem .75rem 9.1rem;font-size:.8438rem;line-height:1.6;color:var(--ink)}
+.fn-full a{color:var(--hi)}
 @media(max-width:40rem){.fn-full{padding-left:.8rem}}
 .fnotes{margin:1.3rem 0 1.8rem;max-width:56rem;border:2px solid var(--edge)}
 .fnote{display:grid;grid-template-columns:7.5rem minmax(0,1fr);gap:.8rem;align-items:baseline;
