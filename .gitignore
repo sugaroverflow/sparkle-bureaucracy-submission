@@ -4,3 +4,4 @@ node_modules/
 .admin-token
 .env*
 .agents/
+.playwright-cli/

@@ -8,12 +8,16 @@ without moving the page faculty are annotating.
 
 ## Files
 
-- `outline.md` — source of truth. Structure, status tags (`[KEEP]` /
-  `[REVISE]` / `[NEW]`), word budgets, and `⚑` verification flags.
+- `submission.md` — **source of truth**: the submission content in the
+  00–06 structure. Parts are `## NN | Title`; timeline entries are
+  `### date | type | title` with `photos: N`, `**Field:** value` rows, and
+  `#### Evidence/Technical/Feedback` drawers; criteria are `### N | Title`
+  with `- [x]` checks. `@todo` and `⚑` markers gate submission mode.
+- `outline.md` — the draft-2 build outline, kept as an execution log.
 - `build.js` — the generator (plain Node, no deps; `npm run build`).
 - `public/index.html` — the built page. Never hand-edit; always rebuild.
-- `api/comments.js` — the comment register API (Vercel function backed by
-  Neon Postgres; the only npm dependency).
+- `api/annotations.js` / `api/comments.js` — annotation store (live) and the
+  dormant comment register (Vercel functions backed by Neon Postgres).
 
 ## Build
 

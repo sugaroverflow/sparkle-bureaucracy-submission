@@ -6,7 +6,7 @@
 <meta name="robots" content="noindex">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>✨</text></svg>">
 <title>25-26 Newspeak House - Prototype Submission: Sparkle Bureaucracy</title>
-<meta name="description" content="A network for closing the AI gap for civic communities, run as an experiment lab. Prototype submission, Newspeak House Political Technology Programme 2025-26.">
+<meta name="description" content="Sparkle Bureaucracy is a network of people using AI to prototype more optimistic futures. Prototype submission, Newspeak House Political Technology Programme 2025-26.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,300..900;1,14..32,300..700&display=swap" rel="stylesheet">
@@ -22,7 +22,6 @@
   --page:#FFFBF8; --ink:#17122C; --soft:#585272; --line:#17122c26;
   --midnight:#0A0E27;
 
-  /* same stacks as sparklebureaucracy.org */
   --display:"Inter",ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
   --text:var(--display);
   --util:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
@@ -57,7 +56,6 @@ code{font:400 .84em/1.3 var(--util);background:#17122c0f;padding:.16em .38em;bor
   @keyframes shift{to{background-position:300% 0}}
 }
 
-
 .rail{position:sticky;top:0;z-index:30;background:#fffbf8f2;backdrop-filter:blur(10px);
   border-bottom:2px solid var(--ink)}
 .rail-in{max-width:var(--wrap);margin:0 auto;padding:.45rem var(--pad);display:flex;gap:1rem;
@@ -72,21 +70,34 @@ code{font:400 .84em/1.3 var(--util);background:#17122c0f;padding:.16em .38em;bor
 .rail nav a:hover{background:var(--ht);color:var(--ink)}
 .rail nav a[aria-current=true]{background:var(--h);border-color:var(--ink);color:var(--ink)}
 .rail nav a[aria-current=true] i{color:var(--ink)}
-.discuss{font:600 .625rem/1 var(--util);letter-spacing:.1em;text-transform:uppercase;color:var(--ink);
-  text-decoration:none;white-space:nowrap;background:var(--gold);border:2px solid var(--ink);
-  border-radius:999px;padding:.55rem .85rem;box-shadow:3px 3px 0 var(--ink)}
-.discuss:hover{transform:translate(1px,1px);box-shadow:2px 2px 0 var(--ink);background:var(--gold)}
+.side-brand{display:none}
+
+@media(min-width:64rem){
+  body{padding-left:15rem}
+  .rail{position:fixed;top:0;left:0;bottom:0;width:15rem;border-right:2px solid var(--ink);border-bottom:0}
+  .rail-in{flex-direction:column;align-items:stretch;height:100%;padding:1.2rem .9rem;gap:1rem;max-width:none}
+  .rail nav{flex-direction:column;overflow:visible;overflow-y:auto;mask-image:none;gap:.2rem}
+  .rail nav a{white-space:normal;line-height:1.45;border-radius:.4rem}
+  .side-brand{display:block;font:900 1.15rem/1.05 var(--display);letter-spacing:-.03em;
+    padding:.2rem .3rem;color:var(--ink);text-decoration:none}
+  .side-brand b{color:var(--magenta);-webkit-text-stroke:1.5px var(--ink);paint-order:stroke fill;display:block}
+  .side-brand small{display:block;font:400 .5rem/1.6 var(--util);letter-spacing:.14em;
+    text-transform:uppercase;color:var(--soft);margin-top:.5rem}
+  .side-foot{margin-top:auto;font:400 .5625rem/1.7 var(--util);letter-spacing:.08em;color:var(--soft)}
+}
 
 .hero{padding-block:clamp(2.25rem,6vw,4rem) clamp(1.5rem,4vw,2.5rem)}
-.wordmark{font-size:clamp(2.7rem,10.5vw,7.4rem);line-height:.94;letter-spacing:-.046em;font-weight:900;margin:0 0 1.1rem}
+.presub{font:600 .6875rem/1.4 var(--util);letter-spacing:.24em;text-transform:uppercase;
+  color:var(--ink);margin:0 0 .6rem}
+.wordmark{font-size:clamp(2.7rem,10.5vw,6.8rem);line-height:.94;letter-spacing:-.046em;font-weight:900;margin:0 0 1.1rem}
 .wordmark span{display:block}
 .wordmark .b{color:var(--magenta);-webkit-text-stroke:2px var(--ink);paint-order:stroke fill}
-.lede{font-size:clamp(1.08rem,2.3vw,1.35rem);line-height:1.48;letter-spacing:-.014em;max-width:34rem;margin:0 0 2.2rem;color:#3A3355}
-.hero-top{display:grid;gap:1.4rem 2.5rem;align-items:start;margin-bottom:2.2rem}
-@media(min-width:64rem){.hero-top{grid-template-columns:minmax(0,1fr) auto}}
+.spine{max-width:40rem;font-size:clamp(1.05rem,2.2vw,1.28rem);line-height:1.5;letter-spacing:-.012em;
+  margin:0 0 .6rem;color:#3A3355}
+.spine+.spine{font-size:.9375rem;color:var(--soft)}
 
 .permit{position:relative;border:2px solid var(--ink);background:#fff;box-shadow:8px 8px 0 var(--ink);
-  max-width:66rem;overflow:hidden}
+  max-width:66rem;overflow:hidden;margin-top:1.8rem}
 .permit>.foil{height:10px}
 .permit-grid{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);
   gap:clamp(1.1rem,3vw,2rem);padding:clamp(1.1rem,2.6vw,1.7rem)}
@@ -109,7 +120,6 @@ code{font:400 .84em/1.3 var(--util);background:#17122c0f;padding:.16em .38em;bor
 .fields dt{margin:0 0 .15rem;font:600 .5625rem/1.4 var(--util);letter-spacing:.14em;
   text-transform:uppercase;color:var(--soft)}
 .fields dd{margin:0;font:400 .875rem/1.4 var(--util)}
-.fields dd b{color:var(--magenta-ink)}
 .stamp{position:absolute;z-index:3;right:clamp(1rem,3vw,2.2rem);bottom:clamp(1.6rem,3vw,2.2rem);
   width:clamp(7.5rem,11vw,9.5rem);aspect-ratio:1;display:grid;place-content:center;gap:.3rem;
   text-align:center;padding:.9rem;color:var(--magenta-ink);border:3px double var(--magenta-ink);
@@ -130,85 +140,96 @@ code{font:400 .84em/1.3 var(--util);background:#17122c0f;padding:.16em .38em;bor
   .stamp{position:static;margin:1.2rem 0 0 auto;right:auto;bottom:auto;width:8.5rem}
 }
 
-.contents{padding-block:clamp(2rem,5vw,3.5rem)}
-.contents ol{list-style:none;margin:0;padding:0;display:grid;gap:.75rem;
-  grid-template-columns:repeat(auto-fill,minmax(min(100%,17rem),1fr))}
-.contents a{display:block;height:100%;padding:1rem;text-decoration:none;color:inherit;
-  background:var(--ht);border:2px solid var(--ink);box-shadow:4px 4px 0 var(--ink)}
-.contents a:hover{transform:translate(2px,2px);box-shadow:2px 2px 0 var(--ink);background:var(--h)}
-.contents i{font-style:normal;display:block;font:600 .625rem/1 var(--util);letter-spacing:.14em;
-  color:var(--hi);margin-bottom:.55rem}
-.contents b{display:block;font-weight:800;font-size:1rem;line-height:1.28;letter-spacing:-.021em;margin-bottom:.35rem}
-.contents em{font-size:.875rem;color:var(--soft);font-style:normal;line-height:1.45}
+.xwalk{margin:1.8rem 0 0;max-width:60rem}
+.xwalk summary{cursor:pointer;list-style:none;display:inline-block;font:600 .6875rem/1 var(--util);
+  letter-spacing:.12em;text-transform:uppercase;background:var(--gold);border:2px solid var(--ink);
+  border-radius:999px;padding:.8rem 1.15rem;box-shadow:4px 4px 0 var(--ink)}
+.xwalk summary::-webkit-details-marker{display:none}
+.xwalk summary span::after{content:"  +"}
+.xwalk[open] summary span::after{content:"  \2013"}
+.xwalk summary:hover{transform:translate(2px,2px);box-shadow:2px 2px 0 var(--ink)}
+.xwalk>div{padding-top:1.2rem}
 
 .part{border-top:2px solid var(--ink)}
 .part>.mrz{border-top:0;border-bottom:2px solid var(--ink)}
 .part-head{max-width:var(--wrap);margin:0 auto;padding:clamp(2rem,5vw,3.25rem) var(--pad) 0}
 .part-head h1{font-size:clamp(1.85rem,4.6vw,2.9rem);letter-spacing:-.034em;font-weight:900;margin-bottom:.75rem}
-.part-head .intro{max-width:38rem;color:var(--soft);margin:0}
 .part-body{max-width:var(--wrap);margin:0 auto;min-width:0;
   padding:clamp(1.6rem,3.5vw,2.5rem) var(--pad) clamp(3rem,7vw,5rem)}
 
 .reading{max-width:var(--measure)}
-.reading.lead{margin-bottom:2rem}
-.reading h3{font-size:1.0625rem;margin:1.8rem 0 .45rem}
-.sub{margin-bottom:2.4rem}
 h2{font-size:1.4rem;letter-spacing:-.026em;margin:0 0 .6rem;display:flex;gap:.65rem;align-items:baseline}
 h2.bare{margin:2.4rem 0 1rem}
-h2 .num{font:600 .6875rem/1.9 var(--util);color:var(--hi);font-style:normal;flex:none}
-.thesis{font-weight:800;font-size:1.22rem;line-height:1.38;letter-spacing:-.021em;border-left:6px solid var(--h,var(--magenta));padding-left:1rem}
-.aside{color:var(--soft);font-size:.9375rem}
-.broll{font:600 .625rem/1.6 var(--util);letter-spacing:.1em;text-transform:uppercase;
-  color:var(--magenta-ink);margin:1.2rem 0}
-.broll::before{content:"★ "}
-.bullets,.ord{list-style:none;padding:0;margin:0 0 1.05rem}
-.bullets li,.ord li{position:relative;padding-left:1.5rem;margin-bottom:.55rem}
+.bullets{list-style:none;padding:0;margin:0 0 1.05rem}
+.bullets li{position:relative;padding-left:1.5rem;margin-bottom:.55rem}
 .bullets li::before{content:"◆";position:absolute;left:0;top:.05em;font-size:.62em;color:var(--h,var(--magenta))}
-.ord{counter-reset:o}
-.ord li{counter-increment:o;padding-left:2.1rem}
-.ord li::before{content:counter(o,decimal-leading-zero);position:absolute;left:0;top:.12em;
-  font:600 .6875rem/1.7 var(--util);color:var(--hi,var(--magenta-ink))}
-.slot{font-size:.875rem;line-height:1.5;background:var(--gold-tint);border:2px dashed var(--gold-ink);
-  padding:.6rem .8rem;color:#6A5200}
-.slot b{display:inline-block;font:600 .5625rem/1 var(--util);letter-spacing:.12em;text-transform:uppercase;
-  background:var(--gold);border:1px solid var(--gold-ink);padding:.3em .45em;margin-right:.5em;
-  vertical-align:.08em;color:var(--ink)}
 
 .slip{margin:1.5rem 0;padding:1.1rem 1.25rem;background:var(--ht,var(--gold-tint));
   border:2px solid var(--ink);box-shadow:5px 5px 0 var(--h,var(--gold));transform:rotate(var(--rot,-.5deg));
-  font-weight:600;font-size:1.03rem;line-height:1.48;letter-spacing:-.011em}
+  font-weight:600;font-size:1.03rem;line-height:1.48;letter-spacing:-.011em;max-width:var(--measure)}
 .slip::before{content:"\201C";font-size:2.4rem;line-height:0;vertical-align:-.35em;
   color:var(--h,var(--gold));margin-right:.08em}
 .slip p{margin:0}
-.slips{display:grid;align-items:start;gap:1.5rem;grid-template-columns:repeat(auto-fill,minmax(min(100%,21rem),1fr))}
-.slips .slip{margin:0}
 
-.visa-grid{display:grid;align-items:start;gap:1.7rem;grid-template-columns:repeat(auto-fill,minmax(min(100%,24rem),1fr))}
+/* ── timeline ────────────────────────────────────────────── */
+.tl{position:relative;display:grid;gap:2.4rem;max-width:56rem;margin:2rem 0;
+  padding-left:clamp(1.1rem,3vw,2rem)}
+.tl::before{content:"";position:absolute;left:0;top:.5rem;bottom:.5rem;width:3px;
+  background:var(--ink);opacity:.85}
+.tl>.visa::before{content:"";position:absolute;left:calc(-1 * clamp(1.1rem,3vw,2rem) - 6px);top:1rem;
+  width:15px;height:15px;border-radius:50%;background:var(--h);border:3px solid var(--ink)}
 .visa{position:relative;background:#fff;border:2px solid var(--ink);box-shadow:6px 6px 0 var(--h);
-  transform:rotate(var(--rot,0deg));display:flex;flex-direction:column}
-.visa>header{display:flex;justify-content:space-between;align-items:center;gap:.6rem;background:var(--h);
-  border-bottom:2px solid var(--ink);padding:.5rem .85rem}
+  transform:rotate(var(--rot,0deg))}
+.visa>header{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:.4rem .8rem;
+  background:var(--h);border-bottom:2px solid var(--ink);padding:.5rem .85rem}
 .visa-date{font:600 .75rem/1 var(--util);letter-spacing:.05em;text-transform:uppercase;color:var(--ink)}
 .visa-date i{font-style:normal;opacity:.55;margin-left:.4em}
+.vbadge{font:600 .5625rem/1 var(--util);letter-spacing:.13em;text-transform:uppercase;
+  background:#fff;border:2px solid var(--ink);border-radius:999px;padding:.35em .65em}
 .visa-serial{font:400 .625rem/1 var(--util);letter-spacing:.1em;color:#17122cb3}
-.visa-body{padding:1rem 1.1rem 1.2rem;flex:1}
-.visa-body h3{font-size:1.1rem;letter-spacing:-.024em;margin:0 0 .6rem}
-.visa-body p{font-size:.9375rem;line-height:1.6;margin-bottom:.8rem}
+.visa-body{padding:1.1rem 1.2rem 1.3rem}
+.visa-body h3{font-size:1.25rem;letter-spacing:-.026em;margin:0 0 .7rem}
+.visa-body p{font-size:.9375rem;line-height:1.62;margin-bottom:.85rem;max-width:44rem}
+.visa-body .bullets li{font-size:.9375rem}
 .visa-body>*:last-child{margin-bottom:0}
-.visa-body .slip{font-size:1rem;box-shadow:3px 3px 0 var(--h);margin:1rem 0}
+.visa-body .slip{font-size:.97rem;box-shadow:3px 3px 0 var(--h);margin:1.1rem 0}
 .perf{height:9px;border-top:2px dashed var(--ink);
   background:radial-gradient(circle at 6px 4.5px,var(--page) 3.5px,#0000 3.6px) 0 0/12px 9px}
 
-.card-grid{display:grid;align-items:start;gap:1.6rem;grid-template-columns:repeat(auto-fill,minmax(min(100%,20rem),1fr))}
-.lcard{position:relative;background:var(--ht);border:2px solid var(--ink);box-shadow:6px 6px 0 var(--h);
-  padding:1.5rem 1.25rem 1.3rem}
-.lnum{position:absolute;top:-.85rem;left:1rem;font:600 .75rem/1 var(--util);background:var(--h);
-  border:2px solid var(--ink);border-radius:999px;padding:.45em .7em}
-.lcard h3{font-size:1.1rem;letter-spacing:-.024em;margin:.35rem 0 .6rem}
-.lcard p{font-size:.9375rem;line-height:1.6;margin-bottom:.8rem}
-.lcard>*:last-child{margin-bottom:0}
+.efields{margin:1rem 0;display:grid;gap:0;max-width:44rem}
+.efields>div{display:grid;grid-template-columns:10rem minmax(0,1fr);gap:0 1rem;
+  padding:.5rem 0;border-top:2px solid var(--line)}
+.efields>div:last-child{border-bottom:2px solid var(--line)}
+.efields dt{font:600 .5625rem/1.7 var(--util);letter-spacing:.12em;text-transform:uppercase;color:var(--hi)}
+.efields dd{margin:0;font-size:.9375rem;line-height:1.55}
+@media(max-width:34rem){.efields>div{grid-template-columns:1fr;gap:.1rem}}
 
-.sheet{list-style:none;margin:0;padding:0;display:grid;gap:1.3rem}
+.shots{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,9.5rem),1fr));gap:.55rem;margin:1.1rem 0}
+.shots img{width:100%;aspect-ratio:8/5;object-fit:cover;border:2px solid var(--ink);
+  cursor:zoom-in;background:var(--ht);display:block}
+.shots img:hover{box-shadow:3px 3px 0 var(--h)}
+
+.lightbox{border:2px solid var(--ink);padding:0;background:#fff;box-shadow:8px 8px 0 var(--ink);
+  max-width:min(92vw,70rem)}
+.lightbox::backdrop{background:#0A0E27d9}
+.lightbox img{display:block;max-width:100%;max-height:82vh}
+.lightbox button{position:absolute;top:.5rem;right:.5rem;font:600 .75rem/1 var(--util);
+  background:var(--gold);border:2px solid var(--ink);border-radius:999px;padding:.5em .7em;
+  cursor:pointer;box-shadow:2px 2px 0 var(--ink)}
+
+.drawer{margin:.75rem 0;border:2px solid var(--line);max-width:44rem}
+.drawer summary{cursor:pointer;list-style:none;font:600 .625rem/1 var(--util);letter-spacing:.13em;
+  text-transform:uppercase;padding:.65rem .85rem;background:var(--ht);color:var(--hi)}
+.drawer summary::-webkit-details-marker{display:none}
+.drawer summary::after{content:"  +";float:right}
+.drawer[open] summary::after{content:"  \2013"}
+.drawer[open] summary{border-bottom:2px solid var(--line)}
+.drawer .din{padding:.85rem .95rem .5rem}
+.drawer .din p,.drawer .din li{font-size:.9375rem;line-height:1.58}
+.drawer .din .slip{font-size:.9375rem}
+
+/* ── criteria sheet ──────────────────────────────────────── */
+.sheet{list-style:none;margin:1.6rem 0;padding:0;display:grid;gap:1.3rem;max-width:60rem}
 .crit{display:grid;grid-template-columns:6.5rem 1fr;background:#fff;border:2px solid var(--ink);
   box-shadow:6px 6px 0 var(--h)}
 .crit-mark{background:var(--ht);border-right:2px solid var(--ink);padding:1.1rem .8rem;display:grid;
@@ -217,41 +238,34 @@ h2 .num{font:600 .6875rem/1.9 var(--util);color:var(--hi);font-style:normal;flex
 .crit-mark i{font:600 .5rem/1 var(--util);letter-spacing:.14em;text-transform:uppercase;color:var(--soft);
   font-style:normal}
 .crit-body{padding:1.15rem 1.35rem 1.25rem;min-width:0}
-.crit-body h3{font-size:1.15rem;letter-spacing:-.026em;margin:0 0 .5rem}
+.crit-body h3{font-size:1.15rem;letter-spacing:-.026em;margin:0 0 .7rem}
 .crit-body p{font-size:.9375rem;line-height:1.6;margin-bottom:.8rem}
 .crit-body>*:last-child{margin-bottom:0}
+.crit-body .slip{font-size:.95rem;box-shadow:3px 3px 0 var(--h)}
 @media(max-width:34rem){.crit{grid-template-columns:1fr}
   .crit-mark{border-right:0;border-bottom:2px solid var(--ink);grid-auto-flow:column;
     justify-content:start;gap:.7rem;align-items:center;padding:.6rem .9rem}}
+.checks{list-style:none;margin:0 0 1rem;padding:0}
+.checks li{position:relative;padding-left:1.7rem;margin-bottom:.45rem;font-size:.9375rem;line-height:1.55}
+.checks li::before{content:"✓";position:absolute;left:0;top:0;font-weight:800;color:var(--aqua-ink)}
 
-.panel{background:var(--ht);border:2px solid var(--ink);box-shadow:6px 6px 0 var(--h);
-  padding:1.35rem 1.45rem;margin-bottom:1.7rem;max-width:52rem}
-.panel>.reading{max-width:none}
-.chip-block{margin:0 0 1.9rem;max-width:60rem}
-.chip-lead{max-width:var(--measure);margin-bottom:.7rem}
-.chips{display:flex;flex-wrap:wrap;gap:.5rem}
-.chips.wide{margin:.4rem 0 1.8rem}
-.chip{font:600 .75rem/1.35 var(--text);background:#fff;border:2px solid var(--ink);
-  border-radius:999px;padding:.5em .9em;max-width:100%}
-.chip:nth-child(5n+1){box-shadow:2px 2px 0 var(--magenta)}
-.chip:nth-child(5n+2){box-shadow:2px 2px 0 var(--violet)}
-.chip:nth-child(5n+3){box-shadow:2px 2px 0 var(--aqua)}
-.chip:nth-child(5n+4){box-shadow:2px 2px 0 var(--cyan)}
-.chip:nth-child(5n+5){box-shadow:2px 2px 0 var(--gold)}
-.scope{display:grid;gap:1.5rem;grid-template-columns:repeat(auto-fit,minmax(min(100%,20rem),1fr));
-  margin-bottom:1.8rem}
-.scope-panel{background:var(--ht);border:2px solid var(--ink);box-shadow:6px 6px 0 var(--h);
-  padding:1.25rem 1.35rem}
-.scope-panel h3{font-size:1.1rem;margin:0 0 .85rem}
+/* ── tables ──────────────────────────────────────────────── */
+.tbl{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:1.3rem 0 1.9rem;
+  border:2px solid var(--ink);box-shadow:6px 6px 0 var(--h);background:#fff;
+  max-width:100%;width:100%}
+.tbl table{border-collapse:collapse;width:100%;min-width:34rem;font-size:.875rem}
+.tbl th{background:var(--h);border-bottom:2px solid var(--ink);text-align:left;
+  padding:.6rem .8rem;font:600 .5625rem/1.3 var(--util);letter-spacing:.13em;
+  text-transform:uppercase;color:var(--ink);vertical-align:bottom}
+.tbl td{border-bottom:2px solid var(--line);border-right:2px solid var(--line);
+  padding:.75rem .8rem;vertical-align:top;line-height:1.55}
+.tbl td:last-child,.tbl th:last-child{border-right:0}
+.tbl tr:last-child td{border-bottom:0}
+.tbl td:first-child{background:var(--ht);font-weight:600;white-space:normal;min-width:8.5rem}
+.tbl code{font-size:.8em}
 
-.transcript summary{cursor:pointer;list-style:none;display:inline-block;font:600 .6875rem/1 var(--util);
-  letter-spacing:.12em;text-transform:uppercase;background:var(--h);border:2px solid var(--ink);
-  border-radius:999px;padding:.8rem 1.15rem;box-shadow:4px 4px 0 var(--ink)}
-.transcript summary::-webkit-details-marker{display:none}
-.transcript summary span::after{content:"  +"}
-.transcript[open] summary span::after{content:"  \2013"}
-.transcript summary:hover{transform:translate(2px,2px);box-shadow:2px 2px 0 var(--ink)}
-.transcript .reading{padding-top:2rem}
+.todo{display:inline-block;font:600 .625rem/1.3 var(--util);letter-spacing:.09em;text-transform:uppercase;
+  background:var(--gold);border:1px solid var(--ink);padding:.1em .4em;margin:0 .15em;color:var(--ink)}
 
 footer{border-top:2px solid var(--ink);background:var(--midnight);color:#E7E4F4}
 .foot-in{max-width:var(--wrap);margin:0 auto;padding:clamp(2rem,5vw,3rem) var(--pad);display:flex;
@@ -262,94 +276,7 @@ footer{border-top:2px solid var(--ink);background:var(--midnight);color:#E7E4F4}
 .foot-stars{font-size:1.15rem;letter-spacing:.4em;
   background:var(--foil);-webkit-background-clip:text;background-clip:text;color:#0000}
 
-@media(max-width:34rem){
-  .status{grid-template-columns:1fr;gap:.45rem}
-  .status>.tag{justify-self:start;margin-top:0}
-}
-@media print{
-  .rail,.discuss,.foil{display:none}
-  body{background:#fff}
-  .visa,.lcard,.crit,.panel,.slip,.permit,.scope-panel{box-shadow:none;transform:none;break-inside:avoid}
-  .part{break-before:page}
-  a{color:var(--ink)}
-}
-/* ── build apparatus ─────────────────────────────────────── */
-.status{display:grid;grid-template-columns:5.6rem minmax(0,1fr);gap:0 1rem;align-items:start;
-  margin:0 0 1.15rem;max-width:calc(var(--measure) + 6.6rem)}
-.status>.tag{font:600 .5625rem/1 var(--util);letter-spacing:.12em;text-transform:uppercase;
-  border:2px solid var(--ink);padding:.42em .3em;text-align:center;margin-top:.22em}
-.status[data-tag=keep]>.tag{background:var(--aqua-tint);color:var(--aqua-ink)}
-.status[data-tag=revise]>.tag{background:var(--gold-tint);color:var(--gold-ink)}
-.status[data-tag=new]>.tag{background:var(--magenta-tint);color:var(--magenta-ink)}
-.status>.txt>*:last-child{margin-bottom:0}
-.status.plain{grid-template-columns:1fr;max-width:var(--measure)}
-.status.plain>.tag{display:none}
-
-.flagbox{display:grid;grid-template-columns:1.8rem minmax(0,1fr);gap:0 .7rem;margin:1.15rem 0 1.5rem;
-  max-width:calc(var(--measure) + 2.8rem);background:var(--cyan-tint);
-  border:2px solid var(--ink);border-left-width:7px;padding:.85rem 1rem}
-.flagbox>.fm{font:600 1rem/1.2 var(--util);color:var(--cyan-ink);text-align:center}
-.flagbox p{margin:0 0 .5rem;font-size:.9375rem;line-height:1.55}
-.flagbox p:last-child{margin-bottom:0}
-.flag-inline{display:inline-block;font:600 .6875rem/1.4 var(--util);color:var(--cyan-ink);
-  background:var(--cyan-tint);border:1px solid var(--cyan-ink);padding:.1em .4em;margin:0 .15em}
-
-.budget{font:600 .5625rem/1 var(--util);letter-spacing:.13em;text-transform:uppercase;
-  color:var(--hi);border:2px solid var(--ink);background:var(--ht);padding:.5em .65em;
-  display:inline-block;margin-top:.9rem}
-
-/* ── tables ──────────────────────────────────────────────── */
-.tbl{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:1.3rem 0 1.9rem;
-  border:2px solid var(--ink);box-shadow:6px 6px 0 var(--h);background:#fff;
-  max-width:100%;width:100%}
-.tbl table{border-collapse:collapse;width:100%;min-width:52rem;font-size:.875rem}
-.tbl.narrow table{min-width:34rem}
-.tbl th{background:var(--h);border-bottom:2px solid var(--ink);text-align:left;
-  padding:.6rem .8rem;font:600 .5625rem/1.3 var(--util);letter-spacing:.13em;
-  text-transform:uppercase;color:var(--ink);vertical-align:bottom}
-.tbl td{border-bottom:2px solid var(--line);border-right:2px solid var(--line);
-  padding:.75rem .8rem;vertical-align:top;line-height:1.55}
-.tbl td:last-child,.tbl th:last-child{border-right:0}
-.tbl tr:last-child td{border-bottom:0}
-.tbl td:first-child{background:var(--ht);font-weight:600;white-space:normal;width:14%;min-width:8.5rem}
-.tbl.narrow td:first-child{min-width:7rem;font:600 .8125rem/1.5 var(--util)}
-.tbl code{font-size:.8em}
-
-/* ── build order ─────────────────────────────────────────── */
-.order{list-style:none;margin:0;padding:0;display:grid;gap:.7rem;counter-reset:bo}
-.order li{counter-increment:bo;display:grid;grid-template-columns:2.6rem minmax(0,1fr);gap:0 .9rem;
-  align-items:center;background:var(--ht);border:2px solid var(--ink);
-  box-shadow:4px 4px 0 var(--h);padding:.85rem 1rem;max-width:52rem}
-.order li::before{content:counter(bo,decimal-leading-zero);font:600 1.15rem/1 var(--util);
-  color:var(--hi);text-align:center}
-.order li>span{font-size:.9375rem;line-height:1.55}
-
-/* ── part meta row ───────────────────────────────────────── */
-.part-meta{display:flex;flex-wrap:wrap;gap:.6rem;align-items:center;margin:0 0 .8rem}
-.was{font:600 .5625rem/1 var(--util);letter-spacing:.12em;text-transform:uppercase;
-  color:var(--soft);border:2px solid var(--line);padding:.45em .6em}
-.newpart{font:600 .5625rem/1 var(--util);letter-spacing:.12em;text-transform:uppercase;
-  color:var(--magenta-ink);background:var(--magenta-tint);border:2px solid var(--ink);padding:.45em .6em}
-.sub-h{font-size:1.05rem;margin:1.9rem 0 .5rem;letter-spacing:-.02em}
-.spine{max-width:38rem;font-size:1.02rem;line-height:1.6;margin:0 0 1.6rem;color:#3A3355}
-.draftnote{font:400 .75rem/1.7 var(--util);color:var(--soft);max-width:44rem;margin:0 0 1.6rem}
-.hero-part{font:600 .5625rem/1 var(--util);letter-spacing:.14em;text-transform:uppercase;
-  color:var(--magenta-ink);margin:0 0 .5rem}
-
-/* text keeps its measure; tables and lists of cards use the full column */
-.reading.wide-ok{max-width:none;min-width:0}
-.reading.wide-ok>p,.reading.wide-ok>.bullets,.reading.wide-ok>.ord,
-.reading.wide-ok>h3,.reading.wide-ok>blockquote{max-width:var(--measure)}
-.reading.wide-ok>.tbl{max-width:none}
-.draftnote{margin-top:2.4rem}
-
-/* print: let tables wrap instead of clipping at the page edge */
-@media print{
-  .tbl{box-shadow:none;overflow:visible}
-  .tbl table,.tbl.narrow table{min-width:0}
-}
-
-/* ── visitors' book (annotation sign-in) ─────────────────── */
+/* ── prototype feedback card ─────────────────────────────── */
 .vbook{position:fixed;right:1rem;bottom:1rem;z-index:40;width:min(19rem,calc(100vw - 2rem));
   background:#fff;border:2px solid var(--ink);box-shadow:5px 5px 0 var(--ink)}
 .vbook-head{font:600 .625rem/1 var(--util);letter-spacing:.13em;text-transform:uppercase;
@@ -398,291 +325,453 @@ footer{border-top:2px solid var(--ink);background:var(--midnight);color:#E7E4F4}
 .r6o-editor .r6o-footer .r6o-icon,.r6o-editor .r6o-footer svg{color:var(--magenta-ink);
   fill:var(--magenta-ink)}
 
-/* ── comment register ────────────────────────────────────── */
-.cmt{margin-top:2.6rem;border:2px solid var(--ink);background:#fff;box-shadow:6px 6px 0 var(--h);max-width:52rem}
-.cmt-head{display:flex;justify-content:space-between;align-items:center;gap:1rem;
-  padding:.7rem 1rem;background:var(--ht);border-bottom:2px solid var(--ink)}
-.cmt-head b{font:600 .6875rem/1.4 var(--util);letter-spacing:.12em;text-transform:uppercase}
-.cmt-count{font:600 .625rem/1 var(--util);background:#fff;border:2px solid var(--ink);
-  border-radius:999px;padding:.35em .6em}
-.cmt-list{list-style:none;margin:0;padding:0}
-.cmt-list li{padding:.85rem 1rem;border-bottom:2px solid var(--line)}
-.cmt-meta{font:600 .625rem/1.4 var(--util);letter-spacing:.08em;text-transform:uppercase;
-  color:var(--hi);margin:0 0 .3rem}
-.cmt-meta time{color:var(--soft);font-weight:400;margin-left:.6em;text-transform:none;letter-spacing:.02em}
-.cmt-quote{font:400 .8125rem/1.5 var(--util);color:var(--soft);border-left:4px solid var(--h);
-  padding:.15rem 0 .15rem .6rem;margin:.2rem 0 .45rem}
-.cmt-body{font-size:.9375rem;line-height:1.55;margin:0;white-space:pre-wrap;overflow-wrap:anywhere}
-.cmt-form{padding:.9rem 1rem 1rem;display:grid;gap:.6rem}
-.cmt-form label{display:grid;gap:.3rem;font:600 .5625rem/1.4 var(--util);letter-spacing:.13em;
-  text-transform:uppercase;color:var(--soft)}
-.cmt-form input,.cmt-form textarea{font:inherit;font-size:.9375rem;border:2px solid var(--ink);
-  background:var(--page);padding:.5rem .65rem;width:100%}
-.cmt-form textarea{min-height:5.2rem;resize:vertical}
-.cmt-chip{display:flex;align-items:flex-start;gap:.5rem;font:400 .8125rem/1.5 var(--util);
-  background:var(--gold-tint);border:2px dashed var(--gold-ink);padding:.45rem .6rem;color:#6A5200}
-.cmt-chip span{flex:1 1 auto;overflow-wrap:anywhere}
-.cmt-chip button{flex:none;font:600 .75rem/1 var(--util);background:#fff;border:1px solid var(--gold-ink);
-  color:var(--gold-ink);padding:.2em .45em;cursor:pointer}
-.cmt-send{justify-self:start;font:600 .625rem/1 var(--util);letter-spacing:.1em;text-transform:uppercase;
-  color:var(--ink);background:var(--gold);border:2px solid var(--ink);border-radius:999px;
-  padding:.7rem 1rem;box-shadow:3px 3px 0 var(--ink);cursor:pointer}
-.cmt-send:hover{transform:translate(1px,1px);box-shadow:2px 2px 0 var(--ink)}
-.cmt-send:disabled{opacity:.55;cursor:wait;transform:none}
-.cmt-note{font:400 .75rem/1.6 var(--util);color:var(--soft);margin:0}
-.hp{position:absolute;left:-5000px;width:1px;height:1px;overflow:hidden}
-@media print{.cmt{display:none}}
+@media print{
+  .rail,.foil,.vbook{display:none}
+  body{background:#fff;padding-left:0}
+  .visa,.crit,.slip,.permit{box-shadow:none;transform:none;break-inside:avoid}
+  .part{break-before:page}
+  a{color:var(--ink)}
+  .tbl{box-shadow:none;overflow:visible}
+  .tbl table{min-width:0}
+  .drawer{display:block}
+  .shots{display:none}
+}
 </style>
 </head>
 <body>
 
 <div class="rail">
   <div class="rail-in">
-    <nav aria-label="Sections"><a href="#front-matter" data-hue="magenta"><i>▸</i>Front matter</a><a href="#part-2" data-hue="violet"><i>02</i>Introducing the project</a><a href="#part-3" data-hue="aqua"><i>03</i>What got built</a><a href="#part-4" data-hue="cyan"><i>04</i>timeline</a><a href="#part-5" data-hue="gold"><i>05</i>learnings</a><a href="#part-6" data-hue="magenta"><i>06</i>roadmap</a><a href="#part-7" data-hue="violet"><i>07</i>Addressing the criteria</a><a href="#part-8" data-hue="aqua"><i>08</i>Evidence shelf</a><a href="#build-order" data-hue="cyan"><i>▸</i>Build order</a></nav>
+    <a class="side-brand" href="#part-00">Sparkle<b>Bureaucracy</b><small>Prototype submission<br>2025–26</small></a>
+    <nav aria-label="Sections"><a href="#part-00" data-hue="gold"><i>00</i>Setting the stage</a><a href="#part-01" data-hue="magenta"><i>01</i>Introducing the project</a><a href="#part-02" data-hue="violet"><i>02</i>Prototype &amp; Experiments Timeline</a><a href="#part-03" data-hue="aqua"><i>03</i>Events &amp; Talks</a><a href="#part-04" data-hue="cyan"><i>04</i>Roadmap</a><a href="#part-05" data-hue="gold"><i>05</i>Addressing the criteria</a><a href="#part-06" data-hue="magenta"><i>06</i>Final Reflection</a></nav>
+    <p class="side-foot">SB/NWSPK/2026/01<br>Newspeak House</p>
   </div>
 </div>
 
 <div class="foil hero-foil" aria-hidden="true"></div>
 
 <main id="annotatable">
-<header class="hero wrap" data-hue="magenta">
+<header class="hero wrap" data-hue="magenta" id="part-00">
   <p class="eyebrow">Newspeak House · Political Technology Programme · Cohort 2025–26</p>
+  <p class="presub">Prototype Submission</p>
   <h1 class="wordmark"><span>Sparkle</span><span class="b">Bureaucracy</span></h1>
-  <p class="spine">I came to find my mission. I found it. Here is what I built, the practice that proves it, the room it now needs, and the two decisions I am deliberately leaving open.</p>
+  <p class="spine">Sparkle Bureaucracy is a network of people using AI to prototype more optimistic futures. (<span class="todo">@todo</span> second mission sentence)</p>
+  <p class="spine">(<span class="todo">@todo</span> YouTube embed link for the video intro — recorded, upload pending)</p>
 
   <div class="permit">
     <div class="foil" aria-hidden="true"></div>
     <div class="permit-grid">
       <div>
-        <p class="hero-part">Part 01 · Video intro</p>
+        <p class="eyebrow" style="margin-bottom:.5rem">Part 00 · Setting the stage</p>
         <div class="window">
-          <div class="ph"><div class="play"></div><p>Official introduction<br>Recording in progress</p></div>
+          <div class="ph"><div class="play"></div><p>Official introduction<br>Recorded · embed pending</p></div>
         </div>
         <dl class="cap-field">
           <dt>Official introduction</dt>
-          <dd>Runtime 4 min · to be viewed before the record</dd>
+          <dd>To be viewed before the record</dd>
         </dl>
       </div>
       <dl class="fields">
         <div class="wide"><dt>Fellowship candidate</dt><dd>Fatima Sarah Khalid</dd></div>
-        <div><dt>Class</dt><dd>2025–2026</dd></div>
+        <div><dt>Cohort</dt><dd>2025–2026</dd></div>
         <div><dt>Serial</dt><dd>SB/NWSPK/2026/01</dd></div>
-        <div class="wide"><dt>Composition</dt><dd><b>80%</b> credible institution · <b>20%</b> sparkle</dd></div>
+        <div class="wide"><dt>Faculty mentor</dt><dd>Matt Stempeck</dd></div>
         <div><dt>Activations run</dt><dd>20+</dd></div>
         <div><dt>Period of validity</dt><dd>Feb – Aug 2026</dd></div>
-        <div><dt>Projects evaluated</dt><dd>321</dd></div>
-        <div><dt>Experiments specified</dt><dd>9</dd></div>
-        <div class="wide"><dt>Public web presence</dt><dd><a href="https://sparklebureaucracy.org">sparklebureaucracy.org</a></dd></div>
+        <div class="wide"><dt>Project URL</dt><dd><a href="https://sparklebureaucracy.org">sparklebureaucracy.org</a></dd></div>
+        <div class="wide"><dt>Relevant mentors</dt><dd>Ed Saperia · Hannah O'Rourke · James Moulding · Anouk Ruhaak</dd></div>
       </dl>
     </div>
     <div class="stamp"><b>Submitted<br>for<br>assessment</b><small>10 Aug 2026</small></div>
     <p class="mrz" aria-hidden="true">PTGBRSPARKLE&lt;BUREAUCRACY&lt;&lt;PROTOTYPE&lt;SUBMISSION&lt;&lt;</p>
   </div>
 
-  <p class="draftnote">Draft 2, 7 August 2026. Derived from a full read of <code>sparkle-bureaucracy.md</code>. Status tags: <strong>[KEEP]</strong> exists and stands · <strong>[REVISE]</strong> exists but the new spine changes it · <strong>[NEW]</strong> needs writing. Word budgets are pacing guides, not targets.</p>
+  <details class="xwalk"><summary><span>Where everything lives — template crosswalk</span></summary><div><div class="tbl narrow"><table><thead><tr><th>Template section</th><th>Where it lives</th></tr></thead><tbody><tr><td>1. Project Summary</td><td>Part 01</td></tr><tr><td>2. Project Map — features, risks, dependencies</td><td>Parts 01 &amp; 04; risk registers in the <a href="https://github.com/sugaroverflow/sparkle-bureaucracy-site/blob/main/submission/sparkle-bureaucracy.md">complete record</a></td></tr><tr><td>3. Weekly Diary Entries</td><td>the record's <code>lore/weekly</code> section — nine dated entries, February–July</td></tr><tr><td>4. Prior Art Log</td><td>the record's prior-art log + the 100-case research corpus</td></tr><tr><td>5. User &amp; Community Engagement Log</td><td>the record's engagement log, plus Parts 02–03 and 05 here</td></tr><tr><td>6. Prototype &amp; Experiments Log</td><td>Part 02, with the full logs in the record</td></tr><tr><td>7. Design Notes</td><td>woven through Part 02's entries; artifacts linked live</td></tr><tr><td>8. Technical Notes</td><td>the Technical drawers in Part 02 + the record's technical-notes section</td></tr><tr><td>9. Faculty Feedback Tracking</td><td>the Feedback drawers in Part 02 + the record's faculty-feedback tracker</td></tr><tr><td>10. Readiness Checklist</td><td>Part 05 — the six criteria addressed directly</td></tr><tr><td>11. Final Reflection</td><td>Part 06</td></tr></tbody></table></div></div></details>
 </header>
 
-<section class="contents wrap" aria-label="Contents">
-  <p class="eyebrow" style="--hi:var(--soft)">Contents</p>
-  <ol><li data-hue="magenta"><a href="#front-matter">
-    <i>Front matter</i><b>Front matter</b></a></li><li data-hue="violet"><a href="#part-2">
-    <i>Part 02</i><b>Introducing the project</b></a></li><li data-hue="aqua"><a href="#part-3">
-    <i>Part 03</i><b>What got built</b><em>New part</em></a></li><li data-hue="cyan"><a href="#part-4">
-    <i>Part 04</i><b>The timeline</b><em>was part 03</em></a></li><li data-hue="gold"><a href="#part-5">
-    <i>Part 05</i><b>The learnings</b><em>was part 04</em></a></li><li data-hue="magenta"><a href="#part-6">
-    <i>Part 06</i><b>The roadmap</b><em>was part 05</em></a></li><li data-hue="violet"><a href="#part-7">
-    <i>Part 07</i><b>Addressing the criteria</b><em>was part 06</em></a></li><li data-hue="aqua"><a href="#part-8">
-    <i>Part 08</i><b>Evidence shelf</b><em>was part 07</em></a></li><li data-hue="cyan"><a href="#build-order">
-    <i>Build order</i><b>Build order</b></a></li></ol>
-  <div class="flagbox" style="margin-top:1.6rem"><span class="fm">▸</span><div><p><strong>Change from draft 1.</strong> a new Part 3, <em>What got built</em>. The timeline is organised by activation, which scatters the working artifacts across 20+ entries so no reader ever sees the volume. The timeline tells the story; an inventory proves the output. Both are needed. Parts 3–7 shift to 4–8.</p></div></div>
-</section>
 
-
-<section class="part" id="front-matter" data-hue="magenta">
-  <p class="mrz" aria-hidden="true">PTSB&lt;FRONT&lt;MATTER&lt;&lt;FRONT&lt;MATTER&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;</p>
+<section class="part" id="part-01" data-hue="magenta">
+  <p class="mrz" aria-hidden="true">PTSB&lt;PART01&lt;&lt;INTRODUCING&lt;THE&lt;PROJECT&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;</p>
   <header class="part-head">
-    <p class="eyebrow">Front matter</p>
-    <h1>Front matter</h1>
-    <div class="part-meta"><span class="budget">target ≈ 400 words</span></div>
+    <p class="eyebrow">Part 01</p>
+    <h1>Introducing the project</h1>
   </header>
-  <div class="part-body"><div class="reading wide-ok"><div class="status" data-tag="keep"><span class="tag">keep</span><div class="txt"><p>Name · Project title · Project URL · Faculty advisor and mentors.</p></div></div>
-<div class="status" data-tag="revise"><span class="tag">revise</span><div class="txt"><p><em>A note on format, for faculty.</em> Existing version is good. Pull the template-mapping table directly underneath it, and add one sentence naming the objection the way the video does — a prototype that is not a tool, assessed against criteria that mostly describe tools.</p></div></div>
-<div class="status" data-tag="keep"><span class="tag">keep</span><div class="txt"><p>The eleven-row template mapping table. Load-bearing: it lets a faculty member verify nothing is missing.</p></div></div>
-<div class="status" data-tag="keep"><span class="tag">keep</span><div class="txt"><p>The paragraph on counting convening alongside experiments, and the paragraph on what is deliberately excluded.</p></div></div></div></div>
+  <div class="part-body"><div class="reading wide-ok"><p>As AI continues to improve and permeate through everyday life, I find myself watching the gap between the people who have AI access and those who don't get wider — and that worries me. Growing up in the US as the child of immigrants, I've seen what happens to skilled workers from other countries: neuroscientists and engineers working at gas stations and driving taxis to get their children educated in America, because their degrees weren't legible to the system. I believe AI is going to make immigrants out of us all — that it's going to widen this gap, make it more and more expensive to access, to learn, and to teach.</p>
+<p>Sparkle Bureaucracy started as a bet about bureaucracy: you can keep the entire procedural skeleton — the forms, the queues, the checkpoints, the stamps — and change only the intent, and the whole experience transforms. "Bureaucracy" carries the weight; it signals unexpected seriousness. "Sparkle" says it doesn't have to be miserable — it lowers threat, invites participation, and makes experimentation socially acceptable in environments that are usually defensive. The working ratio, on the record since the spring: <strong>80% credible institution, 20% sparkle</strong>. Underneath it sits the long-term horizon: digital access to good civic services is load-bearing for democracy, and that's where the name comes from — running experiments that illustrate the power of technology and how emerging innovations can help us envision the possibilities in govtech.</p>
+<p>I came into the fellowship thinking I wanted to run experiments on things like DMVs — what does a better licence renewal process look like? What does liquid democracy look like if the results are livestreamed while you can still change your vote? Then I ran an immigration scheme at my own birthday — passports, visa types, credentials, checkpoints — and watched what happened. People co-created the fiction; compliance felt like joining a story world; even rejection felt narrative rather than punitive. Ed Saperia looked at it and said: <em>that's Sparkle Bureaucracy.</em> The bet became the founding proof: same skeleton, different intent.</p>
+<p>The experimentation widened from there, and each widening forced a decision. The cohort reunion became a spy game because nobody wanted to answer "how is your prototype going?" one more time — and proved that competition and games lower the bar to social interaction. When usable agent tooling suddenly arrived, I started Clawclub, because I'd been testing it in ways that excited me and wanted a community to be excited with — sometimes 10 people, sometimes 60 filling the hall. Leading the fellowship's awards process turned into Project Mirror and a fifteen-version evaluation pipeline published change by change — which is where the lab hit its first hard ethical line: watching a cohort-mate reflect live on what it feels like to have an agent built from your public record taught me that <strong>the inference is not consent</strong>, and that line now shapes everything the lab specifies about synthetic representation.</p>
+<p>All these communities — the tech-for-good people, the emerging-technology builders, the RightsCon folks, the Protocols for Publishers summit, the vTaiwan delegation, the charity evaluators, the campaigners — helped me identify, collect, and narrow the characteristics of the community I want to build. And they surfaced the more urgent problem the original bet had to meet: AI is arriving like a new country arrives — suddenly skills need translating, credentials don't parse, and the people who can't afford the translation fall behind. The communities that should be shaping this technology — civic tech, tech for good, open source, govtech, the grassroots — are the ones most at risk of being priced out of it. The problem statement, as it now stands: the state is failing in many countries; AI offers an opportunity to fix this; we as technologists need to make sure people working at the grassroots are not left behind; and we can use AI to prototype and imagine a different future.</p>
+<p>Getting there took a reckoning, and it's in the diary on purpose. In late July, advice on how networks are born wouldn't settle; the essay that worked out why found the founder's own loop — concealing the programme out of fear it would sound frivolous, which made the concept look vague, which earned advice to go lighter. Naming the loop broke it. An hour with Hannah O'Rourke then turned six months of thrash into a structure that resolved it in an afternoon: there isn't one thing here, there are three, and they don't need collapsing. <strong>The method</strong> — playful games, rituals, and working prototypes that let people <em>feel</em> how a system works instead of being told. <strong>The moment</strong> — civic and political groups have an AI upskilling gap, especially around agents, and it's closing on someone else's terms; while the window is open, SB tests the newest technology and builds the bridge to the people who need it. <strong>The horizon</strong> — govtech. It reduces to two questions anyone can ask: <strong>"What can I use AI for?"</strong> and <strong>"What can AI do for me?"</strong></p>
+<p>The lab also decided what counts, in writing. After a 100-case research sprint, the working definition:</p>
+<div class="slip"><p><strong>Sparkle is the designed charge in a consequential procedure: rules and power become possible to feel and understand, people gain meaningful room to participate, question, or act, and the encounter leaves behind civic capability rather than a decorative veneer.</strong></p></div>
+<p>And the bar an experiment must clear: an <strong>institutional skeleton</strong> (a recognisable ritual — queue, permit, court, ledger, passport), an <strong>affective re-skin</strong> (participatory and legible without pretending power has disappeared), <strong>decision pressure</strong> (something is accepted, rejected, classified, delegated, or made contestable), and a <strong>durable artifact</strong> (a receipt, ledger, passport, constitution, or protocol that could harden into a reusable pattern). If an idea doesn't change who can act, how judgment is made, what becomes visible, or how a decision can be contested — it isn't strong enough yet.</p>
+<p>So what is the prototype? <strong>The network is the prototype; the experiments are its releases; the diary is the evidence.</strong> The experiments and activations are the dated sequence in Parts 02 and 03. The working artifacts are live: Sparkle Border Authority, Project Mirror and the V1–V15 awards pipeline, Campaign Factory, Conference Pulse, Topic, and the site and mailing list at <a href="https://sparklebureaucracy.org">sparklebureaucracy.org</a>. The open diary — weekly entries, experiment cards with risks and ethics notes, engagement and prior-art logs, the research corpus, and the essays where the project interrogated its own assumptions in public — is <a href="https://github.com/sugaroverflow/sparkle-bureaucracy-site/blob/main/submission/sparkle-bureaucracy.md">the complete record</a>. Along the way the network started to demonstrate demand from inside the institution: faculty brought me work three times — Topic to build for Ed, Conference Pulse to a written brief from Hannah, and Campaign Factory against her provocation to make campaigners take agents seriously — commissions, dated in the commit history.</p>
+<p>One honest caveat, stated up front: the name "Sparkle Bureaucracy" may not survive the network's next phase — making bureaucracy sparkle is my long-term horizon, but the urgent work is the gap. What's assessed here is the accumulated practice, the communities engaged, and the roadmap: a hackathon and demo night under the network's own banner, a flagship decision queued with faculty, and a rhythm determined with the community (Part 04).</p></div></div>
 </section>
 
-<section class="part" id="part-2" data-hue="violet">
-  <p class="mrz" aria-hidden="true">PTSB&lt;PART02&lt;&lt;INTRODUCING&lt;THE&lt;PROJECT&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;</p>
+<section class="part" id="part-02" data-hue="violet">
+  <p class="mrz" aria-hidden="true">PTSB&lt;PART02&lt;&lt;PROTOTYPE&lt;&lt;&lt;EXPERIMENTS&lt;TIMELINE&lt;&lt;&lt;</p>
   <header class="part-head">
     <p class="eyebrow">Part 02</p>
-    <h1>Introducing the project</h1>
-    <div class="part-meta"><span class="budget">target ≈ 900 words</span></div>
+    <h1>Prototype &amp; Experiments Timeline</h1>
   </header>
-  <div class="part-body"><div class="reading wide-ok"><p>The part that needs restructuring rather than editing. Current version leads with the bureaucracy bet and bolts the gap on afterwards; the video now does the reverse and the two should agree.</p>
-<div class="status" data-tag="revise"><span class="tag">revise</span><div class="txt"><p><strong>The problem, first.</strong> The gap — AI arriving the way a country arrives, credentials that don't parse, the communities most likely to be priced out. Then the four-point problem statement.</p></div></div>
-<div class="status" data-tag="revise"><span class="tag">revise</span><div class="txt"><p><strong>The origin, second.</strong> Same skeleton, different intent, as where the name came from rather than as the mission. The 80/20 ratio. Ed's line at the birthday.</p></div></div>
-<div class="status" data-tag="keep"><span class="tag">keep</span><div class="txt"><p><strong>The three registers</strong> — method / moment / horizon, and that they don't need collapsing.</p></div></div>
-<div class="status" data-tag="keep"><span class="tag">keep</span><div class="txt"><p><strong>The two questions.</strong> </p></div></div>
-<div class="status" data-tag="keep"><span class="tag">keep</span><div class="txt"><p><strong>What "sparkle" means, precisely</strong> — the working definition from the 100-case sprint.</p></div></div>
-<div class="status" data-tag="revise"><span class="tag">revise</span><div class="txt"><p><strong>The bar an experiment must clear.</strong> The four parts, plus the fifth condition: can the experiment detect its own defectors? Date it as an August addition from the birthday and reunion evidence — the date is the point, because it shows the bar adapting.</p></div></div>
-<div class="status" data-tag="new"><span class="tag">new</span><div class="txt"><p><strong>What the network needs to become: the room.</strong> Two paragraphs. A room is not a venue; it's a group that has settled that it wants to be there. Every activation that worked this year worked because that was already true. The roadmap rests on this and it currently exists nowhere in the submission.</p></div></div>
-<div class="status" data-tag="revise"><span class="tag">revise</span><div class="txt"><p><strong>What the prototype consists of.</strong> Network / experiments / diary — but replace the one-line artifact list with a pointer to Part 3, which now does this properly.</p></div></div>
-<div class="status" data-tag="keep"><span class="tag">keep</span><div class="txt"><p>The honest caveat about the name.</p></div></div></div></div>
+  <div class="part-body"><div class="reading wide-ok"><p>The experiments and projects, in the order they ran. Each entry records what was hypothesised, what happened, what it taught, and what it changed — with evidence, technical notes, and faculty/community feedback in the drawers.</p>
+<div class="tl"><article class="visa" data-hue="magenta" style="--rot:-0.4deg" id="sb-exp-01">
+  <header><span class="visa-date">14 Dec – 1 Apr <i>2026</i></span><span class="vbadge">experiment</span><span class="visa-serial">SB/EXP/01</span></header>
+  <div class="visa-body">
+    <h3>The field-notes room</h3>
+    <p>Before any of the events: a public-by-design Matrix room, <code>field-notes: fatima</code>, with an explicit contract that anything posted could become public. 294 messages over three and a half months — me thinking out loud, with a handful of others dropping in. The rabbit holes weren't all on-mission, but power and AI kept surfacing: the surveillance-pricing investigation, shadow governance and needing permission in rule-light systems, AI system observability, agentic workflow risk. Fifteen arXiv papers, a dozen GitHub repos, the Civic Tech Field Guide, gov.uk.</p>
+    <dl class="efields"><div><dt>Hypothesis</dt><dd>thinking in public, under an explicit consent contract, produces a research corpus a project can actually build on — a diary that starts before it knows it's a diary.</dd></div><div><dt>What happened</dt><dd>when the room went quiet on 1 April, the export became the seed corpus: every fragment catalogued into the research inventory, and the raw export preserved in the open diary.</dd></div><div><dt>What I learned</dt><dd>the diary didn't start as a diary — it started as a room where thinking was public. Working in the open is a capture method, not a publishing chore.</dd></div><div><dt>Impact on next iteration</dt><dd>the export seeded the research inventory, and the room's public-by-design contract became the diary's governance default.</dd></div></dl>
+    <div class="shots"><img src="https://placehold.co/800x500/FFE7F1/A80C59?text=The%20fieldnotes%20room%201" alt="The field-notes room — photo 1 (placeholder)" loading="lazy" data-full="https://placehold.co/1600x1000/FFE7F1/A80C59?text=The%20fieldnotes%20room%201"><img src="https://placehold.co/800x500/FFE7F1/A80C59?text=The%20fieldnotes%20room%202" alt="The field-notes room — photo 2 (placeholder)" loading="lazy" data-full="https://placehold.co/1600x1000/FFE7F1/A80C59?text=The%20fieldnotes%20room%202"></div>
+    
+    
+  </div>
+  <div class="perf"></div>
+</article>
+<article class="visa" data-hue="magenta" style="--rot:0.35deg" id="sb-exp-02">
+  <header><span class="visa-date">11 Mar <i>2026</i></span><span class="vbadge">experiment</span><span class="visa-serial">SB/EXP/02</span></header>
+  <div class="visa-body">
+    <h3>Sparkle Border Authority: "Birthday Passports"</h3>
+    <p>A full border-crossing ritual run live at my birthday — identity checks, purpose-of-visit declarations, secondary screening, visa classes with privileges, printed A6 visa stickers, checkpoints, admin overrides, and a live immigration stats dashboard (<a href="https://sparkle-border-authority.vercel.app/">the app</a>, still deployed). The language layer did real work: "sparkle compliance," "diplomatic glitter" — compliance felt like joining a story world, and even rejection flows felt narrative, not punitive. People co-created the fiction.</p>
+    <dl class="efields"><div><dt>Hypothesis</dt><dd>keep the entire procedural skeleton of a border regime and change only the intent, and the experience transforms — without losing rigour.</dd></div><div><dt>Method</dt><dd>a real intake → process → decision → artifact → handoff pipeline, run live on guests, with printed artifacts and an admin back office. A birthday is the safest sandbox for studying how authority feels: temporary, consented power.</dd></div><div><dt>What happened</dt><dd>guests went through the full ritual and co-created the fiction; Ed Saperia saw it and said <em>that's Sparkle Bureaucracy</em> — the founding proof.</dd></div><div><dt>What I learned</dt><dd>same skeleton, different intent. And that even rejection can be designed to feel narrative rather than punitive.</dd></div><div><dt>Impact on next iteration</dt><dd>the four-part experiment bar (skeleton, re-skin, decision pressure, durable artifact) generalises this event; the missing piece — a post-event ritual — was added by the spy reunion.</dd></div></dl>
+    <div class="shots"><img src="https://placehold.co/800x500/F2E8FF/5F27AE?text=Sparkle%20Border%20Authority%20Birthday%201" alt="Sparkle Border Authority: "Birthday Passports" — photo 1 (placeholder)" loading="lazy" data-full="https://placehold.co/1600x1000/F2E8FF/5F27AE?text=Sparkle%20Border%20Authority%20Birthday%201"><img src="https://placehold.co/800x500/F2E8FF/5F27AE?text=Sparkle%20Border%20Authority%20Birthday%202" alt="Sparkle Border Authority: "Birthday Passports" — photo 2 (placeholder)" loading="lazy" data-full="https://placehold.co/1600x1000/F2E8FF/5F27AE?text=Sparkle%20Border%20Authority%20Birthday%202"><img src="https://placehold.co/800x500/F2E8FF/5F27AE?text=Sparkle%20Border%20Authority%20Birthday%203" alt="Sparkle Border Authority: "Birthday Passports" — photo 3 (placeholder)" loading="lazy" data-full="https://placehold.co/1600x1000/F2E8FF/5F27AE?text=Sparkle%20Border%20Authority%20Birthday%203"><img src="https://placehold.co/800x500/F2E8FF/5F27AE?text=Sparkle%20Border%20Authority%20Birthday%204" alt="Sparkle Border Authority: "Birthday Passports" — photo 4 (placeholder)" loading="lazy" data-full="https://placehold.co/1600x1000/F2E8FF/5F27AE?text=Sparkle%20Border%20Authority%20Birthday%204"></div>
+    <div class="slip"><p>"That's Sparkle Bureaucracy." — Ed Saperia, on seeing Sparkle Border Authority</p></div>
+    <details class="drawer"><summary>Technical</summary><div class="din"><ul class="bullets"><li>React, TypeScript, Vite; browser storage for local state continuity.</li><li>Seven-step flow: 4-character code → identity confirmation → purpose/declaration forms → screening logic with secondary-review path → visa class and privileges → A6 sticker print → checkpoint handoff and arrival tracking.</li><li>Operational surfaces: applicant flow, manual visa creation, visitor signup, checkpoint assistance, admin overrides, reprints, live stats dashboard.</li><li>Open-sourced at Anouk Ruhaak's request: <a href="https://github.com/sugaroverflow/sparkle-border-authority">sugaroverflow/sparkle-border-authority</a>.</li></ul></div></details><details class="drawer"><summary>Evidence</summary><div class="din"><ul class="bullets"><li>The app remains deployed at <a href="https://sparkle-border-authority.vercel.app/">sparkle-border-authority.vercel.app</a>.</li><li>Printed A6 visa stickers as physical artifacts. (<span class="todo">@todo</span> photos: party, a printed visa, the kiosk screen, guest reactions)</li></ul></div></details><details class="drawer"><summary>Feedback</summary><div class="din"><ul class="bullets"><li>Anouk Ruhaak (Prototype Previews): "Please open source the sparkle passport / visa!!" → it's open.</li></ul></div></details>
+  </div>
+  <div class="perf"></div>
+</article>
+<article class="visa" data-hue="magenta" style="--rot:-0.25deg" id="sb-exp-03">
+  <header><span class="visa-date">30 Mar <i>2026</i></span><span class="vbadge">experiment</span><span class="visa-serial">SB/EXP/03</span></header>
+  <div class="visa-body">
+    <h3>Project Mirror + the V1–V15 awards pipeline</h3>
+    <p>The capstone of leading the fellowship's open awards process: 321 political-technology projects evaluated through a pipeline whose every version (V1–V15) was published on GitHub with rationale for every change — from random scoring, through structured dossiers (Civic Tech Field Guide taxonomy, OpenAlex citations, ProPublica financials), to values-as-constitutions and multi-jury agent systems. The framing: rankings are political; openness makes the trade-offs discussable.</p>
+<p>Project Mirror asked: what if all 18 cohort members had been in the room? Eighteen synthetic evaluator constitutions inferred from public records — criteria plus value modifiers (boosts for community ownership and under-resourced civic contexts; reductions for VC funding; a popularity discount to counter LLM familiarity bias) — then a Borda-count grand jury with strategic reasoning enabled. Winner: Liquid Feedback, stable under every manipulation attempt (18-point lead, 13 deliberation arguments, no revisions).</p>
+    <dl class="efields"><div><dt>Hypothesis</dt><dd>publishing an evaluation algorithm version by version, with rationale, makes institutional judgment legible — and moves the argument from "trust us" to "argue with this specific choice".</dd></div><div><dt>Method</dt><dd>fifteen published algorithm versions; constitutions describing evaluative stance, never claimed beliefs; value modifiers making normative assumptions inspectable; the audience running its own live ranking (QR-code criteria → agent-generated ranking) before seeing the committee's.</dd></div><div><dt>What happened</dt><dd>the cohort was pulled in — Davit on values taxonomy, Gamithra's ITN/A framework, Alexandra on aggregation, Jamie on synthetic users, Fran building the People's Choice system with my support — and the showcase ran the full ritual live.</dd></div><div><dt>What I learned</dt><dd>transparency isn't trust, but it makes trade-offs discussable. And the tension that stays: watching Asil reflect live on what it feels like to have an agent built from your public record — the inference is not consent.</dd></div><div><dt>Impact on next iteration</dt><dd>Mirror Commons is specified in the idea bank as the answer — synthetic stand-ins people manage themselves, with editable evaluator passports, red lines, expiry, and revocation. From estimating people, to people governing their own estimates.</dd></div></dl>
+    <div class="shots"><img src="https://placehold.co/800x500/D8FAF4/07766A?text=Project%20Mirror%20the%20V1V15%201" alt="Project Mirror + the V1–V15 awards pipeline — photo 1 (placeholder)" loading="lazy" data-full="https://placehold.co/1600x1000/D8FAF4/07766A?text=Project%20Mirror%20the%20V1V15%201"><img src="https://placehold.co/800x500/D8FAF4/07766A?text=Project%20Mirror%20the%20V1V15%202" alt="Project Mirror + the V1–V15 awards pipeline — photo 2 (placeholder)" loading="lazy" data-full="https://placehold.co/1600x1000/D8FAF4/07766A?text=Project%20Mirror%20the%20V1V15%202"><img src="https://placehold.co/800x500/D8FAF4/07766A?text=Project%20Mirror%20the%20V1V15%203" alt="Project Mirror + the V1–V15 awards pipeline — photo 3 (placeholder)" loading="lazy" data-full="https://placehold.co/1600x1000/D8FAF4/07766A?text=Project%20Mirror%20the%20V1V15%203"><img src="https://placehold.co/800x500/D8FAF4/07766A?text=Project%20Mirror%20the%20V1V15%204" alt="Project Mirror + the V1–V15 awards pipeline — photo 4 (placeholder)" loading="lazy" data-full="https://placehold.co/1600x1000/D8FAF4/07766A?text=Project%20Mirror%20the%20V1V15%204"></div>
+    <div class="slip"><p>"A little bittersweet, because these are synthetic representations. But I think where we are is the cusp of something… technology that keeps us in the judgment loop and lets us work together better." — from the Project Mirror closing reflection</p></div>
+    <details class="drawer"><summary>Technical</summary><div class="din"><ul class="bullets"><li>Core flow: research public profiles → inferred evaluator constitution per person → score 321 projects → ranked outputs with rationale → aggregation → Borda-count deliberation with strategic reasoning.</li><li>Key design choices: constitutions describe evaluative stance, not claimed beliefs; value modifiers make normative assumptions inspectable; a popularity discount counterbalances LLM familiarity bias; aggregation-method variation treated as evidence, not noise.</li><li>Every version published: <a href="https://2025.newspeak.house/awards">2025.newspeak.house/awards</a>.</li></ul></div></details><details class="drawer"><summary>Evidence</summary><div class="din"><ul class="bullets"><li>The live awards site with the full V1–V15 history.</li><li>Cohort contributions credited by name. (<span class="todo">@todo</span> the 18-agents-on-one-screen screenshot, a constitution excerpt)</li></ul></div></details><details class="drawer"><summary>Feedback</summary><div class="din"><ul class="bullets"><li>"Please build some for the team." — a manager, on hearing about synthetic evaluator agents.</li><li>Asil Sidahmed's live reflection at the showcase → the permanent ethical line, and the Mirror Commons spec.</li></ul></div></details>
+  </div>
+  <div class="perf"></div>
+</article>
+<article class="visa" data-hue="magenta" style="--rot:0.3deg" id="sb-exp-04">
+  <header><span class="visa-date">2 Apr <i>2026</i></span><span class="vbadge">experiment</span><span class="visa-serial">SB/EXP/04</span></header>
+  <div class="visa-body">
+    <h3>The prototype diary is founded</h3>
+    <p>The Matrix field-notes room went quiet on 1 April; the next morning the chat was exported and the diary repo was born the same day — which was also the day of the fellowship's <strong>Prototype Previews</strong>. The checkpoint arrived, and the diary became the deliverable: research inventory, sensemaking map, synthesis, and a README rewritten six times in one afternoon until it was in my voice.</p>
+    <dl class="efields"><div><dt>Hypothesis</dt><dd>an agent-assisted diary — notes, commits, and logs turned into structured, human-approved entries — can keep an open record honest without consuming the founder.</dd></div><div><dt>Method</dt><dd>a strict human approval boundary, written down before the tooling: the agent may draft, classify, summarise, and suggest; it may not publish, contact collaborators, represent someone else's views, or mark feedback resolved without human approval.</dd></div><div><dt>What happened</dt><dd>the diary became the data layer for everything since — weekly entries, experiment cards, engagement and prior-art logs — and on 5 August the whole corpus merged into the public site repo, original repo archived. This submission is built directly on top of it, and is the experiment's first full run.</dd></div><div><dt>What I learned</dt><dd>the lab's own bureaucracy is an experiment — and it ran. Legible process, visible provenance, human judgment kept in the loop.</dd></div><div><dt>Impact on next iteration</dt><dd>the reconstructed entries are marked as such, gaps listed for human correction — the pattern every SB experiment now follows for provenance.</dd></div></dl>
+    <div class="shots"><img src="https://placehold.co/800x500/DDF6FD/08657B?text=The%20prototype%20diary%20is%201" alt="The prototype diary is founded — photo 1 (placeholder)" loading="lazy" data-full="https://placehold.co/1600x1000/DDF6FD/08657B?text=The%20prototype%20diary%20is%201"><img src="https://placehold.co/800x500/DDF6FD/08657B?text=The%20prototype%20diary%20is%202" alt="The prototype diary is founded — photo 2 (placeholder)" loading="lazy" data-full="https://placehold.co/1600x1000/DDF6FD/08657B?text=The%20prototype%20diary%20is%202"></div>
+    
+    <details class="drawer"><summary>Feedback</summary><div class="din"><ul class="bullets"><li>Ed Saperia (Prototype Previews): "I think this will go very far — very contemporary, hits very relevant questions… with an AI angle which makes it fresh."</li><li>Matt Stempeck: "an experiment lab for imagining how emerging tech can change the way our systems work without abandoning them" — the phrase the prototype grew into. Also his: "if you can't dance it's not my revolution."</li><li>Hannah O'Rourke offered intros and pilots and pointed at Campaign Lab's <a href="https://pipresist.uk/">pipresist.uk</a> — the seed of everything that followed with them.</li><li>Chris Owen prescribed <em>Radical Help</em> → read. Emily Mayhew asked why public consultation is "such a dull awful bureaucratic cold process" → folded into the synthetic-voice experiment cards. Anouk Ruhaak demanded the sparkle passport be open-sourced → it is.</li><li>Every piece of feedback tracked to an action in the record's faculty-feedback tracker.</li></ul></div></details>
+  </div>
+  <div class="perf"></div>
+</article>
+<article class="visa" data-hue="magenta" style="--rot:-0.4deg" id="sb-exp-05">
+  <header><span class="visa-date">29 Apr <i>2026</i></span><span class="vbadge">experiment</span><span class="visa-serial">SB/EXP/05</span></header>
+  <div class="visa-body">
+    <h3>Red Team, Blue Team at Ration Club</h3>
+    <p>A live team button game built for the Ration Club crowd (<a href="https://github.com/nwspk/ration-club-button-game">nwspk/ration-club-button-game</a>) — the games-as-social-infrastructure thread, tested again between the border ritual and the spy game.</p>
+    <dl class="efields"><div><dt>What it was</dt><dd>a fast, live, two-team game for a room of guests.</dd></div><div><dt>What it taught</dt><dd>the games thread reproduces — play reliably gets people into interactions they'd have avoided as networking. (<span class="todo">@todo</span> how the teams played out — one line)</dd></div></dl>
+    <div class="shots"><img src="https://placehold.co/800x500/FFF2D2/7E5900?text=Red%20Team%20Blue%20Team%201" alt="Red Team, Blue Team at Ration Club — photo 1 (placeholder)" loading="lazy" data-full="https://placehold.co/1600x1000/FFF2D2/7E5900?text=Red%20Team%20Blue%20Team%201"><img src="https://placehold.co/800x500/FFF2D2/7E5900?text=Red%20Team%20Blue%20Team%202" alt="Red Team, Blue Team at Ration Club — photo 2 (placeholder)" loading="lazy" data-full="https://placehold.co/1600x1000/FFF2D2/7E5900?text=Red%20Team%20Blue%20Team%202"></div>
+    
+    
+  </div>
+  <div class="perf"></div>
+</article>
+<article class="visa" data-hue="magenta" style="--rot:0.35deg" id="sb-exp-06">
+  <header><span class="visa-date">9–24 May <i>2026</i></span><span class="vbadge">experiment</span><span class="visa-serial">SB/EXP/06</span></header>
+  <div class="visa-body">
+    <h3>sparklebureaucracy.org + the mailing list</h3>
+    <p>The website goes from AI-generated design to real project: first build pass on 9 May, the Astro migration decision on 11 May (recorded in a decision doc, old version preserved), look-and-feel work, and on 24 May the Buttondown mailing list goes live behind a provider-adapter API — "a mailing list and eventually an event series," the diary's network-building commitment, made real.</p>
+    <dl class="efields"><div><dt>What it was</dt><dd>the network's public front door and its first piece of owned infrastructure.</dd></div><div><dt>What happened</dt><dd>live since May, redesigned in August around the problem statement and three registers, with the experiments and an interest register on the page.</dd></div><div><dt>What I learned</dt><dd>infrastructure has failure modes you only find in the field — the signup form silently blocked a real subscriber ("Suspicious activity detected"), a mechanical explanation for weak conversion found and fixed. Report the bug and the fix together.</dd></div></dl>
+    <div class="shots"><img src="https://placehold.co/800x500/FFE7F1/A80C59?text=sparklebureaucracyorg%20the%20mailing%20list%201" alt="sparklebureaucracy.org + the mailing list — photo 1 (placeholder)" loading="lazy" data-full="https://placehold.co/1600x1000/FFE7F1/A80C59?text=sparklebureaucracyorg%20the%20mailing%20list%201"><img src="https://placehold.co/800x500/FFE7F1/A80C59?text=sparklebureaucracyorg%20the%20mailing%20list%202" alt="sparklebureaucracy.org + the mailing list — photo 2 (placeholder)" loading="lazy" data-full="https://placehold.co/1600x1000/FFE7F1/A80C59?text=sparklebureaucracyorg%20the%20mailing%20list%202"></div>
+    
+    <details class="drawer"><summary>Technical</summary><div class="din"><ul class="bullets"><li>Astro; Buttondown behind a provider-adapter API; self-hosted analytics (Umami) with per-experiment interest events.</li></ul></div></details>
+  </div>
+  <div class="perf"></div>
+</article>
+<article class="visa" data-hue="magenta" style="--rot:-0.25deg" id="sb-exp-07">
+  <header><span class="visa-date">13 May <i>2026</i></span><span class="vbadge">experiment</span><span class="visa-serial">SB/EXP/07</span></header>
+  <div class="visa-body">
+    <h3>Cohort Reunion: Spy Edition (NHIFA)</h3>
+    <p>Nobody in my cohort wanted to answer "how is your prototype going?" one more time — so the reunion became a spy agency. The NHIFA Field Console: each player's mission revealed in-app, keyword guesses, handler bonus codes, submissions locked at 21:45, a paced reveal on the projector at 22:00 — while Director and Handler missions lived on paper, with printed dossier mini-zines and reset slips as physical artifacts.</p>
+    <dl class="efields"><div><dt>Hypothesis</dt><dd>networking reframed as a game — on the intake → process → decision → artifact → reveal skeleton — gets a fatigued cohort talking again.</dd></div><div><dt>Method</dt><dd>in-app mission reveals with a timed submission lock and a paced projector reveal; print pipeline for dossier mini-zines (A6-onto-A3 imposition); paper missions for the Director and Handlers.</dd></div><div><dt>What happened</dt><dd>a resounding success — competition and games lower the bar to social interaction.</dd></div><div><dt>What I learned</dt><dd>the spy game added what the border never had: a post-event ritual. Personal debrief cards on a debrief page in the days after extended the experience past the room.</dd></div><div><dt>Impact on next iteration</dt><dd>post-event rituals became part of the experiment grammar — the encounter should leave something behind, and so should the days after it.</dd></div></dl>
+    <div class="shots"><img src="https://placehold.co/800x500/F2E8FF/5F27AE?text=Cohort%20Reunion%20Spy%20Edition%201" alt="Cohort Reunion: Spy Edition (NHIFA) — photo 1 (placeholder)" loading="lazy" data-full="https://placehold.co/1600x1000/F2E8FF/5F27AE?text=Cohort%20Reunion%20Spy%20Edition%201"><img src="https://placehold.co/800x500/F2E8FF/5F27AE?text=Cohort%20Reunion%20Spy%20Edition%202" alt="Cohort Reunion: Spy Edition (NHIFA) — photo 2 (placeholder)" loading="lazy" data-full="https://placehold.co/1600x1000/F2E8FF/5F27AE?text=Cohort%20Reunion%20Spy%20Edition%202"><img src="https://placehold.co/800x500/F2E8FF/5F27AE?text=Cohort%20Reunion%20Spy%20Edition%203" alt="Cohort Reunion: Spy Edition (NHIFA) — photo 3 (placeholder)" loading="lazy" data-full="https://placehold.co/1600x1000/F2E8FF/5F27AE?text=Cohort%20Reunion%20Spy%20Edition%203"><img src="https://placehold.co/800x500/F2E8FF/5F27AE?text=Cohort%20Reunion%20Spy%20Edition%204" alt="Cohort Reunion: Spy Edition (NHIFA) — photo 4 (placeholder)" loading="lazy" data-full="https://placehold.co/1600x1000/F2E8FF/5F27AE?text=Cohort%20Reunion%20Spy%20Edition%204"></div>
+    
+    <details class="drawer"><summary>Technical</summary><div class="din"><ul class="bullets"><li>NHIFA Field Console: in-app mission reveals, keyword guesses, handler bonus codes, timed submission lock, paced projector reveal, post-event debrief page.</li><li>Physical artifacts: dossier mini-zines via an A6-onto-A3 imposition pipeline, mission cards, reset slips, debrief cards.</li></ul></div></details><details class="drawer"><summary>Evidence</summary><div class="din"><ul class="bullets"><li>(<span class="todo">@todo</span> dossier mini-zine photos, the Field Console, a mission card, a debrief card — check whether a debrief card can be reproduced with permission)</li></ul></div></details>
+  </div>
+  <div class="perf"></div>
+</article>
+<article class="visa" data-hue="magenta" style="--rot:0.3deg" id="sb-exp-08">
+  <header><span class="visa-date">19–23 Jun <i>2026</i></span><span class="vbadge">experiment</span><span class="visa-serial">SB/EXP/08</span></header>
+  <div class="visa-body">
+    <h3>The lab gets its operating system</h3>
+    <p>In one day, the diary reorganised around the fellowship template — submission diary, experiment cards, engagement log, faculty feedback tracker, prior-art log — and an experiment research sprint compared candidate first experiments, concluding: keep Sparkle Bureaucracy itself as the assessed prototype, run lab infrastructure quietly, and pick one public-facing flagship. Four days later the prospective-experiments idea bank landed: nine ranked candidates (Public Voice Customs, Mirror Commons, The Exception Window, Permission Passport Office, The Value Court, Claw Civil Service, Shadow Labour Claims Office, Liquid Mandate Assembly, Sparkle Border Field Kit), each with a smallest-credible-run spec, artifacts, evidence lists, and named risks.</p>
+    <dl class="efields"><div><dt>What it was</dt><dd>the lab practising its own bureaucracy — four infrastructure experiments (agent-assisted diary, faculty feedback loop, collaborator &amp; prior-art scout, experiment cards) that actually ran, and nine prospective experiments specified but not yet run.</dd></div><div><dt>What it taught</dt><dd>specify the bar before choosing the work: if an idea doesn't change who can act, how judgment is made, what becomes visible, or how a decision can be contested — it isn't strong enough yet.</dd></div><div><dt>Impact on next iteration</dt><dd>the flagship decision is deliberately queued with faculty rather than made alone — a governance choice, not an omission.</dd></div></dl>
+    <div class="shots"><img src="https://placehold.co/800x500/D8FAF4/07766A?text=The%20lab%20gets%20its%201" alt="The lab gets its operating system — photo 1 (placeholder)" loading="lazy" data-full="https://placehold.co/1600x1000/D8FAF4/07766A?text=The%20lab%20gets%20its%201"></div>
+    
+    
+  </div>
+  <div class="perf"></div>
+</article>
+<article class="visa" data-hue="magenta" style="--rot:-0.4deg" id="sb-exp-09">
+  <header><span class="visa-date">23 Jun <i>2026</i></span><span class="vbadge">experiment</span><span class="visa-serial">SB/EXP/09</span></header>
+  <div class="visa-body">
+    <h3>Topic (topic.forum)</h3>
+    <p>The same evening the idea bank landed, the <strong>Topic</strong> build kicked off with 43 commits in a day. Topic is collaborative forum software — propose topics, vote with hearts, share availability, shape a schedule together — "a Newspeak House × Sparkle Bureaucracy production," finished like a product through July: QA sprints, feeds, CI, docs.</p>
+    <dl class="efields"><div><dt>What it was</dt><dd>a faculty commission — Ed Saperia as product owner, the engineering and system design mine.</dd></div><div><dt>What happened</dt><dd>deployed at topic.forum, hardened like a product through July.</dd></div><div><dt>What I learned</dt><dd>a commission settles the legitimacy question before the work starts — demonstrated demand for a specific capability, from inside the institution, dated in the commit history.</dd></div></dl>
+    <div class="shots"><img src="https://placehold.co/800x500/DDF6FD/08657B?text=Topic%20topicforum%201" alt="Topic (topic.forum) — photo 1 (placeholder)" loading="lazy" data-full="https://placehold.co/1600x1000/DDF6FD/08657B?text=Topic%20topicforum%201"><img src="https://placehold.co/800x500/DDF6FD/08657B?text=Topic%20topicforum%202" alt="Topic (topic.forum) — photo 2 (placeholder)" loading="lazy" data-full="https://placehold.co/1600x1000/DDF6FD/08657B?text=Topic%20topicforum%202"><img src="https://placehold.co/800x500/DDF6FD/08657B?text=Topic%20topicforum%203" alt="Topic (topic.forum) — photo 3 (placeholder)" loading="lazy" data-full="https://placehold.co/1600x1000/DDF6FD/08657B?text=Topic%20topicforum%203"></div>
+    
+    <details class="drawer"><summary>Technical</summary><div class="din"><ul class="bullets"><li>43 commits on day one; then QA sprints, feeds, CI, and docs through July.</li></ul></div></details>
+  </div>
+  <div class="perf"></div>
+</article>
+<article class="visa" data-hue="magenta" style="--rot:0.35deg" id="sb-exp-10">
+  <header><span class="visa-date">16 Jul <i>2026</i></span><span class="vbadge">experiment</span><span class="visa-serial">SB/EXP/10</span></header>
+  <div class="visa-body">
+    <h3>Campaign Factory + Conference Pulse</h3>
+    <p>Built with Campaign Lab in an intense ten-day sprint — 122 commits, 62 of them on 15 July — against Hannah O'Rourke's brief: demo multi-agents, and make campaigners take agents seriously. Give <a href="https://campaign-factory.vercel.app">Campaign Factory</a> a UK local or public-policy problem and a place, and it researches the decision route, maps power and pressure, proposes strategy and tactics, and drafts campaign materials — <em>showing the work as it happens</em>, with Hannah's campaign-building knowledge base embedded in the system. Conference Pulse ran alongside as the live companion for the AI &amp; Campaigning Conference at Newspeak House: schedule, anonymous per-panel comments, votes, an organiser dashboard, a big-screen room view.</p>
+    <dl class="efields"><div><dt>Hypothesis</dt><dd>meeting a community inside its own work — their problems, their vocabulary, their knowledge base embedded in the system — beats evangelism; and designed affect in a consequential procedure can be <em>commissioned</em>, not just asserted.</dd></div><div><dt>Method</dt><dd>ten-day sprint in the partner's own GitHub organisation (<a href="https://github.com/CampaignLab/campaign-factory">CampaignLab/campaign-factory</a>, <a href="https://github.com/CampaignLab/conference-pulse">CampaignLab/conference-pulse</a>); multi-agent decomposition so the work is showable and replayable — the architecture is the pedagogy; both artifacts run live at a nine-session conference.</dd></div><div><dt>What happened</dt><dd>the room's verdict was measured live by our own instrument — the end-of-panel vote on "Agents: working tools or over-hyped?" came back 19 ballots: 9 <em>could be useful with work</em>, 7 <em>already useful and real</em>, 3 <em>just hype</em>. The week after, a free-access code went onto the house key so "bring your own API key" stopped being the price of admission — a deliberate accessibility decision with a kill-switch as the safety valve. Campaign Lab sent Campaign Factory out in their newsletter.</dd></div><div><dt>What I learned</dt><dd>translation beats evangelism, with a stated mechanism. Sometimes sparkle <em>removes</em> a ritual — the free-access code deleted a gate rather than decorating one. And the sharpest question from the comment wall — how do we stop people's first experience being slop campaign plans? — is the quality bar Campaign Factory carries forward, not yet answered.</dd></div><div><dt>Impact on next iteration</dt><dd>"Campaign Factory, grown up" is a flagship candidate — already live, already partnered, already testimonialed — and the inbound pull it generated (Oxfam GB, the Civic Tech Field Guide) is shaping the autumn calendar.</dd></div></dl>
+    <div class="shots"><img src="https://placehold.co/800x500/FFF2D2/7E5900?text=Campaign%20Factory%20Conference%20Pulse%201" alt="Campaign Factory + Conference Pulse — photo 1 (placeholder)" loading="lazy" data-full="https://placehold.co/1600x1000/FFF2D2/7E5900?text=Campaign%20Factory%20Conference%20Pulse%201"><img src="https://placehold.co/800x500/FFF2D2/7E5900?text=Campaign%20Factory%20Conference%20Pulse%202" alt="Campaign Factory + Conference Pulse — photo 2 (placeholder)" loading="lazy" data-full="https://placehold.co/1600x1000/FFF2D2/7E5900?text=Campaign%20Factory%20Conference%20Pulse%202"><img src="https://placehold.co/800x500/FFF2D2/7E5900?text=Campaign%20Factory%20Conference%20Pulse%203" alt="Campaign Factory + Conference Pulse — photo 3 (placeholder)" loading="lazy" data-full="https://placehold.co/1600x1000/FFF2D2/7E5900?text=Campaign%20Factory%20Conference%20Pulse%203"><img src="https://placehold.co/800x500/FFF2D2/7E5900?text=Campaign%20Factory%20Conference%20Pulse%204" alt="Campaign Factory + Conference Pulse — photo 4 (placeholder)" loading="lazy" data-full="https://placehold.co/1600x1000/FFF2D2/7E5900?text=Campaign%20Factory%20Conference%20Pulse%204"><img src="https://placehold.co/800x500/FFF2D2/7E5900?text=Campaign%20Factory%20Conference%20Pulse%205" alt="Campaign Factory + Conference Pulse — photo 5 (placeholder)" loading="lazy" data-full="https://placehold.co/1600x1000/FFF2D2/7E5900?text=Campaign%20Factory%20Conference%20Pulse%205"></div>
+    <div class="slip"><p>"Campaign Factory built for her what it would take her five months to research." — campaigner at the AI &amp; Campaigning Conference (<span class="todo">@todo</span> get name/permission)</p></div><div class="slip"><p>"Incredible! would love to see a write up of how this was built." — from the Conference Pulse comment wall</p></div>
+    <details class="drawer"><summary>Technical</summary><div class="din"><ul class="bullets"><li>Campaign Factory: multi-agent pipeline that researches decision routes, maps power and pressure, proposes strategy and tactics, and drafts materials — with the run replayable end-to-end (<a href="https://campaign-factory.vercel.app/factory/replay/conference">the conference replay</a>).</li><li>Launched requiring the user's own Anthropic or OpenRouter key; free-access code on the house key the week after, with a kill-switch. Campaign Lab subsidises access.</li><li>Conference Pulse: live schedule, anonymous per-panel comments and votes, organiser dashboard, big-screen room view; AI live-take summaries generated for 7 of 9 sessions.</li><li>Both repos live in the partner's organisation — a trust signal, not a caveat.</li></ul></div></details><details class="drawer"><summary>Evidence</summary><div class="din"><ul class="bullets"><li>From the Conference Pulse production database (16 July, nine sessions): <strong>240 votes · 263 comments · 28 private feedback messages · 67 unique voting devices</strong> (a floor on reach, not attendance — nobody who only watched the projector is counted).</li><li><strong>Retention: 49 of 67 voters (73%) voted in two or more panels</strong>; 25 in five or more; three in all eight with voting open.</li><li>The 19-ballot panel vote, preserved in full in the record.</li><li>The instrument saw the room: comments between 14:00 and 16:00 match independent complaints about heat and breaks — disengagement detected through participation data.</li><li>Inbound after the conference: Oxfam GB's campaign engagement manager requesting a team demo (September workshop being organised with Asil Sidahmed); the Civic Tech Field Guide inviting a show &amp; tell demo; theory-of-change material offered for the strategy section.</li></ul></div></details><details class="drawer"><summary>Feedback</summary><div class="din"><ul class="bullets"><li>The slop-campaign-plans question from the comment wall → logged as Campaign Factory's open quality bar.</li><li>240 votes but only 2 mailing-list signups → the most useful number in the record; the signup-form bug found and fixed, and the conversion strategy rethought.</li></ul></div></details>
+  </div>
+  <div class="perf"></div>
+</article>
+<article class="visa" data-hue="magenta" style="--rot:-0.25deg" id="sb-exp-11">
+  <header><span class="visa-date">Feb–Jul <i>2026</i></span><span class="vbadge">experiment</span><span class="visa-serial">SB/EXP/11</span></header>
+  <div class="visa-body">
+    <h3>The Claw agents</h3>
+    <p>Built inside the Clawclub community: Moltbook interactions, penpals, research and analysis pipelines — playful multi-agent systems with real outputs.</p>
+    <dl class="efields"><div><dt>What it was</dt><dd>whimsical and instrumented agents on the same technical substrate.</dd></div><div><dt>What it taught</dt><dd>whimsy and rigour run on the same substrate — the playful agents generated real social engagement, the research agents generated real evidence, same base. The strongest available argument that the 80/20 ratio is a method, not a tone.</dd></div></dl>
+    <div class="shots"><img src="https://placehold.co/800x500/FFE7F1/A80C59?text=The%20Claw%20agents%201" alt="The Claw agents — photo 1 (placeholder)" loading="lazy" data-full="https://placehold.co/1600x1000/FFE7F1/A80C59?text=The%20Claw%20agents%201"><img src="https://placehold.co/800x500/FFE7F1/A80C59?text=The%20Claw%20agents%202" alt="The Claw agents — photo 2 (placeholder)" loading="lazy" data-full="https://placehold.co/1600x1000/FFE7F1/A80C59?text=The%20Claw%20agents%202"></div>
+    
+    
+  </div>
+  <div class="perf"></div>
+</article></div></div></div>
 </section>
 
-<section class="part" id="part-3" data-hue="aqua">
-  <p class="mrz" aria-hidden="true">PTSB&lt;PART03&lt;&lt;WHAT&lt;GOT&lt;BUILT&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;</p>
+<section class="part" id="part-03" data-hue="aqua">
+  <p class="mrz" aria-hidden="true">PTSB&lt;PART03&lt;&lt;EVENTS&lt;&lt;&lt;TALKS&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;</p>
   <header class="part-head">
     <p class="eyebrow">Part 03</p>
-    <h1>What got built</h1>
-    <div class="part-meta"><span class="newpart">new part</span><span class="budget">target ≈ 1,200 words</span></div>
+    <h1>Events &amp; Talks</h1>
   </header>
-  <div class="part-body"><div class="reading wide-ok"><div class="status" data-tag="new"><span class="tag">new</span><div class="txt"><p>A build inventory, before the narrative timeline. For each: what it is, what it was for, what it proved, where it lives — and <strong>who authored it</strong>. The authorship column is not a disclaimer. Criterion 3 asks for collaborations credited, and "built to a partner's brief" is stronger evidence than "built from my own idea," because it means someone trusted you enough to commission it.</p></div></div></div>
-<h2 class="bare"><span>Deployed applications</span></h2>
-<div class="reading wide-ok"><div class="tbl"><table><thead><tr><th></th><th>Authorship</th><th>What it is</th><th>Evidence</th></tr></thead><tbody><tr><td><strong>Sparkle Border Authority</strong></td><td>Conceived, built, maintained</td><td>End-to-end border ritual as live software. React/TypeScript/Vite. Applicant flow, manual visa creation, visitor signup, checkpoint assistance, admin overrides, reprints, live stats dashboard. Seven-step flow from 4-character code to A6 sticker print to arrival tracking.</td><td>Deployed; open-sourced at Anouk's request</td></tr><tr><td><strong>Project Mirror + the V1–V15 pipeline</strong></td><td>Led and built; named cohort contributions to the pipeline</td><td>321 projects, fifteen published algorithm versions, 18 inferred evaluator constitutions with value modifiers and a popularity discount, Borda-count grand jury with strategic reasoning</td><td><code>2025.newspeak.house/awards</code>; every version on GitHub</td></tr><tr><td><strong>Campaign Factory</strong></td><td><strong>Concept, system design and build mine.</strong> Hannah O'Rourke set the goal — demo multi-agents, make campaigners take agents seriously — and supplied her campaign-building knowledge base, which is embedded in the product. Ideas originated by me, refined with her.</td><td>Give it a UK local or policy problem and a place; it researches the decision route, maps power and pressure, proposes strategy and tactics, drafts materials — showing the work as it happens. ~122 commits in a ten-day sprint</td><td>Deployed; Campaign Lab subsidises access on the house key</td></tr><tr><td><strong>Conference Pulse</strong></td><td>Built and maintained <strong>to a written brief from Hannah O'Rourke</strong> <span class="flag-inline">⚑ verify</span> <em>cite the brief doc — it's evidence</em></td><td>Live conference companion — schedule, anonymous per-panel comments, votes, organiser dashboard, big-screen room view</td><td>Ran the AI &amp; Campaigning conference; produced the 19-ballot vote</td></tr><tr><td><strong>Topic</strong> (topic.forum)</td><td>Engineer; Ed Saperia product owner</td><td>Collaborative forum software — propose topics, vote with hearts, share availability, shape a schedule together. 43 commits day one, then finished like a product through July: QA sprints, feeds, CI, docs</td><td>Deployed</td></tr><tr><td><strong>NHIFA Field Console</strong></td><td>Conceived, built, ran</td><td>The spy-reunion app — in-app mission reveals, keyword guesses, handler bonus codes, timed submission lock, paced projector reveal, post-event debrief page</td><td>Ran 13 May</td></tr><tr><td><strong>sparklebureaucracy.org</strong></td><td>Built and maintained; started from an AI-generated design, migrated to Astro</td><td>Astro site with a Buttondown mailing list behind a provider-adapter API</td><td>Live since May</td></tr><tr><td><strong>Red Team, Blue Team</strong></td><td>Built for the Ration Club crowd</td><td>Live team button game</td><td><code>nwspk/ration-club-button-game</code></td></tr><tr><td><strong>Claw agents</strong></td><td>Built, inside the Clawclub community</td><td>Moltbook interactions, penpals, research and analysis pipelines — whimsical and instrumented on the same substrate</td><td>Built during the Clawclub series</td></tr></tbody></table></div></div>
-<h2 class="bare"><span>The pattern in the authorship column</span></h2>
-<div class="reading wide-ok"><div class="status" data-tag="new"><span class="tag">new</span><div class="txt"><p>Worth naming directly, because it is the strongest evidence in the submission and it is currently invisible.</p></div></div>
-<p>Faculty brought me work three times, and the depth of my authorship varies across them — which is worth showing rather than flattening:</p>
-<ul class="bullets"><li><strong>Topic</strong> — Ed set product direction; the engineering and system design are mine.</li><li><strong>Conference Pulse</strong> — Hannah wrote a brief; I built and maintained it. The brief document is citable evidence and should be cited.</li><li><strong>Campaign Factory</strong> — Hannah set a goal and supplied a knowledge base; the concept, the ideas, the system design and the build are mine. This is originating a product against a provocation, not implementing a spec.</li></ul>
-<p>Two faculty members, independently, brought me things and treated me as the person who could build them. Nobody asked me to justify my standing first — the commission settled that question before the work started. That is a different kind of evidence than a testimonial: it is demonstrated demand for a specific capability, from inside the institution, and it is dated in the commit history.</p>
-<p>It also connects to learning #1. The rooms that worked were rooms where the legitimacy question was already settled, and a commission is one way it gets settled — which is why these three shipped while the governance experiments did not.</p></div>
-<h2 class="bare"><span>Campaign Factory: the method, commissioned</span></h2>
-<div class="reading wide-ok"><div class="status" data-tag="new"><span class="tag">new</span><div class="txt"><p>The point that changes where this artifact sits in the submission.</p></div></div>
-<p>Hannah's ask was not "build a campaign tool." It was <strong>demo multi-agents and make campaigners take agents seriously</strong> — a brief whose success condition was <em>affective</em>. She commissioned productive alarm.</p>
-<p>Which means Campaign Factory is the one artifact in the record where a practitioner commissioned designed affect inside a consequential procedure — the working definition of sparkle, asked for by someone else, in their own domain, using their own knowledge base. The research finding that affect is broader than delight, and that moral discomfort counts, is not only my theory. A practitioner requested it.</p>
-<p>It clears the four-part bar, and this has never been stated:</p>
-<ul class="bullets"><li><strong>Institutional skeleton</strong> — campaign planning's decision routes, power maps, deliverables</li><li><strong>Affective re-skin</strong> — the work shown as it happens, legible without pretending the capability isn't alarming</li><li><strong>Decision pressure</strong> — it proposes strategy and can be wrong; the slop-plans warning is that pressure being real</li><li><strong>Durable artifact</strong> — the replay at <code>campaign-factory.vercel.app/factory/replay/conference</code>, plus the drafted materials</li></ul>
-<div class="flagbox"><span class="fm">⚑</span><div><p>The replay does not appear anywhere in <code>sparkle-bureaucracy.md</code>. It is the most demonstrable artifact in the record and it is undocumented.</p></div></div>
-<p><strong>And it is the fourth delivery of one argument.</strong> The CHEW keynote, the Agent Craft keynote, the OpenClaw 101 workshop and Campaign Factory all make the same case: articulate your work as a system, so you know where agents fit before someone arrives selling you something. Campaign Factory is the strongest of the four because it is the only one that leaves an artifact behind after the room empties — Ed's 28 April principle applied to my own translation work.</p>
-<p><strong>The mechanism, stated plainly for learning #5:</strong> meeting a community inside its own work means embedding a practitioner's knowledge base in the system. That is replicable, and it is why this one landed.</p>
-<p>One honest note: "and then I added the multi-agent flair" undersells it. The multi-agent decomposition is what makes the work showable and replayable. The architecture <em>is</em> the pedagogy — without it there is an output but no visible system, and the whole point was the visible system.</p></div>
-<h2 class="bare"><span>Built by others, with my support</span></h2>
-<div class="reading wide-ok"><div class="status" data-tag="new"><span class="tag">new</span><div class="txt"><p>A short block, and it strengthens rather than weakens the claim. The awards pipeline pulled the cohort in — Davit on values taxonomy, Gamithra's ITN/A framework, Alexandra on aggregation, Jamie on synthetic users, Fran on People's Choice. Credit each by name, describe what they built, don't claim it.</p></div></div>
-<p>The <strong>People's Choice system</strong> — audience criteria submitted by QR code, an agent generating a live ranking of the shortlist, results processed in the break and announced live — was <strong>built by Fran, with my support</strong>, inside an evaluation architecture I led.</p>
-<div class="flagbox"><span class="fm">⚑</span><div><p>Your existing Part I already names all five of these people, so anonymising here would be inconsistent with what's already written — name her.</p></div></div>
-<p>On "support": describe what you actually did rather than the relationship. Unblocked the agent step, reviewed the ranking logic, made room for it in the showcase run of play — whichever is true. That's verifiable and it's sufficient. "Mentored" is a claim about how someone else experienced you, and it can be remembered differently.</p>
-<p>This block is also the clearest evidence for the thesis you state up front: building your thing while building the cohort at the same time.</p></div>
-<h2 class="bare"><span>Worked case study: the Campaign Lab arc</span></h2>
-<div class="reading wide-ok"><div class="status" data-tag="new"><span class="tag">new</span><div class="txt"><p>The submission's centrepiece, and currently scattered across five sections. Seven months with one partner community, producing three artifacts, hard metrics, onward demand, and two instructive failures. If you'd rather promote this to its own Part, it stands alone — but it belongs next to the inventory because it is the argument the inventory is evidence for.</p></div></div>
-<p>Campaign Factory stays the centrepiece. The arc is the case around it.</p></div>
-<h3 class="sub-h">The arc, dated</h3>
-<div class="reading wide-ok"><div class="tbl narrow"><table><thead><tr><th></th><th></th></tr></thead><tbody><tr><td><strong>2 April</strong></td><td>Prototype Previews. Hannah offers intros and pilots, says "we will have people up for piloting things," points at Campaign Lab's <code>pipresist.uk</code> (Tyrone's), offers help with experiments and evaluation frameworks. Logged as <em>acted on</em>.</td></tr><tr><td><span class="flag-inline">⚑ verify</span> <strong>April–May</strong></td><td><strong>Gap in the record.</strong> Your weekly entry says the relationship "goes back at least to" 24 May and "how it started before that is still unrecorded." Fill this — it's the origin of your biggest partnership.</td></tr><tr><td><strong>24 May</strong></td><td><strong>OpenClaw 101 workshop</strong>, run for Campaign Lab. Slidev deck: agents, skills, factories, and the future of AI workflows (<code>sugaroverflow/openclaw101-workshop</code>). The hack-night teaching thread formalised.</td></tr><tr><td><strong>12–17 July</strong></td><td><strong>Campaign Factory</strong> built (<code>CampaignLab/campaign-factory</code>) — ~122 commits, 60 on 15 July alone <span class="flag-inline">⚑ verify</span> <em>verify against the repo</em>. Launched requiring the user's own Anthropic or OpenRouter key.</td></tr><tr><td><strong>15–16 July</strong></td><td><strong>Conference Pulse</strong> built in parallel (<code>CampaignLab/conference-pulse</code>), to Hannah's written brief.</td></tr><tr><td><strong>16 July</strong></td><td><strong>The AI &amp; Campaigning Conference</strong> at Newspeak House. Nine sessions. Both artifacts run live.</td></tr><tr><td><strong>week of 20 July</strong></td><td>Free-access code goes onto the house key — "bring your own API key" stops being the price of admission, with a kill-switch as the safety valve.</td></tr><tr><td><strong>20 July</strong></td><td>Campaign Lab newsletters Campaign Factory out to their list.</td></tr><tr><td><strong>17–21 July</strong></td><td>Civic Tech Field Guide: theory-of-change material offered for Campaign Factory's strategy section, a request to share it onward, and an invitation to demo with Hannah at a vibe-code show &amp; tell.</td></tr><tr><td><strong>20 July – 3 August</strong></td><td><strong>Oxfam GB.</strong> Campaign engagement manager writes unprompted after seeing it at the conference; requests a team demo and Q&amp;A; a September workshop is being organised with Asil Sidahmed. <span class="flag-inline">⚑ verify</span> <em>Thread private — anecdotal summary only, and check whether she's happy to be named.</em></td></tr><tr><td><strong>31 July</strong></td><td>The session with Hannah that produced the problem statement and three registers. The partnership also produced the mission clarity.</td></tr></tbody></table></div></div>
-<h3 class="sub-h">What it produced</h3>
-<div class="reading wide-ok"><p>Three artifacts, two repos in the partner's organisation, one workshop deck, and a live instrument. Note the repo location as a point in your favour rather than a caveat: a partner org hosting your code is a stronger trust signal than self-hosting.</p></div>
-<h3 class="sub-h">The numbers</h3>
-<div class="reading wide-ok"><p>From the Conference Pulse production database, 16 July, nine sessions:</p>
-<ul class="bullets"><li><strong>240 votes · 263 comments · 28 private feedback messages</strong></li><li><strong>67 unique voting devices · 45 unique commenting devices.</strong> Comments are anonymous, so total unique participants sits between 67 and 112, likely near the lower end.</li><li>AI live-take summaries generated for <strong>7 of the 9</strong> active sessions.</li><li><strong>Retention: 49 of 67 voters (73%) voted in two or more panels. 25 voted in five or more. Three voted in all eight</strong> that had voting open.</li><li>Your own panel — Agents: working tools or over-hyped?, with Hannah and Ed — returned <strong>19 votes, 12 comments, 47% "could work."</strong></li></ul>
-<p>Keep your own caveat: unique devices counts nobody who only watched the projector, so it is a floor on reach, not attendance. Stating that makes the rest more credible.</p>
-<p><strong>Where campaigners think agents are real</strong> — measured by your instrument, and useful as field research rather than as reaction to your session:</p>
-<p><em>Already real</em> — social listening 88%, AI content 76%, "anyone can build it" 67%. <em>Could work</em> — AI persuasion bot 73%, canvass coach game 58%, agents 47%. <em>Just hype</em> — election prediction 82%, synthetic personas 52%.</p>
-<p>That last one is a direct input to the flagship decision: the community you'd run Public Voice Customs or Mirror Commons with is currently split on whether synthetic representation is real at all.</p></div>
-<h3 class="sub-h">What it proves</h3>
-<div class="reading wide-ok"><ul class="bullets"><li><strong>Translation beats evangelism, with a stated mechanism.</strong> Meeting a community inside its own work meant embedding a practitioner's knowledge base in the system. That's replicable, and it's why this landed where a talk wouldn't have.</li><li><strong>The affect was commissioned, not asserted.</strong> Hannah's ask had an affective success condition. Designed charge in a consequential procedure, requested by a practitioner in her own domain.</li><li><strong>Sparkle sometimes removes a ritual.</strong> The free-access code deleted a gate rather than decorating one — the research finding, live, with a kill-switch.</li><li><strong>Repeat participation, measured.</strong> 73% returning is the hardest thing to prove for a civic tool, and it's the evidence a network-as-prototype claim actually needs.</li><li><strong>An instrument that can see disengagement.</strong> Pulse sampled repeatedly rather than at entry, and the four comments between 14:00 and 16:00 match the independent feedback complaints about heat and breaks. It detected a room condition through participation data. That's the transferable design principle behind the fifth condition — and it's demonstrated rather than proposed.</li><li><strong>The pull is the product.</strong> Newsletter, Civic Tech Field Guide, Oxfam — all inbound, none solicited.</li></ul></div>
-<h3 class="sub-h">What failed</h3>
-<div class="reading wide-ok"><ul class="bullets"><li><strong>240 votes, 2 mailing-list signups.</strong> The most useful number in the record. An instrument used 240 times converted almost nobody into the network.</li><li><strong>And there's a probable cause, which makes it a better failure.</strong> Matt Stempeck reported that the newsletter signup form blocked him — <em>"Suspicious activity detected."</em> A form that rejects people is a mechanical explanation for the conversion, not just a strategic one. Fix it, and report both together.</li><li><strong>Your own panel was the least emphatic result of the day.</strong> 12 comments, 47% "could work." Include it. The honest context helps: it ran at 17:00 after the dead zone, and vote participation had declined from 45 in the first panel to 15 in the last, so 19 was above the trailing trend. Reporting the weak number is what makes the strong ones believable.</li><li><strong>The launch gate.</strong> Campaign Factory shipped requiring users to bring their own API key — an accessibility failure you identified and fixed within a week.</li><li><strong>The data nearly didn't survive.</strong> The panel feedback was recovered from the production database ahead of a 30-day purge. No retention policy existed for the instrument's own evidence.</li></ul></div>
-<h3 class="sub-h">Unresolved</h3>
-<div class="reading wide-ok"><p>The sharpest question from the comment wall — how do you stop people's first experience being slop campaign plans? — is Campaign Factory's quality bar and it is not yet answered. Say so, and say what you'd do about it.</p></div>
-<h3 class="sub-h">Artifacts to link</h3>
-<div class="reading wide-ok"><p><code>campaign-factory.vercel.app</code> · the conference replay at <code>/factory/replay/conference</code> <span class="flag-inline">⚑ verify</span> <em>absent from your record entirely</em> · <code>CampaignLab/campaign-factory</code> · <code>CampaignLab/conference-pulse</code> · the OpenClaw 101 deck · Hannah's Conference Pulse brief <span class="flag-inline">⚑ verify</span> <em>cite it</em> · the full panel feedback capture.</p></div>
-<h2 class="bare"><span>Physical and print artifacts</span></h2>
-<div class="reading wide-ok"><div class="status" data-tag="new"><span class="tag">new</span><div class="txt"><p>Printed A6 visa stickers · dossier mini-zines via an A6-onto-A3 imposition pipeline · mission cards · reset slips · debrief cards. Worth its own short block: the durable-artifact principle from Ed's 28 April note, made physical.</p></div></div></div>
-<h2 class="bare"><span>What didn't work</span></h2>
-<div class="reading wide-ok"><div class="status" data-tag="new"><span class="tag">new</span><div class="txt"><p>The section the template asks for — 3.5, <em>What Broke / Failed / Felt Wrong</em>, annotated "(This is <em>good</em> — faculty want to see adaptation.)" It doesn't currently exist anywhere in the submission, and you have real material. For each: what it was, what went wrong, what you did about it.</p></div></div>
-<ul class="bullets"><li><strong>The interactive lab wiki</strong> (23 June). A dependency-free static lab notebook with experiment search, status filters, detail views, a local note queue, and the public/private boundary rendered in the interface. It didn't work as intended. Your own execution journal already logged why in advance — content duplicated from the markdown would drift, the <code>localStorage</code> note queue was a sketch and not collaboration infrastructure, and the thing was a prototype shell needing real links and dates. Worth keeping precisely because the risks were named before the attempt and then materialised.</li><li><strong>The assessment log dragged UX</strong>, and the file size caused page-load crashes; patched with lazy-loading.</li><li><strong>The governance experiments produced a lot of process and sometimes very little outcome.</strong> Already in your sensemaking map.</li><li><strong>Participant evidence for Birthday Passports was never preserved.</strong> The record already admits this. Leave the admission in.</li><li><strong>The instrument gap</strong> — the dashboard and the Field Console counted intake, not inhabitation. Cross-reference to learnings.</li><li><strong>The site restructure, paused 31 July</strong> pending the mission question, and still paused.</li><li><strong>The governance and community writing, unpublished.</strong> You called it the most honest thinking you did this year and it never went out. Say so.</li></ul>
-<p>This section is a direct feed to criterion 6 — reference it from there rather than repeating it.</p></div>
-<h2 class="bare"><span>Lab infrastructure — four experiments that actually ran</span></h2>
-<div class="reading wide-ok"><div class="status" data-tag="new"><span class="tag">new</span><div class="txt"><p>Distinct from the nine prospective ones, and currently invisible in the submission. From <code>experiments.md</code>, each with hypothesis, method, what happened, what was learned, evidence, risks and faculty questions:</p></div></div>
-<ol class="ord"><li><strong>Agent-Assisted Prototype Diary</strong> — notes, commits and logs into structured, human-approved entries. This submission package is its first real run.</li><li><strong>Faculty Feedback Loop</strong> — feedback tracked to action.</li><li><strong>Collaborator and Prior-Art Scout</strong></li><li><strong>Sparkle Bureaucracy Experiment Cards</strong></li></ol>
-<p>This is the lab practising its own bureaucracy, and it's the cleanest proof that the method isn't only aimed outward.</p></div>
-<h2 class="bare"><span>Research corpus</span></h2>
-<div class="reading wide-ok"><div class="status" data-tag="new"><span class="tag">new</span><div class="txt"><p>Four linked longlists of 25 (projects, organisations, directories, people/networks) · three deep-evidence lanes · the movements-and-tactics lane · calibration · <code>website-selection.md</code> and the seven founder questions it left open · the prior-art log · the research inventory built from the 294-message field-notes export.</p></div></div></div>
-<h2 class="bare"><span>Specified but not yet run</span></h2>
-<div class="reading wide-ok"><div class="status" data-tag="new"><span class="tag">new</span><div class="txt"><p>Two sets, and they're different vintages — worth showing both, because the second supersedes the first and that's evidence of learning:</p></div></div>
-<ul class="bullets"><li><strong>19–23 June sprint:</strong> Verification Queue · Consultation Customs · Hybrid Delegation Assembly · Agent-Assisted Lab Clerk.</li><li><strong>23 June idea bank, nine ranked candidates:</strong> Public Voice Customs · Mirror Commons · The Exception Window · Permission Passport Office · The Value Court · Claw Civil Service · Shadow Labour Claims Office · Liquid Mandate Assembly · Sparkle Border Field Kit. Each with a smallest-credible-run spec, artifacts, evidence list and named risks.</li></ul></div>
-<h2 class="bare"><span>Talks and workshops</span></h2>
-<div class="reading wide-ok"><div class="status" data-tag="new"><span class="tag">new</span><div class="txt"><p>Agent Craft 2026 keynote · CHEW Festival "Evaluation 2030" keynote · OpenClaw 101 for Campaign Lab · Clawcon London co-organised. These are artifacts too — they're where translation actually happened, and two of them produced inbound leads.</p></div></div></div></div>
+  <div class="part-body"><div class="reading wide-ok"><p>The convening and the translation work — where the network was built and where the method met other communities. Series are dated from their first event.</p>
+<div class="tl"><article class="visa" data-hue="aqua" style="--rot:-0.4deg" id="sb-evt-01">
+  <header><span class="visa-date">2 Feb <i>2026</i></span><span class="vbadge">convening</span><span class="visa-serial">SB/EVT/01</span></header>
+  <div class="visa-body">
+    <h3>Code Club → Prototype Club → Prototype Coworking Day</h3>
+    <p>Code Club came to me from the previous cohort and the institution, and I ran it every other week from 2 February: soliciting workshops people actually wanted, themed sessions on trending topics, discussing and building together. Over the year it evolved with the cohort's needs — <strong>Code Club</strong> (2 Feb – 16 Mar) → <strong>Prototype Club</strong> (from 13 Apr) → <strong>Prototype Coworking Day</strong> (17 Jul, the day after the AI &amp; Campaigning Conference, reshaped around what the cohort needed as prototypes came due).</p>
+    <dl class="efields"><div><dt>What it taught</dt><dd>the clearest example of the thesis — building your thing while building the cohort at the same time. Ed's observation from outside: Prototype Club is itself an SB project. (<span class="todo">@todo</span> themed-session list, attendance range)</dd></div></dl>
+    <div class="shots"><img src="https://placehold.co/800x500/FFE7F1/A80C59?text=Code%20Club%20Prototype%20Club%201" alt="Code Club → Prototype Club → Prototype Coworking Day — photo 1 (placeholder)" loading="lazy" data-full="https://placehold.co/1600x1000/FFE7F1/A80C59?text=Code%20Club%20Prototype%20Club%201"><img src="https://placehold.co/800x500/FFE7F1/A80C59?text=Code%20Club%20Prototype%20Club%202" alt="Code Club → Prototype Club → Prototype Coworking Day — photo 2 (placeholder)" loading="lazy" data-full="https://placehold.co/1600x1000/FFE7F1/A80C59?text=Code%20Club%20Prototype%20Club%202"><img src="https://placehold.co/800x500/FFE7F1/A80C59?text=Code%20Club%20Prototype%20Club%203" alt="Code Club → Prototype Club → Prototype Coworking Day — photo 3 (placeholder)" loading="lazy" data-full="https://placehold.co/1600x1000/FFE7F1/A80C59?text=Code%20Club%20Prototype%20Club%203"></div>
+    
+    
+  </div>
+  <div class="perf"></div>
+</article>
+<article class="visa" data-hue="aqua" style="--rot:0.35deg" id="sb-evt-02">
+  <header><span class="visa-date">17 Feb <i>2026</i></span><span class="vbadge">convening</span><span class="visa-serial">SB/EVT/02</span></header>
+  <div class="visa-body">
+    <h3>Clawclub (series) + Clawcon London</h3>
+    <p>The first hack night, started in response to the sudden arrival of usable agent tooling: I'd been testing openclaw in ways that excited me and wanted a community to share ideas with and be excited together. The series ran through the spring — sometimes 10–12 people, sometimes 60 filling the hall, building, sharing, occasionally selling each other hardware — and on 8 April scaled up to a conference for a day: Clawcon London, co-organised. The Claw agents grew out of this community.</p>
+    <dl class="efields"><div><dt>What it taught</dt><dd>convene around the moment — when the tooling arrived, the community was the bridge. (<span class="todo">@todo</span> attendance ranges per night, one artifact built at a club night, Clawclub #2 and #4 notes)</dd></div></dl>
+    <div class="shots"><img src="https://placehold.co/800x500/F2E8FF/5F27AE?text=Clawclub%20series%20Clawcon%20London%201" alt="Clawclub (series) + Clawcon London — photo 1 (placeholder)" loading="lazy" data-full="https://placehold.co/1600x1000/F2E8FF/5F27AE?text=Clawclub%20series%20Clawcon%20London%201"><img src="https://placehold.co/800x500/F2E8FF/5F27AE?text=Clawclub%20series%20Clawcon%20London%202" alt="Clawclub (series) + Clawcon London — photo 2 (placeholder)" loading="lazy" data-full="https://placehold.co/1600x1000/F2E8FF/5F27AE?text=Clawclub%20series%20Clawcon%20London%202"><img src="https://placehold.co/800x500/F2E8FF/5F27AE?text=Clawclub%20series%20Clawcon%20London%203" alt="Clawclub (series) + Clawcon London — photo 3 (placeholder)" loading="lazy" data-full="https://placehold.co/1600x1000/F2E8FF/5F27AE?text=Clawclub%20series%20Clawcon%20London%203"><img src="https://placehold.co/800x500/F2E8FF/5F27AE?text=Clawclub%20series%20Clawcon%20London%204" alt="Clawclub (series) + Clawcon London — photo 4 (placeholder)" loading="lazy" data-full="https://placehold.co/1600x1000/F2E8FF/5F27AE?text=Clawclub%20series%20Clawcon%20London%204"></div>
+    
+    
+  </div>
+  <div class="perf"></div>
+</article>
+<article class="visa" data-hue="aqua" style="--rot:-0.25deg" id="sb-evt-03">
+  <header><span class="visa-date">25 Mar <i>2026</i></span><span class="vbadge">convening</span><span class="visa-serial">SB/EVT/03</span></header>
+  <div class="visa-body">
+    <h3>Lumina House takeover of Ration Club</h3>
+    <p>Cross-community collaboration — social choreography at scale. Not a software project: a demonstration that the convening instinct works outside technical contexts, and an early data point for the alliance-building strategy.</p>
+    <dl class="efields"><div><dt>What it taught</dt><dd>different communities talk about the same things in completely different languages — cross-pollination is a skill the network needs.</dd></div></dl>
+    <div class="shots"><img src="https://placehold.co/800x500/D8FAF4/07766A?text=Lumina%20House%20takeover%20of%201" alt="Lumina House takeover of Ration Club — photo 1 (placeholder)" loading="lazy" data-full="https://placehold.co/1600x1000/D8FAF4/07766A?text=Lumina%20House%20takeover%20of%201"><img src="https://placehold.co/800x500/D8FAF4/07766A?text=Lumina%20House%20takeover%20of%202" alt="Lumina House takeover of Ration Club — photo 2 (placeholder)" loading="lazy" data-full="https://placehold.co/1600x1000/D8FAF4/07766A?text=Lumina%20House%20takeover%20of%202"></div>
+    
+    
+  </div>
+  <div class="perf"></div>
+</article>
+<article class="visa" data-hue="aqua" style="--rot:0.3deg" id="sb-evt-04">
+  <header><span class="visa-date">8 May <i>2026</i></span><span class="vbadge">convening</span><span class="visa-serial">SB/EVT/04</span></header>
+  <div class="visa-body">
+    <h3>Rights UnCon</h3>
+    <p>The RightsCon-adjacent unconference at the Hall, hosted with Anouk Ruhaak — one of the communities that helped narrow what SB's own community should be. (<span class="todo">@todo</span> blurb + session notes)</p>
+    
+    <div class="shots"><img src="https://placehold.co/800x500/DDF6FD/08657B?text=Rights%20UnCon%201" alt="Rights UnCon — photo 1 (placeholder)" loading="lazy" data-full="https://placehold.co/1600x1000/DDF6FD/08657B?text=Rights%20UnCon%201"><img src="https://placehold.co/800x500/DDF6FD/08657B?text=Rights%20UnCon%202" alt="Rights UnCon — photo 2 (placeholder)" loading="lazy" data-full="https://placehold.co/1600x1000/DDF6FD/08657B?text=Rights%20UnCon%202"></div>
+    
+    
+  </div>
+  <div class="perf"></div>
+</article>
+<article class="visa" data-hue="violet" style="--rot:-0.4deg" id="sb-evt-05">
+  <header><span class="visa-date">24 May <i>2026</i></span><span class="vbadge">talk</span><span class="visa-serial">SB/EVT/05</span></header>
+  <div class="visa-body">
+    <h3>OpenClaw 101, for Campaign Lab</h3>
+    <p>A workshop run for Campaign Lab — "agents, skills, factories, and the future of AI workflows" (<a href="https://github.com/sugaroverflow/openclaw101-workshop">the deck</a>) — the hack-night teaching thread formalised, and the visible start of the partnership that produced Campaign Factory and Conference Pulse in July.</p>
+    <dl class="efields"><div><dt>What it taught</dt><dd>the translation model in miniature — meet a community inside its own work, show what the tools can do, build with them rather than at them.</dd></div></dl>
+    <div class="shots"><img src="https://placehold.co/800x500/FFF2D2/7E5900?text=OpenClaw%20101%20for%20Campaign%201" alt="OpenClaw 101, for Campaign Lab — photo 1 (placeholder)" loading="lazy" data-full="https://placehold.co/1600x1000/FFF2D2/7E5900?text=OpenClaw%20101%20for%20Campaign%201"><img src="https://placehold.co/800x500/FFF2D2/7E5900?text=OpenClaw%20101%20for%20Campaign%202" alt="OpenClaw 101, for Campaign Lab — photo 2 (placeholder)" loading="lazy" data-full="https://placehold.co/1600x1000/FFF2D2/7E5900?text=OpenClaw%20101%20for%20Campaign%202"></div>
+    
+    
+  </div>
+  <div class="perf"></div>
+</article>
+<article class="visa" data-hue="violet" style="--rot:0.35deg" id="sb-evt-06">
+  <header><span class="visa-date">12 Jun <i>2026</i></span><span class="vbadge">talk</span><span class="visa-serial">SB/EVT/06</span></header>
+  <div class="visa-body">
+    <h3>Agent Craft 2026 keynote: "The Agent Hype Is Real. So Is the Mess"</h3>
+    <p>The translation work for a general audience at the "AI for the Rest of Us" day — enthusiasm and honesty in the same talk, and the framing arc I keep teaching: <strong>prompt → system → loops</strong>.</p>
+    <dl class="efields"><div><dt>What happened</dt><dd>two live leads — Tom Fieldman of mySociety, intrigued, offering experiment ideas and an intro to a practitioner using AI agents to fill out government forms; and Paul Silcock, a CTO building production AI agents, who called the framing "so valuable" and asked me to present to his team.</dd></div></dl>
+    <div class="shots"><img src="https://placehold.co/800x500/FFE7F1/A80C59?text=Agent%20Craft%202026%20keynote%201" alt="Agent Craft 2026 keynote: "The Agent Hype Is Real. So Is the Mess" — photo 1 (placeholder)" loading="lazy" data-full="https://placehold.co/1600x1000/FFE7F1/A80C59?text=Agent%20Craft%202026%20keynote%201"><img src="https://placehold.co/800x500/FFE7F1/A80C59?text=Agent%20Craft%202026%20keynote%202" alt="Agent Craft 2026 keynote: "The Agent Hype Is Real. So Is the Mess" — photo 2 (placeholder)" loading="lazy" data-full="https://placehold.co/1600x1000/FFE7F1/A80C59?text=Agent%20Craft%202026%20keynote%202"></div>
+    
+    
+  </div>
+  <div class="perf"></div>
+</article>
+<article class="visa" data-hue="violet" style="--rot:-0.25deg" id="sb-evt-07">
+  <header><span class="visa-date">15 Jun <i>2026</i></span><span class="vbadge">talk</span><span class="visa-serial">SB/EVT/07</span></header>
+  <div class="visa-body">
+    <h3>CHEW Festival keynote: "Evaluation 2030"</h3>
+    <p>The keynote that opened the charity evaluators' festival: shift from prompt-based to systems-based thinking before agents arrive — articulate your work as a system first, so when vendors show up selling things, you know where agents actually fit.</p>
+    <dl class="efields"><div><dt>What happened</dt><dd>fifteen people lined up afterwards to tell me their specific stories and where they could implement agents. Over the following two months the organisers wrote three times asking for a follow-up blog — attendees kept requesting more. The keynote also converted twice more: a Lovelace brown-bag invitation on AI optimism, and a data-and-AI policy researcher joining the list.</dd></div></dl>
+    <div class="shots"><img src="https://placehold.co/800x500/F2E8FF/5F27AE?text=CHEW%20Festival%20keynote%20Evaluation%201" alt="CHEW Festival keynote: "Evaluation 2030" — photo 1 (placeholder)" loading="lazy" data-full="https://placehold.co/1600x1000/F2E8FF/5F27AE?text=CHEW%20Festival%20keynote%20Evaluation%201"><img src="https://placehold.co/800x500/F2E8FF/5F27AE?text=CHEW%20Festival%20keynote%20Evaluation%202" alt="CHEW Festival keynote: "Evaluation 2030" — photo 2 (placeholder)" loading="lazy" data-full="https://placehold.co/1600x1000/F2E8FF/5F27AE?text=CHEW%20Festival%20keynote%20Evaluation%202"></div>
+    
+    
+  </div>
+  <div class="perf"></div>
+</article>
+<article class="visa" data-hue="aqua" style="--rot:0.3deg" id="sb-evt-08">
+  <header><span class="visa-date">12 Dec → weekly <i>2026</i></span><span class="vbadge">convening</span><span class="visa-serial">SB/EVT/08</span></header>
+  <div class="visa-body">
+    <h3>Content Co-Creation Fridays</h3>
+    <p>Co-founded with Francesca Galli, with Matt Stempeck's sponsorship — because I was inspired to work in the open. A weekly "shut up &amp; write"-style focus session at the house for faculty and fellowship candidates: set a goal, pick focused or collaborative mode, check in on progress — research write-ups, blog posts, decks, demo scripts, videos (<a href="https://luma.com/o7t15995">Luma</a>).</p>
+    <dl class="efields"><div><dt>What it taught</dt><dd>the working-in-public method, made into a shared weekly ritual. (<span class="todo">@todo</span> how many sessions ran, one thing that shipped out of it)</dd></div></dl>
+    <div class="shots"><img src="https://placehold.co/800x500/D8FAF4/07766A?text=Content%20CoCreation%20Fridays%201" alt="Content Co-Creation Fridays — photo 1 (placeholder)" loading="lazy" data-full="https://placehold.co/1600x1000/D8FAF4/07766A?text=Content%20CoCreation%20Fridays%201"><img src="https://placehold.co/800x500/D8FAF4/07766A?text=Content%20CoCreation%20Fridays%202" alt="Content Co-Creation Fridays — photo 2 (placeholder)" loading="lazy" data-full="https://placehold.co/1600x1000/D8FAF4/07766A?text=Content%20CoCreation%20Fridays%202"></div>
+    
+    
+  </div>
+  <div class="perf"></div>
+</article>
+<article class="visa" data-hue="aqua" style="--rot:-0.4deg" id="sb-evt-09">
+  <header><span class="visa-date">ongoing <i>2026</i></span><span class="vbadge">convening</span><span class="visa-serial">SB/EVT/09</span></header>
+  <div class="visa-body">
+    <h3>The AI safety study group</h3>
+    <p>A reading-and-discussion group on AI safety materials, with people from neighbouring institutions invited in — the "considering the implications" thread running underneath all the building. (<span class="todo">@todo</span> dates/cadence, reading list)</p>
+    
+    <div class="shots"><img src="https://placehold.co/800x500/DDF6FD/08657B?text=The%20AI%20safety%20study%201" alt="The AI safety study group — photo 1 (placeholder)" loading="lazy" data-full="https://placehold.co/1600x1000/DDF6FD/08657B?text=The%20AI%20safety%20study%201"></div>
+    
+    
+  </div>
+  <div class="perf"></div>
+</article></div>
+<h2 class="bare"><span>What's deliberately not claimed</span></h2>
+<p>Not every contribution to the house belongs under the Sparkle Bureaucracy umbrella, and the line is drawn on purpose: organizing <strong>Funding 101 for Civic &amp; Political Tech</strong> with Georgia Bullen (7 April); organizing the <strong>PoliTech Awards committee meetings</strong> (the evaluation methodology and Project Mirror are SB; the committee logistics were house service); co-hosting the <strong>Censorship &amp; Surveillance Resistant Comms</strong> discussion with Nicholas Botti (1 March). They're named here once because they're part of building the cohort — but claiming them as the project would inflate it. Knowing what <em>isn't</em> the project is part of the method.</p></div></div>
 </section>
 
-<section class="part" id="part-4" data-hue="cyan">
-  <p class="mrz" aria-hidden="true">PTSB&lt;PART04&lt;&lt;THE&lt;TIMELINE&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;</p>
+<section class="part" id="part-04" data-hue="cyan">
+  <p class="mrz" aria-hidden="true">PTSB&lt;PART04&lt;&lt;THE&lt;ROADMAP&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;</p>
   <header class="part-head">
     <p class="eyebrow">Part 04</p>
-    <h1>The timeline</h1>
-    <div class="part-meta"><span class="was">was part 03</span><span class="budget">target ≈ 2,000 words</span></div>
+    <h1>The Roadmap</h1>
   </header>
-  <div class="part-body"><div class="reading wide-ok"><p>Chronological, one <code>Add to the doc</code> slot per entry. Now free to be narrative, because Part 3 carries the inventory.</p>
-<div class="status" data-tag="new"><span class="tag">new</span><div class="txt"><p><strong>Open with 15 December 2025 — the legitimacy field note.</strong> Currently buried in the appendix transcript; it should be the first dated entry, quoted. It establishes that the year's central finding was diagnosed in week three and published in public. Include the <em>why would we follow the rules</em> line, the constitutional-assumptions passage, and <em>I would rather people opt in.</em></p></div></div>
-<div class="flagbox"><span class="fm">⚑</span><div><p>Verify the fellowship start date before calling it "week three."</p></div></div>
-<div class="status" data-tag="keep"><span class="tag">keep</span><div class="txt"><p>All existing entries in sequence, plus</p></div></div>
-<div class="status" data-tag="new"><span class="tag">new</span><div class="txt"><p>the June Topic entry, which is currently marked <em>Blurb TBD</em>.</p></div></div>
-<div class="flagbox"><span class="fm">⚑</span><div><p>Settle the activation count — "21" and "20+" are both in circulation.</p></div></div>
-<div class="status" data-tag="new"><span class="tag">new</span><div class="txt"><p><strong>A visible inflection marker at term 2.</strong> Short block, not a full entry: the decision to stop asking the house to settle the legitimacy question and go find rooms where it was settled. Then what the dates show — from February the centre of gravity moves outward, and the house appears as venue rather than jurisdiction.</p></div></div>
-<div class="flagbox"><span class="fm">⚑</span><div><p>Verify term 2 dates. Earliest hard evidence is Clawclub #1, 17 February.</p></div></div>
-<div class="status" data-tag="revise"><span class="tag">revise</span><div class="txt"><p><strong>Birthday Passports and Cohort Reunion.</strong> Leave as written. The participation caveat belongs in Learnings as a later finding — more honest about when you saw it.</p></div></div>
-<div class="status" data-tag="keep"><span class="tag">keep</span><div class="txt"><p>What's deliberately not in this timeline.</p></div></div></div></div>
+  <div class="part-body"><div class="reading wide-ok"><p>Why a network and not a product? Because the year's evidence says the network is what works: the experiments that landed, landed inside communities that had already settled they wanted to be in the room — the cohort, the Clawclub regulars, Campaign Lab, the charity evaluators. Instead of one tool hunting for users, the practice engages communities through experiments, and the communities keep pulling the work forward. The community formed around the practice before the network had a landing page — which, per the network-formation advice in the diary, is how networks are born.</p>
+<h2 class="bare"><span>Near term (August–September 2026)</span></h2>
+<ul class="bullets"><li><strong>AI agents for good — hackathon.</strong> Prototype a different future, with suggested civic topics and challenges. The network's first event under its own banner.</li></ul>
+<ul class="bullets"><li><strong>Demo night.</strong> Projects from the hackathon, plus anyone else who has something to show.</li></ul>
+<ul class="bullets"><li><strong>Booked and queued engagements</strong> — evidence already turning into calendar: the Oxfam GB Campaign Factory workshop with Asil Sidahmed (late September); the Lovelace brown-bag on AI optimism, in debate with their researchers; Paul Silcock's team presentation; the Civic Tech Field Guide content-creation show &amp; tell; and the CHEW festival follow-up blog (three invitations outstanding).</li></ul>
+<ul class="bullets"><li><strong>A faculty brainstorm on the flagship project.</strong> The network needs its tangible artifact — its pol.is, in the vTaiwan analogy.</li></ul>
+<h2 class="bare"><span>The flagship candidates</span></h2>
+<p>From the Hannah session: <strong>reimagining grant-making</strong> · <strong>Campaign Factory, grown up</strong> (already live, already partnered, already testimonialed) · <strong>a game</strong> · and Peyman's nudge, <strong>"What can AI do for me?" as a product</strong> — an agent that shadows your working patterns and suggests the tools, workflows, and skills that would amplify you: an upskilling diagnostic that meets people inside their actual work.</p>
+<p>Behind these sit the nine specified experiments with their two recommended routes: the <strong>canonical tool route</strong> (Public Voice Customs — "pol.is for synthetic-voice-era consultations"; Mirror Commons — consentful synthetic representation; The Exception Window) and the <strong>fellowship evidence route</strong> (The Exception Window first — the verification/exception ritual that inherits Sparkle Border Authority's grammar and keeps enforcement visible). Each candidate already has a smallest-credible-run spec, artifacts, evidence lists, and named risks.</p>
+<h2 class="bare"><span>The rhythm (determined with the community)</span></h2>
+<ul class="bullets"><li><strong>Hackathon → demo night</strong> as the anchor cycle.</li></ul>
+<ul class="bullets"><li><strong>2× socials a year, built as experiences</strong> — game nights, Xmas and summer; the experiments are the social infrastructure.</li></ul>
+<ul class="bullets"><li><strong>Hear-from-experts sessions</strong> — a domain at a time, when new things ship.</li></ul>
+<ul class="bullets"><li><strong>Problem discovery</strong> — gatherings that bring in people <em>with problems</em>, not technologists: cross-pollination, coffee chats. The network's intake ritual.</li></ul>
+<ul class="bullets"><li><strong>An organiser</strong> to hold the rhythm — plus the supporting strategy from the mentor record: small, high-density events over big panels; a public calendar that curates the ecosystem; "easy yes" asks; a portfolio that includes other people's work.</li></ul>
+<h2 class="bare"><span>Scope — so the network stays aimed</span></h2>
+<p><strong>In:</strong> redesigning refugee services · mapping all of London's community centres · election disinformation · govtech · trade unions · work against hate and authoritarianism.</p>
+<p><strong>Out:</strong> working for a political party, or for one side winning an election.</p>
+<h2 class="bare"><span>Open questions carried forward</span></h2>
+<ul class="bullets"><li><strong>The name.</strong> "Sparkle Bureaucracy" may not be the network's next-phase name; the mission is settled even if the label isn't. The rename decision follows the flagship decision.</li></ul>
+<ul class="bullets"><li><strong>The flagship.</strong> To be chosen with faculty input against the selection criteria already in the experiments log: clearest civic community, smallest credible version, strongest evidence path.</li></ul>
+<ul class="bullets"><li><strong>The seven founder questions</strong> the research sprint left open — e.g. is emerging technology part of sparkle's definition or just SB's current material? Can moral discomfort count as sparkle? Must power be transferred, or is making it legible enough?</li></ul>
+<ul class="bullets"><li><strong>The horizon.</strong> Govtech. The window work of the next year builds the network and credibility that the horizon work will need.</li></ul></div></div>
 </section>
 
-<section class="part" id="part-5" data-hue="gold">
-  <p class="mrz" aria-hidden="true">PTSB&lt;PART05&lt;&lt;THE&lt;LEARNINGS&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;</p>
+<section class="part" id="part-05" data-hue="gold">
+  <p class="mrz" aria-hidden="true">PTSB&lt;PART05&lt;&lt;ADDRESSING&lt;THE&lt;CRITERIA&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;</p>
   <header class="part-head">
     <p class="eyebrow">Part 05</p>
-    <h1>The learnings</h1>
-    <div class="part-meta"><span class="was">was part 04</span><span class="budget">target ≈ 2,000 words</span></div>
+    <h1>Addressing the criteria</h1>
   </header>
-  <div class="part-body"><div class="reading wide-ok"><p>Nine becomes eleven, with one substantially rewritten.</p>
-<div class="status" data-tag="new"><span class="tag">new</span><div class="txt"><p><strong>#1 — Legitimacy has to be settled before design can be debated.</strong> The lead learning; it explains the shape of the year. Where the frame is unsettled every proposal snaps back to <em>why should this bind me</em> and the design argument never happens. Where it's settled you go straight to implementation. Note that it generalises — same mechanism as consultation flooding, and as transparency failing to produce trust.</p></div></div>
-<div class="status" data-tag="keep"><span class="tag">keep</span><div class="txt"><p><strong>Same skeleton, different intent.</strong> </p></div></div>
-<div class="status" data-tag="revise"><span class="tag">revise</span><div class="txt"><p><strong>Games lower the bar — to entry, not to consent.</strong> The correction, dated August as a revision of the earlier entries. Games don't manufacture consent to the frame and they hide its absence, because signing up looks like playing. Name the instrument gap: the dashboard and the Field Console counted intake, not inhabitation. Then the fifth condition. Keep it constitutional, no names.</p></div></div>
-<div class="status" data-tag="new"><span class="tag">new</span><div class="txt"><p><strong>Whimsy and rigour run on the same substrate.</strong> From the Claw agents finding — the playful agents generated real social engagement, the research agents generated real evidence, same technical base. It's the strongest available argument that the 80/20 ratio is a method rather than a tone, and it's in no learnings list.</p></div></div>
-<div class="status" data-tag="keep"><span class="tag">keep</span><div class="txt"><p>Transparency isn't trust · The inference is not consent · Translation beats evangelism · Affect is broader than delight, and its named failure mode · The three registers don't need collapsing · The lab's own bureaucracy is an experiment.</p></div></div>
-<div class="status" data-tag="revise"><span class="tag">revise</span><div class="txt"><p><strong>The resistance is information.</strong> Trim. With #1 in place it only needs the concealment loop and the <em>legitimacy is constructed</em> resolution.</p></div></div>
-<div class="status" data-tag="keep"><span class="tag">keep</span><div class="txt"><p><strong>What the communities around the work taught me</strong> — the full bulleted list.</p></div></div></div></div>
+  <div class="part-body"><div class="reading wide-ok"><p>Sparkle Bureaucracy is not a single tool with a user base, and this submission doesn't pretend it is. The claim: <strong>the network is the prototype, the experiments are its releases, and the diary is the evidence.</strong> The module guidance prioritises judgement, commitment, and creativity demonstrated over time through open working practices — which is precisely what the open diary documents, week by week, including the weeks where the project questioned itself.</p>
+<ol class="sheet"><li class="crit" data-hue="magenta">
+  <div class="crit-mark"><span>1</span><i>criterion</i></div>
+  <div class="crit-body"><h3>Political technology fit</h3><ul class="checks"><li>Can be reasonably added to the Civic Tech Field Guide — the prior-art log already frames the entry; librarian question queued</li><li>Used or tested by civic/political/public sector communities — Campaign Lab, charity evaluators, Oxfam GB, the cohort, Ration Club</li><li>Infrastructural, used by multiple groups — the lab serves multiple civic communities rather than one</li></ul><p>The lab's artifacts are civic/political technology end to end: Sparkle Border Authority (bureaucratic ritual as live software), Project Mirror and the open V1–V15 awards pipeline (participatory evaluation of 321 political-tech projects), Campaign Factory (campaign strategy research for UK civic problems), Conference Pulse (live conference participation), Topic (community scheduling/forum software).</p></div>
+</li>
+<li class="crit" data-hue="violet">
+  <div class="crit-mark"><span>2</span><i>criterion</i></div>
+  <div class="crit-body"><h3>Public web presence</h3><ul class="checks"><li>Live URL — <a href="https://sparklebureaucracy.org">sparklebureaucracy.org</a> with a live mailing list since 24 May</li><li>Clear documentation — the complete open diary in the <a href="https://github.com/sugaroverflow/sparkle-bureaucracy-site">site repo</a></li><li>What is being assessed is visible online — live deployed prototypes (SBA, Campaign Factory, the awards site, topic.forum) and this submission page itself</li></ul></div>
+</li>
+<li class="crit" data-hue="aqua">
+  <div class="crit-mark"><span>3</span><i>criterion</i></div>
+  <div class="crit-body"><h3>Original work</h3><ul class="checks"><li>Original features described — every prototype named above is original work, built during the fellowship, in public</li><li>Contributes something substantial — nine deployed applications, four lab experiments run, nine specified to smallest-credible-run level</li><li>Prior-art adaptation documented — collaborations credited (Campaign Lab on Campaign Factory; cohort contributions to the awards pipeline named individually)</li></ul></div>
+</li>
+<li class="crit" data-hue="cyan">
+  <div class="crit-mark"><span>4</span><i>criterion</i></div>
+  <div class="crit-body"><h3>Not obsolete</h3><ul class="checks"><li>Meaningfully different from similar tools — <strong>designed affect on top of real procedure, AI-native, aimed at the upskilling window, with under-resourced civic contexts as a stated boost</strong></li><li>Evidence of learning from previous attempts — the 100-case corpus classifies neighbours as exemplars, ancestors, infrastructure-awaiting-sparkle, and warning cases</li><li>Avoids the category's predictable failure patterns — the prior-art research names them (affective legitimacy without recourse, cute-washing coercion, exception theatre) and designs against them explicitly</li></ul><p>The neighbours, mapped honestly: vTaiwan/pol.is (the movement-plus-tool precedent), LiquidFeedback, Creative Bureaucracy Festival, OneTeamGov, Papers Please, Project Re:form, Talk to the City, the Habermas Machine. Non-redundancy demonstrated by taxonomy, not assertion.</p></div>
+</li>
+<li class="crit" data-hue="gold">
+  <div class="crit-mark"><span>5</span><i>criterion</i></div>
+  <div class="crit-body"><h3>Evidence of use</h3><ul class="checks"><li>Testimonials — distributed through this page's entries, sourced in the record</li><li>Metrics — Conference Pulse production data (240 votes, 73% repeat participation), Clawclub attendance (10–60/night), 321 projects evaluated, 19-ballot live vote</li><li>Activity logs — the engagement log, the commit histories, the open diary</li><li>Community validation — inbound, unprompted pull</li></ul><p>The inversion at the heart of the submission: instead of one tool with users, <strong>communities engaged through experiments.</strong> Ration Club guests went through a live border ritual and co-created the fiction. The cohort was inside Project Mirror, ran its own live ranking, and played the spy reunion. Clawclub drew 10–60 people a night through the spring. Campaign Lab co-built Campaign Factory, ran it at their conference, and subsidises free access. Fifteen charity evaluators queued after a keynote; the festival wrote three times for more. And the pull began unprompted in July: Oxfam GB requesting a team demo, the Civic Tech Field Guide inviting demos, endorsements from mySociety and a production-agents CTO.</p>
+<div class="slip"><p>"Amazing to see the platform you have built." — Oxfam GB's campaign engagement manager (<span class="todo">@todo</span> check she's happy to be named)</p></div>
+<div class="slip"><p>"You are an inspiration, Fatima! I've shared your website with family and friends today!" — Dr Eugenie Regan</p></div></div>
+</li>
+<li class="crit" data-hue="magenta">
+  <div class="crit-mark"><span>6</span><i>criterion</i></div>
+  <div class="crit-body"><h3>Methodological soundness</h3><ul class="checks"><li>Foreseeable failure modes identified — every candidate experiment carries hypothesis, method, evidence-to-collect, risks, ethics notes, and faculty questions</li><li>Approach adapted based on those risks — the June experiment bar, the July rethink documented in public, the free-access accessibility fix, the signup-bug fix</li><li>No clear predictable reason for failure remains — the category's predictable failure (a vibe with no programme) is answered by the dated record: the activations run, nine experiments specified, one flagship decision queued with faculty</li></ul><p>Expert critique is logged with responses — every piece of Prototype Previews feedback got an action. The record shows the approach adapting, and the diary's own infrastructure runs as a monitored experiment with a human approval gate.</p></div>
+</li></ol></div></div>
 </section>
 
-<section class="part" id="part-6" data-hue="magenta">
-  <p class="mrz" aria-hidden="true">PTSB&lt;PART06&lt;&lt;THE&lt;ROADMAP&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;</p>
+<section class="part" id="part-06" data-hue="magenta">
+  <p class="mrz" aria-hidden="true">PTSB&lt;PART06&lt;&lt;FINAL&lt;REFLECTION&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;</p>
   <header class="part-head">
     <p class="eyebrow">Part 06</p>
-    <h1>The roadmap</h1>
-    <div class="part-meta"><span class="was">was part 05</span><span class="budget">target ≈ 700 words</span></div>
+    <h1>Final Reflection</h1>
   </header>
-  <div class="part-body"><div class="reading wide-ok"><div class="status" data-tag="new"><span class="tag">new</span><div class="txt"><p>One opening paragraph: why a network and not a product. Pull from Part 2's room paragraph. Turns the roadmap from a wish list into the conclusion of the argument.</p></div></div>
-<div class="status" data-tag="keep"><span class="tag">keep</span><div class="txt"><p>Near term · flagship candidates and the two routes · the rhythm · scope, in and out.</p></div></div>
-<div class="status" data-tag="revise"><span class="tag">revise</span><div class="txt"><p><strong>Open questions carried forward.</strong> Same four, reframed: the flagship stays open <em>because</em> of learning #1, not despite it.</p></div></div></div></div>
-</section>
-
-<section class="part" id="part-7" data-hue="violet">
-  <p class="mrz" aria-hidden="true">PTSB&lt;PART07&lt;&lt;ADDRESSING&lt;THE&lt;CRITERIA&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;</p>
-  <header class="part-head">
-    <p class="eyebrow">Part 07</p>
-    <h1>Addressing the criteria</h1>
-    <div class="part-meta"><span class="was">was part 06</span><span class="budget">target ≈ 1,200 words</span></div>
-  </header>
-  <div class="part-body"><div class="reading wide-ok"><div class="status" data-tag="revise"><span class="tag">revise</span><div class="txt"><p><strong>1. Qualifies as political technology.</strong> Now much stronger — point at Part 3. Nine deployed applications, not five — plus print artifacts, four lab experiments that ran, thirteen specified, and a documented failure log.</p></div></div>
-<div class="status" data-tag="keep"><span class="tag">keep</span><div class="txt"><p><strong>2. Public web presence</strong> · <strong>3. Originality</strong> · <strong>4. Non-redundancy.</strong></p></div></div>
-<div class="status" data-tag="revise"><span class="tag">revise</span><div class="txt"><p><strong>5. Active user community.</strong> Add the distinction the year produced — attendance versus inhabited participation, and that you now measure the difference. Pre-empts the sharpest attack on a network-as-prototype claim, which is that a headcount is not a user base.</p></div></div>
-<div class="status" data-tag="revise"><span class="tag">revise</span><div class="txt"><p><strong>6. No clear methodological failure.</strong> Strongest section, gets stronger: the fifth condition arrived at from your own data; the instrument gap named rather than hidden; the December note as evidence the environmental constraint was diagnosed early and in public; four lab experiments that ran with human approval gates; and the record visibly correcting its own earlier claims.</p></div></div></div></div>
-</section>
-
-<section class="part" id="part-8" data-hue="aqua">
-  <p class="mrz" aria-hidden="true">PTSB&lt;PART08&lt;&lt;EVIDENCE&lt;SHELF&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;</p>
-  <header class="part-head">
-    <p class="eyebrow">Part 08</p>
-    <h1>Evidence shelf</h1>
-    <div class="part-meta"><span class="was">was part 07</span><span class="budget">target ≈ 600 words</span></div>
-  </header>
-  <div class="part-body"><div class="reading wide-ok"><div class="status" data-tag="keep"><span class="tag">keep</span><div class="txt"><p>All existing quotes, the people list, partners, the inspired-by constellation.</p></div></div>
-<div class="status" data-tag="new"><span class="tag">new</span><div class="txt"><p>Add from the December field note: <em>even if you were dictator and there was a signed charter, why would we follow the rules?</em> · <em>those are very different constitutional assumptions</em> · <em>I would rather people opt in.</em></p></div></div>
-<div class="flagbox"><span class="fm">⚑</span><div><p>Outstanding: the "five months of research" attribution <em>(get name/permission)</em> · whether a debrief card can be reproduced · participant evidence for Birthday Passports was never preserved and the record already says so — leave that admission in.</p></div></div></div></div>
-</section>
-
-<section class="part" id="build-order" data-hue="cyan">
-  <p class="mrz" aria-hidden="true">PTSB&lt;BUILD&lt;ORDER&lt;&lt;BUILD&lt;ORDER&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;</p>
-  <header class="part-head">
-    <p class="eyebrow">Build order</p>
-    <h1>Build order</h1>
-  </header>
-  <div class="part-body"><ol class="order"><li><span><strong>Part 3</strong> — the inventory and the Campaign Lab case study. Highest return, and mostly assembly rather than writing.</span></li><li><span><strong>Part 2</strong> — the restructure everything else has to agree with.</span></li><li><span><strong>Part 7</strong>, criteria 1, 5 and 6.</span></li><li><span><strong>Part 5</strong> — learnings #1, the games revision, the whimsy/rigour addition.</span></li><li><span><strong>Part 4</strong> — the December entry, the term-2 marker, the Topic blurb. Everything else is written.</span></li><li><span><strong>Part 6</strong> — one new paragraph.</span></li><li><span><strong>Part 8</strong> — three quotes.</span></li><li><span>Photos into the <code>Add to the doc</code> slots last, one pass.</span></li></ol></div>
+  <div class="part-body"><div class="reading wide-ok"><p><strong>What I set out to do.</strong> Find my mission — and test a bet: that you can keep bureaucracy's procedural skeleton, change only the intent, and transform the experience. I came in with DMV experiments and livestreamed liquid democracy in mind, expecting to spend the year making bureaucratic processes sparkle.</p>
+<p><strong>What I actually built.</strong> A network, run as an experiment lab. Nine deployed applications, a border regime at a birthday, an awards pipeline with every version published, a spy agency for a reunion, two artifacts commissioned by faculty and built with a partner community, a hack-night community that filled the hall, two keynotes that generated queues and follow-up demands, an open diary that became the data layer for this submission — and a specified idea bank of nine experiments waiting for the network's next phase.</p>
+<p><strong>What I learned about political technology.</strong> The year's learnings, compressed: <strong>Same skeleton, different intent</strong> — you can change a system's intent without dismantling its structure, and the experience transforms. <strong>Games lower the bar</strong> — play reliably gets people into interactions they'd avoid as networking or compliance; the fun thing is the method, not decoration on it. <strong>Transparency isn't trust</strong> — but it moves the argument from "trust us" to "argue with this specific choice." <strong>The inference is not consent</strong> — synthetic representation scales participation and undermines it in the same motion; the lab's answer is people governing their own estimates. <strong>Translation beats evangelism</strong> — meet a community inside its own work, and the upskilling gap closes at small scale. <strong>Affect is broader than delight</strong> — relief, dignity, moral discomfort and productive disagreement all count; and the category's failure mode is affective legitimacy without recourse — a beautiful, friendly process that leaves power untouched. The thing SB must never build. <strong>The resistance is information</strong> — the hardest learning was about the founder: I trusted my execution far more than my right to originate authority, and naming that loop broke it. Legitimacy is constructed — borrow the answers of the people around you until your own catch up. <strong>The three registers don't need collapsing</strong> — six months of thrash came from trying to compress three cares into one mission; holding them as method, moment, and horizon resolved it in an afternoon. <strong>The lab's own bureaucracy is an experiment — and it ran.</strong></p>
+<p><strong>How the project changed.</strong> It started as the fun thing with a govtech horizon; it ends as a network for closing the AI gap for civic communities, with the fun thing as its method and the horizon intact. The communities I met through the year — vTaiwan's co-creation, the publishers' summit, the Bohm dialogue's lesson that expertise announced is expertise resisted, the Majority Myth launch pointing me at the model minority myth and my own motivations, Lumina House teaching me what being the bridge means — narrowed who this is for and what it must never become. (<span class="todo">@todo</span> Fatima voice pass — this section especially)</p>
+<p><strong>What I would do next with more time.</strong> Run the flagship. The hackathon and demo night are booked intent; the faculty brainstorm picks the flagship against criteria already written; the nine experiments are specified to smallest-credible-run level. And the two questions keep the work honest at any scale: <em>what can I use AI for?</em> and <em>what can AI do for me?</em></p>
+<h2 class="bare"><span>Thank you</span></h2>
+<p><em>Because a network prototype is made of people.</em></p>
+<ul class="bullets"><li><strong>Edward Saperia</strong> — for a year-long thread of belief, and for looking at a border ritual at a birthday party and saying: that's Sparkle Bureaucracy.</li></ul>
+<ul class="bullets"><li><strong>Hannah O'Rourke</strong> — for being emotional support, for the pilot projects, and for repeatedly reminding me — through evidence — that legitimacy is constructed, not earned.</li></ul>
+<ul class="bullets"><li><strong>Anouk Ruhaak</strong> — for indulging me on the implications of AI even while hating it, for testing the limits of my agents, and for the adventure of hosting RightsUnCon.</li></ul>
+<ul class="bullets"><li><strong>Six Silberman</strong> — for the readings that made me weigh the pros and cons of technology, for treating me like an expert, and for implicitly answering the "why me."</li></ul>
+<ul class="bullets"><li><strong>Andreas Varotsis</strong> — for always collaborating on ideas and supporting Clawclub.</li></ul>
+<ul class="bullets"><li><strong>Gamithra Marga</strong> — for the cutting-edge ideas on the awards, and for all the cool things you've built that were so inspiring.</li></ul>
+<ul class="bullets"><li><strong>Alexandra Ciocanel</strong> — for the awards showcase, and for always being willing to support wild ideas and activations.</li></ul>
+<ul class="bullets"><li><strong>Jamie Coombes</strong> — for all the things we did for the amazing awards showcase!</li></ul>
+<ul class="bullets"><li><strong>Francesca Galli</strong> — for being the reason I was excited to run the Sparkle Border Authority at my birthday, and for always supporting my crazy ideas.</li></ul>
+<ul class="bullets"><li><strong>Peyman Owladi</strong> — for always giving me interesting things to consider in his classes, and for the flagship.</li></ul>
+<ul class="bullets"><li><strong>Matt Stempeck</strong> — for being the best mentor ever, for helping me figure out what I wanted to do, and for being excited about all that I do.</li></ul>
+<ul class="bullets"><li><strong>Aadi Kulkarni</strong> — for supporting Claw Club, discussing American politics, and always believing in me even when I didn't.</li></ul>
+<ul class="bullets"><li><strong>James Moulding</strong> — for helping me wrap my head around networks, for believing in the optimistical Sparkle Bureaucracy in its infancy, and for all the feedback and support.</li></ul>
+<ul class="bullets"><li><strong>Chris Owen</strong> — for writing our values statements on the first day together, supporting Prototype and Code Club, and building cool things.</li></ul>
+<ul class="bullets"><li><strong>David Powell</strong> — for being one for building community, and for building cool things together at Code Club.</li></ul>
+<ul class="bullets"><li><strong>Huda Abdirahim</strong> — for coming back to us! So we could brainstorm interesting projects and talk about the impact of technology.</li></ul>
+<ul class="bullets"><li><strong>Asil Sidahmed</strong> — for being an inspiration, for seeing what the others don't see, and for collaborating on ideas.</li></ul>
+<ul class="bullets"><li><strong>Nick Botti</strong> — for the feedback, the emotional support, and the deep debates on American politics and the implications of AI.</li></ul>
+<ul class="bullets"><li><strong>Hoagy Davis-Digges</strong> — for listening to me vent about all things legitimacy of the course, and being very kind about it.</li></ul>
+<ul class="bullets"><li><strong>Zarinah Agnew</strong> — for inspiring me to think about people, motivations, and what kind of impact I want in the communities I exist in.</li></ul>
+<ul class="bullets"><li><strong>Alex Vince</strong> — for the leadership sessions, and for being someone who can be relied on and collaborated with.</li></ul>
+<ul class="bullets"><li><strong>John Evans</strong> — for Matrix! And for the laughs, and for the +1 on technical things and ideas.</li></ul>
+<p>(<span class="todo">@todo</span> lines still to come: Fred O'Brien · Tuna Acisu · Davit Jintcharadze · Emily Mayhew · Connor Dunlop · Theodore Keloglou · Sinead Doyle · Joshua Becker · Sam Ballard)</p></div></div>
 </section>
 </main>
 
@@ -699,13 +788,17 @@ footer{border-top:2px solid var(--ink);background:var(--midnight);color:#E7E4F4}
   </div>
 </aside>
 
+<dialog class="lightbox" id="lightbox">
+  <img alt="">
+  <button type="button" aria-label="Close">✕</button>
+</dialog>
+
 <footer>
   <div class="foil" aria-hidden="true"></div>
   <div class="foot-in">
     <p><span class="foot-stars">★★★★★</span><br>
       Sparkle Bureaucracy · SB/NWSPK/2026/01<br>
-      Open diary <a href="https://github.com/sugaroverflow/sparkle-bureaucracy-site/blob/main/lore">lore/</a> · Site <a href="https://sparklebureaucracy.org">sparklebureaucracy.org</a></p>
-    <p>To leave feedback: add your name (bottom right), then highlight any text<br>and leave a note right there. No account needed.</p>
+      Project site: <a href="https://sparklebureaucracy.org">sparklebureaucracy.org</a> · The complete record: <a href="https://github.com/sugaroverflow/sparkle-bureaucracy-site/blob/main/submission/sparkle-bureaucracy.md">sparkle-bureaucracy.md</a></p>
   </div>
 </footer>
 
@@ -721,10 +814,21 @@ footer{border-top:2px solid var(--ink);background:var(--midnight);color:#E7E4F4}
       a.scrollIntoView({block:'nearest',inline:'nearest'});
     });
   },{rootMargin:'-45% 0px -50% 0px'});
-  document.querySelectorAll('section.part').forEach(function(s){io.observe(s);});
+  document.querySelectorAll('section.part, header.hero').forEach(function(s){io.observe(s);});
+
+  var lb=document.getElementById('lightbox'),lbImg=lb.querySelector('img');
+  document.addEventListener('click',function(ev){
+    var t=ev.target;
+    if(t.tagName==='IMG'&&t.closest('.shots')){
+      lbImg.src=t.getAttribute('data-full')||t.src;
+      lbImg.alt=t.alt;
+      lb.showModal();
+    } else if(t===lb||t.closest('.lightbox button')){
+      lb.close();
+    }
+  });
 })();
 </script>
-
 <script src="/vendor/recogito.min.js"></script>
 <script>
 (function(){
