@@ -711,381 +711,6 @@ thank you!! :)
 ++ 14 Dec 2025 | reread the Tyranny of Structurelessness | Alex Vince recommends revisiting Jo Freeman's essay with a new lens after the governance discussions.
 based on this, it might be good to read the Tyranny of Structurelessness with a new lens (as recommended by alex vince) https://www.jofreeman.com/joreen/tyranny.htm
 → https://www.jofreeman.com/joreen/tyranny.htm
-++ 15 Dec 2025 | Arnstein's ladder of citizen participation | Arnstein's 1969 paper names informing, consultation and placation as tokenism, matching her sense of procedural futility.
-A LADDER OF CITIZEN PARTICIPATION, Sherry R. Arnstein
-https://www.historyofsocialwork.org/1969_ENG_Ladderofparticipation/1969%2C%20Arnstein%2C%20ladder%20of%20participation%2C%20original%20text%20OCR%20C.pdf
-
-What you’re calling procedural futility is basically: the process invites voice but doesn’t route it into consequential decisions. When people learn (even once or twice) that objections don’t change the plan, “participation” becomes a performance: you talk, the document grows, and then the authority proceeds as originally intended.
-
-That maps cleanly onto Arnstein’s ladder: rungs like Informing / Consultation / Placation are “tokenism” — people can “be heard,” but they lack power to ensure their views are heeded.
-→ https://www.historyofsocialwork.org/1969_ENG_Ladderofparticipation/1969%2C%20Arnstein%2C%20ladder%20of%20participation%2C%20original%20text%20OCR%20C.pdf
-++ 15 Dec 2025 | Nancy Fraser on rethinking recognition | Fraser shifts recognition from a cultural identity model to a status model removing institutional barriers to peer participation.
-Nancy Fraser, Rethinking Recognition
-https://newleftreview.org/issues/ii3/articles/nancy-fraser-rethinking-recognition
-
-Nancy Fraser’s approach to recognition is to shift from a culturalist interpretation of the Hegelian model based on the achievement of a positive self-image, to a Weberian model based on inclusion in an institutionalized status order. In what follows I am quoting from her May 2000 article in New Left Review, Rethinking Recognition. Here she contrasts the “identity model” of recognition underlying affirmative anti-sexism and anti-racism movements, for example, which aim to valorize group identity, to a “status model” whose aim is to remove institutional barriers to individual members of the group achieving participation as peers in the wider society.
-→ https://newleftreview.org/issues/ii3/articles/nancy-fraser-rethinking-recognition
-++ 15 Dec 2025 | three framing questions for system behaviour | Where model behaviour ends and system behaviour begins, what developers only think they control, and which failures evals miss.
-1. System boundaries
-
-Where does “model behavior” end and “system behavior” begin?
-
-What components introduce new attack or inference surfaces?
-
-2. Control illusion
-
-What do developers think they control?
-
-What actually controls outputs in practice?
-
-3. Evaluation blind spots
-
-Which failures are invisible to standard model evals?
-
-What would you need to log or instrument to even notice them?
-++ 17 Dec 2025 | Anthropic's multi-agent research system | Shares Anthropic's engineering writeup on their orchestrator-plus-parallel-researchers architecture.
-https://www.anthropic.com/engineering/multi-agent-research-system
-→ https://www.anthropic.com/engineering/multi-agent-research-system
-++ 17 Dec 2025 | question: failures between components | Chained RAG, agents, tools and evaluators each pass their own evals yet combine into hallucinations and reinforced mistakes.
-**Where do failures show up between components in multi agent systems, and why don’t our evals see them?**
-
-Modern systems chain RAG → agents → tools → evaluators and each component can pass it’s own evals. When combined, we see new behaviors like hallucinations, agents reinforcing each other’s mistakes, or harmful outcomes - that don’t appear in single tests. This makes it hard to detect failures.
-
-- Which existing eval methods fail to surface these behaviors, and why?
-- What kinds of stress tests would expose “reasonable locally, harmful globally” outcomes?
-++ 17 Dec 2025 | question: where sensitive inferences happen | Systems never trained on race, health or income still act as if they know them by combining ordinary signals.
-**Where in real AI systems do sensitive inferences actually happen, even when no model is explicitly trained to make them?**
-
-Many AI systems never store or predict sensitive traits like race, health status, or income. But they still end up *acting as if they know them*. This happens when systems combine ordinary signals across multiple steps.
-
-For example a system uses location, time of activity, and spending patterns to route someone into a higher-risk category. Or a content moderation pipeline combines language style, social connections, and past behavior to decide who gets flagged or deprioritized.
-
-This can be hard to detect because each step might look reasoable on it’s own or the inference is spread across retrieval and routing or existing checks aren’t focused on system level behavior.
-- Where does the system first start treating people differently based on those signals?
-- How could we test or log for indirect inference without requiring access to model internals?
-++ 18 Dec 2025 | Ed asks how to test supervisor pattern | Ed wonders how you would systematically test the shortcomings of the supervisor orchestration pattern.
-I wonder how you’d go about systematically testing the shortcomings of the supervisor pattern, do you have any ideas?
-++ 5 Jan 2026 | recursive language models manage context | Prime Intellect on storing inputs in Python and delegating to sub-agents instead of loading everything into the main context.
-https://www.primeintellect.ai/blog/rlm
-
-Recursive Language Models let agents manage massive context by storing inputs in Python and delegating work to sub-agents instead of loading everything into the main model's context—early tests show gains on long-context task (environments).
-→ https://www.primeintellect.ai/blog/rlm
-++ 12 Jan 2026 | building platforms above the loop | Work discussion on humans setting intent and constraints while AI generates, tests and validates, escalating only at decision points.
-Something we're discussing at work is how do we built platforms for AI that are "above the loop"
-
-The loop is currently how we build software:
--  Humans still have to coordinate intent, break down the work, deal with agent failures, and set up the tasks.
-- Agents execute the tasks, but people decide when to stop or continue.
-
-Above the loop (I find is similar to the supervisor orchestration pattern) is when :
-- humans set intent, constraints, and direction
-- ai systems generate, test, revise, and validate changes - and only reach out to the human about decision points
-
-so instead of deciding every code change, the human is deciding "what should exist"
-
-it's very exciting to see this!
-++ 12 Jan 2026 | self-improving agents roundup | Yohei Nakajima's survey of academic projects where an agent edits and improves its own code or policies.
-https://yoheinakajima.com/better-ways-to-build-self-improving-ai-agents/
-academic projects where an agent edits and improves its own code or policies, not just responses.
-→ https://yoheinakajima.com/better-ways-to-build-self-improving-ai-agents/
-++ 12 Jan 2026 | are agent swarms actually better now | Ed is surprised swarm approaches never worked well; Fatima notes they make mess and only run on Claude Code.
-Ed Saperia: I've always been surprised that these don't get better results, but, maybe they do now
-
-Fatima: this was first released two weeks ago
-
-Ed Saperia: I mean, "things of this nature"
-
-Fatima: so this might be a resurgence of iterative loop ideas
-
-Fatima: it feels new to me(!) but i may not have been paying attention in the past few weeks
-
-Fatima: ahhh i think this might be different this time
-
-Fatima: but i may also be falling for the hype hehe
-
-Ed Saperia: there have been various "agent swarm" type things over the past couple of years
-
-Fatima: this is true!
-
-Ed Saperia: no I mean I expect they're getting better quickly
-
-Fatima: they seem to be
-
-Fatima: but they're also creating a lot of mess
-
-Ed Saperia: as I say, I am surprised they aren't good
-
-Fatima: plus they mostly only work with claude code at the moment
-
-Fatima: and i would need infinite tokens
-++ 12 Jan 2026 | ralph explained for idiots | Shares a joke thread explaining the ralph looping technique.
-https://x.com/agrimsingh/status/2010412150918189210
-ralph for idiots: the only explanation you need
-
-(is joke)
-→ https://x.com/agrimsingh/status/2010412150918189210
-++ 20 Jan 2026 | Slipstream protocol for agent communication | Hugging Face writeup on cutting agent communication costs by leveraging existing language rather than inventing a machine protocol.
-https://huggingface.co/blog/anthonym21/slipstream-for-agent-communication
-
-A new protocol called Slipstream offers a powerful and surprisingly counter-intuitive solution. It cuts through the noise to dramatically reduce communication costs and make large-scale agent systems economically viable. This article unpacks the most impactful takeaways from the research, revealing how the solution isn't to invent a new machine language, but to leverage the one we already have.
-
-this is very cool!
-→ https://huggingface.co/blog/anthonym21/slipstream-for-agent-communication
-++ 20 Jan 2026 | models reason as an internal committee | Paper showing reasoning models simulate persona-like internal dialogue; steering a surprise feature doubled accuracy. She is intrigued.
-https://arxiv.org/abs/2601.10825
-
-Researchers from Google, University of Chicago, and Santa Fe Institute show that LLMs like DeepSeek-R1 and QwQ-32B improve reasoning not by length alone but by simulating internal dialogues among diverse, persona-like perspectives. These models display more question-answering, disagreement, and reconciliation than instruction-tuned baselines. Steering a “surprise” discourse feature doubled reasoning accuracy, increasing activation of personality and expertise features. Reinforcement learning reinforced these behaviors, especially when models were fine-tuned on multi-agent dialogues, accelerating reasoning improvements. In short, the model is forming an internal committee to solve problems, echoing human cognition and group collaboration. That’s a leap in understanding both AI and possibly the nature of reasoning itself
-
-AN INTERNAL COMMITEEE
-
-Need to read this soon because I’m INTRIGUED
-→ https://arxiv.org/abs/2601.10825
-++ 26 Jan 2026 | Ed: council of experts is old | Ed notes council of experts has been a named prompting method for a while.
-“Council of Experts” has been a named method for a while I think
-++ 28 Jan 2026 | Clawdbot and Moltbot local agents | mstem shares the Verge report; Ed says the creator visited Newspeak House and suggests code club, mstem advises a VM.
-Matt Stempeck: https://www.theverge.com/report/869004/moltbot-clawdbot-local-ai-agent
-
-Ed Saperia: The creator of this was at NH last week
-
-Ed Saperia: We should probably be playing with it
-
-Ed Saperia: Maybe a good focus for code club on Monday
-
-Fatima: very cool!
-
-Matt Stempeck: play with it on a virtual machine, methinks
-
-Fatima: haha for sure
-
-Fatima: i only have my work laptop :P
-
-Matt Stempeck: i'm excited and terrified by these things
-
-Ed Saperia: they are certainly exciting and terrifying
-
-Ed Saperia: but if we're not the people to experiment with them then who is?
-
-Fatima: agreed!
-→ https://www.theverge.com/report/869004/moltbot-clawdbot-local-ai-agent
-++ 29 Jan 2026 | Ollama launch announcement | Shares Ollama's launch blog post.
-https://ollama.com/blog/launch
-→ https://ollama.com/blog/launch
-++ 29 Jan 2026 | Kimi K2.5 and agent swarms | Kimi's K2.5 release blog plus Simon Smith asking whether swarms plus Agent Skills scale across an enterprise.
-https://www.kimi.com/blog/kimi-k2-5.html
-
-https://x.com/_simonsmith/status/2016234897413964057
-
-I've been thinking about the best way to organize agents in step-by-step workflows where each agent has skills defined by Agent Skills file, and to then scale this across an enterprise. Today Kimi dropped its K2.5 model along with Agent Swarms, and I thought: could this be it?
-→ https://www.kimi.com/blog/kimi-k2-5.html
-++ 29 Jan 2026 | Simon Willison tests parallel planning | Gist testing Kimi's multi-agent planning claims by breaking a Datasette S3 upload plugin into ten parallel tasks.
-https://gist.github.com/simonw/ee2583b2eb5706400a4737f56d57c456
-
-As a more interesting test, I decided to exercise the claims around multi-agent planning with this prompt:
-
-I want to build a Datasette plugin that offers a UI to upload files to an S3 bucket and stores information about them in a SQLite table. Break this down into ten tasks suitable for execution by parallel coding agents.
-→ https://gist.github.com/simonw/ee2583b2eb5706400a4737f56d57c456
-++ 29 Jan 2026 | AI shopping tools raise pricing stakes | Tech Policy Press on big tech AI shopping agents raising the stakes for surveillance pricing laws.
-https://www.techpolicy.press/big-techs-ai-shopping-tools-raise-stakes-for-surveillance-pricing-laws/
-→ https://www.techpolicy.press/big-techs-ai-shopping-tools-raise-stakes-for-surveillance-pricing-laws/
-++ 29 Jan 2026 | Karpathy on the coherence threshold | Shares Karpathy's post about crossing into mostly supervising agents rather than writing code himself.
-https://x.com/karpathy/status/2015883857489522876
-→ https://x.com/karpathy/status/2015883857489522876
-++ 29 Jan 2026 | Clawdbot is the rebrand | Realises Clawdbot and Moltbot are the same viral open-source assistant that proactively messages you, and she missed it going viral.
-aha! this is Clawdbot rebranded!
-
-https://www.reddit.com/r/LocalLLM/comments/1qmrwxl/clawdbot_the_ai_assistant_that_actually_messages/
-
-Clawdbot is an open-source AI assistant (9K+ GitHub stars) with a different approach: it proactively messages you instead of waiting for prompts. If you've used Poke (or others), it works the same way, but is more configurable and obviously open-source. I might even cancel my subscription with Poke now.
-
-I was so busy with work things last week, I completely this missed this going viral!
-→ https://www.reddit.com/r/LocalLLM/comments/1qmrwxl/clawdbot_the_ai_assistant_that_actually_messages/
-++ 29 Jan 2026 | build tools that help people think | Sam Altman on human slop as well as AI slop, and building genuinely good brainstorming partners.
-try to build tools that help people think better
-
-Sam: It’s popular to talk about “AI slop,” but there’s also a huge amount of human-generated slop in the world. (swyx: we agree!) Coming up with genuinely good, new ideas is hard. I increasingly believe that we think at the limits of our tools, and that we should explicitly try to build tools that help people think better. [_From the Open AI town hall_](https://www.youtube.com/watch?v=Wpxv-8nG8ec&t=1179s)
-
-We can build really great brainstorming partners. There have been like three or four people in my life that I have consistently found every time I hang out with them, I leave with a lot of ideas. They’re people who are just really good at asking questions or giving you seeds to build on.
-→ https://www.youtube.com/watch?v=Wpxv-8nG8ec
-++ 29 Jan 2026 | swyx on the AI Paul Graham | Reflections arguing thought-partner agents fail as RAG on essays; a five percent accurate PG would still be valuable.
-Swyx's Reflections in SmolAi were really poignant, sharing them here to read again.
-
-**Reflections on “AI Paul Graham”**
-There are a few reactions I have here that I’ll fire off in quick succession:
-
-It’s nice to see him acknowledge that the potential of AI is not just in helping to attract more attention through generated images and videos and marketing text (AI GTM, the first question from the town hall), but also it should be used in raising the quality of product, because there is a lot of human-origin slop too!
-
-In many ways, Sam here is trying to bring in what YCombinator does for improving founder success to the general thought partnership capability of ChatGPT. Everyone could benefit from having their own personal YC Group Partner, on demand, no office hours. Much less having a PG-tier Partner. And yes, this is just the business form of the more general domain of advising and coaching, which probably everyone can benefit from if we knew how to make it good enough.
-
-Many, many people have tried to build an “AI Paul Graham” bot. These flopped because they mostly did RAG or finetunes on his essays. Information Retrieval isn’t what PG -does- for Sam. He challenges you, runs you through multiple internal world models and pattern matches of past learned experiences, filters through what he should say to elicit the best response out of you instead of simply blurting out what he thinks token by token, and raises your ambitions.
-
-For both model trainers and agent harness builders, it’s instructive to draw a spectrum from the poorest implementation to the most ambitious implementation you can think of, and think about the sequencing of intelligent feedback and pushback you need.
-
-It is too lazy to wait for the God Model to arrive to do all these, there are probably concrete thought partner jobs that can be broken out into Agent Skills and MCP tools and Multi-agent Swarms and other tricks of the AI Engineer trade.
-
-“Accuracy” for an AI PG is not 90%, not even 50% — even a 5% accurate PG is acceptable and valuable (and is probably reflective of most real life conversations with him - most questions or comments are NOT valuable, but a human filter on the comments will surface some very generative and out of distribution “seeds”). So this is a very scalable “throw shit at the wall” task where AI can act as mass generator and Humans can act as discriminator/judge, and our existence proof that high-miss-rate question generation is still useful is YCombinator and Sam’s personal experience.
-
-When faced with “AI as thought partner” I see a lot of parallels with the alignment problem, and I often think about the Weak-to-Strong Superalignment diagram:
-
-Where we are currently treating agents as a junior Software Engineer or “research intern” (this is certainly the relationship we have with ChatGPT or Prism today), we want to build the PG agent that is smarter than us, and perhaps the path there is to build smart agents for dumber people/usecases and then ladder up from there.
-++ 29 Jan 2026 | weak-to-strong generalization | Shares OpenAI's weak-to-strong superalignment work as a parallel to building thought partners smarter than us.
-https://openai.com/index/weak-to-strong-generalization/
-→ https://openai.com/index/weak-to-strong-generalization/
-++ 29 Jan 2026 | coding agent phase shift is real | Agentic coding loops are a step change but agents skip clarifying questions and edit unrelated files in established codebases.
-**Coding agent “phase shift” is real**
-
-but messy: Multiple posts reflect a step-change in practice: founders and engineers are increasingly running “agentic” coding loops, yet hitting new failure modes: agents that don’t ask clarifying questions, get “confused,” or edit unrelated files. [Mikhail Parakhin describes reaching the point where he can specify a scheduler and trust it to work, but still can’t let agents loose on established codebases due to collateral edits](https://substack.com/redirect/96882b75-d628-4d98-87ca-e28d6536c427?j=eyJ1IjoiMm5jaXEifQ.UVxyhsf-HdqTJcGLa9qNmFnHCmiz83YtfDe9Hjfqx5w). Andrew Karpathy [describes it as the threshold of coherence ](https://x.com/karpathy/status/2015883857489522876) -  said he went from writing 80% of his code manually to 80% via AI agents in just a few weeks and now he’s mostly programming in English and supervising machines. That’s a real shift in how we build software. What happens to the "10X engineer" - the ratio of productivity between the mean and the max engineer?
-++ 29 Jan 2026 | skills as a shared interface layer | Workflow logic moving from prompts into reusable skill files, via DeepLearning's course, LangChain and Hugging Face's upskill.
-**Skills are crystallizing into a shared interface layer:**
-A major theme is moving workflow logic out of prompts into reusable “skills” (files/folders of instructions, loaded on demand).
-- [Deep Learning launched an Agent Skills with Anthropic course](https://www.deeplearning.ai/short-courses/agent-skills-with-anthropic/)
-- LangChain is pushing “Skills” via progressive disclosure as lightweight, shareable units
-- [HF showcased “upskill”](https://t.co/phEVhVc0k5): convert strong-model traces into transferable skills, then evaluate impact
-→ https://www.deeplearning.ai/short-courses/agent-skills-with-anthropic/
-++ 29 Jan 2026 | context management for deep agents | As addressable task length grows, context management becomes critical to prevent context rot within finite memory.
-[Context Management for Deep Agents
-](https://x.com/masondrxy/status/2016548078346736014?s=20)
-As the addressable task length of AI agents continues to grow, effective context management becomes critical to prevent context rot and to manage LLMs' finite memory constraints.
-→ https://x.com/masondrxy/status/2016548078346736014
-++ 29 Jan 2026 | Yegge on software survival 3.0 | Shares Steve Yegge's essay; she later says she read it twice and is obsessed.
-Fatima: https://steve-yegge.medium.com/software-survival-3-0-97a2a6255f7b
-
-Ed Saperia: This is great
-
-Ed Saperia: good old yegge
-
-Fatima: I have read it twice
-
-Fatima: I am obsessed
-→ https://steve-yegge.medium.com/software-survival-3-0-97a2a6255f7b
-++ 31 Jan 2026 | local models on a Mac Studio | Shares a thread on running local models, because she wants Clawdbot running locally on her Mac Studio.
-https://x.com/krunkosaurus/status/2017125560988872979 - because I want to use local models on my Mac Studio for my clawdbot
-→ https://x.com/krunkosaurus/status/2017125560988872979
-++ 1 Feb 2026 | Clawdbot on DigitalOcean | Notes from running Clawdbot on DigitalOcean, praising the friendly chat UI but hitting API and skill limitations.
-notes playing around with Clawdbot on Digital Ocean via https://www.digitalocean.com/blog/moltbot-on-digitalocean
-
-- really interesting that they scaffolded a user friendly UI to chat with the bot
-
-some limitations in regards to the types of APIs you can use and the types of skills you can add
-→ https://www.digitalocean.com/blog/moltbot-on-digitalocean
-++ 2 Feb 2026 | two untagged link drops | Shares two x.com links with no commentary.
-https://x.com/pbteja1998/status/2017662163540971756?s=46
-
-https://x.com/francedot/status/2015178880215298557?s=46
-→ https://x.com/pbteja1998/status/2017662163540971756
-++ 4 Feb 2026 | ingesting Matrix into Onyx | Onyx lacks Matrix support but has an ingestion API; Ed says daily dumps would be easy, she worries about preserving context.
-Fatima: Onyx doesn’t seem to support matrix out of the box
-
-Ed Saperia: no but that would be a good project
-
-Fatima: true
-
-Fatima: they have an ingestion API
-
-Ed Saperia: grabbing all the matrix data every day and throwing it in will probably be very easy
-
-Fatima: yes
-
-Fatima: i was worried about preserving the context of chat/channel/person
-
-Ed Saperia: it comes as a big json file no? so it should be able to deal with that
-++ 5 Feb 2026 | Surge leaderboard | Shares the SurgeHQ model leaderboard.
-https://surgehq.ai/leaderboard
-→ https://surgehq.ai/leaderboard
-++ 12 Feb 2026 | GLM-5 scales for agentic tasks | GLM-5 grows to 744B parameters with sparse attention, targeting complex systems engineering and long-horizon agentic work.
-https://z.ai/blog/glm-5
-
-We are launching GLM-5, targeting complex systems engineering and long-horizon agentic tasks. Scaling is still one of the most important ways to improve the intelligence efficiency of Artificial General Intelligence (AGI). Compared to GLM-4.5, GLM-5 scales from 355B parameters (32B active) to 744B parameters (40B active), and increases pre-training data from 23T to 28.5T tokens. GLM-5 also integrates DeepSeek Sparse Attention (DSA), significantly reducing deployment cost while preserving long-context capacity.
-→ https://z.ai/blog/glm-5
-++ 13 Feb 2026 | political consciousness as perpetual quest | Shares Valerie Miller's paper on political consciousness.
-https://justassociates.org/wp-content/uploads/2022/02/political-consciousness-perpetual-quest-valarie-miller.pdf
-→ https://justassociates.org/wp-content/uploads/2022/02/political-consciousness-perpetual-quest-valarie-miller.pdf
-++ 14 Feb 2026 | MiniMax M25 release | Shares MiniMax's M25 announcement.
-https://www.minimax.io/news/minimax-m25
-→ https://www.minimax.io/news/minimax-m25
-++ 15 Feb 2026 | built a Matrix publisher bot | Bot fetches channel history, keeps emoji-tagged posts and threads, maps them to types and builds content.json as a reusable template.
-https://github.com/nwspk/matrix-publisher-bot
-
-built a matrix publisher bot that fetches the full message history of a channel, keeps only the emoji tagged posts and their threads, maps them to a type (`journal, link, field-note`) and crafts a `content.json` for the website. It's a "github template" so all fellows can use the template to generate their own fork and can adjust the content types for example.
-→ https://github.com/nwspk/matrix-publisher-bot
-++ 15 Feb 2026 | cohort site fellow landing pages | In-progress pull request rendering content.json into reading list, publications and explorations sections, vibe engineered and still buggy.
-https://github.com/nwspk/2025.newspeak.house/pull/37
-in progress build of individual landing pages on the cohort website that pull the data from the `content.json` of the matrix publisher bot and create a portfolio of the fellow's content. In my case, it follows the structure of the posts here:
-- *reading list* -> links + projects (or tools I'm interested in)
-- *publications* -> field notes + links to blog posts on substack
-- *explorations* -> questions + ideas
-
-need to test and debug a bit more as it was vibe engineered - and there's a few bugs I need to fix while keeping the functionality isolated enough that fellows can implement their own publisher + parser (within the site) for their pages.
-→ https://github.com/nwspk/2025.newspeak.house/pull/37
-++ 16 Feb 2026 | fran on awe and nuance | fran_galli notes a bias toward awe at modernist work that is just another conformity; Fatima still fixated on the neutrality guy.
-fran: Interesting to read your reflections! personally I find there is a bias sometimes to be in "awe" of modernist odd stuff that "does it differently" when maybe it is just another flavour of conformity. You reminded me of a BBC radio show doing political satire and they had this fake ad piece that was something like "Donate £10 today to teach a Gen Z the concept of nuance" ahahah I think it applies intergenerationally though
-
-Fatima: In hindsight, the man personally who ranted about “how objective and beautifully neutral the film was” occupied so much of my mind for hours later haha
-
-Fatima: I haven’t yet read any public critique of the movie
-++ 19 Feb 2026 | Ed on assuming someone built it | Ed finds it empowering to assume someone else has already done the thing.
-in some ways empowering to be able to assume someone else did the thing
-++ 2 Mar 2026 | Ed on imagination and prior art | Ed argues if you can assume someone already built your idea, imagination is the only limit on what you can bring forth.
-I mean, if you have an idea, and you can assume that someone will have done it already, there's no limit to what you can bring forth in the world if you have enough imagination :)
-++ 4 Mar 2026 | Yegge's Wasteland sequel | Steve Yegge's third instalment after Beads and Gas Town, on federated agent work systems.
-https://steve-yegge.medium.com/welcome-to-the-wasteland-a-thousand-gas-towns-a5eb9bc8dc1f
-
-Well, it's been a long 2 months, but it's finally here, the sequel to Gas Town. It's the third movie in my series: first Beads, then Gas Town, and now The Wasteland -- A Thousand Gas Towns. The biggest and best federated work system the world has ever seen.
-→ https://steve-yegge.medium.com/welcome-to-the-wasteland-a-thousand-gas-towns-a5eb9bc8dc1f
-++ 9 Mar 2026 | question: political calibration across models | After seeing Grok and Claude deliberate differently in awards iteration six, she asks whether RLHF political calibration generalises.
-from the results of our politech awards - iteration v6 - I've been wondering after seeing the deliberations from Grok vs Claude - does Sonnet 4's RLHF calibration around political statements and alignment exist in other models too. Will review the paper and then see if I can be inspired to test some of the models on the awards afterwards.
-++ 26 Mar 2026 | backlog of unwritten field notes | Lists twelve pieces she wants to write, including term reflections, clawclub, the birthday immigration system and sparkle bureaucracy.
-things I want to write about, but haven't gotten a chance!
-
-- first term reflections (in draft!)
-- second term reflections (must start!)
-- clawclub 1&2 and photos!
-- small vs big audiences and workshops
-- censorship + surveillance resistance comms workshop + game idea
-- lumina house takeover!
-- majority myth - book club with the author
-- the birthday immigration system!
-- data governance models and cow farmers!
-- what happens where there's transparency but no accountability
-- chalkboards and how we tell the world who we are - and why that's hard
-- sparkle bureaucracy
-++ 29 Mar 2026 | Gamithra suggests cohort agents | Project idea from Gamithra to run synthetic agents answering questions about the fellowship and prototypes at Ration Club.
-project idea from Gamithra - set up synthetic agents to answer questions about fellowship and prototypes at Ration Club so we can have fun :)
-++ 29 Mar 2026 | a group chat of mirror agents | Ed suggests putting an agent for every cohort member in one group chat; Aadi already asked to talk to his.
-Ed Saperia: you have an agent for everyone in the cohort now, you can have them all in a group chat and people can talk to them
-
-Fatima: Hahaha aadi asked to talk his mirror agent and now I really want to deploy it
-
-Ed Saperia: haha great idea
-++ 1 Apr 2026 | two untagged link drops | Shares two x.com links with no commentary.
-https://x.com/himanshustwts/status/2038924027411222533?s=46
-
-https://x.com/ellen_in_sf/status/2039098050837463504?s=46
-→ https://x.com/himanshustwts/status/2038924027411222533
-++ 1 Apr 2026 | the Claude Code source leak | Wants to play with the leaked Claude Code source, via Latent Space's writeup.
-gotto play around with the Claude code leak hehe
-https://www.latent.space/p/ainews-the-claude-code-source-leak
-→ https://www.latent.space/p/ainews-the-claude-code-source-leak
-
-#### Field notes journal
-
-The year's own writing — each note opens in full.
-
-++ 14 Dec 2025 | Mastodon hires for trust and safety | Field note on Mastodon hiring a Community Director focused on Trust and Safety to reflect its many communities' needs.
-Field Note - Trust & Safety at Mastodon
-
-It's so interesting that Mastodon, as an organization, is choosing to hire a Community Director and specifically for Trust & Safety.
-
-My top priority is to ensure that Mastodon’s plans for these areas reflect the needs of Mastodon’s many different communities.
-++ 14 Dec 2025 | surveillance pricing rabbit hole begins | Field note on a NYT opinion video about dynamic pricing that led her deep into individualised surveillance pricing harms.
-Field Note: [NYtimes Opinion - video - Goodbye, Price Tags. Hello, Dynamic Pricing.](https://www.nytimes.com/video/opinion/100000010545598/dynamic-pricing-algorithms.html?searchResultPosition=7)
-
-I loved the way the story was crafted in this piece - about how dynamic pricing is going to target and stalk us in order to squeeze as much money as we're able to pay based on needs the algorithm anticipates through other smart devices or connected services.
-
-I came across this video piece on tiktok and it led me down a rabbit hole of "surveillance pricing" where retailers and platforms will use algorithms and personal data (device type, location, browsing history, past purchases, things you've said aloud to your smart home, etc) to set _individualized_ prices - so two people might see completely different prices at the exact same time for the exact same item!
-
-In many ways, this undermines transparency and fairness since consumers (a) may not be away that they're being charged more or (b) may not be aware why they're being charged more!
-Most pieces talk about how regulators need to do more - but there might be an opportunity here on signaling that this is likely already at play in the market and will cause real harms.
-→ https://www.nytimes.com/video/opinion/100000010545598/dynamic-pricing-algorithms.html
 ++ 14 Dec 2025 | Matt on research strategy | Mentoring notes on hosting small niche events, coffee chats, landscape analysis, expert interviews and mapping levers of change.
 Mentoring Meeting with Matt on Research Strategy - Notes:
 
@@ -1525,6 +1150,450 @@ Build a foundational understanding of:
 Which emergent AI decision behaviors, especially those that infer sensitive information and adjust outcomes dynamically, are hardest to observe, evaluate, or challenge today, and what governance and technical mechanisms could make them accountable?
 
 _originally posted on Dec 12, 2025_
+++ 15 Dec 2025 | Arnstein's ladder of citizen participation | Arnstein's 1969 paper names informing, consultation and placation as tokenism, matching her sense of procedural futility.
+A LADDER OF CITIZEN PARTICIPATION, Sherry R. Arnstein
+https://www.historyofsocialwork.org/1969_ENG_Ladderofparticipation/1969%2C%20Arnstein%2C%20ladder%20of%20participation%2C%20original%20text%20OCR%20C.pdf
+
+What you’re calling procedural futility is basically: the process invites voice but doesn’t route it into consequential decisions. When people learn (even once or twice) that objections don’t change the plan, “participation” becomes a performance: you talk, the document grows, and then the authority proceeds as originally intended.
+
+That maps cleanly onto Arnstein’s ladder: rungs like Informing / Consultation / Placation are “tokenism” — people can “be heard,” but they lack power to ensure their views are heeded.
+→ https://www.historyofsocialwork.org/1969_ENG_Ladderofparticipation/1969%2C%20Arnstein%2C%20ladder%20of%20participation%2C%20original%20text%20OCR%20C.pdf
+++ 15 Dec 2025 | Nancy Fraser on rethinking recognition | Fraser shifts recognition from a cultural identity model to a status model removing institutional barriers to peer participation.
+Nancy Fraser, Rethinking Recognition
+https://newleftreview.org/issues/ii3/articles/nancy-fraser-rethinking-recognition
+
+Nancy Fraser’s approach to recognition is to shift from a culturalist interpretation of the Hegelian model based on the achievement of a positive self-image, to a Weberian model based on inclusion in an institutionalized status order. In what follows I am quoting from her May 2000 article in New Left Review, Rethinking Recognition. Here she contrasts the “identity model” of recognition underlying affirmative anti-sexism and anti-racism movements, for example, which aim to valorize group identity, to a “status model” whose aim is to remove institutional barriers to individual members of the group achieving participation as peers in the wider society.
+→ https://newleftreview.org/issues/ii3/articles/nancy-fraser-rethinking-recognition
+++ 15 Dec 2025 | three framing questions for system behaviour | Where model behaviour ends and system behaviour begins, what developers only think they control, and which failures evals miss.
+1. System boundaries
+
+Where does “model behavior” end and “system behavior” begin?
+
+What components introduce new attack or inference surfaces?
+
+2. Control illusion
+
+What do developers think they control?
+
+What actually controls outputs in practice?
+
+3. Evaluation blind spots
+
+Which failures are invisible to standard model evals?
+
+What would you need to log or instrument to even notice them?
+++ 17 Dec 2025 | Anthropic's multi-agent research system | Shares Anthropic's engineering writeup on their orchestrator-plus-parallel-researchers architecture.
+https://www.anthropic.com/engineering/multi-agent-research-system
+→ https://www.anthropic.com/engineering/multi-agent-research-system
+++ 17 Dec 2025 | question: failures between components | Chained RAG, agents, tools and evaluators each pass their own evals yet combine into hallucinations and reinforced mistakes.
+**Where do failures show up between components in multi agent systems, and why don’t our evals see them?**
+
+Modern systems chain RAG → agents → tools → evaluators and each component can pass it’s own evals. When combined, we see new behaviors like hallucinations, agents reinforcing each other’s mistakes, or harmful outcomes - that don’t appear in single tests. This makes it hard to detect failures.
+
+- Which existing eval methods fail to surface these behaviors, and why?
+- What kinds of stress tests would expose “reasonable locally, harmful globally” outcomes?
+++ 17 Dec 2025 | question: where sensitive inferences happen | Systems never trained on race, health or income still act as if they know them by combining ordinary signals.
+**Where in real AI systems do sensitive inferences actually happen, even when no model is explicitly trained to make them?**
+
+Many AI systems never store or predict sensitive traits like race, health status, or income. But they still end up *acting as if they know them*. This happens when systems combine ordinary signals across multiple steps.
+
+For example a system uses location, time of activity, and spending patterns to route someone into a higher-risk category. Or a content moderation pipeline combines language style, social connections, and past behavior to decide who gets flagged or deprioritized.
+
+This can be hard to detect because each step might look reasoable on it’s own or the inference is spread across retrieval and routing or existing checks aren’t focused on system level behavior.
+- Where does the system first start treating people differently based on those signals?
+- How could we test or log for indirect inference without requiring access to model internals?
+++ 18 Dec 2025 | Ed asks how to test supervisor pattern | Ed wonders how you would systematically test the shortcomings of the supervisor orchestration pattern.
+I wonder how you’d go about systematically testing the shortcomings of the supervisor pattern, do you have any ideas?
+++ 5 Jan 2026 | recursive language models manage context | Prime Intellect on storing inputs in Python and delegating to sub-agents instead of loading everything into the main context.
+https://www.primeintellect.ai/blog/rlm
+
+Recursive Language Models let agents manage massive context by storing inputs in Python and delegating work to sub-agents instead of loading everything into the main model's context—early tests show gains on long-context task (environments).
+→ https://www.primeintellect.ai/blog/rlm
+++ 12 Jan 2026 | building platforms above the loop | Work discussion on humans setting intent and constraints while AI generates, tests and validates, escalating only at decision points.
+Something we're discussing at work is how do we built platforms for AI that are "above the loop"
+
+The loop is currently how we build software:
+-  Humans still have to coordinate intent, break down the work, deal with agent failures, and set up the tasks.
+- Agents execute the tasks, but people decide when to stop or continue.
+
+Above the loop (I find is similar to the supervisor orchestration pattern) is when :
+- humans set intent, constraints, and direction
+- ai systems generate, test, revise, and validate changes - and only reach out to the human about decision points
+
+so instead of deciding every code change, the human is deciding "what should exist"
+
+it's very exciting to see this!
+++ 12 Jan 2026 | self-improving agents roundup | Yohei Nakajima's survey of academic projects where an agent edits and improves its own code or policies.
+https://yoheinakajima.com/better-ways-to-build-self-improving-ai-agents/
+academic projects where an agent edits and improves its own code or policies, not just responses.
+→ https://yoheinakajima.com/better-ways-to-build-self-improving-ai-agents/
+++ 12 Jan 2026 | are agent swarms actually better now | Ed is surprised swarm approaches never worked well; Fatima notes they make mess and only run on Claude Code.
+Ed Saperia: I've always been surprised that these don't get better results, but, maybe they do now
+
+Fatima: this was first released two weeks ago
+
+Ed Saperia: I mean, "things of this nature"
+
+Fatima: so this might be a resurgence of iterative loop ideas
+
+Fatima: it feels new to me(!) but i may not have been paying attention in the past few weeks
+
+Fatima: ahhh i think this might be different this time
+
+Fatima: but i may also be falling for the hype hehe
+
+Ed Saperia: there have been various "agent swarm" type things over the past couple of years
+
+Fatima: this is true!
+
+Ed Saperia: no I mean I expect they're getting better quickly
+
+Fatima: they seem to be
+
+Fatima: but they're also creating a lot of mess
+
+Ed Saperia: as I say, I am surprised they aren't good
+
+Fatima: plus they mostly only work with claude code at the moment
+
+Fatima: and i would need infinite tokens
+++ 12 Jan 2026 | ralph explained for idiots | Shares a joke thread explaining the ralph looping technique.
+https://x.com/agrimsingh/status/2010412150918189210
+ralph for idiots: the only explanation you need
+
+(is joke)
+→ https://x.com/agrimsingh/status/2010412150918189210
+++ 20 Jan 2026 | Slipstream protocol for agent communication | Hugging Face writeup on cutting agent communication costs by leveraging existing language rather than inventing a machine protocol.
+https://huggingface.co/blog/anthonym21/slipstream-for-agent-communication
+
+A new protocol called Slipstream offers a powerful and surprisingly counter-intuitive solution. It cuts through the noise to dramatically reduce communication costs and make large-scale agent systems economically viable. This article unpacks the most impactful takeaways from the research, revealing how the solution isn't to invent a new machine language, but to leverage the one we already have.
+
+this is very cool!
+→ https://huggingface.co/blog/anthonym21/slipstream-for-agent-communication
+++ 20 Jan 2026 | models reason as an internal committee | Paper showing reasoning models simulate persona-like internal dialogue; steering a surprise feature doubled accuracy. She is intrigued.
+https://arxiv.org/abs/2601.10825
+
+Researchers from Google, University of Chicago, and Santa Fe Institute show that LLMs like DeepSeek-R1 and QwQ-32B improve reasoning not by length alone but by simulating internal dialogues among diverse, persona-like perspectives. These models display more question-answering, disagreement, and reconciliation than instruction-tuned baselines. Steering a “surprise” discourse feature doubled reasoning accuracy, increasing activation of personality and expertise features. Reinforcement learning reinforced these behaviors, especially when models were fine-tuned on multi-agent dialogues, accelerating reasoning improvements. In short, the model is forming an internal committee to solve problems, echoing human cognition and group collaboration. That’s a leap in understanding both AI and possibly the nature of reasoning itself
+
+AN INTERNAL COMMITEEE
+
+Need to read this soon because I’m INTRIGUED
+→ https://arxiv.org/abs/2601.10825
+++ 26 Jan 2026 | Ed: council of experts is old | Ed notes council of experts has been a named prompting method for a while.
+“Council of Experts” has been a named method for a while I think
+++ 28 Jan 2026 | Clawdbot and Moltbot local agents | mstem shares the Verge report; Ed says the creator visited Newspeak House and suggests code club, mstem advises a VM.
+Matt Stempeck: https://www.theverge.com/report/869004/moltbot-clawdbot-local-ai-agent
+
+Ed Saperia: The creator of this was at NH last week
+
+Ed Saperia: We should probably be playing with it
+
+Ed Saperia: Maybe a good focus for code club on Monday
+
+Fatima: very cool!
+
+Matt Stempeck: play with it on a virtual machine, methinks
+
+Fatima: haha for sure
+
+Fatima: i only have my work laptop :P
+
+Matt Stempeck: i'm excited and terrified by these things
+
+Ed Saperia: they are certainly exciting and terrifying
+
+Ed Saperia: but if we're not the people to experiment with them then who is?
+
+Fatima: agreed!
+→ https://www.theverge.com/report/869004/moltbot-clawdbot-local-ai-agent
+++ 29 Jan 2026 | Ollama launch announcement | Shares Ollama's launch blog post.
+https://ollama.com/blog/launch
+→ https://ollama.com/blog/launch
+++ 29 Jan 2026 | Kimi K2.5 and agent swarms | Kimi's K2.5 release blog plus Simon Smith asking whether swarms plus Agent Skills scale across an enterprise.
+https://www.kimi.com/blog/kimi-k2-5.html
+
+https://x.com/_simonsmith/status/2016234897413964057
+
+I've been thinking about the best way to organize agents in step-by-step workflows where each agent has skills defined by Agent Skills file, and to then scale this across an enterprise. Today Kimi dropped its K2.5 model along with Agent Swarms, and I thought: could this be it?
+→ https://www.kimi.com/blog/kimi-k2-5.html
+++ 29 Jan 2026 | Simon Willison tests parallel planning | Gist testing Kimi's multi-agent planning claims by breaking a Datasette S3 upload plugin into ten parallel tasks.
+https://gist.github.com/simonw/ee2583b2eb5706400a4737f56d57c456
+
+As a more interesting test, I decided to exercise the claims around multi-agent planning with this prompt:
+
+I want to build a Datasette plugin that offers a UI to upload files to an S3 bucket and stores information about them in a SQLite table. Break this down into ten tasks suitable for execution by parallel coding agents.
+→ https://gist.github.com/simonw/ee2583b2eb5706400a4737f56d57c456
+++ 29 Jan 2026 | AI shopping tools raise pricing stakes | Tech Policy Press on big tech AI shopping agents raising the stakes for surveillance pricing laws.
+https://www.techpolicy.press/big-techs-ai-shopping-tools-raise-stakes-for-surveillance-pricing-laws/
+→ https://www.techpolicy.press/big-techs-ai-shopping-tools-raise-stakes-for-surveillance-pricing-laws/
+++ 29 Jan 2026 | Karpathy on the coherence threshold | Shares Karpathy's post about crossing into mostly supervising agents rather than writing code himself.
+https://x.com/karpathy/status/2015883857489522876
+→ https://x.com/karpathy/status/2015883857489522876
+++ 29 Jan 2026 | Clawdbot is the rebrand | Realises Clawdbot and Moltbot are the same viral open-source assistant that proactively messages you, and she missed it going viral.
+aha! this is Clawdbot rebranded!
+
+https://www.reddit.com/r/LocalLLM/comments/1qmrwxl/clawdbot_the_ai_assistant_that_actually_messages/
+
+Clawdbot is an open-source AI assistant (9K+ GitHub stars) with a different approach: it proactively messages you instead of waiting for prompts. If you've used Poke (or others), it works the same way, but is more configurable and obviously open-source. I might even cancel my subscription with Poke now.
+
+I was so busy with work things last week, I completely this missed this going viral!
+→ https://www.reddit.com/r/LocalLLM/comments/1qmrwxl/clawdbot_the_ai_assistant_that_actually_messages/
+++ 29 Jan 2026 | build tools that help people think | Sam Altman on human slop as well as AI slop, and building genuinely good brainstorming partners.
+try to build tools that help people think better
+
+Sam: It’s popular to talk about “AI slop,” but there’s also a huge amount of human-generated slop in the world. (swyx: we agree!) Coming up with genuinely good, new ideas is hard. I increasingly believe that we think at the limits of our tools, and that we should explicitly try to build tools that help people think better. [_From the Open AI town hall_](https://www.youtube.com/watch?v=Wpxv-8nG8ec&t=1179s)
+
+We can build really great brainstorming partners. There have been like three or four people in my life that I have consistently found every time I hang out with them, I leave with a lot of ideas. They’re people who are just really good at asking questions or giving you seeds to build on.
+→ https://www.youtube.com/watch?v=Wpxv-8nG8ec
+++ 29 Jan 2026 | swyx on the AI Paul Graham | Reflections arguing thought-partner agents fail as RAG on essays; a five percent accurate PG would still be valuable.
+Swyx's Reflections in SmolAi were really poignant, sharing them here to read again.
+
+**Reflections on “AI Paul Graham”**
+There are a few reactions I have here that I’ll fire off in quick succession:
+
+It’s nice to see him acknowledge that the potential of AI is not just in helping to attract more attention through generated images and videos and marketing text (AI GTM, the first question from the town hall), but also it should be used in raising the quality of product, because there is a lot of human-origin slop too!
+
+In many ways, Sam here is trying to bring in what YCombinator does for improving founder success to the general thought partnership capability of ChatGPT. Everyone could benefit from having their own personal YC Group Partner, on demand, no office hours. Much less having a PG-tier Partner. And yes, this is just the business form of the more general domain of advising and coaching, which probably everyone can benefit from if we knew how to make it good enough.
+
+Many, many people have tried to build an “AI Paul Graham” bot. These flopped because they mostly did RAG or finetunes on his essays. Information Retrieval isn’t what PG -does- for Sam. He challenges you, runs you through multiple internal world models and pattern matches of past learned experiences, filters through what he should say to elicit the best response out of you instead of simply blurting out what he thinks token by token, and raises your ambitions.
+
+For both model trainers and agent harness builders, it’s instructive to draw a spectrum from the poorest implementation to the most ambitious implementation you can think of, and think about the sequencing of intelligent feedback and pushback you need.
+
+It is too lazy to wait for the God Model to arrive to do all these, there are probably concrete thought partner jobs that can be broken out into Agent Skills and MCP tools and Multi-agent Swarms and other tricks of the AI Engineer trade.
+
+“Accuracy” for an AI PG is not 90%, not even 50% — even a 5% accurate PG is acceptable and valuable (and is probably reflective of most real life conversations with him - most questions or comments are NOT valuable, but a human filter on the comments will surface some very generative and out of distribution “seeds”). So this is a very scalable “throw shit at the wall” task where AI can act as mass generator and Humans can act as discriminator/judge, and our existence proof that high-miss-rate question generation is still useful is YCombinator and Sam’s personal experience.
+
+When faced with “AI as thought partner” I see a lot of parallels with the alignment problem, and I often think about the Weak-to-Strong Superalignment diagram:
+
+Where we are currently treating agents as a junior Software Engineer or “research intern” (this is certainly the relationship we have with ChatGPT or Prism today), we want to build the PG agent that is smarter than us, and perhaps the path there is to build smart agents for dumber people/usecases and then ladder up from there.
+++ 29 Jan 2026 | weak-to-strong generalization | Shares OpenAI's weak-to-strong superalignment work as a parallel to building thought partners smarter than us.
+https://openai.com/index/weak-to-strong-generalization/
+→ https://openai.com/index/weak-to-strong-generalization/
+++ 29 Jan 2026 | coding agent phase shift is real | Agentic coding loops are a step change but agents skip clarifying questions and edit unrelated files in established codebases.
+**Coding agent “phase shift” is real**
+
+but messy: Multiple posts reflect a step-change in practice: founders and engineers are increasingly running “agentic” coding loops, yet hitting new failure modes: agents that don’t ask clarifying questions, get “confused,” or edit unrelated files. [Mikhail Parakhin describes reaching the point where he can specify a scheduler and trust it to work, but still can’t let agents loose on established codebases due to collateral edits](https://substack.com/redirect/96882b75-d628-4d98-87ca-e28d6536c427?j=eyJ1IjoiMm5jaXEifQ.UVxyhsf-HdqTJcGLa9qNmFnHCmiz83YtfDe9Hjfqx5w). Andrew Karpathy [describes it as the threshold of coherence ](https://x.com/karpathy/status/2015883857489522876) -  said he went from writing 80% of his code manually to 80% via AI agents in just a few weeks and now he’s mostly programming in English and supervising machines. That’s a real shift in how we build software. What happens to the "10X engineer" - the ratio of productivity between the mean and the max engineer?
+++ 29 Jan 2026 | skills as a shared interface layer | Workflow logic moving from prompts into reusable skill files, via DeepLearning's course, LangChain and Hugging Face's upskill.
+**Skills are crystallizing into a shared interface layer:**
+A major theme is moving workflow logic out of prompts into reusable “skills” (files/folders of instructions, loaded on demand).
+- [Deep Learning launched an Agent Skills with Anthropic course](https://www.deeplearning.ai/short-courses/agent-skills-with-anthropic/)
+- LangChain is pushing “Skills” via progressive disclosure as lightweight, shareable units
+- [HF showcased “upskill”](https://t.co/phEVhVc0k5): convert strong-model traces into transferable skills, then evaluate impact
+→ https://www.deeplearning.ai/short-courses/agent-skills-with-anthropic/
+++ 29 Jan 2026 | context management for deep agents | As addressable task length grows, context management becomes critical to prevent context rot within finite memory.
+[Context Management for Deep Agents
+](https://x.com/masondrxy/status/2016548078346736014?s=20)
+As the addressable task length of AI agents continues to grow, effective context management becomes critical to prevent context rot and to manage LLMs' finite memory constraints.
+→ https://x.com/masondrxy/status/2016548078346736014
+++ 29 Jan 2026 | Yegge on software survival 3.0 | Shares Steve Yegge's essay; she later says she read it twice and is obsessed.
+Fatima: https://steve-yegge.medium.com/software-survival-3-0-97a2a6255f7b
+
+Ed Saperia: This is great
+
+Ed Saperia: good old yegge
+
+Fatima: I have read it twice
+
+Fatima: I am obsessed
+→ https://steve-yegge.medium.com/software-survival-3-0-97a2a6255f7b
+++ 29 Jan 2026 | Kimi swarms versus supervisor pattern | Mini field note: Kimi trains coordination via parallel-agent RL so collaboration emerges, unlike an explicit inspectable orchestrator.
+Field note (mini) - Kimi’s swarms vs the Supervisor pattern
+
+I’ve been reading a lot of the hype around Kimi’s “agent swarms” and got curious about how they’re different from the existing (and very widely used) supervisor / orchestrator pattern. As I understand it so far, the difference is less about having many agents and more about how coordination works.
+
+Kimi’s swarm is framed as a trainable orchestration via Parallel-Agent RL. Multiple agents act at the same time, and a reward signal trains how they divide work, share information, sequence actions, or override each other. Coordination isn’t written out as rules; it’s something that emerges from training, because certain collaboration patterns get higher rewards. Agents can be spawned dynamically, and control can shift between them, there isn’t a permanently fixed supervisor.
+
+In contrast, the supervisor pattern I’m familiar with has an explicit orchestrator (the controller) that decides tasks, splits them up, orders execution, and aggregates outputs from specialist agents. The coordination logic lives in code or prompts, and the other agents are mostly workers or tools. It’s a more inspectable setup (to a degree).
+
+What I think is “special” about Kimi’s swarm, at least in how it’s being framed, is that coordination itself is *learned*, not predefined. The agents learn how to work together, and in theory, the system can adapt its collaboration strategy across tasks without new orchestration code.
+
+Still very much a note-to-self! I need to read more and actually play with Kimi - lots of bookmarks to follow up on!
+++ 31 Jan 2026 | local models on a Mac Studio | Shares a thread on running local models, because she wants Clawdbot running locally on her Mac Studio.
+https://x.com/krunkosaurus/status/2017125560988872979 - because I want to use local models on my Mac Studio for my clawdbot
+→ https://x.com/krunkosaurus/status/2017125560988872979
+++ 1 Feb 2026 | Clawdbot on DigitalOcean | Notes from running Clawdbot on DigitalOcean, praising the friendly chat UI but hitting API and skill limitations.
+notes playing around with Clawdbot on Digital Ocean via https://www.digitalocean.com/blog/moltbot-on-digitalocean
+
+- really interesting that they scaffolded a user friendly UI to chat with the bot
+
+some limitations in regards to the types of APIs you can use and the types of skills you can add
+→ https://www.digitalocean.com/blog/moltbot-on-digitalocean
+++ 2 Feb 2026 | two untagged link drops | Shares two x.com links with no commentary.
+https://x.com/pbteja1998/status/2017662163540971756?s=46
+
+https://x.com/francedot/status/2015178880215298557?s=46
+→ https://x.com/pbteja1998/status/2017662163540971756
+++ 4 Feb 2026 | ingesting Matrix into Onyx | Onyx lacks Matrix support but has an ingestion API; Ed says daily dumps would be easy, she worries about preserving context.
+Fatima: Onyx doesn’t seem to support matrix out of the box
+
+Ed Saperia: no but that would be a good project
+
+Fatima: true
+
+Fatima: they have an ingestion API
+
+Ed Saperia: grabbing all the matrix data every day and throwing it in will probably be very easy
+
+Fatima: yes
+
+Fatima: i was worried about preserving the context of chat/channel/person
+
+Ed Saperia: it comes as a big json file no? so it should be able to deal with that
+++ 5 Feb 2026 | Surge leaderboard | Shares the SurgeHQ model leaderboard.
+https://surgehq.ai/leaderboard
+→ https://surgehq.ai/leaderboard
+++ 12 Feb 2026 | GLM-5 scales for agentic tasks | GLM-5 grows to 744B parameters with sparse attention, targeting complex systems engineering and long-horizon agentic work.
+https://z.ai/blog/glm-5
+
+We are launching GLM-5, targeting complex systems engineering and long-horizon agentic tasks. Scaling is still one of the most important ways to improve the intelligence efficiency of Artificial General Intelligence (AGI). Compared to GLM-4.5, GLM-5 scales from 355B parameters (32B active) to 744B parameters (40B active), and increases pre-training data from 23T to 28.5T tokens. GLM-5 also integrates DeepSeek Sparse Attention (DSA), significantly reducing deployment cost while preserving long-context capacity.
+→ https://z.ai/blog/glm-5
+++ 13 Feb 2026 | political consciousness as perpetual quest | Shares Valerie Miller's paper on political consciousness.
+https://justassociates.org/wp-content/uploads/2022/02/political-consciousness-perpetual-quest-valarie-miller.pdf
+→ https://justassociates.org/wp-content/uploads/2022/02/political-consciousness-perpetual-quest-valarie-miller.pdf
+++ 14 Feb 2026 | MiniMax M25 release | Shares MiniMax's M25 announcement.
+https://www.minimax.io/news/minimax-m25
+→ https://www.minimax.io/news/minimax-m25
+++ 15 Feb 2026 | built a Matrix publisher bot | Bot fetches channel history, keeps emoji-tagged posts and threads, maps them to types and builds content.json as a reusable template.
+https://github.com/nwspk/matrix-publisher-bot
+
+built a matrix publisher bot that fetches the full message history of a channel, keeps only the emoji tagged posts and their threads, maps them to a type (`journal, link, field-note`) and crafts a `content.json` for the website. It's a "github template" so all fellows can use the template to generate their own fork and can adjust the content types for example.
+→ https://github.com/nwspk/matrix-publisher-bot
+++ 15 Feb 2026 | cohort site fellow landing pages | In-progress pull request rendering content.json into reading list, publications and explorations sections, vibe engineered and still buggy.
+https://github.com/nwspk/2025.newspeak.house/pull/37
+in progress build of individual landing pages on the cohort website that pull the data from the `content.json` of the matrix publisher bot and create a portfolio of the fellow's content. In my case, it follows the structure of the posts here:
+- *reading list* -> links + projects (or tools I'm interested in)
+- *publications* -> field notes + links to blog posts on substack
+- *explorations* -> questions + ideas
+
+need to test and debug a bit more as it was vibe engineered - and there's a few bugs I need to fix while keeping the functionality isolated enough that fellows can implement their own publisher + parser (within the site) for their pages.
+→ https://github.com/nwspk/2025.newspeak.house/pull/37
+++ 16 Feb 2026 | fran on awe and nuance | fran_galli notes a bias toward awe at modernist work that is just another conformity; Fatima still fixated on the neutrality guy.
+fran: Interesting to read your reflections! personally I find there is a bias sometimes to be in "awe" of modernist odd stuff that "does it differently" when maybe it is just another flavour of conformity. You reminded me of a BBC radio show doing political satire and they had this fake ad piece that was something like "Donate £10 today to teach a Gen Z the concept of nuance" ahahah I think it applies intergenerationally though
+
+Fatima: In hindsight, the man personally who ranted about “how objective and beautifully neutral the film was” occupied so much of my mind for hours later haha
+
+Fatima: I haven’t yet read any public critique of the movie
+++ 19 Feb 2026 | Ed on assuming someone built it | Ed finds it empowering to assume someone else has already done the thing.
+in some ways empowering to be able to assume someone else did the thing
+++ 2 Mar 2026 | Ed on imagination and prior art | Ed argues if you can assume someone already built your idea, imagination is the only limit on what you can bring forth.
+I mean, if you have an idea, and you can assume that someone will have done it already, there's no limit to what you can bring forth in the world if you have enough imagination :)
+++ 4 Mar 2026 | Yegge's Wasteland sequel | Steve Yegge's third instalment after Beads and Gas Town, on federated agent work systems.
+https://steve-yegge.medium.com/welcome-to-the-wasteland-a-thousand-gas-towns-a5eb9bc8dc1f
+
+Well, it's been a long 2 months, but it's finally here, the sequel to Gas Town. It's the third movie in my series: first Beads, then Gas Town, and now The Wasteland -- A Thousand Gas Towns. The biggest and best federated work system the world has ever seen.
+→ https://steve-yegge.medium.com/welcome-to-the-wasteland-a-thousand-gas-towns-a5eb9bc8dc1f
+++ 9 Mar 2026 | question: political calibration across models | After seeing Grok and Claude deliberate differently in awards iteration six, she asks whether RLHF political calibration generalises.
+from the results of our politech awards - iteration v6 - I've been wondering after seeing the deliberations from Grok vs Claude - does Sonnet 4's RLHF calibration around political statements and alignment exist in other models too. Will review the paper and then see if I can be inspired to test some of the models on the awards afterwards.
+++ 9 Mar 2026 | one-shot prompt surprise | Journal on a single prompt generating a whole functional Politech Awards ranking site, leaving her impressed but overwhelmed by lost control.
+Journal: One-shot prompt surprise - politech ranking project
+
+I wanted to build a UI for ranking projects for the Politech Awards that would allow users to rank the projects and generate Pull Requests. I used the following prompt - and it one-shotted a _whole_ site. It was fully functional and very cool - but made me stop and wonder - _is this what I wanted to build? This is a very overwhelming experience and there's no clear user journey._
+
+It was certainly a fascinating moment as I use a lot of agentic technology both in vibe engineering side projects and at work, with custom agents, models, and workflows - but I am generally really hesitant to relinquish full control.
+
+It was the first time that I felt simultaneously impressed and overwhelmed by the results!
+
+the prompt:
+
+Review https://github.com/nwspk/politech-awards-2026 and https://2025.newspeak.house/awards.
+
+Design an implementation plan for a new greenfield app: politech-projects-ranking-ui.
+
+Context:
+- Algorithm: the-algorithm.ts
+- Data: results.json, iterations.json, candidates.csv (321 projects)
+- Current site shows a single iteration (heuristic, rationale, top/bottom projects)
+
+Goal:
+Build a UI ranking system that publishes the official rankings and lets the cohort explore how rankings change based on values, priorities, and judgments.
+
+Core capabilities:
+- Show all projects with rank/score and iteration metadata
+- Allow switching between iterations
+- Let users adjust value weights/priorities and see rankings update live (no-code ranking builder)
+- Allow saving ranking snapshots
+- Public judging interface with pairwise comparisons and value sliders
+- Store judging data for later analysis (agreement, stated vs revealed preferences, cohort vs algorithm ranking)
+- “Projects I like” → recommend similar projects
+- Optional: infer values from a blog/profile and generate a ranking from those values
+- Support multiple preset viewpoints (different value weightings) and compare rankings
+
+Technical expectations:
+- Use results.json / iterations.json / candidates.csv as core data
+- Define TypeScript models for projects, rankings, iterations, judgments, and snapshots
+- Decide whether to fetch data from GitHub or sync locally
+- Separate read-only ranking UI from interactive judging features
+- Specify frontend, backend/BaaS, and storage
+
+Output:
+product architecture, MVP vs later phases, data model, backend plan, ranking logic approach, analytics design, stack recommendations, and key risks.
+
+the results
+
+https://arc.net/e/53C01F8A-F8AB-48CE-8C47-A4F14475BDFC
+
+ideas for next steps
+
+I would like to try and build a sequential user journey that builds from the simplest to more complex, such as:
+stage 1 - select keywords, see rankings
+stage 2 - select keywords, use slider, see rankings
+stage 3 - pairwise
+stage 4 - LLM inference from your existing blog posts or shared links
+stage 5 - something more deliberate
+stage 6 - if I can build something that allows people to edit the multi agent run like a flow builder and then submit a PR with some code that a dev can review + test, that would be so cool
+++ 26 Mar 2026 | backlog of unwritten field notes | Lists twelve pieces she wants to write, including term reflections, clawclub, the birthday immigration system and sparkle bureaucracy.
+things I want to write about, but haven't gotten a chance!
+
+- first term reflections (in draft!)
+- second term reflections (must start!)
+- clawclub 1&2 and photos!
+- small vs big audiences and workshops
+- censorship + surveillance resistance comms workshop + game idea
+- lumina house takeover!
+- majority myth - book club with the author
+- the birthday immigration system!
+- data governance models and cow farmers!
+- what happens where there's transparency but no accountability
+- chalkboards and how we tell the world who we are - and why that's hard
+- sparkle bureaucracy
+++ 29 Mar 2026 | Gamithra suggests cohort agents | Project idea from Gamithra to run synthetic agents answering questions about the fellowship and prototypes at Ration Club.
+project idea from Gamithra - set up synthetic agents to answer questions about fellowship and prototypes at Ration Club so we can have fun :)
+++ 29 Mar 2026 | a group chat of mirror agents | Ed suggests putting an agent for every cohort member in one group chat; Aadi already asked to talk to his.
+Ed Saperia: you have an agent for everyone in the cohort now, you can have them all in a group chat and people can talk to them
+
+Fatima: Hahaha aadi asked to talk his mirror agent and now I really want to deploy it
+
+Ed Saperia: haha great idea
+++ 1 Apr 2026 | two untagged link drops | Shares two x.com links with no commentary.
+https://x.com/himanshustwts/status/2038924027411222533?s=46
+
+https://x.com/ellen_in_sf/status/2039098050837463504?s=46
+→ https://x.com/himanshustwts/status/2038924027411222533
+++ 1 Apr 2026 | the Claude Code source leak | Wants to play with the leaked Claude Code source, via Latent Space's writeup.
+gotto play around with the Claude code leak hehe
+https://www.latent.space/p/ainews-the-claude-code-source-leak
+→ https://www.latent.space/p/ainews-the-claude-code-source-leak
+
+#### Field notes journal
+
+The year's own writing — each note opens in full.
+
+++ 14 Dec 2025 | Mastodon hires for trust and safety | Field note on Mastodon hiring a Community Director focused on Trust and Safety to reflect its many communities' needs.
+Field Note - Trust & Safety at Mastodon
+
+It's so interesting that Mastodon, as an organization, is choosing to hire a Community Director and specifically for Trust & Safety.
+
+My top priority is to ensure that Mastodon’s plans for these areas reflect the needs of Mastodon’s many different communities.
+++ 14 Dec 2025 | surveillance pricing rabbit hole begins | Field note on a NYT opinion video about dynamic pricing that led her deep into individualised surveillance pricing harms.
+Field Note: [NYtimes Opinion - video - Goodbye, Price Tags. Hello, Dynamic Pricing.](https://www.nytimes.com/video/opinion/100000010545598/dynamic-pricing-algorithms.html?searchResultPosition=7)
+
+I loved the way the story was crafted in this piece - about how dynamic pricing is going to target and stalk us in order to squeeze as much money as we're able to pay based on needs the algorithm anticipates through other smart devices or connected services.
+
+I came across this video piece on tiktok and it led me down a rabbit hole of "surveillance pricing" where retailers and platforms will use algorithms and personal data (device type, location, browsing history, past purchases, things you've said aloud to your smart home, etc) to set _individualized_ prices - so two people might see completely different prices at the exact same time for the exact same item!
+
+In many ways, this undermines transparency and fairness since consumers (a) may not be away that they're being charged more or (b) may not be aware why they're being charged more!
+Most pieces talk about how regulators need to do more - but there might be an opportunity here on signaling that this is likely already at play in the market and will cause real harms.
+→ https://www.nytimes.com/video/opinion/100000010545598/dynamic-pricing-algorithms.html
 ++ 14 Dec 2025 | what makes a community a community | Field note on grief when cohort members disengage, and whether communities need shared responsibility rather than just shared membership.
 Field Note: What makes a community a community? Is it shared membership, or shared responsibility?
 
@@ -1738,18 +1807,6 @@ Open questions:
 •	What are the early signs that you're headed this way?
 
 •	At what point does naming harm stop creating capacity and start eroding it?
-++ 29 Jan 2026 | Kimi swarms versus supervisor pattern | Mini field note: Kimi trains coordination via parallel-agent RL so collaboration emerges, unlike an explicit inspectable orchestrator.
-Field note (mini) - Kimi’s swarms vs the Supervisor pattern
-
-I’ve been reading a lot of the hype around Kimi’s “agent swarms” and got curious about how they’re different from the existing (and very widely used) supervisor / orchestrator pattern. As I understand it so far, the difference is less about having many agents and more about how coordination works.
-
-Kimi’s swarm is framed as a trainable orchestration via Parallel-Agent RL. Multiple agents act at the same time, and a reward signal trains how they divide work, share information, sequence actions, or override each other. Coordination isn’t written out as rules; it’s something that emerges from training, because certain collaboration patterns get higher rewards. Agents can be spawned dynamically, and control can shift between them, there isn’t a permanently fixed supervisor.
-
-In contrast, the supervisor pattern I’m familiar with has an explicit orchestrator (the controller) that decides tasks, splits them up, orders execution, and aggregates outputs from specialist agents. The coordination logic lives in code or prompts, and the other agents are mostly workers or tools. It’s a more inspectable setup (to a degree).
-
-What I think is “special” about Kimi’s swarm, at least in how it’s being framed, is that coordination itself is *learned*, not predefined. The agents learn how to work together, and in theory, the system can adapt its collaboration strategy across tasks without new orchestration code.
-
-Still very much a note-to-self! I need to read more and actually play with Kimi - lots of bookmarks to follow up on!
 ++ 6 Feb 2026 | before managers, look at organizations | Field note on Laloux's red to teal paradigms, which management activities are really needed, and why permission-less cultures do not exist.
 Field Note: Before we come for Managers, we need to look at Organizations
 
@@ -1995,64 +2052,6 @@ In the discussion circle, I felt slightly off. Everyone was in awe of the artist
 I don’t reject the film’s concerns. I reject the exclusivity. The film presents itself as truth. I disagree because it feels like only a slice of the whole story.
 
 Perhaps my resistance comes from an instinct toward the need for nuance - an unwillingness to accept a single moral arc when the reality of modern life feels so layered. If that means I struggle to surrender to narratives that compress nuance into verdict, then that too is part of how I see the world.
-++ 9 Mar 2026 | one-shot prompt surprise | Journal on a single prompt generating a whole functional Politech Awards ranking site, leaving her impressed but overwhelmed by lost control.
-Journal: One-shot prompt surprise - politech ranking project
-
-I wanted to build a UI for ranking projects for the Politech Awards that would allow users to rank the projects and generate Pull Requests. I used the following prompt - and it one-shotted a _whole_ site. It was fully functional and very cool - but made me stop and wonder - _is this what I wanted to build? This is a very overwhelming experience and there's no clear user journey._
-
-It was certainly a fascinating moment as I use a lot of agentic technology both in vibe engineering side projects and at work, with custom agents, models, and workflows - but I am generally really hesitant to relinquish full control.
-
-It was the first time that I felt simultaneously impressed and overwhelmed by the results!
-
-the prompt:
-
-Review https://github.com/nwspk/politech-awards-2026 and https://2025.newspeak.house/awards.
-
-Design an implementation plan for a new greenfield app: politech-projects-ranking-ui.
-
-Context:
-- Algorithm: the-algorithm.ts
-- Data: results.json, iterations.json, candidates.csv (321 projects)
-- Current site shows a single iteration (heuristic, rationale, top/bottom projects)
-
-Goal:
-Build a UI ranking system that publishes the official rankings and lets the cohort explore how rankings change based on values, priorities, and judgments.
-
-Core capabilities:
-- Show all projects with rank/score and iteration metadata
-- Allow switching between iterations
-- Let users adjust value weights/priorities and see rankings update live (no-code ranking builder)
-- Allow saving ranking snapshots
-- Public judging interface with pairwise comparisons and value sliders
-- Store judging data for later analysis (agreement, stated vs revealed preferences, cohort vs algorithm ranking)
-- “Projects I like” → recommend similar projects
-- Optional: infer values from a blog/profile and generate a ranking from those values
-- Support multiple preset viewpoints (different value weightings) and compare rankings
-
-Technical expectations:
-- Use results.json / iterations.json / candidates.csv as core data
-- Define TypeScript models for projects, rankings, iterations, judgments, and snapshots
-- Decide whether to fetch data from GitHub or sync locally
-- Separate read-only ranking UI from interactive judging features
-- Specify frontend, backend/BaaS, and storage
-
-Output:
-product architecture, MVP vs later phases, data model, backend plan, ranking logic approach, analytics design, stack recommendations, and key risks.
-
-the results
-
-https://arc.net/e/53C01F8A-F8AB-48CE-8C47-A4F14475BDFC
-
-ideas for next steps
-
-I would like to try and build a sequential user journey that builds from the simplest to more complex, such as:
-stage 1 - select keywords, see rankings
-stage 2 - select keywords, use slider, see rankings
-stage 3 - pairwise
-stage 4 - LLM inference from your existing blog posts or shared links
-stage 5 - something more deliberate
-stage 6 - if I can build something that allows people to edit the multi agent run like a flow builder and then submit a PR with some code that a dev can review + test, that would be so cool
-
 
 Three longer pieces grew out of the room's thinking:
 
