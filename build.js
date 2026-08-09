@@ -120,7 +120,10 @@ for (const ln of raw) {
     }
     continue;
   }
-  if (!t) { flushBuf(); continue; }
+  if (!t) {
+    if (buf && buf.k === "journal") { buf.body.push(""); continue; }
+    flushBuf(); continue;
+  }
   if ((m = /^photos:\s*(\d+)/.exec(t)) && node && node.kind === "entry") { node.photos = +m[1]; continue; }
   if ((m = /^gallery:\s*(\d+)/.exec(t)) && !node) { P.gallery = +m[1]; continue; }
   if ((m = /^-\s+\[x\]\s+(.*)$/i.exec(t))) {
@@ -134,9 +137,20 @@ for (const ln of raw) {
     else { flushBuf(); buf = { k: "table", rows: [t] }; }
     continue;
   }
-  if ((m = /^\+\+\+\s+(.*)$/.exec(t))) {
+  if ((m = /^\+\+\+(2?)\s+(.*)$/.exec(t))) {
     flushBuf();
-    (drawer ? drawer.blocks : node ? node.blocks : P.blocks).push({ k: "ngroup", t: m[1].trim() });
+    (drawer ? drawer.blocks : node ? node.blocks : P.blocks).push(
+      { k: "ngroup", t: m[2].trim(), half: m[1] === "2" });
+    continue;
+  }
+  if ((m = /^\+\+\s+([^|]+)\|([^|]+)\|(.+)$/.exec(t))) {
+    flushBuf();
+    buf = { k: "journal", d: m[1].trim(), title: m[2].trim(), cap: m[3].trim(), body: [] };
+    continue;
+  }
+  if (buf && buf.k === "journal") {
+    if (!t) { buf.body.push(""); continue; }
+    buf.body.push(t);
     continue;
   }
   if ((m = /^\+\s+(.+)$/.exec(t)) && !t.startsWith("+++")) {
@@ -208,6 +222,35 @@ function renderTable(rows) {
 }
 
 let gCat = 0;
+function renderLinkRow(b) {
+  const title = b.url
+    ? '<a href="' + b.url.replace(/"/g, "&quot;") + '">' + inline(b.title) + ' <span class="ext">↗</span></a>'
+    : inline(b.title);
+  return '<div class="fnote"><span class="fn-d">' + inline(b.d) + '</span><div class="fn-b"><b>' +
+    title + "</b><span>" + inline(b.sum) + "</span></div></div>";
+}
+
+function renderJournal(b) {
+  const paras = []; let cur = [];
+  const closePara = () => { if (cur.length) { paras.push(cur.join(" ")); cur = []; } };
+  for (const ln of b.body) {
+    if (!ln) { closePara(); continue; }
+    if (ln.startsWith("→ ")) {
+      closePara();
+      const u = ln.slice(2).trim();
+      paras.push('<p class="fnj-link"><a href="' + u.replace(/"/g, "&quot;") + '">' +
+        esc(u.replace(/^https?:\/\/(www\.)?/, "").split("/")[0]) + " ↗</a></p>");
+      continue;
+    }
+    cur.push(ln);
+  }
+  closePara();
+  const bodyHtml = paras.map((p) => p.startsWith("<p") ? p : "<p>" + inline(p) + "</p>").join("");
+  return '<details class="fnote fnj"><summary><span class="fn-d">' + inline(b.d) +
+    '</span><div class="fn-b"><b>' + inline(b.title) + "</b><span>" + inline(b.cap) +
+    "</span></div></summary><div class=\"fnj-body\">" + bodyHtml + "</div></details>";
+}
+
 function renderNote(b) {
   const head = '<span class="fn-d">' + inline(b.d) + '</span><div class="fn-b"><b>' +
     inline(b.title) + "</b><span>" + inline(b.sum) + "</span></div>";
@@ -232,16 +275,23 @@ function renderBlocks(blocks) {
   const closeO = () => { if (ol.length) { out.push('<ol class="ord">' + ol.join("") + "</ol>"); ol = []; } };
   const closeN = () => { if (notes.length) { out.push('<div class="fnotes">' + notes.join("") + "</div>"); notes = []; } };
   const closeQ = () => { if (qcs.length) { out.push('<div class="qcards">' + qcs.join("") + "</div>"); qcs = []; } };
-  const closeAll = () => { closeL(); closeF(); closeO(); closeN(); closeQ(); };
+  let halfGroup = [];
+  const closeH = () => { if (halfGroup.length) { out.push('<div class="fncols">' + halfGroup.join("") + "</div>"); halfGroup = []; } };
+  const closeAll = () => { closeL(); closeF(); closeO(); closeN(); closeQ(); closeH(); };
   for (let bi = 0; bi < blocks.length; bi++) {
     const b = blocks[bi];
     if (b.k === "ngroup") {
-      closeAll();
+      closeL(); closeF(); closeO(); closeN(); closeQ();
       const rows = [];
-      while (bi + 1 < blocks.length && blocks[bi + 1].k === "note") rows.push(renderNote(blocks[++bi]));
+      while (bi + 1 < blocks.length && (blocks[bi + 1].k === "note" || blocks[bi + 1].k === "journal")) {
+        const r = blocks[++bi];
+        rows.push(r.k === "journal" ? renderJournal(r) : b.half ? renderLinkRow(r) : renderNote(r));
+      }
       const hue = ["magenta", "gold", "violet", "aqua"][gCat++ % 4];
-      out.push('<details class="fncat" data-hue="' + hue + '"><summary><span class="fnc-l">' + inline(b.t) +
-        "</span><i>" + rows.length + " entries</i></summary><div class=\"fnotes\">" + rows.join("") + "</div></details>");
+      const html = '<details class="fncat" data-hue="' + hue + '"><summary><span class="fnc-l">' + inline(b.t) +
+        "</span><i>" + rows.length + " entries</i></summary><div class=\"fnotes\">" + rows.join("") + "</div></details>";
+      if (b.half) halfGroup.push(html);
+      else { closeH(); out.push(html); }
       continue;
     }
     if (b.k === "li") { closeF(); closeO(); closeN(); closeQ(); list.push("<li>" + inline(b.t) + "</li>"); continue; }
@@ -710,6 +760,19 @@ h2.bare{margin:2.4rem 0 1rem}
 .fn-full{margin:0;padding:.15rem .8rem .75rem 9.1rem;font-size:.8438rem;line-height:1.6;color:var(--ink)}
 .fn-full a{color:var(--hi)}
 @media(max-width:40rem){.fn-full{padding-left:.8rem}}
+.ext{font-size:.8em;vertical-align:.1em}
+.fncols{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem;max-width:66rem;align-items:start;margin:1.2rem 0}
+.fncols .fncat{margin:0;max-width:none}
+.fncols .fnote{grid-template-columns:5.8rem minmax(0,1fr);padding:.5rem .7rem}
+@media(max-width:52rem){.fncols{grid-template-columns:1fr}}
+.fnj>summary{display:grid;grid-template-columns:7.5rem minmax(0,1fr);gap:.8rem;align-items:baseline}
+.fnj{display:block;padding:0}
+.fnj>summary{padding:.55rem .8rem}
+.fnj[open]{background:var(--gold-tint)}
+.fnj-body{padding:.3rem 1.2rem 1.1rem;max-width:44rem;margin-left:8.3rem}
+.fnj-body p{margin:0 0 .7rem;font-size:.875rem;line-height:1.66;color:var(--ink)}
+.fnj-body .fnj-link a{color:var(--hi);font:600 .75rem/1.4 var(--util)}
+@media(max-width:40rem){.fnj-body{margin-left:0}}
 .fnotes{margin:1.3rem 0 1.8rem;max-width:56rem;border:2px solid var(--edge)}
 .fnote{display:grid;grid-template-columns:7.5rem minmax(0,1fr);gap:.8rem;align-items:baseline;
   padding:.55rem .8rem;border-bottom:1px solid var(--edge)}
@@ -736,12 +799,17 @@ h2.bare{margin:2.4rem 0 1rem}
 
 /* ── month roadmap: sideways timeline ────────────────────── */
 .mroad{position:relative;display:grid;grid-auto-flow:column;grid-auto-columns:minmax(13.5rem,15rem);
-  gap:1rem;margin:1.6rem 0 2.4rem;padding:1.7rem .3rem 1.2rem;overflow-x:auto;
+  gap:1rem;margin:1.6rem 0 2.4rem;padding:2.5rem .9rem 1.2rem .3rem;overflow-x:auto;
   scroll-snap-type:x proximity;scrollbar-width:thin;align-items:start}
-.mroad::before{content:"";position:absolute;left:0;right:0;top:.6rem;height:3px;background:var(--edge)}
+.mroad::before{content:"";position:absolute;left:0;right:1rem;top:.55rem;height:4px;
+  background:var(--gold);opacity:.9}
+.mroad::after{content:"";position:absolute;right:0;top:.28rem;width:0;height:0;
+  border-left:12px solid var(--gold);border-top:9px solid transparent;border-bottom:9px solid transparent}
 .mcard{position:relative;scroll-snap-align:start;background:var(--paper);color:var(--ink);
   border:2px solid var(--ink);box-shadow:5px 5px 0 var(--h);padding:0 0 .7rem}
-.mcard::after{content:"";position:absolute;left:.85rem;top:-1.62rem;
+.mcard::before{content:"";position:absolute;left:1.42rem;top:-1.55rem;width:3px;height:1.55rem;
+  background:var(--gold);opacity:.55}
+.mcard::after{content:"";position:absolute;left:1.05rem;top:-2.35rem;
   width:14px;height:14px;border-radius:50%;background:var(--h);border:3px solid var(--midnight)}
 .m-more summary{cursor:pointer;list-style:none;font:600 .5625rem/1 var(--util);letter-spacing:.12em;
   text-transform:uppercase;color:var(--hi);padding:.15rem .85rem .1rem}
@@ -755,14 +823,14 @@ h2.bare{margin:2.4rem 0 1rem}
 .mcard p{margin:0;padding:0 .85rem;font-size:.8438rem;line-height:1.55;color:var(--soft)}
 
 /* ── thank-you cards ─────────────────────────────────────── */
-#part-08 .bullets{display:grid;gap:1rem;grid-template-columns:repeat(auto-fill,minmax(min(100%,17rem),1fr));
-  max-width:none;align-items:start}
-@media(min-width:64rem){#part-08 .bullets{grid-template-columns:repeat(3,1fr)}
-  #part-08 .bullets li:nth-child(7n+1){grid-column:span 2;font-size:.9375rem;padding:1.15rem 1.2rem}
+#part-08 .bullets{columns:1;column-gap:1rem;max-width:none}
+@media(min-width:44rem){#part-08 .bullets{columns:2}}
+@media(min-width:64rem){#part-08 .bullets{columns:3}
+  #part-08 .bullets li:nth-child(7n+1){font-size:.9375rem;padding:1.15rem 1.2rem}
   #part-08 .bullets li:nth-child(9n+5){font-size:.8125rem}}
-#part-08 .bullets li{background:var(--paper);color:var(--ink);border:2px solid var(--ink);
-  box-shadow:4px 4px 0 var(--h,var(--gold));padding:.95rem 1rem;margin:0;font-size:.875rem;
-  line-height:1.55;transform:rotate(var(--rot,0deg))}
+#part-08 .bullets li{display:block;break-inside:avoid;background:var(--paper);color:var(--ink);
+  border:2px solid var(--ink);box-shadow:4px 4px 0 var(--h,var(--gold));padding:.95rem 1rem;
+  margin:0 0 1rem;font-size:.875rem;line-height:1.55;transform:rotate(var(--rot,0deg))}
 #part-08 .bullets li::before{display:none}
 #part-08 .bullets li:nth-child(5n+1){--h:var(--magenta);--rot:-.4deg}
 #part-08 .bullets li:nth-child(5n+2){--h:var(--aqua);--rot:.35deg}
