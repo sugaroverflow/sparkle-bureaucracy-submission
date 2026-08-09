@@ -134,9 +134,22 @@ for (const ln of raw) {
     else { flushBuf(); buf = { k: "table", rows: [t] }; }
     continue;
   }
+  if ((m = /^\+\s+([^|]+)\|([^|]+)\|(.+)$/.exec(t))) {
+    flushBuf();
+    (drawer ? drawer.blocks : node ? node.blocks : P.blocks).push(
+      { k: "note", d: m[1].trim(), title: m[2].trim(), sum: m[3].trim() });
+    continue;
+  }
+  if ((m = /^\?\s+([^|]+)\|(.+)$/.exec(t))) {
+    flushBuf();
+    (drawer ? drawer.blocks : node ? node.blocks : P.blocks).push(
+      { k: "qc", title: m[1].trim(), body: m[2].trim() });
+    continue;
+  }
   if ((m = /^[-*]\s+(.*)$/.exec(t))) { flushBuf(); buf = { k: "li", t: m[1] }; continue; }
+  if ((m = /^\d+\.\s+(.*)$/.exec(t))) { flushBuf(); buf = { k: "oli", t: m[1] }; continue; }
   if ((m = /^>\s*(.*)$/.exec(t))) { flushBuf(); buf = { k: "q", t: m[1] }; continue; }
-  if (buf && ["p", "li", "q"].includes(buf.k)) { buf.t += " " + t; continue; }
+  if (buf && ["p", "li", "oli", "q"].includes(buf.k)) { buf.t += " " + t; continue; }
   flushBuf(); buf = { k: "p", t };
 }
 flushBuf();
@@ -163,8 +176,20 @@ function renderRoadmap(rows) {
   return out + "</div>";
 }
 
+function renderMonths(rows) {
+  const body = rows.slice(2).map(tcells);
+  return '<div class="mroad">' + body.map((r, i) =>
+    `<div class="mcard" data-hue="${HUES[i % HUES.length]}">
+      <span class="m-when">${inline(r[0])}</span>
+      <b>${inline(r[1])}</b>
+      <p>${inline(r[2] || "")}</p>
+    </div>`).join("") + "</div>";
+}
+
 function renderTable(rows) {
-  if (tcells(rows[0])[0].toLowerCase() === "stream") return renderRoadmap(rows);
+  const first = tcells(rows[0])[0].toLowerCase();
+  if (first === "stream") return renderRoadmap(rows);
+  if (first === "month") return renderMonths(rows);
   const head = tcells(rows[0]);
   const body = rows.slice(2).map(tcells);
   const narrow = head.length <= 2;
@@ -183,19 +208,36 @@ function renderBlocks(blocks) {
       fields = [];
     }
   };
+  let ol = [], notes = [], qcs = [];
+  const closeO = () => { if (ol.length) { out.push('<ol class="ord">' + ol.join("") + "</ol>"); ol = []; } };
+  const closeN = () => { if (notes.length) { out.push('<div class="fnotes">' + notes.join("") + "</div>"); notes = []; } };
+  const closeQ = () => { if (qcs.length) { out.push('<div class="qcards">' + qcs.join("") + "</div>"); qcs = []; } };
+  const closeAll = () => { closeL(); closeF(); closeO(); closeN(); closeQ(); };
   for (const b of blocks) {
-    if (b.k === "li") { closeF(); list.push("<li>" + inline(b.t) + "</li>"); continue; }
+    if (b.k === "li") { closeF(); closeO(); closeN(); closeQ(); list.push("<li>" + inline(b.t) + "</li>"); continue; }
+    if (b.k === "oli") { closeF(); closeL(); closeN(); closeQ(); ol.push("<li>" + inline(b.t) + "</li>"); continue; }
+    if (b.k === "note") {
+      closeL(); closeF(); closeO(); closeQ();
+      notes.push('<details class="fnote"><summary><span class="fn-d">' + inline(b.d) +
+        '</span><span class="fn-t">' + inline(b.title) + "</span></summary><p>" + inline(b.sum) + "</p></details>");
+      continue;
+    }
+    if (b.k === "qc") {
+      closeL(); closeF(); closeO(); closeN();
+      qcs.push('<div class="qcard"><span class="q-mark">?</span><b>' + inline(b.title) + "</b><p>" + inline(b.body) + "</p></div>");
+      continue;
+    }
     if (b.k === "p") {
       const fm = /^\*\*([^*]{2,40}?):\*\*\s*(.*)$/.exec(b.t);
-      if (fm) { closeL(); fields.push([fm[1], fm[2]]); continue; }
+      if (fm) { closeL(); closeO(); closeN(); closeQ(); fields.push([fm[1], fm[2]]); continue; }
     }
-    closeL(); closeF();
+    closeAll();
     if (b.k === "table") out.push(renderTable(b.rows));
     else if (b.k === "q") out.push('<div class="slip"><p>' + inline(b.t) + "</p></div>");
     else if (b.k === "sub") out.push('<h2 class="bare"><span>' + inline(b.t) + "</span></h2>");
     else out.push("<p>" + inline(b.t) + "</p>");
   }
-  closeL(); closeF();
+  closeAll();
   return out.join("\n");
 }
 
@@ -261,18 +303,18 @@ function renderCrit(c, i) {
 }
 
 function renderPartBody(P) {
-  const out = []; let entries = [];
+  const out = []; let entries = []; let crits = []; let flow = [];
   const closeTl = () => { if (entries.length) { out.push('<div class="tl">' + entries.join("\n") + "</div>"); entries = []; } };
-  let crits = [];
   const closeCrits = () => { if (crits.length) { out.push('<ol class="sheet">' + crits.join("\n") + "</ol>"); crits = []; } };
+  const closeFlow = () => { if (flow.length) { out.push(renderBlocks(flow)); flow = []; } };
   let ei = 0, ci = 0;
   for (const b of P.blocks) {
-    if (b.kind === "entry") { closeCrits(); entries.push(renderEntry(b, ei++, P.num)); continue; }
-    if (b.kind === "crit") { closeTl(); crits.push(renderCrit(b, ci++)); continue; }
+    if (b.kind === "entry") { closeFlow(); closeCrits(); entries.push(renderEntry(b, ei++, P.num)); continue; }
+    if (b.kind === "crit") { closeFlow(); closeTl(); crits.push(renderCrit(b, ci++)); continue; }
     closeTl(); closeCrits();
-    out.push(renderBlocks([b]));
+    flow.push(b);
   }
-  closeTl(); closeCrits();
+  closeFlow(); closeTl(); closeCrits();
   return '<div class="reading wide-ok">' + out.join("\n") + "</div>";
 }
 
@@ -604,10 +646,75 @@ h2.bare{margin:2.4rem 0 1rem}
     letter-spacing:.12em;text-transform:uppercase;opacity:.7;margin-bottom:.2rem}
 }
 
-/* ── thank-you gallery ───────────────────────────────────── */
-.shots.gallery{grid-template-columns:repeat(auto-fill,minmax(min(100%,13rem),1fr));gap:.7rem;
-  max-width:62rem;margin:1.6rem 0}
-.shots.gallery img{aspect-ratio:9/7}
+/* ── ordered list ────────────────────────────────────────── */
+.ord{list-style:none;padding:0;margin:0 0 1.05rem;counter-reset:o;max-width:var(--measure)}
+.ord li{counter-increment:o;position:relative;padding-left:2.3rem;margin-bottom:.7rem}
+.ord li::before{content:counter(o,decimal-leading-zero);position:absolute;left:0;top:.12em;
+  font:600 .6875rem/1.7 var(--util);color:var(--h,var(--gold))}
+
+/* ── field notes ─────────────────────────────────────────── */
+.fnotes{margin:1.3rem 0 1.8rem;max-width:56rem;border:2px solid var(--edge)}
+.fnote{border-bottom:1px solid var(--edge)}
+.fnote:last-child{border-bottom:0}
+.fnote summary{cursor:pointer;list-style:none;display:grid;grid-template-columns:7.5rem minmax(0,1fr);
+  gap:.8rem;align-items:baseline;padding:.5rem .8rem}
+.fnote summary::-webkit-details-marker{display:none}
+.fnote summary:hover{background:#ffffff0d}
+.fn-d{font:600 .625rem/1.6 var(--util);letter-spacing:.08em;text-transform:uppercase;color:var(--gold)}
+.fn-t{font-size:.875rem;line-height:1.5;color:var(--light)}
+.fnote[open] summary{background:#ffffff0d}
+.fnote>p{margin:0;padding:.1rem .8rem .7rem 9.1rem;font-size:.875rem;line-height:1.55;color:var(--softlight)}
+@media(max-width:40rem){
+  .fnote summary{grid-template-columns:1fr;gap:.1rem}
+  .fnote>p{padding-left:.8rem}
+}
+
+/* ── open-question cards ─────────────────────────────────── */
+.qcards{display:grid;gap:1.1rem;grid-template-columns:repeat(auto-fill,minmax(min(100%,17rem),1fr));
+  margin:1.4rem 0 2rem;max-width:66rem;align-items:start}
+.qcard{position:relative;background:var(--paper);color:var(--ink);border:2px solid var(--ink);
+  box-shadow:5px 5px 0 var(--h,var(--gold));padding:1.4rem 1.1rem 1rem;transform:rotate(var(--rot,0deg))}
+.qcards .qcard:nth-child(4n+1){--h:var(--magenta);--rot:-.5deg}
+.qcards .qcard:nth-child(4n+2){--h:var(--aqua);--rot:.4deg}
+.qcards .qcard:nth-child(4n+3){--h:var(--violet);--rot:-.3deg}
+.qcards .qcard:nth-child(4n+4){--h:var(--gold);--rot:.5deg}
+.q-mark{position:absolute;top:-.8rem;left:.9rem;font:800 .9rem/1 var(--util);background:var(--h);
+  border:2px solid var(--ink);border-radius:999px;padding:.3em .55em;color:var(--ink)}
+.qcard b{display:block;font-size:1rem;letter-spacing:-.018em;margin-bottom:.4rem}
+.qcard p{margin:0;font-size:.875rem;line-height:1.55}
+
+/* ── month roadmap cards ─────────────────────────────────── */
+.mroad{display:grid;gap:1.1rem;grid-template-columns:repeat(auto-fill,minmax(min(100%,16rem),1fr));
+  margin:1.6rem 0 2.2rem;max-width:66rem;align-items:start}
+.mcard{background:var(--paper);color:var(--ink);border:2px solid var(--ink);
+  box-shadow:5px 5px 0 var(--h);padding:0 0 .9rem}
+.m-when{display:block;font:600 .625rem/1 var(--util);letter-spacing:.13em;text-transform:uppercase;
+  background:var(--h);border-bottom:2px solid var(--ink);padding:.5rem .8rem;margin-bottom:.7rem}
+.mcard b{display:block;font-size:1rem;letter-spacing:-.018em;padding:0 .85rem;margin-bottom:.35rem}
+.mcard p{margin:0;padding:0 .85rem;font-size:.8438rem;line-height:1.55;color:var(--soft)}
+
+/* ── thank-you cards ─────────────────────────────────────── */
+#part-08 .bullets{display:grid;gap:1rem;grid-template-columns:repeat(auto-fill,minmax(min(100%,17rem),1fr));
+  max-width:none;align-items:start}
+#part-08 .bullets li{background:var(--paper);color:var(--ink);border:2px solid var(--ink);
+  box-shadow:4px 4px 0 var(--h,var(--gold));padding:.95rem 1rem;margin:0;font-size:.875rem;
+  line-height:1.55;transform:rotate(var(--rot,0deg))}
+#part-08 .bullets li::before{display:none}
+#part-08 .bullets li:nth-child(5n+1){--h:var(--magenta);--rot:-.4deg}
+#part-08 .bullets li:nth-child(5n+2){--h:var(--aqua);--rot:.35deg}
+#part-08 .bullets li:nth-child(5n+3){--h:var(--violet);--rot:-.25deg}
+#part-08 .bullets li:nth-child(5n+4){--h:var(--cyan);--rot:.3deg}
+#part-08 .bullets li:nth-child(5n+5){--h:var(--gold);--rot:-.35deg}
+
+/* ── gallery wall ────────────────────────────────────────── */
+.shots.gallery{grid-template-columns:repeat(auto-fill,minmax(min(100%,9rem),1fr));
+  grid-auto-rows:7rem;grid-auto-flow:dense;gap:.7rem;max-width:62rem;margin:1.6rem 0}
+.shots.gallery img{aspect-ratio:auto;height:100%;width:100%;object-fit:cover}
+.shots.gallery img:nth-child(6n+1){grid-column:span 2;grid-row:span 2}
+.shots.gallery img:nth-child(6n+4){grid-row:span 2}
+.shots.gallery img:nth-child(6n+5){grid-column:span 2}
+.shots.gallery img:nth-child(8n+7){transform:rotate(-.6deg)}
+.shots.gallery img:nth-child(8n+3){transform:rotate(.5deg)}
 
 footer{border-top:2px solid var(--edge);background:#060919;color:#E7E4F4}
 .foot-in{max-width:var(--wrap);margin:0 auto;padding:clamp(2rem,5vw,3rem) var(--pad);display:flex;
@@ -762,7 +869,7 @@ ${ANNOTATIONS ? `<aside class="vbook" id="vbook" aria-label="Prototype feedback 
   <div class="foot-in">
     <p><span class="foot-stars">★★★★★</span><br>
       Sparkle Bureaucracy · ${SERIAL}<br>
-      Project site: <a href="https://sparklebureaucracy.org">sparklebureaucracy.org</a> · The complete record: <a href="${RECORD}">sparkle-bureaucracy.md</a></p>
+      Project site: <a href="https://sparklebureaucracy.org">sparklebureaucracy.org</a> · The complete lore: <a href="${RECORD}">sparkle-bureaucracy.md</a></p>
   </div>
 </footer>
 
