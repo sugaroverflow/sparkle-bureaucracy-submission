@@ -659,9 +659,31 @@ footer{border-top:2px solid var(--ink);background:var(--midnight);color:#E7E4F4}
 @media print{.vbook{display:none}}
 
 /* recogito: match the page's ink-and-gold system */
-.r6o-annotation,.r6o-selection{background:#ffc93c59;border-bottom:2px solid var(--gold-ink)}
+.r6o-annotation,.r6o-selection{background:#ffc93c59;border-bottom:2px solid var(--gold-ink);cursor:pointer}
+.r6o-annotation:hover{background:#ffc93c99}
 .r6o-editor{font-family:var(--text);z-index:50}
-.r6o-editor .r6o-btn{background:var(--magenta);border-color:var(--magenta)}
+.r6o-editor .r6o-arrow{display:none}
+.r6o-editor .r6o-editor-inner{background:#fff;border:2px solid var(--ink);border-radius:0;
+  box-shadow:5px 5px 0 var(--ink)}
+.r6o-editor .r6o-widget{border-color:var(--line);font-size:.9375rem;line-height:1.55}
+.r6o-editor .r6o-widget.comment.editable{background:var(--page)}
+.r6o-editor .r6o-widget.comment .r6o-editable-text,
+.r6o-editor .r6o-widget.comment .r6o-readonly-comment{font-family:var(--text);
+  font-size:.9375rem;line-height:1.55;color:var(--ink)}
+.r6o-editor .r6o-widget.comment .r6o-editable-text:empty:not(:focus):before{color:var(--soft)}
+.r6o-editor .r6o-lastmodified{font:600 .5625rem/1.5 var(--util);letter-spacing:.1em;
+  text-transform:uppercase;color:var(--magenta-ink)}
+.r6o-editor .r6o-lastmodified-at{color:var(--soft);font-weight:400;letter-spacing:.03em;
+  text-transform:none}
+.r6o-editor .r6o-footer{background:var(--gold-tint);border-top:2px solid var(--ink);
+  padding:.5rem .6rem}
+.r6o-editor .r6o-footer .r6o-btn{font:600 .5625rem/1 var(--util);letter-spacing:.1em;
+  text-transform:uppercase;color:var(--ink);background:var(--gold);border:2px solid var(--ink);
+  border-radius:999px;padding:.55rem .8rem;box-shadow:2px 2px 0 var(--ink);cursor:pointer}
+.r6o-editor .r6o-footer .r6o-btn:hover{transform:translate(1px,1px);box-shadow:1px 1px 0 var(--ink)}
+.r6o-editor .r6o-footer .r6o-btn.outline{background:#fff;color:var(--ink)}
+.r6o-editor .r6o-footer .r6o-icon,.r6o-editor .r6o-footer svg{color:var(--magenta-ink);
+  fill:var(--magenta-ink)}
 
 /* ── comment register ────────────────────────────────────── */
 .cmt{margin-top:2.6rem;border:2px solid var(--ink);background:#fff;box-shadow:6px 6px 0 var(--h);max-width:52rem}
@@ -759,10 +781,10 @@ footer{border-top:2px solid var(--ink);background:var(--midnight);color:#E7E4F4}
 ${sections}
 </main>
 
-${ANNOTATIONS ? `<aside class="vbook" id="vbook" aria-label="Annotation sign-in">
-  <div class="vbook-head">Visitors&rsquo; book</div>
+${ANNOTATIONS ? `<aside class="vbook" id="vbook" aria-label="Prototype feedback sign-in">
+  <div class="vbook-head">Prototype feedback</div>
   <div class="vbook-body">
-    <p class="vbook-note" id="vbook-note">Sign in to annotate — highlight any text on the page to leave a note. No account needed.</p>
+    <p class="vbook-note" id="vbook-note">Add your name, then highlight any text on the page to leave feedback. No account needed.</p>
     <form id="vbook-form">
       <input id="vbook-name" maxlength="80" placeholder="Your name" aria-label="Your name">
       <button type="submit">Begin</button>
@@ -778,7 +800,7 @@ ${ANNOTATIONS ? `<aside class="vbook" id="vbook" aria-label="Annotation sign-in"
     <p><span class="foot-stars">★★★★★</span><br>
       Sparkle Bureaucracy · ${SERIAL}<br>
       Open diary <a href="${REPO}/lore">lore/</a> · Site <a href="https://sparklebureaucracy.org">sparklebureaucracy.org</a></p>
-    <p>${ANNOTATIONS ? `To comment: sign the visitors&rsquo; book (bottom right), then highlight any text<br>and leave a note right there. No account needed.` : COMMENTS ? `Comments are lodged directly on this page — each part has a comment register.<br>Highlight text before you type to quote it. No account needed.` : `Comment link to follow.`}</p>
+    <p>${ANNOTATIONS ? `To leave feedback: add your name (bottom right), then highlight any text<br>and leave a note right there. No account needed.` : COMMENTS ? `Comments are lodged directly on this page — each part has a comment register.<br>Highlight text before you type to quote it. No account needed.` : `Comment link to follow.`}</p>
   </div>
 </footer>
 
