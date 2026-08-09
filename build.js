@@ -389,8 +389,11 @@ code{font:400 .84em/1.3 var(--util);background:#17122c0f;padding:.16em .38em;bor
   body{padding-left:15rem}
   .rail{position:fixed;top:0;left:0;bottom:0;width:15rem;border-right:2px solid var(--edge);border-bottom:0}
   .rail-in{flex-direction:column;align-items:stretch;height:100%;padding:1.2rem .9rem;gap:1rem;max-width:none}
-  .rail nav{flex-direction:column;overflow:visible;overflow-y:auto;mask-image:none;gap:.2rem}
-  .rail nav a{white-space:normal;line-height:1.45;border-radius:.4rem}
+  .rail nav{flex-direction:column;overflow:visible;overflow-y:auto;mask-image:none;gap:.25rem}
+  .rail nav a{white-space:normal;line-height:1.5;border-radius:.4rem;font-size:.8125rem;
+    letter-spacing:.04em;padding:.6rem .7rem}
+  .side-brand small{font-size:.5625rem}
+  .side-foot{font-size:.625rem}
   .side-brand{display:block;font:900 1.15rem/1.05 var(--display);letter-spacing:-.03em;
     padding:.2rem .3rem;color:var(--light);text-decoration:none}
   .side-brand b{color:var(--magenta);-webkit-text-stroke:1.5px var(--ink);paint-order:stroke fill;display:block}
@@ -618,8 +621,17 @@ footer{border-top:2px solid var(--edge);background:#060919;color:#E7E4F4}
 /* ── prototype feedback card ─────────────────────────────── */
 .vbook{position:fixed;right:1rem;bottom:1rem;z-index:40;width:min(19rem,calc(100vw - 2rem));
   background:#fff;border:2px solid var(--ink);box-shadow:5px 5px 0 var(--ink)}
-.vbook-head{font:600 .625rem/1 var(--util);letter-spacing:.13em;text-transform:uppercase;
+.vbook-head{display:flex;justify-content:space-between;align-items:center;gap:.6rem;
+  font:600 .625rem/1 var(--util);letter-spacing:.13em;text-transform:uppercase;
   background:var(--gold);border-bottom:2px solid var(--ink);padding:.55rem .75rem}
+.vbook-head button{font:700 .875rem/1 var(--util);background:none;border:0;cursor:pointer;
+  color:var(--ink);padding:0 .15rem}
+.vb-mini{display:none}
+.vbook.min{width:auto;border-radius:999px;overflow:hidden;box-shadow:3px 3px 0 var(--magenta)}
+.vbook.min .vbook-body{display:none}
+.vbook.min .vbook-head{border-bottom:0;cursor:pointer;padding:.6rem .95rem}
+.vbook.min .vb-full,.vbook.min #vbook-min{display:none}
+.vbook.min .vb-mini{display:inline}
 .vbook-body{padding:.7rem .75rem .8rem}
 .vbook-note{font:400 .75rem/1.55 var(--util);color:var(--soft);margin:0 0 .55rem}
 .vbook form{display:flex;gap:.45rem}
@@ -728,7 +740,7 @@ ${sections}
 </main>
 
 ${ANNOTATIONS ? `<aside class="vbook" id="vbook" aria-label="Prototype feedback sign-in">
-  <div class="vbook-head">Prototype feedback</div>
+  <div class="vbook-head" id="vbook-head"><span class="vb-full">Prototype feedback</span><span class="vb-mini">✦ Give feedback</span><button type="button" id="vbook-min" aria-label="Minimise" title="Minimise">–</button></div>
   <div class="vbook-body">
     <p class="vbook-note" id="vbook-note">Add your name, then highlight any text on the page to leave feedback. No account needed.</p>
     <form id="vbook-form">
@@ -824,6 +836,19 @@ ${ANNOTATIONS ? `<script src="/vendor/recogito.min.js"></script>
   var saved=null;
   try{saved=localStorage.getItem(KEY)}catch(e){}
   if(saved){done(saved);start(saved)}else{start(null)}
+
+  var KEYM="sb-fb-min",head=document.getElementById("vbook-head");
+  function setMin(v){
+    box.classList.toggle("min",v);
+    try{v?localStorage.setItem(KEYM,"1"):localStorage.removeItem(KEYM)}catch(e){}
+  }
+  document.getElementById("vbook-min").addEventListener("click",function(ev){
+    ev.stopPropagation();setMin(true);
+  });
+  head.addEventListener("click",function(){
+    if(box.classList.contains("min"))setMin(false);
+  });
+  try{if(localStorage.getItem(KEYM))setMin(true)}catch(e){}
 })();
 </script>` : ""}
 </body>

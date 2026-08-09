@@ -56,35 +56,6 @@ So what is the prototype? **The network is the prototype; the experiments are it
 
 One honest caveat, stated up front: the name "Sparkle Bureaucracy" may not survive the network's next phase — making bureaucracy sparkle is my long-term horizon, but the urgent work is the gap. What's assessed here is the accumulated practice, the communities engaged, and the roadmap: a hackathon and demo night under the network's own banner, a flagship decision queued with faculty, and a rhythm determined with the community (Part 05).
 
-#### Project map — components
-
-| Component | Status | Notes |
-| --- | --- | --- |
-| Sparkle Border Authority | Done · deployed | [Live](https://sparkle-border-authority.vercel.app/); open-sourced at Anouk's request |
-| Project Mirror + V1–V15 pipeline | Done · live | [2025.newspeak.house/awards](https://2025.newspeak.house/awards); every version on GitHub |
-| Campaign Factory | Live · partnered | Campaign Lab subsidises free access; flagship candidate |
-| Conference Pulse | Live | Ran the AI & Campaigning Conference, 16 Jul |
-| Topic (topic.forum) | Live | Ed Saperia product owner; hardened through July |
-| NHIFA Field Console | Done | Ran the cohort reunion, 13 May |
-| sparklebureaucracy.org + mailing list | Live | 15 subscribers; Umami analytics; interest register |
-| Claw agents | Done | Built inside the Clawclub community |
-| Red Team, Blue Team | Done | Ration Club, 29 Apr |
-| This submission page | Live | Annotation register; its own experiment |
-| Nine specified experiments | Specified, not run | Smallest-credible-run specs, risks, evidence lists |
-| The flagship | Decision queued | Faculty brainstorm, then build |
-
-#### Risks & unknowns
-
-| Risk | Mitigation |
-| --- | --- |
-| "A vibe with no programme" — the category's predictable failure | The dated record: activations run all year, nine experiments specified to smallest-credible-run level, flagship decision queued with faculty |
-| Affective legitimacy without recourse — a friendly process that leaves power untouched | The four-part experiment bar requires decision pressure and contestability; the warning cases (Rahvakogu, Holograms for Freedom) are studied in the prior art |
-| Synthetic representation without consent | "Evaluative stance," never "beliefs"; Mirror Commons specified as the answer — self-managed stand-ins with red lines, expiry, revocation |
-| Founder-legitimacy loop — concealing the programme makes it look vague | Named in public (the resistance essay); legitimacy borrowed from the people around the work until the founder's own catches up |
-| Access gating — "bring your own API key" prices out the audience | The free-access-code pattern with a kill-switch, live since 21 July |
-| Evidence decay — instruments purging their own data | The 30-day-purge rescue became capture discipline; the diary is the data layer |
-| The name may not survive the next phase | Mission settled; rename decision deliberately follows the flagship decision |
-
 ## 02 | Experiments Log
 
 The experiments and projects, in the order they ran. Each entry records what was hypothesised, what happened, what it taught, and what it changed — with the evidence, metrics, technical notes, and faculty/community feedback that belong to it in the drawers.
@@ -183,36 +154,6 @@ Project Mirror asked: what if all 18 cohort members had been in the room? Eighte
 - "Please build some for the team." — a manager, on hearing about synthetic evaluator agents.
 - Asil Sidahmed's live reflection at the showcase → the permanent ethical line, and the Mirror Commons spec.
 
-### 2 Apr | experiment | The prototype diary is founded
-
-photos: 2
-
-The Matrix field-notes room went quiet on 1 April; the next morning the chat was exported and the diary repo was born the same day — which was also the day of the fellowship's **Prototype Previews**. The checkpoint arrived, and the diary became the deliverable: research inventory, sensemaking map, synthesis, and a README rewritten six times in one afternoon until it was in my voice.
-
-**Hypothesis:** an agent-assisted diary — notes, commits, and logs turned into structured, human-approved entries — can keep an open record honest without consuming the founder.
-
-**Method:** a strict human approval boundary, written down before the tooling: the agent may draft, classify, summarise, and suggest; it may not publish, contact collaborators, represent someone else's views, or mark feedback resolved without human approval.
-
-**What happened:** the diary became the data layer for everything since — weekly entries, experiment cards, engagement and prior-art logs — and on 5 August the whole corpus merged into the public site repo, original repo archived. This submission is built directly on top of it, and is the experiment's first full run.
-
-**What I learned:** the lab's own bureaucracy is an experiment — and it ran. Legible process, visible provenance, human judgment kept in the loop.
-
-**Impact on next iteration:** the reconstructed entries are marked as such, gaps listed for human correction — the pattern every SB experiment now follows for provenance.
-
-#### Evidence
-
-- Nine commits, all on Thursday 2 April between 13:26 and 16:34; the README rebuilt in six passes until it was in my voice.
-- The diary became the data layer: on 5 August the whole corpus merged into the public site repo; this page is built on top of it.
-
-#### Feedback
-
-- Ed Saperia (Prototype Previews): "I think this will go very far — very contemporary, hits very relevant questions, in a way that's quite straightforward, generative, and accessible… with an AI angle which makes it fresh."
-- Matt Stempeck: "an experiment lab for imagining how emerging tech can change the way our systems work without abandoning them" — the phrase the prototype grew into. Also his: "if you can't dance it's not my revolution."
-- Hannah O'Rourke: intros to AI-in-gov and optimistic-narratives people; MP-office applications from casework; "we will have people up for piloting things"; pointed at Campaign Lab's [pipresist.uk](https://pipresist.uk/) — the seed of everything that followed with them, and offered help with evaluation frameworks.
-- Chris Owen prescribed *Radical Help* → read ("we architected our systems poorly and can radically re-imagine them"). Emily Mayhew asked why public consultation is "such a dull awful bureaucratic cold process" → folded into the synthetic-voice experiment cards. Anouk Ruhaak demanded the sparkle passport be open-sourced → it is.
-- James Moulding: "I liked optimistical." → the word stays. Sinead Doyle: "I really enjoy the aesthetic of your slides ✨" (Ed: "you are basically the target audience for this project").
-- Every piece of feedback tracked to an action in the record's faculty-feedback tracker.
-
 ### 29 Apr | experiment | Red Team, Blue Team at Ration Club
 
 photos: 2
@@ -270,13 +211,13 @@ Nobody in my cohort wanted to answer "how is your prototype going?" one more tim
 
 - (@todo dossier mini-zine photos, the Field Console, a mission card, a debrief card — check whether a debrief card can be reproduced with permission)
 
-### 19–23 Jun | experiment | The lab gets its operating system
+### 19–23 Jun | experiment | The nine-experiment idea bank
 
 photos: 1
 
-In one day, the diary reorganised around the fellowship template — submission diary, experiment cards, engagement log, faculty feedback tracker, prior-art log — and an experiment research sprint compared candidate first experiments, concluding: keep Sparkle Bureaucracy itself as the assessed prototype, run lab infrastructure quietly, and pick one public-facing flagship. Four days later the prospective-experiments idea bank landed: nine ranked candidates (Public Voice Customs, Mirror Commons, The Exception Window, Permission Passport Office, The Value Court, Claw Civil Service, Shadow Labour Claims Office, Liquid Mandate Assembly, Sparkle Border Field Kit), each with a smallest-credible-run spec, artifacts, evidence lists, and named risks.
+An experiment research sprint compared candidate first experiments and concluded: keep Sparkle Bureaucracy itself as the assessed prototype, and pick one public-facing flagship. Four days later the idea bank landed: nine ranked candidates — Public Voice Customs, Mirror Commons, The Exception Window, Permission Passport Office, The Value Court, Claw Civil Service, Shadow Labour Claims Office, Liquid Mandate Assembly, Sparkle Border Field Kit — each specified to smallest-credible-run level, with artifacts, evidence lists, and named risks.
 
-**What it was:** the lab practising its own bureaucracy — four infrastructure experiments (agent-assisted diary, faculty feedback loop, collaborator & prior-art scout, experiment cards) that actually ran, and nine prospective experiments specified but not yet run.
+**What it was:** the network's release pipeline, written down before any of it runs — nine experiments waiting for the next phase, filtered through the four-part bar.
 
 **What it taught:** specify the bar before choosing the work: if an idea doesn't change who can act, how judgment is made, what becomes visible, or how a decision can be contested — it isn't strong enough yet.
 
@@ -284,7 +225,6 @@ In one day, the diary reorganised around the fellowship template — submission 
 
 #### Feedback
 
-- Matt Stempeck's Previews phrase — "an experiment lab for imagining how emerging tech can change the way our systems work without abandoning them" — became the lab's spine when the diary reorganised around it.
 - Emily Mayhew's consultation question ("why is public consultation such a dull awful bureaucratic cold process?") fed Public Voice Customs and Mirror Commons' consent model in the idea bank.
 - Ed Saperia's artifact principle (28 Apr — "every interaction with SB should leave a durable artifact: a certificate, a key, a title") became the durable-artifact leg of the four-part bar.
 
@@ -304,17 +244,17 @@ The same evening the idea bank landed, the **Topic** build kicked off with 43 co
 
 - 43 commits on day one, ~66 by 30 June; a further build wave 21–25 July (~37 commits) and a 32-commit QA sprint on 27 July (PRs #139–146) — finished like a product.
 
-### 16 Jul | experiment | Campaign Factory + Conference Pulse
+### 12–17 Jul | experiment | Campaign Factory
 
-photos: 5
+photos: 4
 
-Built with Campaign Lab in an intense ten-day sprint — 122 commits, 62 of them on 15 July — against Hannah O'Rourke's brief: demo multi-agents, and make campaigners take agents seriously. Give [Campaign Factory](https://campaign-factory.vercel.app) a UK local or public-policy problem and a place, and it researches the decision route, maps power and pressure, proposes strategy and tactics, and drafts campaign materials — *showing the work as it happens*, with Hannah's campaign-building knowledge base embedded in the system. Conference Pulse ran alongside as the live companion for the AI & Campaigning Conference at Newspeak House: schedule, anonymous per-panel comments, votes, an organiser dashboard, a big-screen room view.
+Built with Campaign Lab in an intense ten-day sprint — 122 commits, 62 of them on 15 July — against Hannah O'Rourke's brief: demo multi-agents, and make campaigners take agents seriously. Give [Campaign Factory](https://campaign-factory.vercel.app) a UK local or public-policy problem and a place, and it researches the decision route, maps power and pressure, proposes strategy and tactics, and drafts campaign materials — *showing the work as it happens*, with Hannah's campaign-building knowledge base embedded in the system. It demoed live at the AI & Campaigning Conference at Newspeak House on 16 July.
 
 **Hypothesis:** meeting a community inside its own work — their problems, their vocabulary, their knowledge base embedded in the system — beats evangelism; and designed affect in a consequential procedure can be *commissioned*, not just asserted.
 
-**Method:** ten-day sprint in the partner's own GitHub organisation ([CampaignLab/campaign-factory](https://github.com/CampaignLab/campaign-factory), [CampaignLab/conference-pulse](https://github.com/CampaignLab/conference-pulse)); multi-agent decomposition so the work is showable and replayable — the architecture is the pedagogy; both artifacts run live at a nine-session conference.
+**Method:** ten-day sprint in the partner's own GitHub organisation ([CampaignLab/campaign-factory](https://github.com/CampaignLab/campaign-factory)); multi-agent decomposition so the work is showable and replayable — the architecture is the pedagogy.
 
-**What happened:** the room's verdict was measured live by our own instrument — the end-of-panel vote on "Agents: working tools or over-hyped?" came back 19 ballots: 9 *could be useful with work*, 7 *already useful and real*, 3 *just hype*. The week after, a free-access code went onto the house key so "bring your own API key" stopped being the price of admission — a deliberate accessibility decision with a kill-switch as the safety valve. Campaign Lab sent Campaign Factory out in their newsletter.
+**What happened:** the room's verdict on the conference panel — "Agents: working tools or over-hyped?", with Hannah and Ed — came back 19 ballots: 9 *could be useful with work*, 7 *already useful and real*, 3 *just hype*. The week after, a free-access code went onto the house key so "bring your own API key" stopped being the price of admission — a deliberate accessibility decision with a kill-switch as the safety valve. Campaign Lab sent Campaign Factory out in their newsletter.
 
 **What I learned:** translation beats evangelism, with a stated mechanism. Sometimes sparkle *removes* a ritual — the free-access code deleted a gate rather than decorating one. And the sharpest question from the comment wall — how do we stop people's first experience being slop campaign plans? — is the quality bar Campaign Factory carries forward, not yet answered.
 
@@ -322,28 +262,49 @@ Built with Campaign Lab in an intense ten-day sprint — 122 commits, 62 of them
 
 > "Campaign Factory built for her what it would take her five months to research." — campaigner at the AI & Campaigning Conference (@todo get name/permission)
 
-> "Incredible! would love to see a write up of how this was built." — from the Conference Pulse comment wall
+> "Incredible! would love to see a write up of how this was built." — from the panel comment wall
 
 #### Technical
 
-- Campaign Factory: multi-agent pipeline that researches decision routes, maps power and pressure, proposes strategy and tactics, and drafts materials — with the run replayable end-to-end ([the conference replay](https://campaign-factory.vercel.app/factory/replay/conference)).
+- Multi-agent pipeline that researches decision routes, maps power and pressure, proposes strategy and tactics, and drafts materials — with the run replayable end-to-end ([the conference replay](https://campaign-factory.vercel.app/factory/replay/conference)).
 - Launched requiring the user's own Anthropic or OpenRouter key; the free-access code (`FREE-CAMPAIGN-BUILD`) went onto the house key from 21 July, with a kill-switch. Campaign Lab subsidises access.
-- Conference Pulse: live schedule, anonymous per-panel comments and votes, organiser dashboard, big-screen room view; AI live-take summaries generated for 7 of 9 sessions.
-- Both repos live in the partner's organisation — a trust signal, not a caveat.
+- The repo lives in the partner's organisation — a trust signal, not a caveat.
 
 #### Evidence
 
-- From the Conference Pulse production database (16 July, nine sessions): **240 votes · 263 comments · 28 private feedback messages · 67 unique voting devices** (a floor on reach, not attendance — nobody who only watched the projector is counted).
-- **Retention: 49 of 67 voters (73%) voted in two or more panels**; 25 in five or more; three in all eight with voting open.
-- The 19-ballot panel vote, preserved in full in the record.
-- The instrument saw the room: comments between 14:00 and 16:00 match independent complaints about heat and breaks — disengagement detected through participation data.
+- The 19-ballot panel vote, preserved in full in the record, with twelve live comments and two private organiser notes.
 - Inbound after the conference: **Abby Mason** (Campaign Engagement Manager, Oxfam GB) — "amazing to see the platform you have built" — requesting a team demo and Q&A; a September workshop is being organised with Asil Sidahmed. **Matt Stempeck + Daniel Mackisack** (Civic Tech Field Guide) offering theory-of-change material for the strategy section, asking to share it with coworkers "and then, the world," and inviting a CTFG vibe-code show & tell demo. Campaign Lab newslettered Campaign Factory to their list on 20 July.
 
 #### Feedback
 
 - Hannah O'Rourke's Previews offer (2 Apr) — pilots, intros, and the pipresist.uk pointer — is the seed this whole arc grew from; she later co-built the problem statement (31 Jul).
 - The slop-campaign-plans question from the comment wall → logged as Campaign Factory's open quality bar.
-- 240 votes but only 2 mailing-list signups on the day → the most useful number in the record; the signup-form bug found and fixed (the list stands at 15), and the conversion strategy rethought.
+
+### 15–16 Jul | experiment | Conference Pulse
+
+photos: 3
+
+The live companion for the AI & Campaigning Conference, built in parallel to a written brief from Hannah O'Rourke: schedule, anonymous per-panel comments, votes, an organiser dashboard, a big-screen room view. Nine sessions, live all day.
+
+**Hypothesis:** an instrument that samples participation repeatedly — rather than once at the door — can see what a room is actually doing, including when it disengages.
+
+**Method:** built to the brief in the partner's organisation ([CampaignLab/conference-pulse](https://github.com/CampaignLab/conference-pulse)); anonymous per-panel voting and comments so participation costs nothing.
+
+**What happened:** 240 votes, 263 comments, and 28 private feedback messages across nine sessions — and the instrument saw the room: the comments between 14:00 and 16:00 match independent complaints about heat and breaks. Disengagement detected through participation data.
+
+**What I learned:** repeat participation is measurable — and it's the hardest evidence a civic tool can produce. Also the year's most useful failure: 240 votes converted only 2 people to the mailing list on the day (the signup form was silently rejecting real people — found, fixed; the list stands at 15).
+
+**Impact on next iteration:** the fifth condition — can an experiment detect its own defectors? — comes from this instrument, demonstrated rather than proposed. And the 30-day data purge it nearly lost its own evidence to became the lab's capture discipline.
+
+#### Technical
+
+- Live schedule, anonymous per-panel comments and votes, organiser dashboard, big-screen room view; AI live-take summaries generated for 7 of 9 sessions.
+- The panel feedback was recovered from the production database ahead of a 30-day purge — no retention policy existed for the instrument's own evidence until then.
+
+#### Evidence
+
+- From the production database (16 July, nine sessions): **240 votes · 263 comments · 28 private feedback messages · 67 unique voting devices** (a floor on reach, not attendance — nobody who only watched the projector is counted).
+- **Retention: 49 of 67 voters (73%) voted in two or more panels**; 25 in five or more; three in all eight with voting open.
 
 ### Feb–Jul | experiment | The Claw agents
 
@@ -407,6 +368,22 @@ Cross-community collaboration — social choreography at scale. Not a software p
 
 **What it taught:** different communities talk about the same things in completely different languages — cross-pollination is a skill the network needs. And a realisation about the "why me" question: the people I look up to are ML/AI researchers who know far more than I do — but for the people around me, I'm the closest to that they have. That's not imposter syndrome resolved; that's what being the bridge means.
 
+### 2 Apr | talk | Prototype Previews: Sparkle Bureaucracy meets the faculty
+
+photos: 2
+
+The fellowship's checkpoint, and the framing's first encounter with the faculty (pitch at 21:50). The same morning, the field-notes export had become the diary repo — research inventory, sensemaking map, synthesis, and a README rewritten six times in one afternoon until it was in my voice — so the pitch arrived with a record behind it.
+
+**What it taught:** every piece of feedback below got a response, tracked to an action in the faculty-feedback tracker — the Previews night set half the year's threads in motion, and the Campaign Lab partnership grew directly out of it.
+
+#### Feedback
+
+- Ed Saperia: "I think this will go very far — very contemporary, hits very relevant questions, in a way that's quite straightforward, generative, and accessible… with an AI angle which makes it fresh."
+- Matt Stempeck: "an experiment lab for imagining how emerging tech can change the way our systems work without abandoning them" — the phrase the prototype grew into. Also his: "if you can't dance it's not my revolution."
+- Hannah O'Rourke: intros to AI-in-gov and optimistic-narratives people; MP-office applications from casework; "we will have people up for piloting things"; pointed at Campaign Lab's [pipresist.uk](https://pipresist.uk/) — the seed of everything that followed with them, and offered help with evaluation frameworks.
+- Chris Owen prescribed *Radical Help* → read ("we architected our systems poorly and can radically re-imagine them"). Emily Mayhew asked why public consultation is "such a dull awful bureaucratic cold process" → folded into the synthetic-voice experiment cards. Anouk Ruhaak demanded the sparkle passport be open-sourced → it is.
+- James Moulding: "I liked optimistical." → the word stays. Sinead Doyle: "I really enjoy the aesthetic of your slides ✨" (Ed: "you are basically the target audience for this project").
+
 ### 30 Apr | encounter | "Are You a Software Update?" book launch
 
 photos: 1
@@ -467,7 +444,7 @@ photos: 1
 
 A reading-and-discussion group on AI safety materials, with people from neighbouring institutions invited in — the "considering the implications" thread running underneath all the building. (@todo dates/cadence, reading list)
 
-### What's deliberately not claimed
+### Note
 
 Not every contribution to the house belongs under the Sparkle Bureaucracy umbrella, and the line is drawn on purpose: organizing **Funding 101 for Civic & Political Tech** with Georgia Bullen (7 April); organizing the **PoliTech Awards committee meetings** (the evaluation methodology and Project Mirror are SB; the committee logistics were house service); co-hosting the **Censorship & Surveillance Resistant Comms** discussion with Nicholas Botti (1 March). They're named here once because they're part of building the cohort — but claiming them as the project would inflate it. Knowing what *isn't* the project is part of the method.
 
