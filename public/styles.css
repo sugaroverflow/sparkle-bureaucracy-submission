@@ -397,7 +397,8 @@ h2.bare{margin:2.4rem 0 1rem}
   .mroad{max-width:none;padding-left:0;row-gap:1.6rem}
   .mroad::before{left:calc(50% - .125rem);top:1.3rem}
   .mroad::after{left:50%}
-  .mrow{grid-template-columns:1fr 8.4rem 1fr;row-gap:0}
+  .mrow{grid-template-columns:1fr 8.4rem 1fr;row-gap:0;pointer-events:none}
+  .mrow::before,.mcard,.m-when{pointer-events:auto}
   .mrow:nth-child(even){margin-top:-2.9rem}
   .mrow::before{left:calc(50% - .55rem);top:.95rem}
   .m-when{grid-column:2;grid-row:1;align-self:start;text-align:right;

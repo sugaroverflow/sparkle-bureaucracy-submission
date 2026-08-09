@@ -2165,11 +2165,11 @@ Why a network and not a product? Because the year's evidence says the network is
 
 Each event type does a different job, learned from what worked this year:
 
-? ↻ | Hackathon → demo night | The anchor cycle: build together around suggested civic topics, then show the work. Clawclub's lesson made regular — convene around the moment, and the building is the community.
-? ✦ | Socials as experiences | Twice a year — game nights, Xmas, summer. Games lower the bar to social interaction, so the experiments are the social infrastructure, not entertainment between the real work.
-? ★ | Hear-from-experts | One domain at a time, when new things ship. The translation model from the keynotes: meet each community inside its own work.
-? ☕ | Problem discovery | Gatherings that bring in people with problems, not technologists — cross-pollination, coffee chats. The network's intake ritual, so the work starts from real civic needs.
-? ♥ | An organiser + the strategy | Someone to hold the rhythm — running the mentor record's playbook: small high-density events over big panels, a public calendar that curates the ecosystem, "easy yes" asks, a portfolio that includes other people's work.
+- **Hackathon → demo night** is the anchor cycle: build together around suggested civic topics, then show the work. It's Clawclub's lesson made regular — convene around the moment, and the building *is* the community.
+- **Socials built as experiences** (2× a year — game nights, Xmas, summer): the Birthday Passports and spy-reunion lesson. Games lower the bar to social interaction, so the experiments are the social infrastructure, not entertainment between the real work.
+- **Hear-from-experts sessions** — one domain at a time, when new things ship. The translation model from the keynotes: meet each community inside its own work.
+- **Problem discovery** — gatherings that bring in people *with problems*, not technologists: cross-pollination, coffee chats. The network's intake ritual, so the work starts from real civic needs.
+- **An organiser to hold the rhythm** — running the mentor record's playbook: small, high-density events over big panels; a public calendar that curates the ecosystem; "easy yes" asks; a portfolio that includes other people's work.
 
 #### The map
 
