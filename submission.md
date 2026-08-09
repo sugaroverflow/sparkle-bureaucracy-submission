@@ -514,7 +514,659 @@ Before the diary was a diary, it was a room: `field-notes: fatima`, public by de
 + 10 Mar 2026 | idea: a house guide one-pager | Suggests a short house guide on the cohort website; Ed notes the example is for a coworking space. | - | She shares a house guide example. Ed: "note that this is for a coworking space." Fatima: "i think we could have a much smaller one like a one pager", "on our website".
 + 10 Mar 2026 | idea: zapier for agent swarms | Wants visual orchestration for swarms, then finds aitable, dazl, deforge, mindpal, langflow and sim already doing it. | https://aitable.ai/ | "zapier but for agent swarms" — then "found one!" and a run of existing tools: aitable.ai, dazl.dev, deforge.io, mindpal.space, langflow.org and simstudioai/sim.
 
-+++ Field notes
++++ Field discussions
+++ 14 Dec 2025 | field notes room opens publicly | Fatima launches a public Matrix field-notes channel with open history so bots can read it and posts can be shared.
+welcome to my field notes channel! it took a few tries to get this right, but it's a public channel with history set to anyone - so it can be used by bots and shared with everyone 🎉
+
+*(some of these posts were from Nov 23 - Dec 12, but had to migrated from the previous, encrypted channel)*
+++ 14 Dec 2025 | Hannah Aubry and decentralised social platforms | Curiosity about Hannah's career path, plus Fatima's older Open Source Summit talk on Mastodon, Bluesky and decentralised protocols.
+I'm curious to see how this plays out and connect with Hannah about her plans! She was previously on their Board and has worked in Open Source and Developer Relations - so it's also interesting career path.
+
+https://www.linkedin.com/posts/hannahaubry_i-am-thrilled-to-share-the-news-that-i-joined-ugcPost-7396472394892091392-H1Nl
+
+2 years ago, I gave a talk at Open Source Summit called "Adapting to the New Era of Social Platforms in Open Source" exploring the explosion of Mastodon, Blue Sky / the pros and cons of decentralized social platforms and the protocols powering them
+It was still early and I didn't totally understand all the protocols at the time
+Then the hype died down and well people didn't pick up Mastodon as much as hoped..
+So I'm interested to see them invest in community!! And see if they're competing directly with some of the choices that other mainstream platforms are making (re data and privacy)
+https://www.youtube.com/watch?v=UEyRQWogbxk
+originally posted on Nov 20, 2025
+→ https://www.linkedin.com/posts/hannahaubry_i-am-thrilled-to-share-the-news-that-i-joined-ugcPost-7396472394892091392-H1Nl
+++ 14 Dec 2025 | homework from Matt Stempeck | Pick one interesting thing per Civic Tech Guide category; she flags open source AI, algo transparency, audits, AI literacy.
+Homework from Matt Stempeck
+
+Tell me about 1 thing you find interesting from each section in our next check-in. If you rule it out entirely, just skip it. https://app.civictech.guide/categories
+
+- ethical AI safety space (includes prosocial alternatives)
+- governance
+- public sector AI
+- **open source AI**
+- deepfakes
+- **algo transparency** - actively evolving area given difficulty of explainability
+- **audits**
+- **ai iteracy** - AI slop vs code slop
+
+_originally posted on Nov 20, 2025_
+→ https://app.civictech.guide/categories
+++ 14 Dec 2025 | homework from Six | Two readings: field-building and the epistemic culture of AI safety, and The Fallacy of AI Functionality.
+Homework from Six
+
+Field-building and the epistemic culture of AI safety
+(https://firstmonday.org/ojs/index.php/fm/article/view/13626)
+The Fallacy of AI Functionality (https://facctconference.org/static/pdfs_2022/facct22-3533158.pdf)
+
+_originally posted on Nov 20, 2025_
+→ https://firstmonday.org/ojs/index.php/fm/article/view/13626
+++ 14 Dec 2025 | cline-bench benchmarks real engineering problems | Cline's new benchmark initiative evaluates agents on real open-source repository work rather than lab puzzles, continuing their transparency commitment.
+https://cline.bot/blog/cline-bench-initiative
+
+Lots of enthusiasm around the release of cline-bench this week - the mission is to benchmark agents in real-world engineering problems and not lab puzzles. And only open source repositories are eligible.
+
+Cline's whole thing has always been open source and transparency - so it's great to see them committed to that.
+originally posted on Nov 21, 2025
+→ https://cline.bot/blog/cline-bench-initiative
+++ 14 Dec 2025 | CrowdStrike finds hidden AI-coded vulnerabilities | Research showing DeepSeek-R1 produces severely vulnerable code up to fifty percent more often on politically sensitive CCP topics.
+https://www.crowdstrike.com/en-us/blog/crowdstrike-researchers-identify-hidden-vulnerabilities-ai-coded-software/
+
+“However, we found that when DeepSeek-R1 receives prompts containing topics the Chinese Communist Party (CCP) likely considers politically sensitive, the likelihood of it producing code with severe security vulnerabilities increases by up to 50%."
+→ https://www.crowdstrike.com/en-us/blog/crowdstrike-researchers-identify-hidden-vulnerabilities-ai-coded-software/
+++ 14 Dec 2025 | community interest companies explained | Government guidance on CICs, learned via Fred's session on music, artists and open source; companies required to benefit community.
+https://www.gov.uk/government/publications/community-interest-companies-how-to-form-a-cic/community-interest-companies-guidance-chapters
+Learned about CIC from Fred’s session on music and artists and open source. Type of company that is required to benefit the community rather than make a profit
+→ https://www.gov.uk/government/publications/community-interest-companies-how-to-form-a-cic/community-interest-companies-guidance-chapters
+++ 14 Dec 2025 | Ed on CIC tradeoffs | Ed Saperia calls CICs a halfway house between company and charity, weaker on tax and funding, but publicly registered.
+Edward Saperia:
+
+sort of a halfway between a regular company and a charity
+
+generally considered less good because you don't get the same tax advantages and it's not eligible for lots of kinds of funding
+
+it's cool that there's a public register though
+++ 14 Dec 2025 | question: roles that aren't committees | Asks what non-committee role structures look like; Ed answers individual roles, because committees make responsibility unclear.
+what are some structures of roles that aren’t committees?
+
+_originally posted on Nov 23, 2025_
+
+Edward Saperia
+
+Individual roles!
+
+fatima
+
+Like a finite set of roles?
+For example
+
+“website maintainer”
+“ration club manager”
+Based on duties?
+Or more broad?
+
+Edward Saperia
+
+The idea of roles is that they make responsibility clear
+Committees don’t do that very well
+++ 14 Dec 2025 | Biden executive order 14110 | Links the 2023 order on safe, secure and trustworthy AI requiring developers to share safety testing results.
+[Safe, Secure, and Trustworthy Development and Use of Artificial Intelligence - Biden's order (Executive Order 14110)](https://www.federalregister.gov/documents/2023/11/01/2023-24283/safe-secure-and-trustworthy-development-and-use-of-artificial-intelligence):
+
+Issued in October 2023, this order aimed to create guidelines for responsible AI use in government, require developers to share safety testing results, and promote trustworthy AI.
+
+_originally posted on Nov 24, 2025_
+→ https://www.federalregister.gov/documents/2023/11/01/2023-24283/safe-secure-and-trustworthy-development-and-use-of-artificial-intelligence
+++ 14 Dec 2025 | anarchy reading list from Ed | Anarchic Agreements field guide to collective organising, plus Uri Gordon on anarchism and the politics of technology.
+reading on anarchy from Ed
+
+https://www.abebooks.co.uk/9781629639635/Anarchic-Agreements-Field-Guide-Collective-162963963X/plp
+https://theanarchistlibrary.org/library/uri-gordon-anarchism-and-the-politics-of-technology
+→ https://www.abebooks.co.uk/9781629639635/Anarchic-Agreements-Field-Guide-Collective-162963963X/plp
+++ 14 Dec 2025 | swiss cheese model for AI safety | arXiv taxonomy and reference architecture for multi-layered runtime guardrails around foundation-model agents, hard because agent behaviour is non-deterministic.
+[ Swiss Cheese Model for AI Safety](https://arxiv.org/abs/2408.02205): A Taxonomy and Reference Architecture for Multi-Layered Guardrails of Foundation Model Based Agents
+
+Researchers are exploring better ways to design guardrails to ensure that the runtime behavior of FM-based agents remains within specific boundaries. Nevertheless, designing effective runtime guardrails is challenging due to the agents' autonomous and non-deterministic behavior. The involvement of multiple pipeline stages and agent artifacts, such as goals, plans, tools, at runtime further complicates these issues.
+→ https://arxiv.org/abs/2408.02205
+++ 14 Dec 2025 | introduction to AI safety textbook | Shares the free online AI Safety, Ethics, and Society book as a foundational reference.
+[Introduction to AI Safety, Ethics, and Society](https://www.aisafetybook.com/)
+→ https://www.aisafetybook.com/
+++ 14 Dec 2025 | RL-learned context compression | Rajan's writeup on training Qwen to invent its own tenfold context compression so research agents can run for days.
+https://www.rajan.sh/llm-compression
+
+in order to have research agents that can run for days, we need context compaction
+
+i used RL to have LLMs naturally learn their own 10x compression! Qwen learned to pack more info per token (ie use Mandarin tokens, prune text)
+→ https://www.rajan.sh/llm-compression
+++ 14 Dec 2025 | NSF national AI research resource | Links the NAIRR focus area page on US public AI research infrastructure.
+https://www.nsf.gov/focus-areas/ai/nairr
+→ https://www.nsf.gov/focus-areas/ai/nairr
+++ 14 Dec 2025 | claude skill for concise output | Shares a community Claude skill file that constrains agents to concise output.
+https://github.com/NTCoding/claude-skillz/blob/main/concise-output/SKILL.md
+→ https://github.com/NTCoding/claude-skillz/blob/main/concise-output/SKILL.md
+++ 14 Dec 2025 | bitter lesson of LLM extensions | Sawyer Hood argues hand-rolled agent and plugin scaffolding collapses under complexity; models will learn to compose capabilities themselves.
+https://www.sawyerhood.com/blog/llm-extension
+
+“The Bitter Lesson of LLM Extensions” argues that as we bolt agents, tools, and plugins onto LLMs, the real “bitter lesson” is that most hand-rolled extension systems collapse under complexity, and the long-term win will be letting models themselves learn how to adapt and compose capabilities on the fly.
+→ https://www.sawyerhood.com/blog/llm-extension
+++ 14 Dec 2025 | New York algorithmic pricing law | New York's Algorithmic Pricing Disclosure Act took effect November 2025, requiring disclosure when personal data sets an individual's price.
+[New York’s Algorithmic Pricing Disclosure Law Takes Effect](https://www.kelleydrye.com/viewpoints/blogs/ad-law-access/new-yorks-algorithmic-pricing-disclosure-law-takes-effect)
+
+New York Attorney General Letitia James recently announced that on November 10, 2025, New York’s Algorithmic Pricing Disclosure Act (the ​“Act”) officially took effect. Codified at N.Y. Gen. Bus. Law § 349-a, the Act requires that companies making use of consumer-specific data to set prices clearly and inform consumers when those prices have been determined by an algorithm. It was enacted as part of New York’s omnibus budget bill, which also introduced other consumer protection measures, including amendments to the state’s Automatic Renewal Law that we covered in June. This measure reflects emerging legislative interest in addressing ​“surveillance pricing”, or individualized pricing practices that rely on personal data to adjust the cost of goods or services.
+→ https://www.kelleydrye.com/viewpoints/blogs/ad-law-access/new-yorks-algorithmic-pricing-disclosure-law-takes-effect
+++ 14 Dec 2025 | F-Secure on hidden online premiums | Explainer showing two shoppers can see different prices at the same moment based on device, postcode or location.
+[Surveillance Pricing Is Quietly Raising the Cost of Online Shopping](https://www.f-secure.com/en/partners/insights/surveillance-pricing-is-quietly-raising-the-cost-of-online-shopping)
+
+You may be paying a hidden premium when shopping online, determined not by what you buy or when you buy it, but by who you are. In fact, two people can look at the same product at the same moment yet see completely different prices—not because of sales, stock levels, or errors, but simply because one is shopping on a Mac, living in a particular zip code, or standing in a store's parking lot.
+
+That's the result of surveillance pricing, where online retailers use advanced data collection, predictive algorithms, and AI to profile shoppers, predict the maximum each person would be willing to pay, and set prices within milliseconds.
+→ https://www.f-secure.com/en/partners/insights/surveillance-pricing-is-quietly-raising-the-cost-of-online-shopping
+++ 14 Dec 2025 | Karpathy on Software 2.0 | Karpathy argues AI is best understood as a new computing paradigm automating digital information processing, easily automating what you can verify.
+[Software 2.0 easily automates what you can verify- Karpathy / x](https://x.com/karpathy/status/1990116666194456651)
+
+various historical precedents: electricity, industrial revolution, etc., I think the strongest analogy is that of AI as a new computing paradigm (Software 2.0) because both are…
+AI has been compared to various historical precedents: electricity, industrial revolution, etc., I think the strongest analogy is that of AI as a new computing paradigm (Software 2.0) because both are fundamentally about the automation of digital information processing.
+→ https://x.com/karpathy/status/1990116666194456651
+++ 14 Dec 2025 | Ed suggests algorithmic management | Ed points to algorithmic management, the ETUC trade union manual on negotiating the algorithm, and the Digital Statecraft manifesto.
+Readings/Advice from Edward Saperia
+
+You might be interested in "Algorithmic Management"
+
+Similar to surveillance algorithms, but with a focus on the rights of the people being managed
+
+Six will have things to say on this
+
+This kind of thing https://www.etuc.org/sites/default/files/publication/file/2025-09/Negotiating%20the%20Algorithm%20-%20Trade%20Union%20Manual_ETUC%20%28updated%29.pdf
+
+I'd also engage with the "AI in government" folks, ask Andreas will probably have suggestions for how to get plugged into this
+Also maybe go find out who these people are https://digitalstatecraft.academy/the_digital_statecraft_manifesto_v1-0/
+→ https://www.etuc.org/sites/default/files/publication/file/2025-09/Negotiating%20the%20Algorithm%20-%20Trade%20Union%20Manual_ETUC%20%28updated%29.pdf
+++ 14 Dec 2025 | Aadi shares tech and law syllabus | Cornell Tech/Law Colloquium plus an INFO1200 syllabus covering technology, law and surveillance curricula.
+reading  from Aadi
+
+- broader tech, law, and surveillance, curriculums (syllabus attached)
+- Tech/Law Colloquium – Exploring new developments at the intersection of law and information technology https://tlc.cis.cornell.edu/
+
+Syllabus-FA25-INFO1200-LEC001-DRAFT.pdf
+→ https://tlc.cis.cornell.edu/
+++ 14 Dec 2025 | Hirschman on exit and voice | Exit, Voice, and Loyalty as a framework for disengagement, silence and morale decay in collective projects.
+Albert O. Hirschman – Exit, Voice, and Loyalty https://www.hup.harvard.edu/books/9780674276604
+
+Provides a precise framework for understanding disengagement, silence, and morale decay in collective projects.
+→ https://www.hup.harvard.edu/books/9780674276604
+++ 14 Dec 2025 | Olson on collective action | The Logic of Collective Action explains why people rationally disengage from shared projects they believe in.
+Mancur Olson – The Logic of Collective Action
+https://www.hup.harvard.edu/books/9780674537514
+
+Explains why people rationally disengage from shared projects even when they believe in them.
+→ https://www.hup.harvard.edu/books/9780674537514
+++ 14 Dec 2025 | Scott on seeing like a state | Seeing Like a State on how simplified or rule-free systems erase lived experience and reproduce inequality.
+James C. Scott – Seeing Like a State
+https://yalebooks.yale.edu/book/9780300078152/seeing-like-a-state/
+
+Helps explain why simplified or “rule-free” systems often erase lived experience and reproduce inequality.
+→ https://yalebooks.yale.edu/book/9780300078152/seeing-like-a-state/
+++ 14 Dec 2025 | Matrix rooms must be unencrypted for bots | mstem and Ed advised to use public-to-space rooms with readable history, because bots cannot operate in encrypted channels.
+mstem: Edward Saperia - I think I finally fixed the channel issues. For bot related channels or notes like these, we should recommend `public to space` and `anyone can read history at anytime` instead of encrypted because bots can't run then.
+
+thank you!! :)
+++ 14 Dec 2025 | reread the Tyranny of Structurelessness | Alex Vince recommends revisiting Jo Freeman's essay with a new lens after the governance discussions.
+based on this, it might be good to read the Tyranny of Structurelessness with a new lens (as recommended by alex vince) https://www.jofreeman.com/joreen/tyranny.htm
+→ https://www.jofreeman.com/joreen/tyranny.htm
+++ 15 Dec 2025 | Arnstein's ladder of citizen participation | Arnstein's 1969 paper names informing, consultation and placation as tokenism, matching her sense of procedural futility.
+A LADDER OF CITIZEN PARTICIPATION, Sherry R. Arnstein
+https://www.historyofsocialwork.org/1969_ENG_Ladderofparticipation/1969%2C%20Arnstein%2C%20ladder%20of%20participation%2C%20original%20text%20OCR%20C.pdf
+
+What you’re calling procedural futility is basically: the process invites voice but doesn’t route it into consequential decisions. When people learn (even once or twice) that objections don’t change the plan, “participation” becomes a performance: you talk, the document grows, and then the authority proceeds as originally intended.
+
+That maps cleanly onto Arnstein’s ladder: rungs like Informing / Consultation / Placation are “tokenism” — people can “be heard,” but they lack power to ensure their views are heeded.
+→ https://www.historyofsocialwork.org/1969_ENG_Ladderofparticipation/1969%2C%20Arnstein%2C%20ladder%20of%20participation%2C%20original%20text%20OCR%20C.pdf
+++ 15 Dec 2025 | Nancy Fraser on rethinking recognition | Fraser shifts recognition from a cultural identity model to a status model removing institutional barriers to peer participation.
+Nancy Fraser, Rethinking Recognition
+https://newleftreview.org/issues/ii3/articles/nancy-fraser-rethinking-recognition
+
+Nancy Fraser’s approach to recognition is to shift from a culturalist interpretation of the Hegelian model based on the achievement of a positive self-image, to a Weberian model based on inclusion in an institutionalized status order. In what follows I am quoting from her May 2000 article in New Left Review, Rethinking Recognition. Here she contrasts the “identity model” of recognition underlying affirmative anti-sexism and anti-racism movements, for example, which aim to valorize group identity, to a “status model” whose aim is to remove institutional barriers to individual members of the group achieving participation as peers in the wider society.
+→ https://newleftreview.org/issues/ii3/articles/nancy-fraser-rethinking-recognition
+++ 15 Dec 2025 | three framing questions for system behaviour | Where model behaviour ends and system behaviour begins, what developers only think they control, and which failures evals miss.
+1. System boundaries
+
+Where does “model behavior” end and “system behavior” begin?
+
+What components introduce new attack or inference surfaces?
+
+2. Control illusion
+
+What do developers think they control?
+
+What actually controls outputs in practice?
+
+3. Evaluation blind spots
+
+Which failures are invisible to standard model evals?
+
+What would you need to log or instrument to even notice them?
+++ 17 Dec 2025 | Anthropic's multi-agent research system | Shares Anthropic's engineering writeup on their orchestrator-plus-parallel-researchers architecture.
+https://www.anthropic.com/engineering/multi-agent-research-system
+→ https://www.anthropic.com/engineering/multi-agent-research-system
+++ 17 Dec 2025 | question: failures between components | Chained RAG, agents, tools and evaluators each pass their own evals yet combine into hallucinations and reinforced mistakes.
+**Where do failures show up between components in multi agent systems, and why don’t our evals see them?**
+
+Modern systems chain RAG → agents → tools → evaluators and each component can pass it’s own evals. When combined, we see new behaviors like hallucinations, agents reinforcing each other’s mistakes, or harmful outcomes - that don’t appear in single tests. This makes it hard to detect failures.
+
+- Which existing eval methods fail to surface these behaviors, and why?
+- What kinds of stress tests would expose “reasonable locally, harmful globally” outcomes?
+++ 17 Dec 2025 | question: where sensitive inferences happen | Systems never trained on race, health or income still act as if they know them by combining ordinary signals.
+**Where in real AI systems do sensitive inferences actually happen, even when no model is explicitly trained to make them?**
+
+Many AI systems never store or predict sensitive traits like race, health status, or income. But they still end up *acting as if they know them*. This happens when systems combine ordinary signals across multiple steps.
+
+For example a system uses location, time of activity, and spending patterns to route someone into a higher-risk category. Or a content moderation pipeline combines language style, social connections, and past behavior to decide who gets flagged or deprioritized.
+
+This can be hard to detect because each step might look reasoable on it’s own or the inference is spread across retrieval and routing or existing checks aren’t focused on system level behavior.
+- Where does the system first start treating people differently based on those signals?
+- How could we test or log for indirect inference without requiring access to model internals?
+++ 18 Dec 2025 | Ed asks how to test supervisor pattern | Ed wonders how you would systematically test the shortcomings of the supervisor orchestration pattern.
+I wonder how you’d go about systematically testing the shortcomings of the supervisor pattern, do you have any ideas?
+++ 5 Jan 2026 | recursive language models manage context | Prime Intellect on storing inputs in Python and delegating to sub-agents instead of loading everything into the main context.
+https://www.primeintellect.ai/blog/rlm
+
+Recursive Language Models let agents manage massive context by storing inputs in Python and delegating work to sub-agents instead of loading everything into the main model's context—early tests show gains on long-context task (environments).
+→ https://www.primeintellect.ai/blog/rlm
+++ 12 Jan 2026 | building platforms above the loop | Work discussion on humans setting intent and constraints while AI generates, tests and validates, escalating only at decision points.
+Something we're discussing at work is how do we built platforms for AI that are "above the loop"
+
+The loop is currently how we build software:
+-  Humans still have to coordinate intent, break down the work, deal with agent failures, and set up the tasks.
+- Agents execute the tasks, but people decide when to stop or continue.
+
+Above the loop (I find is similar to the supervisor orchestration pattern) is when :
+- humans set intent, constraints, and direction
+- ai systems generate, test, revise, and validate changes - and only reach out to the human about decision points
+
+so instead of deciding every code change, the human is deciding "what should exist"
+
+it's very exciting to see this!
+++ 12 Jan 2026 | self-improving agents roundup | Yohei Nakajima's survey of academic projects where an agent edits and improves its own code or policies.
+https://yoheinakajima.com/better-ways-to-build-self-improving-ai-agents/
+academic projects where an agent edits and improves its own code or policies, not just responses.
+→ https://yoheinakajima.com/better-ways-to-build-self-improving-ai-agents/
+++ 12 Jan 2026 | are agent swarms actually better now | Ed is surprised swarm approaches never worked well; Fatima notes they make mess and only run on Claude Code.
+Ed Saperia: I've always been surprised that these don't get better results, but, maybe they do now
+
+Fatima: this was first released two weeks ago
+
+Ed Saperia: I mean, "things of this nature"
+
+Fatima: so this might be a resurgence of iterative loop ideas
+
+Fatima: it feels new to me(!) but i may not have been paying attention in the past few weeks
+
+Fatima: ahhh i think this might be different this time
+
+Fatima: but i may also be falling for the hype hehe
+
+Ed Saperia: there have been various "agent swarm" type things over the past couple of years
+
+Fatima: this is true!
+
+Ed Saperia: no I mean I expect they're getting better quickly
+
+Fatima: they seem to be
+
+Fatima: but they're also creating a lot of mess
+
+Ed Saperia: as I say, I am surprised they aren't good
+
+Fatima: plus they mostly only work with claude code at the moment
+
+Fatima: and i would need infinite tokens
+++ 12 Jan 2026 | ralph explained for idiots | Shares a joke thread explaining the ralph looping technique.
+https://x.com/agrimsingh/status/2010412150918189210
+ralph for idiots: the only explanation you need
+
+(is joke)
+→ https://x.com/agrimsingh/status/2010412150918189210
+++ 20 Jan 2026 | Slipstream protocol for agent communication | Hugging Face writeup on cutting agent communication costs by leveraging existing language rather than inventing a machine protocol.
+https://huggingface.co/blog/anthonym21/slipstream-for-agent-communication
+
+A new protocol called Slipstream offers a powerful and surprisingly counter-intuitive solution. It cuts through the noise to dramatically reduce communication costs and make large-scale agent systems economically viable. This article unpacks the most impactful takeaways from the research, revealing how the solution isn't to invent a new machine language, but to leverage the one we already have.
+
+this is very cool!
+→ https://huggingface.co/blog/anthonym21/slipstream-for-agent-communication
+++ 20 Jan 2026 | models reason as an internal committee | Paper showing reasoning models simulate persona-like internal dialogue; steering a surprise feature doubled accuracy. She is intrigued.
+https://arxiv.org/abs/2601.10825
+
+Researchers from Google, University of Chicago, and Santa Fe Institute show that LLMs like DeepSeek-R1 and QwQ-32B improve reasoning not by length alone but by simulating internal dialogues among diverse, persona-like perspectives. These models display more question-answering, disagreement, and reconciliation than instruction-tuned baselines. Steering a “surprise” discourse feature doubled reasoning accuracy, increasing activation of personality and expertise features. Reinforcement learning reinforced these behaviors, especially when models were fine-tuned on multi-agent dialogues, accelerating reasoning improvements. In short, the model is forming an internal committee to solve problems, echoing human cognition and group collaboration. That’s a leap in understanding both AI and possibly the nature of reasoning itself
+
+AN INTERNAL COMMITEEE
+
+Need to read this soon because I’m INTRIGUED
+→ https://arxiv.org/abs/2601.10825
+++ 26 Jan 2026 | Ed: council of experts is old | Ed notes council of experts has been a named prompting method for a while.
+“Council of Experts” has been a named method for a while I think
+++ 28 Jan 2026 | Clawdbot and Moltbot local agents | mstem shares the Verge report; Ed says the creator visited Newspeak House and suggests code club, mstem advises a VM.
+Matt Stempeck: https://www.theverge.com/report/869004/moltbot-clawdbot-local-ai-agent
+
+Ed Saperia: The creator of this was at NH last week
+
+Ed Saperia: We should probably be playing with it
+
+Ed Saperia: Maybe a good focus for code club on Monday
+
+Fatima: very cool!
+
+Matt Stempeck: play with it on a virtual machine, methinks
+
+Fatima: haha for sure
+
+Fatima: i only have my work laptop :P
+
+Matt Stempeck: i'm excited and terrified by these things
+
+Ed Saperia: they are certainly exciting and terrifying
+
+Ed Saperia: but if we're not the people to experiment with them then who is?
+
+Fatima: agreed!
+→ https://www.theverge.com/report/869004/moltbot-clawdbot-local-ai-agent
+++ 29 Jan 2026 | Ollama launch announcement | Shares Ollama's launch blog post.
+https://ollama.com/blog/launch
+→ https://ollama.com/blog/launch
+++ 29 Jan 2026 | Kimi K2.5 and agent swarms | Kimi's K2.5 release blog plus Simon Smith asking whether swarms plus Agent Skills scale across an enterprise.
+https://www.kimi.com/blog/kimi-k2-5.html
+
+https://x.com/_simonsmith/status/2016234897413964057
+
+I've been thinking about the best way to organize agents in step-by-step workflows where each agent has skills defined by Agent Skills file, and to then scale this across an enterprise. Today Kimi dropped its K2.5 model along with Agent Swarms, and I thought: could this be it?
+→ https://www.kimi.com/blog/kimi-k2-5.html
+++ 29 Jan 2026 | Simon Willison tests parallel planning | Gist testing Kimi's multi-agent planning claims by breaking a Datasette S3 upload plugin into ten parallel tasks.
+https://gist.github.com/simonw/ee2583b2eb5706400a4737f56d57c456
+
+As a more interesting test, I decided to exercise the claims around multi-agent planning with this prompt:
+
+I want to build a Datasette plugin that offers a UI to upload files to an S3 bucket and stores information about them in a SQLite table. Break this down into ten tasks suitable for execution by parallel coding agents.
+→ https://gist.github.com/simonw/ee2583b2eb5706400a4737f56d57c456
+++ 29 Jan 2026 | AI shopping tools raise pricing stakes | Tech Policy Press on big tech AI shopping agents raising the stakes for surveillance pricing laws.
+https://www.techpolicy.press/big-techs-ai-shopping-tools-raise-stakes-for-surveillance-pricing-laws/
+→ https://www.techpolicy.press/big-techs-ai-shopping-tools-raise-stakes-for-surveillance-pricing-laws/
+++ 29 Jan 2026 | Karpathy on the coherence threshold | Shares Karpathy's post about crossing into mostly supervising agents rather than writing code himself.
+https://x.com/karpathy/status/2015883857489522876
+→ https://x.com/karpathy/status/2015883857489522876
+++ 29 Jan 2026 | Clawdbot is the rebrand | Realises Clawdbot and Moltbot are the same viral open-source assistant that proactively messages you, and she missed it going viral.
+aha! this is Clawdbot rebranded!
+
+https://www.reddit.com/r/LocalLLM/comments/1qmrwxl/clawdbot_the_ai_assistant_that_actually_messages/
+
+Clawdbot is an open-source AI assistant (9K+ GitHub stars) with a different approach: it proactively messages you instead of waiting for prompts. If you've used Poke (or others), it works the same way, but is more configurable and obviously open-source. I might even cancel my subscription with Poke now.
+
+I was so busy with work things last week, I completely this missed this going viral!
+→ https://www.reddit.com/r/LocalLLM/comments/1qmrwxl/clawdbot_the_ai_assistant_that_actually_messages/
+++ 29 Jan 2026 | build tools that help people think | Sam Altman on human slop as well as AI slop, and building genuinely good brainstorming partners.
+try to build tools that help people think better
+
+Sam: It’s popular to talk about “AI slop,” but there’s also a huge amount of human-generated slop in the world. (swyx: we agree!) Coming up with genuinely good, new ideas is hard. I increasingly believe that we think at the limits of our tools, and that we should explicitly try to build tools that help people think better. [_From the Open AI town hall_](https://www.youtube.com/watch?v=Wpxv-8nG8ec&t=1179s)
+
+We can build really great brainstorming partners. There have been like three or four people in my life that I have consistently found every time I hang out with them, I leave with a lot of ideas. They’re people who are just really good at asking questions or giving you seeds to build on.
+→ https://www.youtube.com/watch?v=Wpxv-8nG8ec
+++ 29 Jan 2026 | swyx on the AI Paul Graham | Reflections arguing thought-partner agents fail as RAG on essays; a five percent accurate PG would still be valuable.
+Swyx's Reflections in SmolAi were really poignant, sharing them here to read again.
+
+**Reflections on “AI Paul Graham”**
+There are a few reactions I have here that I’ll fire off in quick succession:
+
+It’s nice to see him acknowledge that the potential of AI is not just in helping to attract more attention through generated images and videos and marketing text (AI GTM, the first question from the town hall), but also it should be used in raising the quality of product, because there is a lot of human-origin slop too!
+
+In many ways, Sam here is trying to bring in what YCombinator does for improving founder success to the general thought partnership capability of ChatGPT. Everyone could benefit from having their own personal YC Group Partner, on demand, no office hours. Much less having a PG-tier Partner. And yes, this is just the business form of the more general domain of advising and coaching, which probably everyone can benefit from if we knew how to make it good enough.
+
+Many, many people have tried to build an “AI Paul Graham” bot. These flopped because they mostly did RAG or finetunes on his essays. Information Retrieval isn’t what PG -does- for Sam. He challenges you, runs you through multiple internal world models and pattern matches of past learned experiences, filters through what he should say to elicit the best response out of you instead of simply blurting out what he thinks token by token, and raises your ambitions.
+
+For both model trainers and agent harness builders, it’s instructive to draw a spectrum from the poorest implementation to the most ambitious implementation you can think of, and think about the sequencing of intelligent feedback and pushback you need.
+
+It is too lazy to wait for the God Model to arrive to do all these, there are probably concrete thought partner jobs that can be broken out into Agent Skills and MCP tools and Multi-agent Swarms and other tricks of the AI Engineer trade.
+
+“Accuracy” for an AI PG is not 90%, not even 50% — even a 5% accurate PG is acceptable and valuable (and is probably reflective of most real life conversations with him - most questions or comments are NOT valuable, but a human filter on the comments will surface some very generative and out of distribution “seeds”). So this is a very scalable “throw shit at the wall” task where AI can act as mass generator and Humans can act as discriminator/judge, and our existence proof that high-miss-rate question generation is still useful is YCombinator and Sam’s personal experience.
+
+When faced with “AI as thought partner” I see a lot of parallels with the alignment problem, and I often think about the Weak-to-Strong Superalignment diagram:
+
+Where we are currently treating agents as a junior Software Engineer or “research intern” (this is certainly the relationship we have with ChatGPT or Prism today), we want to build the PG agent that is smarter than us, and perhaps the path there is to build smart agents for dumber people/usecases and then ladder up from there.
+++ 29 Jan 2026 | weak-to-strong generalization | Shares OpenAI's weak-to-strong superalignment work as a parallel to building thought partners smarter than us.
+https://openai.com/index/weak-to-strong-generalization/
+→ https://openai.com/index/weak-to-strong-generalization/
+++ 29 Jan 2026 | coding agent phase shift is real | Agentic coding loops are a step change but agents skip clarifying questions and edit unrelated files in established codebases.
+**Coding agent “phase shift” is real**
+
+but messy: Multiple posts reflect a step-change in practice: founders and engineers are increasingly running “agentic” coding loops, yet hitting new failure modes: agents that don’t ask clarifying questions, get “confused,” or edit unrelated files. [Mikhail Parakhin describes reaching the point where he can specify a scheduler and trust it to work, but still can’t let agents loose on established codebases due to collateral edits](https://substack.com/redirect/96882b75-d628-4d98-87ca-e28d6536c427?j=eyJ1IjoiMm5jaXEifQ.UVxyhsf-HdqTJcGLa9qNmFnHCmiz83YtfDe9Hjfqx5w). Andrew Karpathy [describes it as the threshold of coherence ](https://x.com/karpathy/status/2015883857489522876) -  said he went from writing 80% of his code manually to 80% via AI agents in just a few weeks and now he’s mostly programming in English and supervising machines. That’s a real shift in how we build software. What happens to the "10X engineer" - the ratio of productivity between the mean and the max engineer?
+++ 29 Jan 2026 | skills as a shared interface layer | Workflow logic moving from prompts into reusable skill files, via DeepLearning's course, LangChain and Hugging Face's upskill.
+**Skills are crystallizing into a shared interface layer:**
+A major theme is moving workflow logic out of prompts into reusable “skills” (files/folders of instructions, loaded on demand).
+- [Deep Learning launched an Agent Skills with Anthropic course](https://www.deeplearning.ai/short-courses/agent-skills-with-anthropic/)
+- LangChain is pushing “Skills” via progressive disclosure as lightweight, shareable units
+- [HF showcased “upskill”](https://t.co/phEVhVc0k5): convert strong-model traces into transferable skills, then evaluate impact
+→ https://www.deeplearning.ai/short-courses/agent-skills-with-anthropic/
+++ 29 Jan 2026 | context management for deep agents | As addressable task length grows, context management becomes critical to prevent context rot within finite memory.
+[Context Management for Deep Agents
+](https://x.com/masondrxy/status/2016548078346736014?s=20)
+As the addressable task length of AI agents continues to grow, effective context management becomes critical to prevent context rot and to manage LLMs' finite memory constraints.
+→ https://x.com/masondrxy/status/2016548078346736014
+++ 29 Jan 2026 | Yegge on software survival 3.0 | Shares Steve Yegge's essay; she later says she read it twice and is obsessed.
+Fatima: https://steve-yegge.medium.com/software-survival-3-0-97a2a6255f7b
+
+Ed Saperia: This is great
+
+Ed Saperia: good old yegge
+
+Fatima: I have read it twice
+
+Fatima: I am obsessed
+→ https://steve-yegge.medium.com/software-survival-3-0-97a2a6255f7b
+++ 31 Jan 2026 | local models on a Mac Studio | Shares a thread on running local models, because she wants Clawdbot running locally on her Mac Studio.
+https://x.com/krunkosaurus/status/2017125560988872979 - because I want to use local models on my Mac Studio for my clawdbot
+→ https://x.com/krunkosaurus/status/2017125560988872979
+++ 1 Feb 2026 | Clawdbot on DigitalOcean | Notes from running Clawdbot on DigitalOcean, praising the friendly chat UI but hitting API and skill limitations.
+notes playing around with Clawdbot on Digital Ocean via https://www.digitalocean.com/blog/moltbot-on-digitalocean
+
+- really interesting that they scaffolded a user friendly UI to chat with the bot
+
+some limitations in regards to the types of APIs you can use and the types of skills you can add
+→ https://www.digitalocean.com/blog/moltbot-on-digitalocean
+++ 2 Feb 2026 | two untagged link drops | Shares two x.com links with no commentary.
+https://x.com/pbteja1998/status/2017662163540971756?s=46
+
+https://x.com/francedot/status/2015178880215298557?s=46
+→ https://x.com/pbteja1998/status/2017662163540971756
+++ 4 Feb 2026 | ingesting Matrix into Onyx | Onyx lacks Matrix support but has an ingestion API; Ed says daily dumps would be easy, she worries about preserving context.
+Fatima: Onyx doesn’t seem to support matrix out of the box
+
+Ed Saperia: no but that would be a good project
+
+Fatima: true
+
+Fatima: they have an ingestion API
+
+Ed Saperia: grabbing all the matrix data every day and throwing it in will probably be very easy
+
+Fatima: yes
+
+Fatima: i was worried about preserving the context of chat/channel/person
+
+Ed Saperia: it comes as a big json file no? so it should be able to deal with that
+++ 5 Feb 2026 | Surge leaderboard | Shares the SurgeHQ model leaderboard.
+https://surgehq.ai/leaderboard
+→ https://surgehq.ai/leaderboard
+++ 12 Feb 2026 | GLM-5 scales for agentic tasks | GLM-5 grows to 744B parameters with sparse attention, targeting complex systems engineering and long-horizon agentic work.
+https://z.ai/blog/glm-5
+
+We are launching GLM-5, targeting complex systems engineering and long-horizon agentic tasks. Scaling is still one of the most important ways to improve the intelligence efficiency of Artificial General Intelligence (AGI). Compared to GLM-4.5, GLM-5 scales from 355B parameters (32B active) to 744B parameters (40B active), and increases pre-training data from 23T to 28.5T tokens. GLM-5 also integrates DeepSeek Sparse Attention (DSA), significantly reducing deployment cost while preserving long-context capacity.
+→ https://z.ai/blog/glm-5
+++ 13 Feb 2026 | political consciousness as perpetual quest | Shares Valerie Miller's paper on political consciousness.
+https://justassociates.org/wp-content/uploads/2022/02/political-consciousness-perpetual-quest-valarie-miller.pdf
+→ https://justassociates.org/wp-content/uploads/2022/02/political-consciousness-perpetual-quest-valarie-miller.pdf
+++ 14 Feb 2026 | MiniMax M25 release | Shares MiniMax's M25 announcement.
+https://www.minimax.io/news/minimax-m25
+→ https://www.minimax.io/news/minimax-m25
+++ 15 Feb 2026 | built a Matrix publisher bot | Bot fetches channel history, keeps emoji-tagged posts and threads, maps them to types and builds content.json as a reusable template.
+https://github.com/nwspk/matrix-publisher-bot
+
+built a matrix publisher bot that fetches the full message history of a channel, keeps only the emoji tagged posts and their threads, maps them to a type (`journal, link, field-note`) and crafts a `content.json` for the website. It's a "github template" so all fellows can use the template to generate their own fork and can adjust the content types for example.
+→ https://github.com/nwspk/matrix-publisher-bot
+++ 15 Feb 2026 | cohort site fellow landing pages | In-progress pull request rendering content.json into reading list, publications and explorations sections, vibe engineered and still buggy.
+https://github.com/nwspk/2025.newspeak.house/pull/37
+in progress build of individual landing pages on the cohort website that pull the data from the `content.json` of the matrix publisher bot and create a portfolio of the fellow's content. In my case, it follows the structure of the posts here:
+- *reading list* -> links + projects (or tools I'm interested in)
+- *publications* -> field notes + links to blog posts on substack
+- *explorations* -> questions + ideas
+
+need to test and debug a bit more as it was vibe engineered - and there's a few bugs I need to fix while keeping the functionality isolated enough that fellows can implement their own publisher + parser (within the site) for their pages.
+→ https://github.com/nwspk/2025.newspeak.house/pull/37
+++ 16 Feb 2026 | fran on awe and nuance | fran_galli notes a bias toward awe at modernist work that is just another conformity; Fatima still fixated on the neutrality guy.
+fran: Interesting to read your reflections! personally I find there is a bias sometimes to be in "awe" of modernist odd stuff that "does it differently" when maybe it is just another flavour of conformity. You reminded me of a BBC radio show doing political satire and they had this fake ad piece that was something like "Donate £10 today to teach a Gen Z the concept of nuance" ahahah I think it applies intergenerationally though
+
+Fatima: In hindsight, the man personally who ranted about “how objective and beautifully neutral the film was” occupied so much of my mind for hours later haha
+
+Fatima: I haven’t yet read any public critique of the movie
+++ 19 Feb 2026 | Ed on assuming someone built it | Ed finds it empowering to assume someone else has already done the thing.
+in some ways empowering to be able to assume someone else did the thing
+++ 2 Mar 2026 | Ed on imagination and prior art | Ed argues if you can assume someone already built your idea, imagination is the only limit on what you can bring forth.
+I mean, if you have an idea, and you can assume that someone will have done it already, there's no limit to what you can bring forth in the world if you have enough imagination :)
+++ 4 Mar 2026 | Yegge's Wasteland sequel | Steve Yegge's third instalment after Beads and Gas Town, on federated agent work systems.
+https://steve-yegge.medium.com/welcome-to-the-wasteland-a-thousand-gas-towns-a5eb9bc8dc1f
+
+Well, it's been a long 2 months, but it's finally here, the sequel to Gas Town. It's the third movie in my series: first Beads, then Gas Town, and now The Wasteland -- A Thousand Gas Towns. The biggest and best federated work system the world has ever seen.
+→ https://steve-yegge.medium.com/welcome-to-the-wasteland-a-thousand-gas-towns-a5eb9bc8dc1f
+++ 9 Mar 2026 | question: political calibration across models | After seeing Grok and Claude deliberate differently in awards iteration six, she asks whether RLHF political calibration generalises.
+from the results of our politech awards - iteration v6 - I've been wondering after seeing the deliberations from Grok vs Claude - does Sonnet 4's RLHF calibration around political statements and alignment exist in other models too. Will review the paper and then see if I can be inspired to test some of the models on the awards afterwards.
+++ 26 Mar 2026 | backlog of unwritten field notes | Lists twelve pieces she wants to write, including term reflections, clawclub, the birthday immigration system and sparkle bureaucracy.
+things I want to write about, but haven't gotten a chance!
+
+- first term reflections (in draft!)
+- second term reflections (must start!)
+- clawclub 1&2 and photos!
+- small vs big audiences and workshops
+- censorship + surveillance resistance comms workshop + game idea
+- lumina house takeover!
+- majority myth - book club with the author
+- the birthday immigration system!
+- data governance models and cow farmers!
+- what happens where there's transparency but no accountability
+- chalkboards and how we tell the world who we are - and why that's hard
+- sparkle bureaucracy
+++ 29 Mar 2026 | Gamithra suggests cohort agents | Project idea from Gamithra to run synthetic agents answering questions about the fellowship and prototypes at Ration Club.
+project idea from Gamithra - set up synthetic agents to answer questions about fellowship and prototypes at Ration Club so we can have fun :)
+++ 29 Mar 2026 | a group chat of mirror agents | Ed suggests putting an agent for every cohort member in one group chat; Aadi already asked to talk to his.
+Ed Saperia: you have an agent for everyone in the cohort now, you can have them all in a group chat and people can talk to them
+
+Fatima: Hahaha aadi asked to talk his mirror agent and now I really want to deploy it
+
+Ed Saperia: haha great idea
+++ 1 Apr 2026 | two untagged link drops | Shares two x.com links with no commentary.
+https://x.com/himanshustwts/status/2038924027411222533?s=46
+
+https://x.com/ellen_in_sf/status/2039098050837463504?s=46
+→ https://x.com/himanshustwts/status/2038924027411222533
+++ 1 Apr 2026 | the Claude Code source leak | Wants to play with the leaked Claude Code source, via Latent Space's writeup.
+gotto play around with the Claude code leak hehe
+https://www.latent.space/p/ainews-the-claude-code-source-leak
+→ https://www.latent.space/p/ainews-the-claude-code-source-leak
+
+Three longer pieces grew out of the room's thinking:
+
+- **The resistance is information** (26 Jul) — the essay that found the founder's loop: *"I know I can build something worthy of attention. I do not yet trust that my way of seeing is itself worthy of attention."* Naming the loop broke it.
+- **How networks are born — and second thoughts** — the session with Ed and James on mission + taste + letting people show up, and the weekend where the advice wouldn't settle.
+- **What I actually care about** (31 Jul) — the hour with Hannah that turned six months of thrash into the three registers and the two questions.
+
+#### Mentorship
+
+(@todo Fatima voice pass) Mentorship shaped this project at every turn. The near-daily thread with Ed Saperia — roughly 7,400 messages, from before the fellowship to this week — is where SB found its language: the March brand session that framed it as "an update of civic tech for AI," with "bureaucracy" as unexpected seriousness and vTaiwan-and-pol.is as the movement-plus-tool model; the awards-eve reassurance that "something sparkle bureaucracy themed" was enough; the observation from outside that Prototype Club was itself an SB project; the April principle that every interaction should leave you holding a durable artifact — now a leg of the experiment bar; and the July reframe that set up the endgame: SB is a container, and it needs a tangible project headlining it.
+
+Matt Stempeck turned "experiment lab" into the prototype's spine, and brought the librarian discipline and the strategy the network still runs on — small, high-density events over big panels; a public calendar that curates the ecosystem; "easy yes" asks; a portfolio that includes other people's work. Hannah O'Rourke turned six months of mission thrash into the three registers in a single hour, and her pilot offer grew into the Campaign Lab partnership. James Moulding helped me wrap my head around how networks are born; Peyman Owladi's nudge became the flagship question. One honest gap: sessions with Matt, Six, James, Peyman, and Hannah through the spring and summer shaped the work and are only partially documented — the record says so itself.
+
+#### The bookshelf
+
+*A few chapters into each so far — inspiration doesn't require completion. The field-notes rows I met only in excerpts.*
+
+| Book | From | What I learned |
+| --- | --- | --- |
+| *The Utopia of Rules* — David Graeber | Anouk Ruhaak | The canonical SB text by title alone — Graeber's "dead zones of the imagination" are exactly what sparkle attacks: the bet that forms, queues and stamps can carry play and meaning instead of dread. Half the project's name answers this book. |
+| *Radical Help* — Hilary Cottam | Chris Owen | "We architected our systems poorly and can radically re-imagine them." Relational welfare is the humane baseline: proof the civic encounter can be redesigned without any technology at all — SB's AI-native work has to at least clear that bar. |
+| *Incorruptible* — Eric Ries | Theodore Keloglou (also the house Book Club's pick, 16 Jun) | How institutions keep their integrity while changing — the question every SB experiment puts to the ritual it re-skins: what must not bend when the intent changes? |
+| *Who Thought This Was a Good Idea?* — Alyssa Mastromonaco | Hannah O'Rourke | Operations as care: the unglamorous staffwork that makes big rooms function. The mission-cards, reset-slips and print-pipeline end of SB is this book's territory. |
+| *The Employees* — Olga Ravn | Six Silberman | A crew reviewing their coexistence with their objects and with each other — the strangeness of working alongside non-human colleagues, read while building agent crews of my own. |
+| *Insufferable Tools* | Six Silberman | (@todo confirm the title and the note) |
+| *Talking About a Revolution* | (@todo who handed it over) | (@todo the note) |
+| *The Majority Myth* — Edmund Lewis Maklouf | Met the author at his launch (20 May) | The model-minority thread: what are my true motivations for this project? Still sitting with it |
+| *Seeing Like a State* — James C. Scott | Field notes, 14 Dec — excerpts | Why simplified, "legible" systems erase lived experience and reproduce inequality — the seed of the legibility-and-bureaucracy lane, and the ancestor of the skeleton-versus-intent bet |
+| *Exit, Voice, and Loyalty* — Albert O. Hirschman | Field notes, 14 Dec — excerpts | The precise frame for disengagement, silence and morale decay in collective projects — the cohort question, named |
+| *The Logic of Collective Action* — Mancur Olson | Field notes, 14 Dec — excerpts | Why people rationally disengage from shared projects they believe in — read the week the cohort's disengagement first stung |
+| *Reinventing Organizations* — Frédéric Laloux | Field notes, 6 Feb — excerpts | The red-to-teal paradigms behind "what are managers actually for" — and why permission-less cultures don't exist: even anarchist systems have rules |
+| *Anarchic Agreements* | Ed Saperia — field notes, 14 Dec; excerpts | A field guide to collective organising without formal authority — read against the house's own rule-light design |
+| "The Tyranny of Structurelessness" — Jo Freeman | Alex Vince (a re-read, with a new lens) | Structureless groups don't escape power — they hide it. The essay behind the shadow-governance field note, and half the argument for why the lab writes its rules down |
+
+#### Prior art
+
+Both librarian check-ins with Matt Stempeck were completed — the conversations are in the field-notes export — and the prior-art work ran all year: a dedicated log, then a 100-case research sprint across six lanes. The consolidated table; rows marked *(field notes)* were discovered in the Matrix room:
+
+| Project | What it does | What I'm learning from it | How SB differs or is influenced by |
+| --- | --- | --- | --- |
+| [*Papers, Please*](https://papersplea.se/) — Lucas Pope | Puts the player behind an authoritarian border-inspection desk; documents, quotas, refusal | Policy should arrive as a felt interface, with every mundane stamp connected to a human consequence | SB intervenes in a real procedure; the game diagnoses the institution rather than improving it |
+| [Models All the Way Down](https://knowingmachines.org/models-all-the-way) | Visual investigation of how 5.8bn image–text pairs became LAION-5B | Make scale bodily comprehensible; trace mundane classifications to public consequences | SB aims at appeal/correction routes the investigation leaves unresolved |
+| [New World Summit](https://www.jonasstaal.nl/) — Jonas Staal | Alternative parliaments co-created with excluded political movements | Redesign the room, symbols and authorised participants together; let speculative administration harden into infrastructure | Influence: the courage to build alternative institutions as real, inhabitable rooms — the border authority and the spy agency are small parliaments of this kind |
+| [Project Re:form](https://civilla.org/work/project-reform-case-study) — Civilla | Statewide redesign of a benefits application and the staff practice around it | A form can become a respectful invitation without theatricality or AI | SB is AI-native; Re:form proves the low-tech baseline |
+| [JustFix Letter of Complaint](https://app.justfix.org/en/loc/) | Tenants generate and certify-send a formal repair-demand letter | The full pipeline matters; a person should leave with an artifact that changes how they can approach power | Influence: the durable-artifact leg of the experiment bar — a person should leave holding something that changes how they can approach power |
+| [Haqdarshak](https://www.haqdarshak.com/) | AI-supported entitlement discovery behind trained local agents | Let AI strengthen a trusted neighbour as the civic interface | Influence: the trusted-person-as-interface finding — SB's translation work aims at intermediaries too (campaigners, evaluators), not only end users |
+| [OpenCRVS](https://www.opencrvs.org/) | Open, offline-capable civil registration | Acknowledgement and status are emotional design — show a person they've been seen | Influence: acknowledgement and status as designed affect — SBA's visa classes and arrival tracking are a playful cover of this pattern |
+| [Buurtzorg](https://www.buurtzorg.com/) | Dutch home care via small self-managing teams | Technology can remove managerial layers and support professional discretion rather than automate judgment | Influence: structure itself as affective design — the network's small-events rhythm over big panels follows the same logic |
+| [vTaiwan](https://info.vtaiwan.tw/) + [pol.is](https://pol.is/) | Agenda-setting, opinion mapping, facilitated deliberation, point-by-point government response | Make disagreement navigable; separate consensus from popularity; require a visible institutional response | The movement-plus-tool precedent — SB may need a canonical tool or a portfolio of rituals |
+| [Habermas Machine](https://deepmind.google/research/publications/65220/) — DeepMind | AI drafts common-ground statements; participants criticise and it revises | Synthesis should be iterative and contestable; measure perceived clarity and bias instead of declaring neutrality | Influences Public Voice Customs: synthesis must stay iterative and contestable; SB adds the affective layer and the civic-capability requirement |
+| [Talk to the City](https://ai.objectives.institute/talk-to-the-city-1) | LLM turns testimony into navigable clusters linked to source voices | Contestability: clusters retain links to underlying material | SB treats felt experience as a first-class claim |
+| [Document Assembly Line](https://suffolklitlab.org/) — Suffolk LIT Lab | Guided interviews → assembled court forms → e-filing | Durable, open, shared legal infrastructure with real institutional adoption | SB researches the felt experience the record says is missing: whether the process reduced fear or humiliation |
+| [Pathfinder](https://www.mobilepathways.org/pathfinder) — Mobile Pathways | AI immigration case intelligence for legal-service orgs | AI capacity built *for* trusted intermediaries rather than replacing them | The technology currently sparkles for the professional intermediary; SB targets the resident's encounter |
+| [Clear My Record](https://codeforamerica.org/) — Code for America | Government-initiated bulk record clearance | Sparkly precisely because a humiliating ritual disappears and the burden moves back to the institution | SB insists on notice and correction — invisible automation can become another opaque system |
+| [HRC Explorer Grants](https://gateway.hrc.govt.nz/funding/ideas-funding/2026-explorer-grants) | Anonymous short application, threshold review, qualified lottery | Replaces false-precision ranking — an honest institutional response to uncertainty | Affect is not explicitly designed here; SB designs it |
+| [Helsinki Summer Streets / UrbanistAI](https://site.urbanistai.com/helsinki-summer-streets-1) | Residents and planners manipulate generated images as shared planning objects | Generative imagery as a shared object, not a design oracle | SB requires reception evidence before affect claims |
+| [Rahvakogu / People's Assembly](https://kogu.ee/en/activity/peoples-assembly/) — warning case | Estonian citizens' assembly whose parliamentary handoff failed | A strong participatory process can reduce trust when the institution fails to close the handoff | SB treats the institutional handoff as part of the experience |
+| Consult (the Humphrey suite) — UK Gov | Theme frameworks per consultation question; inspectable analyst dashboards | Human-inspectable theme mapping as the safe shape for AI consultation analysis | SB differs: it aims at the felt encounter of consultation, not only the analyst's dashboard — Public Voice Customs starts where Consult stops |
+| Cambridge Design Code + [Go Vocal](https://www.govocal.com/) | AI thematic summaries of open-text planning feedback, staff-checked against source | Staff verification against source is the contestability step | Influence: staff verification against source as the contestability step — mirrored in Project Mirror's human-approval gates |
+| [Policy Synth](https://policysynth.ai/) — NJ AI Task Force | Workers rank AI-caused problems; agents evolve policy proposals | Worker-ranked problems as the input to agentic policy generation | SB differs: keeps affect and legitimacy central where Policy Synth optimises the pipeline; the jury-and-constitution work is the shared ground |
+| [Decidim](https://www.decidim.barcelona/) / [CONSUL](https://consuldemocracy.org/) | Municipal participation infrastructure at scale (€30m Barcelona, €100m Madrid budgets) | Participation infrastructure that reaches real allocation decisions | SB differs: experiments-as-releases rather than platform-first — Decidim is the kind of infrastructure a matured flagship could plug into |
+| [FixMyStreet](https://www.fixmystreet.com/) — mySociety | Report a problem, route it to the responsible authority, publish the status trail | Public status trail as accountability | Influence: the public status trail as accountability — SBA's live dashboard and Conference Pulse's visible participation borrow the pattern |
+| [LiquidFeedback](https://liquidfeedback.org/) | Liquid democracy software | Delegation, revocation, and voting operationalised as civic infrastructure | An SB version would focus on the felt ritual and trust comparison, not only the software |
+| [Creative Bureaucracy Festival](https://creativebureaucracy.org/) | Festival around public-sector imagination | There is an existing audience for optimistic bureaucratic reform | SB is more explicitly AI-native, experimental, and prototype-led |
+| [OneTeamGov](https://oneteamgov.uk/) | Public-sector reform community | Useful adjacent community and reform energy | SB uses more theatrical, AI-native, artifact-based experiments |
+| [Civic Tech Field Guide](https://directory.civictech.guide/) | Directory and taxonomy of civic technology | Helps classify the project and test novelty | SB should become legible enough to be added as a pattern or project |
+| [PipResist](https://pipresist.uk/) — Campaign Lab | Turns voice notes into government consultation responses | Lowering the barrier to civic voice is a live, adjacent build | Public Voice Customs focuses on the receiving side: making volume, substance, and uncertainty legible without authenticity policing |
+| [Who Targets Me](https://whotargets.me/en/) *(field notes)* | Crowdsourced transparency for online political ads | — | Influence: transparency tooling born at Newspeak House — the house lineage SB continues |
+| [Permission Slip](https://app.civictech.guide/p/permission-slip/) *(field notes)* | Consumer tool for exercising data rights | — | Influence: an agent exercising rights on your behalf prefigures Mirror Commons' consent machinery |
+| GOV.UK Notify & Forms *(field notes)* | Shared government notification and form platforms | Legibility: how systems demand structured, interoperable inputs | Influence: the legibility lane — how systems demand structured, interoperable inputs is the skeleton SB re-skins |
+| [The Fallacy of AI Functionality](https://facctconference.org/static/pdfs_2022/facct22-3533158.pdf) (FAccT 2022) *(field notes)* | Paper: AI harms often stem from systems that simply don't work | — | Influence: functionality-first scepticism became SB's honesty norm — demo what works, log what broke |
+| Negotiating the Algorithm — ETUC manual *(field notes)* | Union handbook for bargaining over algorithmic management | — | Influence: making algorithmic power legible to the people it manages — kin to the moment register |
+| [Digital Statecraft Manifesto](https://digitalstatecraft.academy/) *(field notes)* | Manifesto/network on statecraft in the digital era | "Go find out who these people are" | Watch-list: possible allies for the govtech horizon — "go find out who these people are" |
+
+#### Inspirations
+
+**The constellation** — ten projects we're inspired by: *Papers, Please* · Models All the Way Down · New World Summit · Project Re:form · JustFix · Haqdarshak · OpenCRVS · Buurtzorg · vTaiwan · the Habermas Machine.
+
+What the hundred cases taught, distilled:
+
+- Affect is broader than delight.
+- Status is affective infrastructure.
+- Sparkle may remove a ritual rather than decorate it.
+- Technology often works best behind a trusted person, not as the sole civic interface.
+- Staff relief is useful evidence — but it is not evidence that a resident felt heard.
+- The clearest warning pattern is affective legitimacy without recourse.
+
+**The movements lane** — each with its ingredient of sparkle:
+
+| Movement | Ingredient of sparkle |
+| --- | --- |
+| Glitter Revolution (#NoMeCuidanMeViolan) | Material that behaves politically — the affective device physically marks power and survives as a distributed visual language |
+| Operation Inflation (Portland inflatables) | An inhabitable counter-role — costume changes participation without pretending confrontation is safe |
+| LASTESIS, *Un violador en tu camino* | A replicable score — choreography turns individualised harm into collective accusation, allowing local translation |
+| Otpor!'s Milošević barrel | A designed institutional dilemma — humour from mapping the opponent's response options |
+| Mothers of Plaza de Mayo | A counter-procedure — garment, place and cadence create status and memory where the state withholds both |
+| ACT UP | Affect joined to procedural literacy — graphic force and grief leading into organised expertise |
+| Women of Liberia Mass Action for Peace | Symbol that escalates into leverage — a counter-uniform connects witness to negotiation pressure |
+| Hīkoi mō te Tiriti / the parliamentary haka | Living protocol confronting official procedure — embodied authority meets a precise legislative document |
+
+And the warning study: Holograms for Freedom (Spain, 2015) — technological spectacle while bodies risked sanction. Spectacle is not participation.
+
+#### Field notes journal
+
+The year's own writing — each note opens in full.
+
 ++ 14 Dec 2025 | Mastodon hires for trust and safety | Field note on Mastodon hiring a Community Director focused on Trust and Safety to reflect its many communities' needs.
 Field Note - Trust & Safety at Mastodon
 
@@ -1497,653 +2149,6 @@ stage 3 - pairwise
 stage 4 - LLM inference from your existing blog posts or shared links
 stage 5 - something more deliberate
 stage 6 - if I can build something that allows people to edit the multi agent run like a flow builder and then submit a PR with some code that a dev can review + test, that would be so cool
-+++ Field discussions
-++ 14 Dec 2025 | field notes room opens publicly | Fatima launches a public Matrix field-notes channel with open history so bots can read it and posts can be shared.
-welcome to my field notes channel! it took a few tries to get this right, but it's a public channel with history set to anyone - so it can be used by bots and shared with everyone 🎉
-
-*(some of these posts were from Nov 23 - Dec 12, but had to migrated from the previous, encrypted channel)*
-++ 14 Dec 2025 | Hannah Aubry and decentralised social platforms | Curiosity about Hannah's career path, plus Fatima's older Open Source Summit talk on Mastodon, Bluesky and decentralised protocols.
-I'm curious to see how this plays out and connect with Hannah about her plans! She was previously on their Board and has worked in Open Source and Developer Relations - so it's also interesting career path.
-
-https://www.linkedin.com/posts/hannahaubry_i-am-thrilled-to-share-the-news-that-i-joined-ugcPost-7396472394892091392-H1Nl
-
-2 years ago, I gave a talk at Open Source Summit called "Adapting to the New Era of Social Platforms in Open Source" exploring the explosion of Mastodon, Blue Sky / the pros and cons of decentralized social platforms and the protocols powering them
-It was still early and I didn't totally understand all the protocols at the time
-Then the hype died down and well people didn't pick up Mastodon as much as hoped..
-So I'm interested to see them invest in community!! And see if they're competing directly with some of the choices that other mainstream platforms are making (re data and privacy)
-https://www.youtube.com/watch?v=UEyRQWogbxk
-originally posted on Nov 20, 2025
-→ https://www.linkedin.com/posts/hannahaubry_i-am-thrilled-to-share-the-news-that-i-joined-ugcPost-7396472394892091392-H1Nl
-++ 14 Dec 2025 | homework from Matt Stempeck | Pick one interesting thing per Civic Tech Guide category; she flags open source AI, algo transparency, audits, AI literacy.
-Homework from Matt Stempeck
-
-Tell me about 1 thing you find interesting from each section in our next check-in. If you rule it out entirely, just skip it. https://app.civictech.guide/categories
-
-- ethical AI safety space (includes prosocial alternatives)
-- governance
-- public sector AI
-- **open source AI**
-- deepfakes
-- **algo transparency** - actively evolving area given difficulty of explainability
-- **audits**
-- **ai iteracy** - AI slop vs code slop
-
-_originally posted on Nov 20, 2025_
-→ https://app.civictech.guide/categories
-++ 14 Dec 2025 | homework from Six | Two readings: field-building and the epistemic culture of AI safety, and The Fallacy of AI Functionality.
-Homework from Six
-
-Field-building and the epistemic culture of AI safety
-(https://firstmonday.org/ojs/index.php/fm/article/view/13626)
-The Fallacy of AI Functionality (https://facctconference.org/static/pdfs_2022/facct22-3533158.pdf)
-
-_originally posted on Nov 20, 2025_
-→ https://firstmonday.org/ojs/index.php/fm/article/view/13626
-++ 14 Dec 2025 | cline-bench benchmarks real engineering problems | Cline's new benchmark initiative evaluates agents on real open-source repository work rather than lab puzzles, continuing their transparency commitment.
-https://cline.bot/blog/cline-bench-initiative
-
-Lots of enthusiasm around the release of cline-bench this week - the mission is to benchmark agents in real-world engineering problems and not lab puzzles. And only open source repositories are eligible.
-
-Cline's whole thing has always been open source and transparency - so it's great to see them committed to that.
-originally posted on Nov 21, 2025
-→ https://cline.bot/blog/cline-bench-initiative
-++ 14 Dec 2025 | CrowdStrike finds hidden AI-coded vulnerabilities | Research showing DeepSeek-R1 produces severely vulnerable code up to fifty percent more often on politically sensitive CCP topics.
-https://www.crowdstrike.com/en-us/blog/crowdstrike-researchers-identify-hidden-vulnerabilities-ai-coded-software/
-
-“However, we found that when DeepSeek-R1 receives prompts containing topics the Chinese Communist Party (CCP) likely considers politically sensitive, the likelihood of it producing code with severe security vulnerabilities increases by up to 50%."
-→ https://www.crowdstrike.com/en-us/blog/crowdstrike-researchers-identify-hidden-vulnerabilities-ai-coded-software/
-++ 14 Dec 2025 | community interest companies explained | Government guidance on CICs, learned via Fred's session on music, artists and open source; companies required to benefit community.
-https://www.gov.uk/government/publications/community-interest-companies-how-to-form-a-cic/community-interest-companies-guidance-chapters
-Learned about CIC from Fred’s session on music and artists and open source. Type of company that is required to benefit the community rather than make a profit
-→ https://www.gov.uk/government/publications/community-interest-companies-how-to-form-a-cic/community-interest-companies-guidance-chapters
-++ 14 Dec 2025 | Ed on CIC tradeoffs | Ed Saperia calls CICs a halfway house between company and charity, weaker on tax and funding, but publicly registered.
-Edward Saperia:
-
-sort of a halfway between a regular company and a charity
-
-generally considered less good because you don't get the same tax advantages and it's not eligible for lots of kinds of funding
-
-it's cool that there's a public register though
-++ 14 Dec 2025 | question: roles that aren't committees | Asks what non-committee role structures look like; Ed answers individual roles, because committees make responsibility unclear.
-what are some structures of roles that aren’t committees?
-
-_originally posted on Nov 23, 2025_
-
-Edward Saperia
-
-Individual roles!
-
-fatima
-
-Like a finite set of roles?
-For example
-
-“website maintainer”
-“ration club manager”
-Based on duties?
-Or more broad?
-
-Edward Saperia
-
-The idea of roles is that they make responsibility clear
-Committees don’t do that very well
-++ 14 Dec 2025 | Biden executive order 14110 | Links the 2023 order on safe, secure and trustworthy AI requiring developers to share safety testing results.
-[Safe, Secure, and Trustworthy Development and Use of Artificial Intelligence - Biden's order (Executive Order 14110)](https://www.federalregister.gov/documents/2023/11/01/2023-24283/safe-secure-and-trustworthy-development-and-use-of-artificial-intelligence):
-
-Issued in October 2023, this order aimed to create guidelines for responsible AI use in government, require developers to share safety testing results, and promote trustworthy AI.
-
-_originally posted on Nov 24, 2025_
-→ https://www.federalregister.gov/documents/2023/11/01/2023-24283/safe-secure-and-trustworthy-development-and-use-of-artificial-intelligence
-++ 14 Dec 2025 | anarchy reading list from Ed | Anarchic Agreements field guide to collective organising, plus Uri Gordon on anarchism and the politics of technology.
-reading on anarchy from Ed
-
-https://www.abebooks.co.uk/9781629639635/Anarchic-Agreements-Field-Guide-Collective-162963963X/plp
-https://theanarchistlibrary.org/library/uri-gordon-anarchism-and-the-politics-of-technology
-→ https://www.abebooks.co.uk/9781629639635/Anarchic-Agreements-Field-Guide-Collective-162963963X/plp
-++ 14 Dec 2025 | swiss cheese model for AI safety | arXiv taxonomy and reference architecture for multi-layered runtime guardrails around foundation-model agents, hard because agent behaviour is non-deterministic.
-[ Swiss Cheese Model for AI Safety](https://arxiv.org/abs/2408.02205): A Taxonomy and Reference Architecture for Multi-Layered Guardrails of Foundation Model Based Agents
-
-Researchers are exploring better ways to design guardrails to ensure that the runtime behavior of FM-based agents remains within specific boundaries. Nevertheless, designing effective runtime guardrails is challenging due to the agents' autonomous and non-deterministic behavior. The involvement of multiple pipeline stages and agent artifacts, such as goals, plans, tools, at runtime further complicates these issues.
-→ https://arxiv.org/abs/2408.02205
-++ 14 Dec 2025 | introduction to AI safety textbook | Shares the free online AI Safety, Ethics, and Society book as a foundational reference.
-[Introduction to AI Safety, Ethics, and Society](https://www.aisafetybook.com/)
-→ https://www.aisafetybook.com/
-++ 14 Dec 2025 | RL-learned context compression | Rajan's writeup on training Qwen to invent its own tenfold context compression so research agents can run for days.
-https://www.rajan.sh/llm-compression
-
-in order to have research agents that can run for days, we need context compaction
-
-i used RL to have LLMs naturally learn their own 10x compression! Qwen learned to pack more info per token (ie use Mandarin tokens, prune text)
-→ https://www.rajan.sh/llm-compression
-++ 14 Dec 2025 | NSF national AI research resource | Links the NAIRR focus area page on US public AI research infrastructure.
-https://www.nsf.gov/focus-areas/ai/nairr
-→ https://www.nsf.gov/focus-areas/ai/nairr
-++ 14 Dec 2025 | claude skill for concise output | Shares a community Claude skill file that constrains agents to concise output.
-https://github.com/NTCoding/claude-skillz/blob/main/concise-output/SKILL.md
-→ https://github.com/NTCoding/claude-skillz/blob/main/concise-output/SKILL.md
-++ 14 Dec 2025 | bitter lesson of LLM extensions | Sawyer Hood argues hand-rolled agent and plugin scaffolding collapses under complexity; models will learn to compose capabilities themselves.
-https://www.sawyerhood.com/blog/llm-extension
-
-“The Bitter Lesson of LLM Extensions” argues that as we bolt agents, tools, and plugins onto LLMs, the real “bitter lesson” is that most hand-rolled extension systems collapse under complexity, and the long-term win will be letting models themselves learn how to adapt and compose capabilities on the fly.
-→ https://www.sawyerhood.com/blog/llm-extension
-++ 14 Dec 2025 | New York algorithmic pricing law | New York's Algorithmic Pricing Disclosure Act took effect November 2025, requiring disclosure when personal data sets an individual's price.
-[New York’s Algorithmic Pricing Disclosure Law Takes Effect](https://www.kelleydrye.com/viewpoints/blogs/ad-law-access/new-yorks-algorithmic-pricing-disclosure-law-takes-effect)
-
-New York Attorney General Letitia James recently announced that on November 10, 2025, New York’s Algorithmic Pricing Disclosure Act (the ​“Act”) officially took effect. Codified at N.Y. Gen. Bus. Law § 349-a, the Act requires that companies making use of consumer-specific data to set prices clearly and inform consumers when those prices have been determined by an algorithm. It was enacted as part of New York’s omnibus budget bill, which also introduced other consumer protection measures, including amendments to the state’s Automatic Renewal Law that we covered in June. This measure reflects emerging legislative interest in addressing ​“surveillance pricing”, or individualized pricing practices that rely on personal data to adjust the cost of goods or services.
-→ https://www.kelleydrye.com/viewpoints/blogs/ad-law-access/new-yorks-algorithmic-pricing-disclosure-law-takes-effect
-++ 14 Dec 2025 | F-Secure on hidden online premiums | Explainer showing two shoppers can see different prices at the same moment based on device, postcode or location.
-[Surveillance Pricing Is Quietly Raising the Cost of Online Shopping](https://www.f-secure.com/en/partners/insights/surveillance-pricing-is-quietly-raising-the-cost-of-online-shopping)
-
-You may be paying a hidden premium when shopping online, determined not by what you buy or when you buy it, but by who you are. In fact, two people can look at the same product at the same moment yet see completely different prices—not because of sales, stock levels, or errors, but simply because one is shopping on a Mac, living in a particular zip code, or standing in a store's parking lot.
-
-That's the result of surveillance pricing, where online retailers use advanced data collection, predictive algorithms, and AI to profile shoppers, predict the maximum each person would be willing to pay, and set prices within milliseconds.
-→ https://www.f-secure.com/en/partners/insights/surveillance-pricing-is-quietly-raising-the-cost-of-online-shopping
-++ 14 Dec 2025 | Karpathy on Software 2.0 | Karpathy argues AI is best understood as a new computing paradigm automating digital information processing, easily automating what you can verify.
-[Software 2.0 easily automates what you can verify- Karpathy / x](https://x.com/karpathy/status/1990116666194456651)
-
-various historical precedents: electricity, industrial revolution, etc., I think the strongest analogy is that of AI as a new computing paradigm (Software 2.0) because both are…
-AI has been compared to various historical precedents: electricity, industrial revolution, etc., I think the strongest analogy is that of AI as a new computing paradigm (Software 2.0) because both are fundamentally about the automation of digital information processing.
-→ https://x.com/karpathy/status/1990116666194456651
-++ 14 Dec 2025 | Ed suggests algorithmic management | Ed points to algorithmic management, the ETUC trade union manual on negotiating the algorithm, and the Digital Statecraft manifesto.
-Readings/Advice from Edward Saperia
-
-You might be interested in "Algorithmic Management"
-
-Similar to surveillance algorithms, but with a focus on the rights of the people being managed
-
-Six will have things to say on this
-
-This kind of thing https://www.etuc.org/sites/default/files/publication/file/2025-09/Negotiating%20the%20Algorithm%20-%20Trade%20Union%20Manual_ETUC%20%28updated%29.pdf
-
-I'd also engage with the "AI in government" folks, ask Andreas will probably have suggestions for how to get plugged into this
-Also maybe go find out who these people are https://digitalstatecraft.academy/the_digital_statecraft_manifesto_v1-0/
-→ https://www.etuc.org/sites/default/files/publication/file/2025-09/Negotiating%20the%20Algorithm%20-%20Trade%20Union%20Manual_ETUC%20%28updated%29.pdf
-++ 14 Dec 2025 | Aadi shares tech and law syllabus | Cornell Tech/Law Colloquium plus an INFO1200 syllabus covering technology, law and surveillance curricula.
-reading  from Aadi
-
-- broader tech, law, and surveillance, curriculums (syllabus attached)
-- Tech/Law Colloquium – Exploring new developments at the intersection of law and information technology https://tlc.cis.cornell.edu/
-
-Syllabus-FA25-INFO1200-LEC001-DRAFT.pdf
-→ https://tlc.cis.cornell.edu/
-++ 14 Dec 2025 | Hirschman on exit and voice | Exit, Voice, and Loyalty as a framework for disengagement, silence and morale decay in collective projects.
-Albert O. Hirschman – Exit, Voice, and Loyalty https://www.hup.harvard.edu/books/9780674276604
-
-Provides a precise framework for understanding disengagement, silence, and morale decay in collective projects.
-→ https://www.hup.harvard.edu/books/9780674276604
-++ 14 Dec 2025 | Olson on collective action | The Logic of Collective Action explains why people rationally disengage from shared projects they believe in.
-Mancur Olson – The Logic of Collective Action
-https://www.hup.harvard.edu/books/9780674537514
-
-Explains why people rationally disengage from shared projects even when they believe in them.
-→ https://www.hup.harvard.edu/books/9780674537514
-++ 14 Dec 2025 | Scott on seeing like a state | Seeing Like a State on how simplified or rule-free systems erase lived experience and reproduce inequality.
-James C. Scott – Seeing Like a State
-https://yalebooks.yale.edu/book/9780300078152/seeing-like-a-state/
-
-Helps explain why simplified or “rule-free” systems often erase lived experience and reproduce inequality.
-→ https://yalebooks.yale.edu/book/9780300078152/seeing-like-a-state/
-++ 14 Dec 2025 | Matrix rooms must be unencrypted for bots | mstem and Ed advised to use public-to-space rooms with readable history, because bots cannot operate in encrypted channels.
-mstem: Edward Saperia - I think I finally fixed the channel issues. For bot related channels or notes like these, we should recommend `public to space` and `anyone can read history at anytime` instead of encrypted because bots can't run then.
-
-thank you!! :)
-++ 14 Dec 2025 | reread the Tyranny of Structurelessness | Alex Vince recommends revisiting Jo Freeman's essay with a new lens after the governance discussions.
-based on this, it might be good to read the Tyranny of Structurelessness with a new lens (as recommended by alex vince) https://www.jofreeman.com/joreen/tyranny.htm
-→ https://www.jofreeman.com/joreen/tyranny.htm
-++ 15 Dec 2025 | Arnstein's ladder of citizen participation | Arnstein's 1969 paper names informing, consultation and placation as tokenism, matching her sense of procedural futility.
-A LADDER OF CITIZEN PARTICIPATION, Sherry R. Arnstein
-https://www.historyofsocialwork.org/1969_ENG_Ladderofparticipation/1969%2C%20Arnstein%2C%20ladder%20of%20participation%2C%20original%20text%20OCR%20C.pdf
-
-What you’re calling procedural futility is basically: the process invites voice but doesn’t route it into consequential decisions. When people learn (even once or twice) that objections don’t change the plan, “participation” becomes a performance: you talk, the document grows, and then the authority proceeds as originally intended.
-
-That maps cleanly onto Arnstein’s ladder: rungs like Informing / Consultation / Placation are “tokenism” — people can “be heard,” but they lack power to ensure their views are heeded.
-→ https://www.historyofsocialwork.org/1969_ENG_Ladderofparticipation/1969%2C%20Arnstein%2C%20ladder%20of%20participation%2C%20original%20text%20OCR%20C.pdf
-++ 15 Dec 2025 | Nancy Fraser on rethinking recognition | Fraser shifts recognition from a cultural identity model to a status model removing institutional barriers to peer participation.
-Nancy Fraser, Rethinking Recognition
-https://newleftreview.org/issues/ii3/articles/nancy-fraser-rethinking-recognition
-
-Nancy Fraser’s approach to recognition is to shift from a culturalist interpretation of the Hegelian model based on the achievement of a positive self-image, to a Weberian model based on inclusion in an institutionalized status order. In what follows I am quoting from her May 2000 article in New Left Review, Rethinking Recognition. Here she contrasts the “identity model” of recognition underlying affirmative anti-sexism and anti-racism movements, for example, which aim to valorize group identity, to a “status model” whose aim is to remove institutional barriers to individual members of the group achieving participation as peers in the wider society.
-→ https://newleftreview.org/issues/ii3/articles/nancy-fraser-rethinking-recognition
-++ 15 Dec 2025 | three framing questions for system behaviour | Where model behaviour ends and system behaviour begins, what developers only think they control, and which failures evals miss.
-1. System boundaries
-
-Where does “model behavior” end and “system behavior” begin?
-
-What components introduce new attack or inference surfaces?
-
-2. Control illusion
-
-What do developers think they control?
-
-What actually controls outputs in practice?
-
-3. Evaluation blind spots
-
-Which failures are invisible to standard model evals?
-
-What would you need to log or instrument to even notice them?
-++ 17 Dec 2025 | Anthropic's multi-agent research system | Shares Anthropic's engineering writeup on their orchestrator-plus-parallel-researchers architecture.
-https://www.anthropic.com/engineering/multi-agent-research-system
-→ https://www.anthropic.com/engineering/multi-agent-research-system
-++ 17 Dec 2025 | question: failures between components | Chained RAG, agents, tools and evaluators each pass their own evals yet combine into hallucinations and reinforced mistakes.
-**Where do failures show up between components in multi agent systems, and why don’t our evals see them?**
-
-Modern systems chain RAG → agents → tools → evaluators and each component can pass it’s own evals. When combined, we see new behaviors like hallucinations, agents reinforcing each other’s mistakes, or harmful outcomes - that don’t appear in single tests. This makes it hard to detect failures.
-
-- Which existing eval methods fail to surface these behaviors, and why?
-- What kinds of stress tests would expose “reasonable locally, harmful globally” outcomes?
-++ 17 Dec 2025 | question: where sensitive inferences happen | Systems never trained on race, health or income still act as if they know them by combining ordinary signals.
-**Where in real AI systems do sensitive inferences actually happen, even when no model is explicitly trained to make them?**
-
-Many AI systems never store or predict sensitive traits like race, health status, or income. But they still end up *acting as if they know them*. This happens when systems combine ordinary signals across multiple steps.
-
-For example a system uses location, time of activity, and spending patterns to route someone into a higher-risk category. Or a content moderation pipeline combines language style, social connections, and past behavior to decide who gets flagged or deprioritized.
-
-This can be hard to detect because each step might look reasoable on it’s own or the inference is spread across retrieval and routing or existing checks aren’t focused on system level behavior.
-- Where does the system first start treating people differently based on those signals?
-- How could we test or log for indirect inference without requiring access to model internals?
-++ 18 Dec 2025 | Ed asks how to test supervisor pattern | Ed wonders how you would systematically test the shortcomings of the supervisor orchestration pattern.
-I wonder how you’d go about systematically testing the shortcomings of the supervisor pattern, do you have any ideas?
-++ 5 Jan 2026 | recursive language models manage context | Prime Intellect on storing inputs in Python and delegating to sub-agents instead of loading everything into the main context.
-https://www.primeintellect.ai/blog/rlm
-
-Recursive Language Models let agents manage massive context by storing inputs in Python and delegating work to sub-agents instead of loading everything into the main model's context—early tests show gains on long-context task (environments).
-→ https://www.primeintellect.ai/blog/rlm
-++ 12 Jan 2026 | building platforms above the loop | Work discussion on humans setting intent and constraints while AI generates, tests and validates, escalating only at decision points.
-Something we're discussing at work is how do we built platforms for AI that are "above the loop"
-
-The loop is currently how we build software:
--  Humans still have to coordinate intent, break down the work, deal with agent failures, and set up the tasks.
-- Agents execute the tasks, but people decide when to stop or continue.
-
-Above the loop (I find is similar to the supervisor orchestration pattern) is when :
-- humans set intent, constraints, and direction
-- ai systems generate, test, revise, and validate changes - and only reach out to the human about decision points
-
-so instead of deciding every code change, the human is deciding "what should exist"
-
-it's very exciting to see this!
-++ 12 Jan 2026 | self-improving agents roundup | Yohei Nakajima's survey of academic projects where an agent edits and improves its own code or policies.
-https://yoheinakajima.com/better-ways-to-build-self-improving-ai-agents/
-academic projects where an agent edits and improves its own code or policies, not just responses.
-→ https://yoheinakajima.com/better-ways-to-build-self-improving-ai-agents/
-++ 12 Jan 2026 | are agent swarms actually better now | Ed is surprised swarm approaches never worked well; Fatima notes they make mess and only run on Claude Code.
-Ed Saperia: I've always been surprised that these don't get better results, but, maybe they do now
-
-Fatima: this was first released two weeks ago
-
-Ed Saperia: I mean, "things of this nature"
-
-Fatima: so this might be a resurgence of iterative loop ideas
-
-Fatima: it feels new to me(!) but i may not have been paying attention in the past few weeks
-
-Fatima: ahhh i think this might be different this time
-
-Fatima: but i may also be falling for the hype hehe
-
-Ed Saperia: there have been various "agent swarm" type things over the past couple of years
-
-Fatima: this is true!
-
-Ed Saperia: no I mean I expect they're getting better quickly
-
-Fatima: they seem to be
-
-Fatima: but they're also creating a lot of mess
-
-Ed Saperia: as I say, I am surprised they aren't good
-
-Fatima: plus they mostly only work with claude code at the moment
-
-Fatima: and i would need infinite tokens
-++ 12 Jan 2026 | ralph explained for idiots | Shares a joke thread explaining the ralph looping technique.
-https://x.com/agrimsingh/status/2010412150918189210
-ralph for idiots: the only explanation you need
-
-(is joke)
-→ https://x.com/agrimsingh/status/2010412150918189210
-++ 20 Jan 2026 | Slipstream protocol for agent communication | Hugging Face writeup on cutting agent communication costs by leveraging existing language rather than inventing a machine protocol.
-https://huggingface.co/blog/anthonym21/slipstream-for-agent-communication
-
-A new protocol called Slipstream offers a powerful and surprisingly counter-intuitive solution. It cuts through the noise to dramatically reduce communication costs and make large-scale agent systems economically viable. This article unpacks the most impactful takeaways from the research, revealing how the solution isn't to invent a new machine language, but to leverage the one we already have.
-
-this is very cool!
-→ https://huggingface.co/blog/anthonym21/slipstream-for-agent-communication
-++ 20 Jan 2026 | models reason as an internal committee | Paper showing reasoning models simulate persona-like internal dialogue; steering a surprise feature doubled accuracy. She is intrigued.
-https://arxiv.org/abs/2601.10825
-
-Researchers from Google, University of Chicago, and Santa Fe Institute show that LLMs like DeepSeek-R1 and QwQ-32B improve reasoning not by length alone but by simulating internal dialogues among diverse, persona-like perspectives. These models display more question-answering, disagreement, and reconciliation than instruction-tuned baselines. Steering a “surprise” discourse feature doubled reasoning accuracy, increasing activation of personality and expertise features. Reinforcement learning reinforced these behaviors, especially when models were fine-tuned on multi-agent dialogues, accelerating reasoning improvements. In short, the model is forming an internal committee to solve problems, echoing human cognition and group collaboration. That’s a leap in understanding both AI and possibly the nature of reasoning itself
-
-AN INTERNAL COMMITEEE
-
-Need to read this soon because I’m INTRIGUED
-→ https://arxiv.org/abs/2601.10825
-++ 26 Jan 2026 | Ed: council of experts is old | Ed notes council of experts has been a named prompting method for a while.
-“Council of Experts” has been a named method for a while I think
-++ 28 Jan 2026 | Clawdbot and Moltbot local agents | mstem shares the Verge report; Ed says the creator visited Newspeak House and suggests code club, mstem advises a VM.
-Matt Stempeck: https://www.theverge.com/report/869004/moltbot-clawdbot-local-ai-agent
-
-Ed Saperia: The creator of this was at NH last week
-
-Ed Saperia: We should probably be playing with it
-
-Ed Saperia: Maybe a good focus for code club on Monday
-
-Fatima: very cool!
-
-Matt Stempeck: play with it on a virtual machine, methinks
-
-Fatima: haha for sure
-
-Fatima: i only have my work laptop :P
-
-Matt Stempeck: i'm excited and terrified by these things
-
-Ed Saperia: they are certainly exciting and terrifying
-
-Ed Saperia: but if we're not the people to experiment with them then who is?
-
-Fatima: agreed!
-→ https://www.theverge.com/report/869004/moltbot-clawdbot-local-ai-agent
-++ 29 Jan 2026 | Ollama launch announcement | Shares Ollama's launch blog post.
-https://ollama.com/blog/launch
-→ https://ollama.com/blog/launch
-++ 29 Jan 2026 | Kimi K2.5 and agent swarms | Kimi's K2.5 release blog plus Simon Smith asking whether swarms plus Agent Skills scale across an enterprise.
-https://www.kimi.com/blog/kimi-k2-5.html
-
-https://x.com/_simonsmith/status/2016234897413964057
-
-I've been thinking about the best way to organize agents in step-by-step workflows where each agent has skills defined by Agent Skills file, and to then scale this across an enterprise. Today Kimi dropped its K2.5 model along with Agent Swarms, and I thought: could this be it?
-→ https://www.kimi.com/blog/kimi-k2-5.html
-++ 29 Jan 2026 | Simon Willison tests parallel planning | Gist testing Kimi's multi-agent planning claims by breaking a Datasette S3 upload plugin into ten parallel tasks.
-https://gist.github.com/simonw/ee2583b2eb5706400a4737f56d57c456
-
-As a more interesting test, I decided to exercise the claims around multi-agent planning with this prompt:
-
-I want to build a Datasette plugin that offers a UI to upload files to an S3 bucket and stores information about them in a SQLite table. Break this down into ten tasks suitable for execution by parallel coding agents.
-→ https://gist.github.com/simonw/ee2583b2eb5706400a4737f56d57c456
-++ 29 Jan 2026 | AI shopping tools raise pricing stakes | Tech Policy Press on big tech AI shopping agents raising the stakes for surveillance pricing laws.
-https://www.techpolicy.press/big-techs-ai-shopping-tools-raise-stakes-for-surveillance-pricing-laws/
-→ https://www.techpolicy.press/big-techs-ai-shopping-tools-raise-stakes-for-surveillance-pricing-laws/
-++ 29 Jan 2026 | Karpathy on the coherence threshold | Shares Karpathy's post about crossing into mostly supervising agents rather than writing code himself.
-https://x.com/karpathy/status/2015883857489522876
-→ https://x.com/karpathy/status/2015883857489522876
-++ 29 Jan 2026 | Clawdbot is the rebrand | Realises Clawdbot and Moltbot are the same viral open-source assistant that proactively messages you, and she missed it going viral.
-aha! this is Clawdbot rebranded!
-
-https://www.reddit.com/r/LocalLLM/comments/1qmrwxl/clawdbot_the_ai_assistant_that_actually_messages/
-
-Clawdbot is an open-source AI assistant (9K+ GitHub stars) with a different approach: it proactively messages you instead of waiting for prompts. If you've used Poke (or others), it works the same way, but is more configurable and obviously open-source. I might even cancel my subscription with Poke now.
-
-I was so busy with work things last week, I completely this missed this going viral!
-→ https://www.reddit.com/r/LocalLLM/comments/1qmrwxl/clawdbot_the_ai_assistant_that_actually_messages/
-++ 29 Jan 2026 | build tools that help people think | Sam Altman on human slop as well as AI slop, and building genuinely good brainstorming partners.
-try to build tools that help people think better
-
-Sam: It’s popular to talk about “AI slop,” but there’s also a huge amount of human-generated slop in the world. (swyx: we agree!) Coming up with genuinely good, new ideas is hard. I increasingly believe that we think at the limits of our tools, and that we should explicitly try to build tools that help people think better. [_From the Open AI town hall_](https://www.youtube.com/watch?v=Wpxv-8nG8ec&t=1179s)
-
-We can build really great brainstorming partners. There have been like three or four people in my life that I have consistently found every time I hang out with them, I leave with a lot of ideas. They’re people who are just really good at asking questions or giving you seeds to build on.
-→ https://www.youtube.com/watch?v=Wpxv-8nG8ec
-++ 29 Jan 2026 | swyx on the AI Paul Graham | Reflections arguing thought-partner agents fail as RAG on essays; a five percent accurate PG would still be valuable.
-Swyx's Reflections in SmolAi were really poignant, sharing them here to read again.
-
-**Reflections on “AI Paul Graham”**
-There are a few reactions I have here that I’ll fire off in quick succession:
-
-It’s nice to see him acknowledge that the potential of AI is not just in helping to attract more attention through generated images and videos and marketing text (AI GTM, the first question from the town hall), but also it should be used in raising the quality of product, because there is a lot of human-origin slop too!
-
-In many ways, Sam here is trying to bring in what YCombinator does for improving founder success to the general thought partnership capability of ChatGPT. Everyone could benefit from having their own personal YC Group Partner, on demand, no office hours. Much less having a PG-tier Partner. And yes, this is just the business form of the more general domain of advising and coaching, which probably everyone can benefit from if we knew how to make it good enough.
-
-Many, many people have tried to build an “AI Paul Graham” bot. These flopped because they mostly did RAG or finetunes on his essays. Information Retrieval isn’t what PG -does- for Sam. He challenges you, runs you through multiple internal world models and pattern matches of past learned experiences, filters through what he should say to elicit the best response out of you instead of simply blurting out what he thinks token by token, and raises your ambitions.
-
-For both model trainers and agent harness builders, it’s instructive to draw a spectrum from the poorest implementation to the most ambitious implementation you can think of, and think about the sequencing of intelligent feedback and pushback you need.
-
-It is too lazy to wait for the God Model to arrive to do all these, there are probably concrete thought partner jobs that can be broken out into Agent Skills and MCP tools and Multi-agent Swarms and other tricks of the AI Engineer trade.
-
-“Accuracy” for an AI PG is not 90%, not even 50% — even a 5% accurate PG is acceptable and valuable (and is probably reflective of most real life conversations with him - most questions or comments are NOT valuable, but a human filter on the comments will surface some very generative and out of distribution “seeds”). So this is a very scalable “throw shit at the wall” task where AI can act as mass generator and Humans can act as discriminator/judge, and our existence proof that high-miss-rate question generation is still useful is YCombinator and Sam’s personal experience.
-
-When faced with “AI as thought partner” I see a lot of parallels with the alignment problem, and I often think about the Weak-to-Strong Superalignment diagram:
-
-Where we are currently treating agents as a junior Software Engineer or “research intern” (this is certainly the relationship we have with ChatGPT or Prism today), we want to build the PG agent that is smarter than us, and perhaps the path there is to build smart agents for dumber people/usecases and then ladder up from there.
-++ 29 Jan 2026 | weak-to-strong generalization | Shares OpenAI's weak-to-strong superalignment work as a parallel to building thought partners smarter than us.
-https://openai.com/index/weak-to-strong-generalization/
-→ https://openai.com/index/weak-to-strong-generalization/
-++ 29 Jan 2026 | coding agent phase shift is real | Agentic coding loops are a step change but agents skip clarifying questions and edit unrelated files in established codebases.
-**Coding agent “phase shift” is real**
-
-but messy: Multiple posts reflect a step-change in practice: founders and engineers are increasingly running “agentic” coding loops, yet hitting new failure modes: agents that don’t ask clarifying questions, get “confused,” or edit unrelated files. [Mikhail Parakhin describes reaching the point where he can specify a scheduler and trust it to work, but still can’t let agents loose on established codebases due to collateral edits](https://substack.com/redirect/96882b75-d628-4d98-87ca-e28d6536c427?j=eyJ1IjoiMm5jaXEifQ.UVxyhsf-HdqTJcGLa9qNmFnHCmiz83YtfDe9Hjfqx5w). Andrew Karpathy [describes it as the threshold of coherence ](https://x.com/karpathy/status/2015883857489522876) -  said he went from writing 80% of his code manually to 80% via AI agents in just a few weeks and now he’s mostly programming in English and supervising machines. That’s a real shift in how we build software. What happens to the "10X engineer" - the ratio of productivity between the mean and the max engineer?
-++ 29 Jan 2026 | skills as a shared interface layer | Workflow logic moving from prompts into reusable skill files, via DeepLearning's course, LangChain and Hugging Face's upskill.
-**Skills are crystallizing into a shared interface layer:**
-A major theme is moving workflow logic out of prompts into reusable “skills” (files/folders of instructions, loaded on demand).
-- [Deep Learning launched an Agent Skills with Anthropic course](https://www.deeplearning.ai/short-courses/agent-skills-with-anthropic/)
-- LangChain is pushing “Skills” via progressive disclosure as lightweight, shareable units
-- [HF showcased “upskill”](https://t.co/phEVhVc0k5): convert strong-model traces into transferable skills, then evaluate impact
-→ https://www.deeplearning.ai/short-courses/agent-skills-with-anthropic/
-++ 29 Jan 2026 | context management for deep agents | As addressable task length grows, context management becomes critical to prevent context rot within finite memory.
-[Context Management for Deep Agents
-](https://x.com/masondrxy/status/2016548078346736014?s=20)
-As the addressable task length of AI agents continues to grow, effective context management becomes critical to prevent context rot and to manage LLMs' finite memory constraints.
-→ https://x.com/masondrxy/status/2016548078346736014
-++ 29 Jan 2026 | Yegge on software survival 3.0 | Shares Steve Yegge's essay; she later says she read it twice and is obsessed.
-Fatima: https://steve-yegge.medium.com/software-survival-3-0-97a2a6255f7b
-
-Ed Saperia: This is great
-
-Ed Saperia: good old yegge
-
-Fatima: I have read it twice
-
-Fatima: I am obsessed
-→ https://steve-yegge.medium.com/software-survival-3-0-97a2a6255f7b
-++ 31 Jan 2026 | local models on a Mac Studio | Shares a thread on running local models, because she wants Clawdbot running locally on her Mac Studio.
-https://x.com/krunkosaurus/status/2017125560988872979 - because I want to use local models on my Mac Studio for my clawdbot
-→ https://x.com/krunkosaurus/status/2017125560988872979
-++ 1 Feb 2026 | Clawdbot on DigitalOcean | Notes from running Clawdbot on DigitalOcean, praising the friendly chat UI but hitting API and skill limitations.
-notes playing around with Clawdbot on Digital Ocean via https://www.digitalocean.com/blog/moltbot-on-digitalocean
-
-- really interesting that they scaffolded a user friendly UI to chat with the bot
-
-some limitations in regards to the types of APIs you can use and the types of skills you can add
-→ https://www.digitalocean.com/blog/moltbot-on-digitalocean
-++ 2 Feb 2026 | two untagged link drops | Shares two x.com links with no commentary.
-https://x.com/pbteja1998/status/2017662163540971756?s=46
-
-https://x.com/francedot/status/2015178880215298557?s=46
-→ https://x.com/pbteja1998/status/2017662163540971756
-++ 4 Feb 2026 | ingesting Matrix into Onyx | Onyx lacks Matrix support but has an ingestion API; Ed says daily dumps would be easy, she worries about preserving context.
-Fatima: Onyx doesn’t seem to support matrix out of the box
-
-Ed Saperia: no but that would be a good project
-
-Fatima: true
-
-Fatima: they have an ingestion API
-
-Ed Saperia: grabbing all the matrix data every day and throwing it in will probably be very easy
-
-Fatima: yes
-
-Fatima: i was worried about preserving the context of chat/channel/person
-
-Ed Saperia: it comes as a big json file no? so it should be able to deal with that
-++ 5 Feb 2026 | Surge leaderboard | Shares the SurgeHQ model leaderboard.
-https://surgehq.ai/leaderboard
-→ https://surgehq.ai/leaderboard
-++ 12 Feb 2026 | GLM-5 scales for agentic tasks | GLM-5 grows to 744B parameters with sparse attention, targeting complex systems engineering and long-horizon agentic work.
-https://z.ai/blog/glm-5
-
-We are launching GLM-5, targeting complex systems engineering and long-horizon agentic tasks. Scaling is still one of the most important ways to improve the intelligence efficiency of Artificial General Intelligence (AGI). Compared to GLM-4.5, GLM-5 scales from 355B parameters (32B active) to 744B parameters (40B active), and increases pre-training data from 23T to 28.5T tokens. GLM-5 also integrates DeepSeek Sparse Attention (DSA), significantly reducing deployment cost while preserving long-context capacity.
-→ https://z.ai/blog/glm-5
-++ 13 Feb 2026 | political consciousness as perpetual quest | Shares Valerie Miller's paper on political consciousness.
-https://justassociates.org/wp-content/uploads/2022/02/political-consciousness-perpetual-quest-valarie-miller.pdf
-→ https://justassociates.org/wp-content/uploads/2022/02/political-consciousness-perpetual-quest-valarie-miller.pdf
-++ 14 Feb 2026 | MiniMax M25 release | Shares MiniMax's M25 announcement.
-https://www.minimax.io/news/minimax-m25
-→ https://www.minimax.io/news/minimax-m25
-++ 15 Feb 2026 | built a Matrix publisher bot | Bot fetches channel history, keeps emoji-tagged posts and threads, maps them to types and builds content.json as a reusable template.
-https://github.com/nwspk/matrix-publisher-bot
-
-built a matrix publisher bot that fetches the full message history of a channel, keeps only the emoji tagged posts and their threads, maps them to a type (`journal, link, field-note`) and crafts a `content.json` for the website. It's a "github template" so all fellows can use the template to generate their own fork and can adjust the content types for example.
-→ https://github.com/nwspk/matrix-publisher-bot
-++ 15 Feb 2026 | cohort site fellow landing pages | In-progress pull request rendering content.json into reading list, publications and explorations sections, vibe engineered and still buggy.
-https://github.com/nwspk/2025.newspeak.house/pull/37
-in progress build of individual landing pages on the cohort website that pull the data from the `content.json` of the matrix publisher bot and create a portfolio of the fellow's content. In my case, it follows the structure of the posts here:
-- *reading list* -> links + projects (or tools I'm interested in)
-- *publications* -> field notes + links to blog posts on substack
-- *explorations* -> questions + ideas
-
-need to test and debug a bit more as it was vibe engineered - and there's a few bugs I need to fix while keeping the functionality isolated enough that fellows can implement their own publisher + parser (within the site) for their pages.
-→ https://github.com/nwspk/2025.newspeak.house/pull/37
-++ 16 Feb 2026 | fran on awe and nuance | fran_galli notes a bias toward awe at modernist work that is just another conformity; Fatima still fixated on the neutrality guy.
-fran: Interesting to read your reflections! personally I find there is a bias sometimes to be in "awe" of modernist odd stuff that "does it differently" when maybe it is just another flavour of conformity. You reminded me of a BBC radio show doing political satire and they had this fake ad piece that was something like "Donate £10 today to teach a Gen Z the concept of nuance" ahahah I think it applies intergenerationally though
-
-Fatima: In hindsight, the man personally who ranted about “how objective and beautifully neutral the film was” occupied so much of my mind for hours later haha
-
-Fatima: I haven’t yet read any public critique of the movie
-++ 19 Feb 2026 | Ed on assuming someone built it | Ed finds it empowering to assume someone else has already done the thing.
-in some ways empowering to be able to assume someone else did the thing
-++ 2 Mar 2026 | Ed on imagination and prior art | Ed argues if you can assume someone already built your idea, imagination is the only limit on what you can bring forth.
-I mean, if you have an idea, and you can assume that someone will have done it already, there's no limit to what you can bring forth in the world if you have enough imagination :)
-++ 4 Mar 2026 | Yegge's Wasteland sequel | Steve Yegge's third instalment after Beads and Gas Town, on federated agent work systems.
-https://steve-yegge.medium.com/welcome-to-the-wasteland-a-thousand-gas-towns-a5eb9bc8dc1f
-
-Well, it's been a long 2 months, but it's finally here, the sequel to Gas Town. It's the third movie in my series: first Beads, then Gas Town, and now The Wasteland -- A Thousand Gas Towns. The biggest and best federated work system the world has ever seen.
-→ https://steve-yegge.medium.com/welcome-to-the-wasteland-a-thousand-gas-towns-a5eb9bc8dc1f
-++ 9 Mar 2026 | question: political calibration across models | After seeing Grok and Claude deliberate differently in awards iteration six, she asks whether RLHF political calibration generalises.
-from the results of our politech awards - iteration v6 - I've been wondering after seeing the deliberations from Grok vs Claude - does Sonnet 4's RLHF calibration around political statements and alignment exist in other models too. Will review the paper and then see if I can be inspired to test some of the models on the awards afterwards.
-++ 26 Mar 2026 | backlog of unwritten field notes | Lists twelve pieces she wants to write, including term reflections, clawclub, the birthday immigration system and sparkle bureaucracy.
-things I want to write about, but haven't gotten a chance!
-
-- first term reflections (in draft!)
-- second term reflections (must start!)
-- clawclub 1&2 and photos!
-- small vs big audiences and workshops
-- censorship + surveillance resistance comms workshop + game idea
-- lumina house takeover!
-- majority myth - book club with the author
-- the birthday immigration system!
-- data governance models and cow farmers!
-- what happens where there's transparency but no accountability
-- chalkboards and how we tell the world who we are - and why that's hard
-- sparkle bureaucracy
-++ 29 Mar 2026 | Gamithra suggests cohort agents | Project idea from Gamithra to run synthetic agents answering questions about the fellowship and prototypes at Ration Club.
-project idea from Gamithra - set up synthetic agents to answer questions about fellowship and prototypes at Ration Club so we can have fun :)
-++ 29 Mar 2026 | a group chat of mirror agents | Ed suggests putting an agent for every cohort member in one group chat; Aadi already asked to talk to his.
-Ed Saperia: you have an agent for everyone in the cohort now, you can have them all in a group chat and people can talk to them
-
-Fatima: Hahaha aadi asked to talk his mirror agent and now I really want to deploy it
-
-Ed Saperia: haha great idea
-++ 1 Apr 2026 | two untagged link drops | Shares two x.com links with no commentary.
-https://x.com/himanshustwts/status/2038924027411222533?s=46
-
-https://x.com/ellen_in_sf/status/2039098050837463504?s=46
-→ https://x.com/himanshustwts/status/2038924027411222533
-++ 1 Apr 2026 | the Claude Code source leak | Wants to play with the leaked Claude Code source, via Latent Space's writeup.
-gotto play around with the Claude code leak hehe
-https://www.latent.space/p/ainews-the-claude-code-source-leak
-→ https://www.latent.space/p/ainews-the-claude-code-source-leak
-
-Three longer pieces grew out of the room's thinking:
-
-- **The resistance is information** (26 Jul) — the essay that found the founder's loop: *"I know I can build something worthy of attention. I do not yet trust that my way of seeing is itself worthy of attention."* Naming the loop broke it.
-- **How networks are born — and second thoughts** — the session with Ed and James on mission + taste + letting people show up, and the weekend where the advice wouldn't settle.
-- **What I actually care about** (31 Jul) — the hour with Hannah that turned six months of thrash into the three registers and the two questions.
-
-#### Mentorship
-
-(@todo Fatima voice pass) Mentorship shaped this project at every turn. The near-daily thread with Ed Saperia — roughly 7,400 messages, from before the fellowship to this week — is where SB found its language: the March brand session that framed it as "an update of civic tech for AI," with "bureaucracy" as unexpected seriousness and vTaiwan-and-pol.is as the movement-plus-tool model; the awards-eve reassurance that "something sparkle bureaucracy themed" was enough; the observation from outside that Prototype Club was itself an SB project; the April principle that every interaction should leave you holding a durable artifact — now a leg of the experiment bar; and the July reframe that set up the endgame: SB is a container, and it needs a tangible project headlining it.
-
-Matt Stempeck turned "experiment lab" into the prototype's spine, and brought the librarian discipline and the strategy the network still runs on — small, high-density events over big panels; a public calendar that curates the ecosystem; "easy yes" asks; a portfolio that includes other people's work. Hannah O'Rourke turned six months of mission thrash into the three registers in a single hour, and her pilot offer grew into the Campaign Lab partnership. James Moulding helped me wrap my head around how networks are born; Peyman Owladi's nudge became the flagship question. One honest gap: sessions with Matt, Six, James, Peyman, and Hannah through the spring and summer shaped the work and are only partially documented — the record says so itself.
-
-#### The bookshelf
-
-*A few chapters into each so far — inspiration doesn't require completion. The field-notes rows I met only in excerpts.*
-
-| Book | From | What I learned |
-| --- | --- | --- |
-| *The Utopia of Rules* — David Graeber | Anouk Ruhaak | The canonical SB text by title alone — Graeber's "dead zones of the imagination" are exactly what sparkle attacks: the bet that forms, queues and stamps can carry play and meaning instead of dread. Half the project's name answers this book. |
-| *Radical Help* — Hilary Cottam | Chris Owen | "We architected our systems poorly and can radically re-imagine them." Relational welfare is the humane baseline: proof the civic encounter can be redesigned without any technology at all — SB's AI-native work has to at least clear that bar. |
-| *Incorruptible* — Eric Ries | Theodore Keloglou (also the house Book Club's pick, 16 Jun) | How institutions keep their integrity while changing — the question every SB experiment puts to the ritual it re-skins: what must not bend when the intent changes? |
-| *Who Thought This Was a Good Idea?* — Alyssa Mastromonaco | Hannah O'Rourke | Operations as care: the unglamorous staffwork that makes big rooms function. The mission-cards, reset-slips and print-pipeline end of SB is this book's territory. |
-| *The Employees* — Olga Ravn | Six Silberman | A crew reviewing their coexistence with their objects and with each other — the strangeness of working alongside non-human colleagues, read while building agent crews of my own. |
-| *Insufferable Tools* | Six Silberman | (@todo confirm the title and the note) |
-| *Talking About a Revolution* | (@todo who handed it over) | (@todo the note) |
-| *The Majority Myth* — Edmund Lewis Maklouf | Met the author at his launch (20 May) | The model-minority thread: what are my true motivations for this project? Still sitting with it |
-| *Seeing Like a State* — James C. Scott | Field notes, 14 Dec — excerpts | Why simplified, "legible" systems erase lived experience and reproduce inequality — the seed of the legibility-and-bureaucracy lane, and the ancestor of the skeleton-versus-intent bet |
-| *Exit, Voice, and Loyalty* — Albert O. Hirschman | Field notes, 14 Dec — excerpts | The precise frame for disengagement, silence and morale decay in collective projects — the cohort question, named |
-| *The Logic of Collective Action* — Mancur Olson | Field notes, 14 Dec — excerpts | Why people rationally disengage from shared projects they believe in — read the week the cohort's disengagement first stung |
-| *Reinventing Organizations* — Frédéric Laloux | Field notes, 6 Feb — excerpts | The red-to-teal paradigms behind "what are managers actually for" — and why permission-less cultures don't exist: even anarchist systems have rules |
-| *Anarchic Agreements* | Ed Saperia — field notes, 14 Dec; excerpts | A field guide to collective organising without formal authority — read against the house's own rule-light design |
-
-#### Prior art
-
-Both librarian check-ins with Matt Stempeck were completed — the conversations are in the field-notes export — and the prior-art work ran all year: a dedicated log, then a 100-case research sprint across six lanes. The consolidated table; rows marked *(field notes)* were discovered in the Matrix room:
-
-| Project | What it does | What I'm learning from it | How SB differs or is influenced by |
-| --- | --- | --- | --- |
-| [*Papers, Please*](https://papersplea.se/) — Lucas Pope | Puts the player behind an authoritarian border-inspection desk; documents, quotas, refusal | Policy should arrive as a felt interface, with every mundane stamp connected to a human consequence | SB intervenes in a real procedure; the game diagnoses the institution rather than improving it |
-| [Models All the Way Down](https://knowingmachines.org/models-all-the-way) | Visual investigation of how 5.8bn image–text pairs became LAION-5B | Make scale bodily comprehensible; trace mundane classifications to public consequences | SB aims at appeal/correction routes the investigation leaves unresolved |
-| [New World Summit](https://www.jonasstaal.nl/) — Jonas Staal | Alternative parliaments co-created with excluded political movements | Redesign the room, symbols and authorised participants together; let speculative administration harden into infrastructure | Influence: the courage to build alternative institutions as real, inhabitable rooms — the border authority and the spy agency are small parliaments of this kind |
-| [Project Re:form](https://civilla.org/work/project-reform-case-study) — Civilla | Statewide redesign of a benefits application and the staff practice around it | A form can become a respectful invitation without theatricality or AI | SB is AI-native; Re:form proves the low-tech baseline |
-| [JustFix Letter of Complaint](https://app.justfix.org/en/loc/) | Tenants generate and certify-send a formal repair-demand letter | The full pipeline matters; a person should leave with an artifact that changes how they can approach power | Influence: the durable-artifact leg of the experiment bar — a person should leave holding something that changes how they can approach power |
-| [Haqdarshak](https://www.haqdarshak.com/) | AI-supported entitlement discovery behind trained local agents | Let AI strengthen a trusted neighbour as the civic interface | Influence: the trusted-person-as-interface finding — SB's translation work aims at intermediaries too (campaigners, evaluators), not only end users |
-| [OpenCRVS](https://www.opencrvs.org/) | Open, offline-capable civil registration | Acknowledgement and status are emotional design — show a person they've been seen | Influence: acknowledgement and status as designed affect — SBA's visa classes and arrival tracking are a playful cover of this pattern |
-| [Buurtzorg](https://www.buurtzorg.com/) | Dutch home care via small self-managing teams | Technology can remove managerial layers and support professional discretion rather than automate judgment | Influence: structure itself as affective design — the network's small-events rhythm over big panels follows the same logic |
-| [vTaiwan](https://info.vtaiwan.tw/) + [pol.is](https://pol.is/) | Agenda-setting, opinion mapping, facilitated deliberation, point-by-point government response | Make disagreement navigable; separate consensus from popularity; require a visible institutional response | The movement-plus-tool precedent — SB may need a canonical tool or a portfolio of rituals |
-| [Habermas Machine](https://deepmind.google/research/publications/65220/) — DeepMind | AI drafts common-ground statements; participants criticise and it revises | Synthesis should be iterative and contestable; measure perceived clarity and bias instead of declaring neutrality | Influences Public Voice Customs: synthesis must stay iterative and contestable; SB adds the affective layer and the civic-capability requirement |
-| [Talk to the City](https://ai.objectives.institute/talk-to-the-city-1) | LLM turns testimony into navigable clusters linked to source voices | Contestability: clusters retain links to underlying material | SB treats felt experience as a first-class claim |
-| [Document Assembly Line](https://suffolklitlab.org/) — Suffolk LIT Lab | Guided interviews → assembled court forms → e-filing | Durable, open, shared legal infrastructure with real institutional adoption | SB researches the felt experience the record says is missing: whether the process reduced fear or humiliation |
-| [Pathfinder](https://www.mobilepathways.org/pathfinder) — Mobile Pathways | AI immigration case intelligence for legal-service orgs | AI capacity built *for* trusted intermediaries rather than replacing them | The technology currently sparkles for the professional intermediary; SB targets the resident's encounter |
-| [Clear My Record](https://codeforamerica.org/) — Code for America | Government-initiated bulk record clearance | Sparkly precisely because a humiliating ritual disappears and the burden moves back to the institution | SB insists on notice and correction — invisible automation can become another opaque system |
-| [HRC Explorer Grants](https://gateway.hrc.govt.nz/funding/ideas-funding/2026-explorer-grants) | Anonymous short application, threshold review, qualified lottery | Replaces false-precision ranking — an honest institutional response to uncertainty | Affect is not explicitly designed here; SB designs it |
-| [Helsinki Summer Streets / UrbanistAI](https://site.urbanistai.com/helsinki-summer-streets-1) | Residents and planners manipulate generated images as shared planning objects | Generative imagery as a shared object, not a design oracle | SB requires reception evidence before affect claims |
-| [Rahvakogu / People's Assembly](https://kogu.ee/en/activity/peoples-assembly/) — warning case | Estonian citizens' assembly whose parliamentary handoff failed | A strong participatory process can reduce trust when the institution fails to close the handoff | SB treats the institutional handoff as part of the experience |
-| Consult (the Humphrey suite) — UK Gov | Theme frameworks per consultation question; inspectable analyst dashboards | Human-inspectable theme mapping as the safe shape for AI consultation analysis | SB differs: it aims at the felt encounter of consultation, not only the analyst's dashboard — Public Voice Customs starts where Consult stops |
-| Cambridge Design Code + [Go Vocal](https://www.govocal.com/) | AI thematic summaries of open-text planning feedback, staff-checked against source | Staff verification against source is the contestability step | Influence: staff verification against source as the contestability step — mirrored in Project Mirror's human-approval gates |
-| [Policy Synth](https://policysynth.ai/) — NJ AI Task Force | Workers rank AI-caused problems; agents evolve policy proposals | Worker-ranked problems as the input to agentic policy generation | SB differs: keeps affect and legitimacy central where Policy Synth optimises the pipeline; the jury-and-constitution work is the shared ground |
-| [Decidim](https://www.decidim.barcelona/) / [CONSUL](https://consuldemocracy.org/) | Municipal participation infrastructure at scale (€30m Barcelona, €100m Madrid budgets) | Participation infrastructure that reaches real allocation decisions | SB differs: experiments-as-releases rather than platform-first — Decidim is the kind of infrastructure a matured flagship could plug into |
-| [FixMyStreet](https://www.fixmystreet.com/) — mySociety | Report a problem, route it to the responsible authority, publish the status trail | Public status trail as accountability | Influence: the public status trail as accountability — SBA's live dashboard and Conference Pulse's visible participation borrow the pattern |
-| [LiquidFeedback](https://liquidfeedback.org/) | Liquid democracy software | Delegation, revocation, and voting operationalised as civic infrastructure | An SB version would focus on the felt ritual and trust comparison, not only the software |
-| [Creative Bureaucracy Festival](https://creativebureaucracy.org/) | Festival around public-sector imagination | There is an existing audience for optimistic bureaucratic reform | SB is more explicitly AI-native, experimental, and prototype-led |
-| [OneTeamGov](https://oneteamgov.uk/) | Public-sector reform community | Useful adjacent community and reform energy | SB uses more theatrical, AI-native, artifact-based experiments |
-| [Civic Tech Field Guide](https://directory.civictech.guide/) | Directory and taxonomy of civic technology | Helps classify the project and test novelty | SB should become legible enough to be added as a pattern or project |
-| [PipResist](https://pipresist.uk/) — Campaign Lab | Turns voice notes into government consultation responses | Lowering the barrier to civic voice is a live, adjacent build | Public Voice Customs focuses on the receiving side: making volume, substance, and uncertainty legible without authenticity policing |
-| [Who Targets Me](https://whotargets.me/en/) *(field notes)* | Crowdsourced transparency for online political ads | — | Influence: transparency tooling born at Newspeak House — the house lineage SB continues |
-| [Permission Slip](https://app.civictech.guide/p/permission-slip/) *(field notes)* | Consumer tool for exercising data rights | — | Influence: an agent exercising rights on your behalf prefigures Mirror Commons' consent machinery |
-| GOV.UK Notify & Forms *(field notes)* | Shared government notification and form platforms | Legibility: how systems demand structured, interoperable inputs | Influence: the legibility lane — how systems demand structured, interoperable inputs is the skeleton SB re-skins |
-| [The Fallacy of AI Functionality](https://facctconference.org/static/pdfs_2022/facct22-3533158.pdf) (FAccT 2022) *(field notes)* | Paper: AI harms often stem from systems that simply don't work | — | Influence: functionality-first scepticism became SB's honesty norm — demo what works, log what broke |
-| Negotiating the Algorithm — ETUC manual *(field notes)* | Union handbook for bargaining over algorithmic management | — | Influence: making algorithmic power legible to the people it manages — kin to the moment register |
-| [Digital Statecraft Manifesto](https://digitalstatecraft.academy/) *(field notes)* | Manifesto/network on statecraft in the digital era | "Go find out who these people are" | Watch-list: possible allies for the govtech horizon — "go find out who these people are" |
-
-#### Inspirations
-
-**The constellation** — ten projects we're inspired by: *Papers, Please* · Models All the Way Down · New World Summit · Project Re:form · JustFix · Haqdarshak · OpenCRVS · Buurtzorg · vTaiwan · the Habermas Machine.
-
-What the hundred cases taught, distilled:
-
-- Affect is broader than delight.
-- Status is affective infrastructure.
-- Sparkle may remove a ritual rather than decorate it.
-- Technology often works best behind a trusted person, not as the sole civic interface.
-- Staff relief is useful evidence — but it is not evidence that a resident felt heard.
-- The clearest warning pattern is affective legitimacy without recourse.
-
-**The movements lane** — each with its ingredient of sparkle:
-
-| Movement | Ingredient of sparkle |
-| --- | --- |
-| Glitter Revolution (#NoMeCuidanMeViolan) | Material that behaves politically — the affective device physically marks power and survives as a distributed visual language |
-| Operation Inflation (Portland inflatables) | An inhabitable counter-role — costume changes participation without pretending confrontation is safe |
-| LASTESIS, *Un violador en tu camino* | A replicable score — choreography turns individualised harm into collective accusation, allowing local translation |
-| Otpor!'s Milošević barrel | A designed institutional dilemma — humour from mapping the opponent's response options |
-| Mothers of Plaza de Mayo | A counter-procedure — garment, place and cadence create status and memory where the state withholds both |
-| ACT UP | Affect joined to procedural literacy — graphic force and grief leading into organised expertise |
-| Women of Liberia Mass Action for Peace | Symbol that escalates into leverage — a counter-uniform connects witness to negotiation pressure |
-| Hīkoi mō te Tiriti / the parliamentary haka | Living protocol confronting official procedure — embodied authority meets a precise legislative document |
-
-And the warning study: Holograms for Freedom (Spain, 2015) — technological spectacle while bodies risked sanction. Spectacle is not participation.
 
 ## 05 | The Roadmap
 
