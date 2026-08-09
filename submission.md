@@ -456,104 +456,1536 @@ Working in the open wasn't a publishing chore — it was the method. The thinkin
 
 Before the diary was a diary, it was a room: `field-notes: fatima`, public by design, with an explicit contract that anything posted could become public. **294 field notes · 15 arXiv papers · 10 external repos · ~30 tools logged.** The room's own marker taxonomy tells the story of a year's attention: 📔 field notes ×137, 🔗 links ×41, 📥 papers ×37, 💾 tools ×20, 💡 ideas ×15, ❓ questions ×4. The notes themselves, in order, by kind:
 
-+++ Field journal
-+ 14 Dec 2025 | field notes room opens publicly | Fatima launches a public Matrix field-notes channel with open history so bots can read it and posts can be shared. | - | "welcome to my field notes channel! it took a few tries to get this right, but it's a public channel with history set to anyone - so it can be used by bots and shared with everyone" — some posts migrated from the previous encrypted channel.
-+ 14 Dec 2025 | Mastodon hires for trust and safety | Field note on Mastodon hiring a Community Director focused on Trust and Safety to reflect its many communities' needs. | - | "It's so interesting that Mastodon, as an organization, is choosing to hire a Community Director and specifically for Trust & Safety." Quotes the hire: "My top priority is to ensure that Mastodon's plans for these areas reflect the needs of Mastodon's many different communities."
-+ 14 Dec 2025 | Hannah Aubry and decentralised social platforms | Curiosity about Hannah's career path, plus Fatima's older Open Source Summit talk on Mastodon, Bluesky and decentralised protocols. | https://www.linkedin.com/posts/hannahaubry_i-am-thrilled-to-share-the-news-that-i-joined-ugcPost-7396472394892091392-H1Nl | "I'm curious to see how this plays out and connect with Hannah about her plans!" She was previously on the Board, with Open Source and DevRel experience. Two years ago Fatima gave an Open Source Summit talk on Mastodon, Bluesky and their protocols. Interested to see them invest in community.
-+ 14 Dec 2025 | homework from Matt Stempeck | Pick one interesting thing per Civic Tech Guide category; she flags open source AI, algo transparency, audits, AI literacy. | https://app.civictech.guide/categories | Matt: "Tell me about 1 thing you find interesting from each section in our next check-in. If you rule it out entirely, just skip it." Her list: ethical AI safety space, governance, public sector AI, open source AI, deepfakes, algo transparency, audits, AI literacy.
-+ 14 Dec 2025 | homework from Six | Two readings: field-building and the epistemic culture of AI safety, and The Fallacy of AI Functionality. | https://firstmonday.org/ojs/index.php/fm/article/view/13626 | Two readings assigned by Six: field-building and the epistemic culture of AI safety, plus The Fallacy of AI Functionality.
-+ 14 Dec 2025 | cline-bench benchmarks real engineering problems | Cline's new benchmark initiative evaluates agents on real open-source repository work rather than lab puzzles, continuing their transparency commitment. | https://cline.bot/blog/cline-bench-initiative | "Lots of enthusiasm around the release of cline-bench this week - the mission is to benchmark agents in real-world engineering problems and not lab puzzles. And only open source repositories are eligible. Cline's whole thing has always been open source and transparency - so it's great to see them committed to that."
-+ 14 Dec 2025 | CrowdStrike finds hidden AI-coded vulnerabilities | Research showing DeepSeek-R1 produces severely vulnerable code up to fifty percent more often on politically sensitive CCP topics. | https://www.crowdstrike.com/en-us/blog/crowdstrike-researchers-identify-hidden-vulnerabilities-ai-coded-software/ | Quotes the research: when DeepSeek-R1 receives prompts on topics the CCP likely considers politically sensitive, the likelihood of it producing code with severe security vulnerabilities increases by up to 50 percent.
-+ 14 Dec 2025 | community interest companies explained | Government guidance on CICs, learned via Fred's session on music, artists and open source; companies required to benefit community. | https://www.gov.uk/government/publications/community-interest-companies-how-to-form-a-cic/community-interest-companies-guidance-chapters | "Learned about CIC from Fred's session on music and artists and open source. Type of company that is required to benefit the community rather than make a profit"
-+ 14 Dec 2025 | Ed on CIC tradeoffs | Ed Saperia calls CICs a halfway house between company and charity, weaker on tax and funding, but publicly registered. | - | Edward Saperia: "sort of a halfway between a regular company and a charity"; "generally considered less good because you don't get the same tax advantages and it's not eligible for lots of kinds of funding"; "it's cool that there's a public register though"
-+ 14 Dec 2025 | question: roles that aren't committees | Asks what non-committee role structures look like; Ed answers individual roles, because committees make responsibility unclear. | - | She asks what structures of roles exist that aren't committees. Ed: "Individual roles!" She probes — a finite set like "website maintainer" or "ration club manager," based on duties or broader? Ed: "The idea of roles is that they make responsibility clear. Committees don't do that very well."
-+ 14 Dec 2025 | Biden executive order 14110 | Links the 2023 order on safe, secure and trustworthy AI requiring developers to share safety testing results. | https://www.federalregister.gov/documents/2023/11/01/2023-24283/safe-secure-and-trustworthy-development-and-use-of-artificial-intelligence | "Issued in October 2023, this order aimed to create guidelines for responsible AI use in government, require developers to share safety testing results, and promote trustworthy AI."
-+ 14 Dec 2025 | anarchy reading list from Ed | Anarchic Agreements field guide to collective organising, plus Uri Gordon on anarchism and the politics of technology. | https://www.abebooks.co.uk/9781629639635/Anarchic-Agreements-Field-Guide-Collective-162963963X/plp | Reading on anarchy from Ed: Anarchic Agreements, a field guide to collective organising, and Uri Gordon's "Anarchism and the Politics of Technology" from the Anarchist Library.
-+ 14 Dec 2025 | swiss cheese model for AI safety | arXiv taxonomy and reference architecture for multi-layered runtime guardrails around foundation-model agents, hard because agent behaviour is non-deterministic. | https://arxiv.org/abs/2408.02205 | A taxonomy and reference architecture for multi-layered guardrails of foundation-model based agents. Designing effective runtime guardrails is challenging because of agents' autonomous and non-deterministic behaviour, and because multiple pipeline stages and artifacts — goals, plans, tools — complicate things further.
-+ 14 Dec 2025 | introduction to AI safety textbook | Shares the free online AI Safety, Ethics, and Society book as a foundational reference. | https://www.aisafetybook.com/ | Shares the free online AI Safety, Ethics, and Society book as a foundational reference.
-+ 14 Dec 2025 | RL-learned context compression | Rajan's writeup on training Qwen to invent its own tenfold context compression so research agents can run for days. | https://www.rajan.sh/llm-compression | Quotes: "in order to have research agents that can run for days, we need context compaction"; "i used RL to have LLMs naturally learn their own 10x compression! Qwen learned to pack more info per token (ie use Mandarin tokens, prune text)"
-+ 14 Dec 2025 | NSF national AI research resource | Links the NAIRR focus area page on US public AI research infrastructure. | https://www.nsf.gov/focus-areas/ai/nairr | Bare link to the NSF NAIRR focus area page on US public AI research infrastructure.
-+ 14 Dec 2025 | claude skill for concise output | Shares a community Claude skill file that constrains agents to concise output. | https://github.com/NTCoding/claude-skillz/blob/main/concise-output/SKILL.md | Bare link to a community Claude skill file that constrains agents to concise output.
-+ 14 Dec 2025 | bitter lesson of LLM extensions | Sawyer Hood argues hand-rolled agent and plugin scaffolding collapses under complexity; models will learn to compose capabilities themselves. | https://www.sawyerhood.com/blog/llm-extension | "as we bolt agents, tools, and plugins onto LLMs, the real bitter lesson is that most hand-rolled extension systems collapse under complexity, and the long-term win will be letting models themselves learn how to adapt and compose capabilities on the fly."
-+ 14 Dec 2025 | New York algorithmic pricing law | New York's Algorithmic Pricing Disclosure Act took effect November 2025, requiring disclosure when personal data sets an individual's price. | https://www.kelleydrye.com/viewpoints/blogs/ad-law-access/new-yorks-algorithmic-pricing-disclosure-law-takes-effect | On 10 November 2025 New York's Algorithmic Pricing Disclosure Act took effect, requiring companies using consumer-specific data to set prices to inform consumers when prices are algorithmically determined. Part of the omnibus budget bill; reflects emerging legislative interest in surveillance pricing.
-+ 14 Dec 2025 | surveillance pricing rabbit hole begins | Field note on a NYT opinion video about dynamic pricing that led her deep into individualised surveillance pricing harms. | https://www.nytimes.com/video/opinion/100000010545598/dynamic-pricing-algorithms.html | "I loved the way the story was crafted in this piece - about how dynamic pricing is going to target and stalk us in order to squeeze as much money as we're able to pay." Found it on TikTok; it led her down a rabbit hole of surveillance pricing where two people see different prices at the same moment. "there might be an opportunity here on signaling that this is likely already at play in the market and will cause real harms."
-+ 14 Dec 2025 | F-Secure on hidden online premiums | Explainer showing two shoppers can see different prices at the same moment based on device, postcode or location. | https://www.f-secure.com/en/partners/insights/surveillance-pricing-is-quietly-raising-the-cost-of-online-shopping | "two people can look at the same product at the same moment yet see completely different prices - not because of sales, stock levels, or errors, but simply because one is shopping on a Mac, living in a particular zip code, or standing in a store's parking lot."
-+ 14 Dec 2025 | Karpathy on Software 2.0 | Karpathy argues AI is best understood as a new computing paradigm automating digital information processing, easily automating what you can verify. | https://x.com/karpathy/status/1990116666194456651 | "AI has been compared to various historical precedents: electricity, industrial revolution, etc., I think the strongest analogy is that of AI as a new computing paradigm (Software 2.0) because both are fundamentally about the automation of digital information processing."
-+ 14 Dec 2025 | Matt on research strategy | Mentoring notes on hosting small niche events, coffee chats, landscape analysis, expert interviews and mapping levers of change. | - | Notes from mentoring with Matt: host your own small events, keep descriptions narrow and niche, six deeply interested people beat a big panel, bring one big name. Coffee chats with targeted questions and an explicit ask. Go deep then broaden; map levers of change, tools, where your solution fits. Landscape analysis via expert interviews on what works, what hasn't, and where the real gaps are.
-+ 14 Dec 2025 | spark test across AI subfields | Rates roughly twenty AI governance, technical and adjacent areas by personal spark; evals, RAG, agentic workflows and legibility score highest. | - | After talking to Matt and reviewing civic tech guide categories, she collected a "spark test list" and reacted to each scope with notes on meaning, examples and research backing. Five stars: model evals and red-teaming, RAG architectures, agentic workflows, AI political economy, legibility and bureaucracy. Zero interest: open-source licensing, institutional design, edge inference, TEEs, climate-aligned scaling, anthropological analyses.
-+ 14 Dec 2025 | three clusters of topics | Groups sparks into system-level evaluation and safety, governance as technical constraint, and AI access and alternatives. | - | Cluster A, system-level evaluation and safety: how do complex AI systems fail, especially in surveillance-like ways, when evaluations don't catch these. Cluster B, governance as technical constraint: rules become interfaces and eval methods, governance becomes architecture. Cluster C, AI access and alternatives: "Access = oversight. Oversight = safety." Useful to come back to later.
-+ 14 Dec 2025 | stage one exploration and discovery plan | December plan to map emergent behaviours, eval blind spots and governance constraints, aiming for candidate problems by January. | - | "My instincts are leaning towards Cluster A and Cluster B … Ever since I've started reading on surveillance algorithms, I've been a little obsessed!" Goal: a Problem Space Map, 5-7 logged real-world examples, and 3-5 candidate problems that feel real and energizing, so she can start coffee chats and landscape interviews in January.
-+ 14 Dec 2025 | Ed suggests algorithmic management | Ed points to algorithmic management, the ETUC trade union manual on negotiating the algorithm, and the Digital Statecraft manifesto. | https://www.etuc.org/sites/default/files/publication/file/2025-09/Negotiating%20the%20Algorithm%20-%20Trade%20Union%20Manual_ETUC%20%28updated%29.pdf | Ed: "You might be interested in Algorithmic Management … Similar to surveillance algorithms, but with a focus on the rights of the people being managed. Six will have things to say on this." He also suggests engaging the AI in government folks via Andreas, and finding out who is behind the Digital Statecraft manifesto.
-+ 14 Dec 2025 | Aadi shares tech and law syllabus | Cornell Tech/Law Colloquium plus an INFO1200 syllabus covering technology, law and surveillance curricula. | https://tlc.cis.cornell.edu/ | Reading from Aadi on broader tech, law and surveillance curricula, plus the Cornell Tech/Law Colloquium on new developments at the intersection of law and information technology.
-+ 14 Dec 2025 | what makes a community a community | Field note on grief when cohort members disengage, and whether communities need shared responsibility rather than just shared membership. | - | "I've been thinking a lot about the engagement of the cohort and why I feel upset when people disengage." The fellowship was "a sort of group project to build and govern a small community." She believes communities require stewardship, care, discomfort and collective responsibility, and that fluid responsibility without accountability is the antithesis of that. "Is this grief that the shared project is being abandoned?"
-+ 14 Dec 2025 | Hirschman on exit and voice | Exit, Voice, and Loyalty as a framework for disengagement, silence and morale decay in collective projects. | https://www.hup.harvard.edu/books/9780674276604 | "Provides a precise framework for understanding disengagement, silence, and morale decay in collective projects."
-+ 14 Dec 2025 | Olson on collective action | The Logic of Collective Action explains why people rationally disengage from shared projects they believe in. | https://www.hup.harvard.edu/books/9780674537514 | "Explains why people rationally disengage from shared projects even when they believe in them."
-+ 14 Dec 2025 | Scott on seeing like a state | Seeing Like a State on how simplified or rule-free systems erase lived experience and reproduce inequality. | https://yalebooks.yale.edu/book/9780300078152/seeing-like-a-state/ | "Helps explain why simplified or rule-free systems often erase lived experience and reproduce inequality."
-+ 14 Dec 2025 | three person teams and power | Field note arguing a developer, product manager and user researcher distributes power better than stacking a team with developers. | - | In Peyman's Leading Tech Projects class, given three people, others proposed two developers and a PM. "I strongly disagreed. My discomfort with that structure isn't about undervaluing engineering - it's about power." Her counterproposal: one developer, one product manager, one user researcher. "minimal teams make power dynamics more visible, not less."
-+ 14 Dec 2025 | permission inside a rule-free house | Field note on needing structural legitimacy to act at Newspeak House, and how marginalisation teaches you to seek cover. | - | "Newspeak House is designed as a space without fixed rules … In theory, no one needs permission to act. And yet … I notice that I do need permission." Not a lack of confidence: "As someone who has experienced marginalization, I've learned through real consequences that acting without permission in the world often carries risk … that teaches you to seek cover: consensus, legitimacy, shared responsibility."
-+ 14 Dec 2025 | Matrix rooms must be unencrypted for bots | mstem and Ed advised to use public-to-space rooms with readable history, because bots cannot operate in encrypted channels. | - | mstem to Ed: "I think I finally fixed the channel issues. For bot related channels or notes like these, we should recommend public to space and anyone can read history at anytime instead of encrypted because bots can't run then." Fatima: "thank you!!"
-+ 14 Dec 2025 | reread the Tyranny of Structurelessness | Alex Vince recommends revisiting Jo Freeman's essay with a new lens after the governance discussions. | https://www.jofreeman.com/joreen/tyranny.htm | "based on this, it might be good to read the Tyranny of Structurelessness with a new lens (as recommended by alex vince)"
-+ 15 Dec 2025 | Arnstein's ladder of citizen participation | Arnstein's 1969 paper names informing, consultation and placation as tokenism, matching her sense of procedural futility. | https://www.historyofsocialwork.org/1969_ENG_Ladderofparticipation/1969%2C%20Arnstein%2C%20ladder%20of%20participation%2C%20original%20text%20OCR%20C.pdf | "What you're calling procedural futility is basically: the process invites voice but doesn't route it into consequential decisions … you talk, the document grows, and then the authority proceeds as originally intended. That maps cleanly onto Arnstein's ladder: rungs like Informing / Consultation / Placation are tokenism."
-+ 15 Dec 2025 | Nancy Fraser on rethinking recognition | Fraser shifts recognition from a cultural identity model to a status model removing institutional barriers to peer participation. | https://newleftreview.org/issues/ii3/articles/nancy-fraser-rethinking-recognition | Fraser shifts from a culturalist Hegelian model based on positive self-image to a Weberian model based on inclusion in an institutionalized status order, contrasting the identity model that valorizes group identity with a status model aimed at removing institutional barriers to participation as peers.
-+ 15 Dec 2025 | shadow governance and unpaid labour | Field note on informal governance falling to whoever does the labour, and occupying a spokesperson role nobody officially recognises. | - | "In groups like ours that reject formal authority and prefer informal structures, governance doesn't just disappear, it sort of gets distributed to those who hold the most labor." She occupies "this role that doesn't exist" — articulating stakes, lobbying faculty, warning early. "Being a spokesperson is like living on two islands and you being the bridge." Closes: "What happens when you try to legitimize a role inside a system that may not believe legitimacy itself exists?"
-+ 15 Dec 2025 | legitimacy of the governance module | Field note on cohort members refusing that any house rule could bind them, blocking real debate about policy design. | - | She keeps hearing "Even if you were dictator and there was a signed charter, why would we follow the rules?" and the reply "well that's politics." "we keep trying to debate policies without ever settling what would make a rule binding in the first place." Reading Weber and Ostrom: "Authority doesn't persist because it's declared - it persists because people treat it as legitimate."
-+ 15 Dec 2025 | three framing questions for system behaviour | Where model behaviour ends and system behaviour begins, what developers only think they control, and which failures evals miss. | - | System boundaries: where does model behavior end and system behavior begin, and what components introduce new attack or inference surfaces. Control illusion: what do developers think they control versus what actually controls outputs. Evaluation blind spots: which failures are invisible to standard model evals, and what would you need to log or instrument to even notice them.
-+ 16 Dec 2025 | multi-agent architecture and context limits | Field note asking whether legacy systems can be agent-legible, what agent-friendly architecture looks like, and how handoff should work. | - | After Peyman's class on "Do we need developers?", the question became which parts can be delegated to AI. "If you have strong documentation, clean architecture, and well-written code, is that enough for agents to align with an existing system, especially one that's 10+ years old? Or do agent-friendly systems need to be designed differently from the start?" "Right now, it feels like handoff is the missing piece."
-+ 17 Dec 2025 | Anthropic's multi-agent research system | Shares Anthropic's engineering writeup on their orchestrator-plus-parallel-researchers architecture. | https://www.anthropic.com/engineering/multi-agent-research-system | Bare link to Anthropic's engineering writeup on their orchestrator-plus-parallel-researchers architecture.
-+ 17 Dec 2025 | handoff is the hard part | Field note arguing execution is easy and systems dodge agent-to-agent handoff of intent by centralising it in orchestrators. | https://www.anthropic.com/engineering/multi-agent-research-system | Presenting to engineers at a large financial institution, "the term that kept coming up in questions wasn't reasoning or autonomy. It was handoff." By handoff she means transfer of state, intent, assumptions and responsibility, not just artifacts. "the hard part of multi-agent systems isn't getting agents to do work. Execution is the easy bit." Protocols like MCP "make context accessible, not transferable."
-+ 17 Dec 2025 | question: failures between components | Chained RAG, agents, tools and evaluators each pass their own evals yet combine into hallucinations and reinforced mistakes. | - | "Where do failures show up between components in multi agent systems, and why don't our evals see them?" Modern systems chain RAG to agents to tools to evaluators and each passes its own evals; combined, they produce hallucinations and agents reinforcing each other's mistakes. "What kinds of stress tests would expose reasonable locally, harmful globally outcomes?"
-+ 17 Dec 2025 | question: where sensitive inferences happen | Systems never trained on race, health or income still act as if they know them by combining ordinary signals. | - | "Where in real AI systems do sensitive inferences actually happen, even when no model is explicitly trained to make them?" Systems combine location, activity time and spending to route someone into a higher-risk category. "How could we test or log for indirect inference without requiring access to model internals?"
-+ 18 Dec 2025 | Ed asks how to test supervisor pattern | Ed wonders how you would systematically test the shortcomings of the supervisor orchestration pattern. | - | Ed Saperia: "I wonder how you'd go about systematically testing the shortcomings of the supervisor pattern, do you have any ideas?"
-+ 19 Dec 2025 | when optimism feels like social risk | Field note on groups where critique becomes posture and hope reads as naivety, draining her sense of purpose. | - | "There's a thing that happens in groups that I care about where critique becomes the dominant point of conversation. Not critique as analysis or disagreement, but critique as posture … over time, there's a hostility to hope." She finds her optimism read as naivety. "when optimism becomes socially risky, I start to feel like I don't fit."
-+ 5 Jan 2026 | recursive language models manage context | Prime Intellect on storing inputs in Python and delegating to sub-agents instead of loading everything into the main context. | https://www.primeintellect.ai/blog/rlm | "Recursive Language Models let agents manage massive context by storing inputs in Python and delegating work to sub-agents instead of loading everything into the main model's context - early tests show gains on long-context task (environments)."
-+ 12 Jan 2026 | building platforms above the loop | Work discussion on humans setting intent and constraints while AI generates, tests and validates, escalating only at decision points. | - | "Something we're discussing at work is how do we built platforms for AI that are above the loop." The loop today: humans coordinate intent, break down work, deal with agent failures. Above the loop, "humans set intent, constraints, and direction" and AI systems "generate, test, revise, and validate changes" and only escalate at decision points. "the human is deciding what should exist."
-+ 12 Jan 2026 | self-improving agents roundup | Yohei Nakajima's survey of academic projects where an agent edits and improves its own code or policies. | https://yoheinakajima.com/better-ways-to-build-self-improving-ai-agents/ | "academic projects where an agent edits and improves its own code or policies, not just responses."
-+ 12 Jan 2026 | are agent swarms actually better now | Ed is surprised swarm approaches never worked well; Fatima notes they make mess and only run on Claude Code. | - | Ed: "I've always been surprised that these don't get better results, but, maybe they do now." Fatima: "it feels new to me(!)", "but i may also be falling for the hype hehe", "they're also creating a lot of mess", "plus they mostly only work with claude code at the moment", "and i would need infinite tokens".
-+ 12 Jan 2026 | ralph explained for idiots | Shares a joke thread explaining the ralph looping technique. | https://x.com/agrimsingh/status/2010412150918189210 | "ralph for idiots: the only explanation you need" — she adds "(is joke)".
-+ 20 Jan 2026 | Slipstream protocol for agent communication | Hugging Face writeup on cutting agent communication costs by leveraging existing language rather than inventing a machine protocol. | https://huggingface.co/blog/anthonym21/slipstream-for-agent-communication | "A new protocol called Slipstream … cuts through the noise to dramatically reduce communication costs and make large-scale agent systems economically viable … the solution isn't to invent a new machine language, but to leverage the one we already have." She adds: "this is very cool!"
-+ 20 Jan 2026 | models reason as an internal committee | Paper showing reasoning models simulate persona-like internal dialogue; steering a surprise feature doubled accuracy. She is intrigued. | https://arxiv.org/abs/2601.10825 | Researchers show LLMs like DeepSeek-R1 and QwQ-32B improve reasoning by simulating internal dialogues among persona-like perspectives; steering a "surprise" discourse feature doubled reasoning accuracy. "AN INTERNAL COMMITEEE … Need to read this soon because I'm INTRIGUED"
-+ 26 Jan 2026 | Ed: council of experts is old | Ed notes council of experts has been a named prompting method for a while. | - | Ed Saperia: "Council of Experts has been a named method for a while I think"
-+ 28 Jan 2026 | Clawdbot and Moltbot local agents | mstem shares the Verge report; Ed says the creator visited Newspeak House and suggests code club, mstem advises a VM. | https://www.theverge.com/report/869004/moltbot-clawdbot-local-ai-agent | mstem shares the Verge report. Ed: "The creator of this was at NH last week … We should probably be playing with it … Maybe a good focus for code club on Monday." mstem: "play with it on a virtual machine, methinks" and "i'm excited and terrified by these things". Ed: "but if we're not the people to experiment with them then who is?"
-+ 29 Jan 2026 | Ollama launch announcement | Shares Ollama's launch blog post. | https://ollama.com/blog/launch | Bare link to Ollama's launch blog post.
-+ 29 Jan 2026 | Kimi swarms versus supervisor pattern | Mini field note: Kimi trains coordination via parallel-agent RL so collaboration emerges, unlike an explicit inspectable orchestrator. | - | "the difference is less about having many agents and more about how coordination works." Kimi's swarm is trainable orchestration via Parallel-Agent RL: "Coordination isn't written out as rules; it's something that emerges from training." The supervisor pattern has an explicit orchestrator whose logic is more inspectable. "Still very much a note-to-self!"
-+ 29 Jan 2026 | Kimi K2.5 and agent swarms | Kimi's K2.5 release blog plus Simon Smith asking whether swarms plus Agent Skills scale across an enterprise. | https://www.kimi.com/blog/kimi-k2-5.html | Kimi's K2.5 release blog, alongside Simon Smith: "I've been thinking about the best way to organize agents in step-by-step workflows where each agent has skills defined by Agent Skills file, and to then scale this across an enterprise. Today Kimi dropped its K2.5 model along with Agent Swarms, and I thought: could this be it?"
-+ 29 Jan 2026 | Simon Willison tests parallel planning | Gist testing Kimi's multi-agent planning claims by breaking a Datasette S3 upload plugin into ten parallel tasks. | https://gist.github.com/simonw/ee2583b2eb5706400a4737f56d57c456 | "As a more interesting test, I decided to exercise the claims around multi-agent planning with this prompt: I want to build a Datasette plugin that offers a UI to upload files to an S3 bucket … Break this down into ten tasks suitable for execution by parallel coding agents."
-+ 29 Jan 2026 | AI shopping tools raise pricing stakes | Tech Policy Press on big tech AI shopping agents raising the stakes for surveillance pricing laws. | https://www.techpolicy.press/big-techs-ai-shopping-tools-raise-stakes-for-surveillance-pricing-laws/ | Bare link to Tech Policy Press on big tech's AI shopping tools raising the stakes for surveillance pricing laws.
-+ 29 Jan 2026 | Karpathy on the coherence threshold | Shares Karpathy's post about crossing into mostly supervising agents rather than writing code himself. | https://x.com/karpathy/status/2015883857489522876 | Bare link to Karpathy's post about crossing the threshold into mostly supervising agents rather than writing code himself.
-+ 29 Jan 2026 | Clawdbot is the rebrand | Realises Clawdbot and Moltbot are the same viral open-source assistant that proactively messages you, and she missed it going viral. | https://www.reddit.com/r/LocalLLM/comments/1qmrwxl/clawdbot_the_ai_assistant_that_actually_messages/ | "aha! this is Clawdbot rebranded!" Quotes: "Clawdbot is an open-source AI assistant (9K+ GitHub stars) with a different approach: it proactively messages you instead of waiting for prompts." Then: "I was so busy with work things last week, I completely this missed this going viral!"
-+ 29 Jan 2026 | build tools that help people think | Sam Altman on human slop as well as AI slop, and building genuinely good brainstorming partners. | https://www.youtube.com/watch?v=Wpxv-8nG8ec | "try to build tools that help people think better." Sam at the OpenAI town hall: "It's popular to talk about AI slop, but there's also a huge amount of human-generated slop in the world … we should explicitly try to build tools that help people think better."
-+ 29 Jan 2026 | swyx on the AI Paul Graham | Reflections arguing thought-partner agents fail as RAG on essays; a five percent accurate PG would still be valuable. | - | "Swyx's Reflections in SmolAi were really poignant, sharing them here to read again." Many AI Paul Graham bots "flopped because they mostly did RAG or finetunes on his essays. Information Retrieval isn't what PG does." Accuracy for an AI PG "is not 90%, not even 50% - even a 5% accurate PG is acceptable and valuable."
-+ 29 Jan 2026 | weak-to-strong generalization | Shares OpenAI's weak-to-strong superalignment work as a parallel to building thought partners smarter than us. | https://openai.com/index/weak-to-strong-generalization/ | Shared alongside swyx's point that where we currently treat agents as junior engineers or research interns, we want to build a PG agent smarter than us, and the path may be building smart agents for simpler use cases and laddering up.
-+ 29 Jan 2026 | coding agent phase shift is real | Agentic coding loops are a step change but agents skip clarifying questions and edit unrelated files in established codebases. | - | "Coding agent phase shift is real, but messy." Founders and engineers are running agentic loops yet hitting new failure modes: agents that don't ask clarifying questions, get confused, or edit unrelated files. Karpathy went from 80 percent manual code to 80 percent via agents in weeks. "What happens to the 10X engineer?"
-+ 29 Jan 2026 | skills as a shared interface layer | Workflow logic moving from prompts into reusable skill files, via DeepLearning's course, LangChain and Hugging Face's upskill. | https://www.deeplearning.ai/short-courses/agent-skills-with-anthropic/ | "Skills are crystallizing into a shared interface layer: A major theme is moving workflow logic out of prompts into reusable skills (files/folders of instructions, loaded on demand)." DeepLearning launched an Agent Skills with Anthropic course; HF showcased upskill: convert strong-model traces into transferable skills.
-+ 29 Jan 2026 | context management for deep agents | As addressable task length grows, context management becomes critical to prevent context rot within finite memory. | https://x.com/masondrxy/status/2016548078346736014 | "As the addressable task length of AI agents continues to grow, effective context management becomes critical to prevent context rot and to manage LLMs' finite memory constraints."
-+ 29 Jan 2026 | Yegge on software survival 3.0 | Shares Steve Yegge's essay; she later says she read it twice and is obsessed. | https://steve-yegge.medium.com/software-survival-3-0-97a2a6255f7b | Shares Steve Yegge's essay. Ed: "This is great … good old yegge". Fatima: "I have read it twice" and "I am obsessed".
-+ 31 Jan 2026 | local models on a Mac Studio | Shares a thread on running local models, because she wants Clawdbot running locally on her Mac Studio. | https://x.com/krunkosaurus/status/2017125560988872979 | "because I want to use local models on my Mac Studio for my clawdbot"
-+ 1 Feb 2026 | Clawdbot on DigitalOcean | Notes from running Clawdbot on DigitalOcean, praising the friendly chat UI but hitting API and skill limitations. | https://www.digitalocean.com/blog/moltbot-on-digitalocean | "notes playing around with Clawdbot on Digital Ocean … really interesting that they scaffolded a user friendly UI to chat with the bot … some limitations in regards to the types of APIs you can use and the types of skills you can add"
-+ 2 Feb 2026 | two untagged link drops | Shares two x.com links with no commentary. | https://x.com/pbteja1998/status/2017662163540971756 | Two bare x.com links posted with no commentary.
-+ 4 Feb 2026 | ingesting Matrix into Onyx | Onyx lacks Matrix support but has an ingestion API; Ed says daily dumps would be easy, she worries about preserving context. | - | "Onyx doesn't seem to support matrix out of the box." Ed: "no but that would be a good project" and "grabbing all the matrix data every day and throwing it in will probably be very easy." She replies: "i was worried about preserving the context of chat/channel/person".
-+ 5 Feb 2026 | Surge leaderboard | Shares the SurgeHQ model leaderboard. | https://surgehq.ai/leaderboard | Bare link to the SurgeHQ model leaderboard.
-+ 6 Feb 2026 | before managers, look at organizations | Field note on Laloux's red to teal paradigms, which management activities are really needed, and why permission-less cultures do not exist. | http://www.reinventingorganizations.com/ | "Before we can really analyze the role of managers in organizations, need to talk about organizations themselves." Walks Laloux's red, amber, orange, green and teal paradigms, noting organizations regress under market pressure. "I don't believe permission-less cultures exist … Even anarchist systems have rules." The real question is "what managers are actually for".
-+ 7 Feb 2026 | growing up amongst my heroes | Field note on invisible civic tech labour in New York, and heroes who became peers, mentors and friends ten years later. | - | "Civic tech can be quite a small world … growing up amongst my heroes was quite difficult." Volunteering at BetaNYC, cleaning up after Civic Hall events, ordering stickers, picking up pizza — "work that I gave no credit to - because it felt invisible in terms of on paper achievements." "Ten years later, my heroes are now my friends, my mentors, and my confidantes."
-+ 7 Feb 2026 | Taiwan digital democracy, ten years later | Field note on meeting Audrey Tang in 2017, g0v, Open Culture Foundation, and being a bridge between systems. | - | In 2017 she volunteered at Personal Democracy Forum and greeted Audrey Tang, then watched her keynote on digital democracy, polis and disinformation. "I was absolutely enamored." A coffee chat turned to purpose: "perhaps my purpose is being a facilitator of projects and people, or a bridge between systems that do not understand each other."
-+ 12 Feb 2026 | GLM-5 scales for agentic tasks | GLM-5 grows to 744B parameters with sparse attention, targeting complex systems engineering and long-horizon agentic work. | https://z.ai/blog/glm-5 | GLM-5 targets complex systems engineering and long-horizon agentic tasks, scaling from 355B parameters to 744B and pre-training data from 23T to 28.5T tokens, integrating DeepSeek Sparse Attention to cut deployment cost while preserving long-context capacity.
-+ 13 Feb 2026 | who taught us the rules | Draft field note on administrative burden, her father bending systems, sedimented legitimacy, and designing rules before they harden. | - | "The first time that I noticed systems meant to support people in fact actually excluded them was the free lunch in elementary school." Research calls this administrative burden. Her father "saw rules as flexible, power as attainable" and negotiated a scholarship that did not exist. "We live inside sediment." Newspeak House is special because "we are being handed the chance to design systems before they harden."
-+ 13 Feb 2026 | political consciousness as perpetual quest | Shares Valerie Miller's paper on political consciousness. | https://justassociates.org/wp-content/uploads/2022/02/political-consciousness-perpetual-quest-valarie-miller.pdf | Bare link to Valerie Miller's paper on political consciousness as a perpetual quest.
-+ 14 Feb 2026 | MiniMax M25 release | Shares MiniMax's M25 announcement. | https://www.minimax.io/news/minimax-m25 | Bare link to MiniMax's M25 announcement.
-+ 14 Feb 2026 | disagreeing with Koyaanisqatsi | Field note resisting the film's single moral arc, defending cars, planes and transit as immigrant mobility rather than alienation. | - | At a Newspeak screening the audience called it "so truthful," "objective." "I felt something else." "I saw highways filled with cars meant to disillusion me, and thought about how, for immigrant families like mine, cars represented economic mobility and access." "I don't reject the film's concerns. I reject the exclusivity."
-+ 15 Feb 2026 | built a Matrix publisher bot | Bot fetches channel history, keeps emoji-tagged posts and threads, maps them to types and builds content.json as a reusable template. | https://github.com/nwspk/matrix-publisher-bot | "built a matrix publisher bot that fetches the full message history of a channel, keeps only the emoji tagged posts and their threads, maps them to a type (journal, link, field-note) and crafts a content.json for the website. It's a github template so all fellows can use the template to generate their own fork."
-+ 15 Feb 2026 | cohort site fellow landing pages | In-progress pull request rendering content.json into reading list, publications and explorations sections, vibe engineered and still buggy. | https://github.com/nwspk/2025.newspeak.house/pull/37 | "in progress build of individual landing pages on the cohort website that pull the data from the content.json of the matrix publisher bot and create a portfolio of the fellow's content." "need to test and debug a bit more as it was vibe engineered."
-+ 16 Feb 2026 | fran on awe and nuance | fran_galli notes a bias toward awe at modernist work that is just another conformity; Fatima still fixated on the neutrality guy. | - | fran_galli: "personally I find there is a bias sometimes to be in awe of modernist odd stuff that does it differently when maybe it is just another flavour of conformity." Fatima: "the man personally who ranted about how objective and beautifully neutral the film was occupied so much of my mind for hours later haha."
-+ 19 Feb 2026 | Ed on assuming someone built it | Ed finds it empowering to assume someone else has already done the thing. | - | Ed Saperia: "in some ways empowering to be able to assume someone else did the thing"
-+ 2 Mar 2026 | Ed on imagination and prior art | Ed argues if you can assume someone already built your idea, imagination is the only limit on what you can bring forth. | - | Ed Saperia: "I mean, if you have an idea, and you can assume that someone will have done it already, there's no limit to what you can bring forth in the world if you have enough imagination :)"
-+ 4 Mar 2026 | Yegge's Wasteland sequel | Steve Yegge's third instalment after Beads and Gas Town, on federated agent work systems. | https://steve-yegge.medium.com/welcome-to-the-wasteland-a-thousand-gas-towns-a5eb9bc8dc1f | "it's been a long 2 months, but it's finally here, the sequel to Gas Town. It's the third movie in my series: first Beads, then Gas Town, and now The Wasteland - A Thousand Gas Towns."
-+ 9 Mar 2026 | one-shot prompt surprise | Journal on a single prompt generating a whole functional Politech Awards ranking site, leaving her impressed but overwhelmed by lost control. | - | "I used the following prompt - and it one-shotted a whole site. It was fully functional and very cool - but made me stop and wonder - is this what I wanted to build?" She uses agentic tech daily "but I am generally really hesitant to relinquish full control. It was the first time that I felt simultaneously impressed and overwhelmed by the results!"
-+ 9 Mar 2026 | question: political calibration across models | After seeing Grok and Claude deliberate differently in awards iteration six, she asks whether RLHF political calibration generalises. | - | "from the results of our politech awards - iteration v6 - I've been wondering after seeing the deliberations from Grok vs Claude - does Sonnet 4's RLHF calibration around political statements and alignment exist in other models too."
-+ 26 Mar 2026 | backlog of unwritten field notes | Lists twelve pieces she wants to write, including term reflections, clawclub, the birthday immigration system and sparkle bureaucracy. | - | "things I want to write about, but haven't gotten a chance!" First and second term reflections, clawclub 1 and 2 with photos, a censorship and surveillance resistance comms workshop and game idea, lumina house takeover, majority myth book club with the author, the birthday immigration system, data governance models and cow farmers, transparency without accountability, chalkboards, and sparkle bureaucracy.
-+ 29 Mar 2026 | Gamithra suggests cohort agents | Project idea from Gamithra to run synthetic agents answering questions about the fellowship and prototypes at Ration Club. | - | "project idea from Gamithra - set up synthetic agents to answer questions about fellowship and prototypes at Ration Club so we can have fun :)"
-+ 29 Mar 2026 | a group chat of mirror agents | Ed suggests putting an agent for every cohort member in one group chat; Aadi already asked to talk to his. | - | Ed: "you have an agent for everyone in the cohort now, you can have them all in a group chat and people can talk to them." Fatima: "Hahaha aadi asked to talk his mirror agent and now I really want to deploy it." Ed: "haha great idea".
-+ 1 Apr 2026 | two untagged link drops | Shares two x.com links with no commentary. | https://x.com/himanshustwts/status/2038924027411222533 | Two bare x.com links posted with no commentary.
-+ 1 Apr 2026 | the Claude Code source leak | Wants to play with the leaked Claude Code source, via Latent Space's writeup. | https://www.latent.space/p/ainews-the-claude-code-source-leak | "gotto play around with the Claude code leak hehe"
++++ Field notes
+++ 14 Dec 2025 | Mastodon hires for trust and safety | Field note on Mastodon hiring a Community Director focused on Trust and Safety to reflect its many communities' needs.
+Field Note - Trust & Safety at Mastodon
+
+It's so interesting that Mastodon, as an organization, is choosing to hire a Community Director and specifically for Trust & Safety.
+
+My top priority is to ensure that Mastodon’s plans for these areas reflect the needs of Mastodon’s many different communities.
+++ 14 Dec 2025 | surveillance pricing rabbit hole begins | Field note on a NYT opinion video about dynamic pricing that led her deep into individualised surveillance pricing harms.
+Field Note: [NYtimes Opinion - video - Goodbye, Price Tags. Hello, Dynamic Pricing.](https://www.nytimes.com/video/opinion/100000010545598/dynamic-pricing-algorithms.html?searchResultPosition=7)
+
+I loved the way the story was crafted in this piece - about how dynamic pricing is going to target and stalk us in order to squeeze as much money as we're able to pay based on needs the algorithm anticipates through other smart devices or connected services.
+
+I came across this video piece on tiktok and it led me down a rabbit hole of "surveillance pricing" where retailers and platforms will use algorithms and personal data (device type, location, browsing history, past purchases, things you've said aloud to your smart home, etc) to set _individualized_ prices - so two people might see completely different prices at the exact same time for the exact same item!
+
+In many ways, this undermines transparency and fairness since consumers (a) may not be away that they're being charged more or (b) may not be aware why they're being charged more!
+Most pieces talk about how regulators need to do more - but there might be an opportunity here on signaling that this is likely already at play in the market and will cause real harms.
+→ https://www.nytimes.com/video/opinion/100000010545598/dynamic-pricing-algorithms.html
+++ 14 Dec 2025 | Matt on research strategy | Mentoring notes on hosting small niche events, coffee chats, landscape analysis, expert interviews and mapping levers of change.
+Mentoring Meeting with Matt on Research Strategy - Notes:
+
+**Event Strategy**
+
+- Host your own small events and invite the specific people you want to go deeper with.
+- Keep the event description narrow and niche to attract the right crowd.
+- A tight group of six deeply interested people beats a larger, more superficial panel.
+- Could it be an event series?
+- Consider hallway-track style encounters (e.g., Dan from CFA) as a model for organic depth.
+- Once you specify your focus, faculty can help connect you to their networks.
+- Bring in at least one “big name” whose presence would be meaningful for your team and attendees.
+
+**Formats & Precedents to consider**
+
+- Practitioner-focused, research-aligned format.
+- Loosely structured brainstorms and “brain trust” feedback sessions.
+- People enjoy showing up to help shape something early.
+- Newspeak House as a reference for a shorter, high-density event.
+- Coffee chats:
+
+    - Come prepared with targeted questions and a notebook.
+    - Make the ask explicit: e.g., informing product direction or contributing to your research.
+
+**Exploration & Mapping**
+
+- Go deep first, then broaden.
+- Identify the key emerging “lights” in the space.
+- It’s still early enough that you can help shape the field.
+- As activity appears, start mapping:
+
+    - Levers of change
+    - Tools
+    - Where your solution fits
+
+**Landscape Analysis**
+
+- Clarify who’s doing what and where.
+- Track major players, their approaches, and their theories of change.
+- Situate yourself through expert interviews:
+
+    - What’s effective?
+    - What has and hasn’t worked?
+    - Where is the field heading?
+    - What interventions are promising?
+    - What problems are already solved?
+    - Where are the real gaps—especially ones shaped by your viewpoint and skillset?
+
+**Community**
+
+- Identify the communities you want to work with and start building relationships through events, chats, and mapping work.
+++ 14 Dec 2025 | spark test across AI subfields | Rates roughly twenty AI governance, technical and adjacent areas by personal spark; evals, RAG, agentic workflows and legibility score highest.
+**Spark Test!**
+
+After talking to Matt earlier this week and going over the civic tech guide categories and some of the Deep Research I ran with LLMs on "areas in the periphery of AI", I collected a "spark test list" to react to different scopes.
+
+I left myself some notes on why I reacted a certain way. Some of the Applied areas I'm more familiar. For others, I briefly looked up:
+
+- what it means
+- a concrete example
+- technical connections
+- a representative source/research backing
+
+(Matrix doesn't support Markdown tables so lots of text coming)
+
+---
+
+**✨ GOVERNANCE / SAFETY**
+
+**Model evals & red-teaming**
+
+• Description: Testing risky or dangerous model behaviors.
+
+• Example: ARC Evals; UK AISI Public Evaluations.
+
+• Spark: ⭐⭐⭐⭐⭐
+
+• Notes: Dangerous-behavior tests, identity inference, misuse evals, benchmark building, surveillance algorithms.
+
+**Compute governance**
+
+• Description: Policies for access to advanced compute.
+
+• Example: US BIS Export Controls; EU Chips Act.
+
+• Spark: ⭐
+
+• Notes: Not into infra; tiny curiosity about hardware geopolitics.
+
+**Open-source licensing**
+
+• Description: Rules for using open-model weights.
+
+• Example: OpenRAIL Licenses.
+
+• Spark: 🚫
+
+• Notes: No interest.
+
+**Open-source AI alternatives**
+
+• Description: Open-weight model ecosystems.
+
+• Example: Mistral; Falcon; Meta Llama.
+
+• Spark: ⭐⭐⭐
+
+• Notes: Curious who trains open models + how they evolve.
+
+**Global coordination**
+
+• Description: International safety alignment + incident sharing.
+
+• Example: G7 Hiroshima AI Safety Process.
+
+• Spark: ⭐⭐⭐⭐
+
+• Notes: Interested in shared benchmarks + global reporting.
+
+**Safety standards**
+
+• Description: Rules for evaluations, audits, and compliance.
+
+• Example: NIST AI RMF; ISO/IEC 42001.
+
+• Spark: ⭐⭐
+
+• Notes: Important but slow adoption; relevant when tied to eval specs.
+
+**Institutional design**
+
+• Description: Creating new AI oversight bodies.
+
+• Example: EU AI Office (2025).
+
+• Spark: 🚫
+
+• Notes: No interest.
+
+**Public-sector AI workflows**
+
+• Description: How governments adopt and use AI.
+
+• Example: Estonia KRATT AI.
+
+• Spark: ⭐⭐⭐
+
+• Notes: Interesting but slow-moving.
+
+---
+
+**⚙️ APPLIED TECHNICAL**
+
+**RAG architectures**
+
+• Description: Retrieval + generation pipelines.
+
+• Example: Microsoft GraphRAG.
+
+• Spark: ⭐⭐⭐⭐⭐
+
+• Notes: Full technical space; deeply compelling.
+
+**Interpretability**
+
+• Description: Understanding model/system behavior.
+
+• Example: Anthropic Mech-Interp; OpenAI System Behavior Profiles.
+
+• Spark: ⭐⭐
+
+• Notes: Interested in agent debugging + retrieval attribution (not circuits-level).
+
+**Interoperability (MCP)**
+
+• Description: Protocols for cross-tool coordination.
+
+• Example: Model Context Protocol (MCP).
+
+• Spark: ⭐⭐⭐⭐
+
+• Notes: Very into systems interfaces + shared protocols.
+
+**Model editing**
+
+• Description: Modify model knowledge without retraining.
+
+• Example: ROME; MEMIT.
+
+• Spark: ⭐⭐⭐
+
+• Notes: Curious about targeted knowledge changes.
+
+**Synthetic data**
+
+• Description: AI-generated datasets.
+
+• Example: NVIDIA NeMo synthetic data.
+
+• Spark: ⭐⭐
+
+• Notes: Mild interest, mostly for reasoning augmentation.
+
+**Agentic workflows**
+
+• Description: Multi-step, tool-using systems.
+
+• Example: OpenAI Systems Agents.
+
+• Spark: ⭐⭐⭐⭐⭐
+
+• Notes: Huge spark; core of your daily work but still technically exciting.
+
+**Edge inference**
+
+• Description: Running models locally on-device.
+
+• Example: Apple Neural Engine.
+
+• Spark: 🚫
+
+• Notes: Not a point of interest.
+
+**Secure compute / TEEs**
+
+• Description: Enclave-based privacy-preserving execution.
+
+• Example: Azure Confidential Compute (SGX).
+
+• Spark: 🚫
+
+• Notes: Not compute-focused.
+
+---
+
+**🌍 ADJACENT**
+
+**AI political economy**
+
+• Description: How power + access shape AI ecosystems.
+
+• Example: Data & Society AI Supply Chain Research.
+
+• Spark: ⭐⭐⭐⭐⭐
+
+• Notes: Interested in access barriers, inference pricing, multi-agent compute workarounds, surveillance as a business model
+
+**Legibility & bureaucracy**
+
+• Description: How systems demand structured, interoperable inputs.
+
+• Example: [GOV.UK](http://gov.uk/) Notify & Forms.
+
+• Spark: ⭐⭐⭐⭐⭐
+
+• Notes: Deep interest in interoperability, eval design, hallucination cleanup.
+
+**Identity & epistemic justice**
+
+• Description: Bias + inference harms.
+
+• Example: MIT Gender Shades.
+
+• Spark: ⭐
+
+• Notes: Important work but not your expertise.
+
+**Global South perspectives**
+
+• Description: AI outside Western contexts.
+
+• Example: Masakhane NLP.
+
+• Spark: 🚫
+
+• Notes: No expertise.
+
+**Climate-aligned scaling**
+
+• Description: Energy constraints on model scaling.
+
+• Example: Stanford CRFM Energy Reports.
+
+• Spark: 🚫
+
+• Notes: Not your focus.
+
+**Law & rights frameworks**
+
+• Description: Legal requirements shaping technical AI behavior.
+
+• Example: EU AI Act; NYC Local Law 144.
+
+• Spark: ⭐⭐⭐⭐
+
+• Notes: Interested in explanation rights, interoperability regulation, surveillance laws, eval constraints, biometric regulation
+
+**Anthropological analyses**
+
+• Description: How humans adapt around AI systems.
+
+• Example: Data & Society STS ethnography.
+
+• Spark: 🚫
+
+• Notes: Not an area of interest.
+++ 14 Dec 2025 | three clusters of topics | Groups sparks into system-level evaluation and safety, governance as technical constraint, and AI access and alternatives.
+Field Note: Clusters of Topics ✨️
+
+Cluster A --> System-Level Evaluation & Safety
+
+**Core question:**
+
+How do complex AI systems (RAG + agents + tools) fail especially in surveillance-like ways?
+
+**Included subdomains:**
+
+• Model evals & red-teaming 4⭐️
+
+• Agentic workflows 4⭐️
+
+• RAG architectures 4⭐️
+
+• System-level interpretability 4⭐️
+
+**Civic Tech Guide alignment:**
+
+• Ethical AI Safety Space
+
+• Algo Transparency / Explainability
+
+• AI Literacy (RAG/agent debugging)
+
+**Why this matters:**
+
+System behaviors → real harms (identity inference, hallucination chains, autonomy drift).
+
+Evaluations don’t catch these.
+
+Cluster B --> Governance as Technical Constraint
+
+**Core question:**
+
+How do laws and institutions enforce transparency and safety through technical requirements?
+
+**Included subdomains:**
+
+• Legibility & bureaucracy 4⭐️
+
+• AI political economy 4⭐️
+
+• Law & rights frameworks 4⭐️
+
+• Global coordination 4⭐️
+
+**Civic Tech Guide alignment:**
+
+• Governance
+
+• Public Sector AI
+
+• Audits
+
+• Algo Transparency (policy → compliance)
+
+**Why this matters:**
+
+Rules → interfaces + eval methods.
+
+Governance becomes architecture.
+
+Cluster C --> AI Access & Alternatives
+
+**Core question:**
+
+Who gets to build and evaluate AI and who gets locked out?
+
+**Included subdomain:**
+
+• Open-source AI alternatives 4⭐️
+
+**Civic Tech Guide alignment:**
+
+• Open Source AI
+
+• Ethical AI Safety Space (broader evaluability)
+
+**Why this matters:**
+
+Access = oversight.
+
+Oversight = safety.
+
+---
+
+useful to come back to these later on after I've gone down a route.
+++ 14 Dec 2025 | stage one exploration and discovery plan | December plan to map emergent behaviours, eval blind spots and governance constraints, aiming for candidate problems by January.
+**Field Note - Stage 1: Exploration & Discovery**
+
+My instincts are leaning towards Cluster A (system-level behavior evaluation) and Cluster B (governance as technical constraint). I feel like I may be obliged to support to Cluster C (open source)because of my background, but I worry that area moves slow. May deprioritize for now and chase some other sparks.
+
+Ever since I've started reading on surveillance algorithms, I've been a little obsessed!
+
+I’m discovering they’re part of a broader class of systems where AI makes impactful decisions we can’t fully observe or evaluate. I’m mapping that category so I understand where surveillance fits in and which gaps matter most.
+
+My goal for the next few weeks is test whether these instincts hold up under actual exposure to the existing projects and research and papers! I want to be at a point in January where I can start scheduling coffee chats and doing some of those landscape analysis interviews (with a more clear scope)
+
+**Timeline:** December 2025
+**Purpose:** Gather enough understanding of the space to make a confident scope decision.
+
+**Goals:**
+
+Build a foundational understanding of:
+
+• emergent behaviors in multi-component AI systems (agents + RAG, etc.)
+
+• current evaluation methods and where they fall short
+
+• transparency and accountability requirements (e.g surveillance algorithms, dynamic pricing)
+
+**Map the problem space by collecting:**
+
+• projects, research sources, and case studies
+
+• real-world examples where behaviors exceed what we can observe or govern
+
+• sparks of “ugh someone needs to fix this”
+
+**Expected outputs by end of December:**
+
+• A Problem Space Map summarizing behaviors, evaluation blind spots, governance constraints, and actors
+
+• 5–7 logged examples where these tensions show up in the wild
+
+• 3–5 candidate problems that feel both real and energizing
+
+Which emergent AI decision behaviors, especially those that infer sensitive information and adjust outcomes dynamically, are hardest to observe, evaluate, or challenge today, and what governance and technical mechanisms could make them accountable?
+
+_originally posted on Dec 12, 2025_
+++ 14 Dec 2025 | what makes a community a community | Field note on grief when cohort members disengage, and whether communities need shared responsibility rather than just shared membership.
+Field Note: What makes a community a community? Is it shared membership, or shared responsibility?
+
+I’ve been thinking a lot about the engagement of the cohort and why I feel upset when people disengage. Perhaps it’s a personal thing, such as a feeling of abandoned.
+
+When I really consider that, however, it’s more complex. The fellowship, to me, was a sort of group project to build and govern a small community that is, as Ed often says, like a small country. I believe communities require stewardship, care, explicit communications, discomfort (because we can build anything if we are all comfortable), and collective responsibility.
+
+However, the format by which our cohort is running (in some ways by “default”) - with fluid responsibility and not accountability, to me feels like… the anthithesis to how I implicitly understand communities to be built.
+
+Betrayal is not the right word here, but I certainly feel that when no one is “required” to steward and no one “owes” each other anything, then we can’t build a community we actually want to be a part of, that requires intentional work.
+
+It’s a complex feeling. I empathize with the reasons for disengaging while also feel hurt by the “dropping of the group project”.
+
+Is this grief that the shared project is being abandoned? Grief for the version of the cohort I imagined you we could potentially build together where we would get past the everyday polices that we know to be unhelpful (like codes of conduct) and reimagine what those systems could look like with a new lens to take back to the real world?
+
+I’m trying to decouple my instinct to hold the community together from my excitement about the fellowship itself, but I suspect people like me will always yearn for communities where everyone is bought in.
+Maybe learning to take small steps… and confronting how people actually engage is part of this political education and I just don’t see it because I’m in it.
+
+And there may still be ways for the core group to model community with more structure or experimentation.
+
+How do I keep modeling the kind of community I believe in, while also protecting myself from “hurt” and accepting that people will engage at their own limits and that this, too, is part of… politics?
+
+_originally posted on Dec 8, 2025_
+++ 14 Dec 2025 | three person teams and power | Field note arguing a developer, product manager and user researcher distributes power better than stacking a team with developers.
+Field Note: Three Person Teams, Power, and the Shape of Leadership
+
+In our Leading Tech Projects class, Peyman ran an exercise asking what it actually takes to lead a new technology project. We mapped out all the roles and capabilities we could think of, then clustered and prioritized them into tiers. After that, we were given a constraint: _you only get three people on the team. What do those roles look like?_
+
+People proposed many roles, including two developers and one product manager. I strongly disagreed.
+
+My discomfort with that structure isn’t about undervaluing engineering - it’s about power. When you stack a team with developers and remove explicit roles for user research or design, decisions about UX, accessibility, and user experience don’t disappear. They get absorbed by whoever is closest to implementation. In practice, that often means developers making product and design decisions by default, not because they’re best positioned to do so, but because the structure leaves no alternative.
+
+My counterproposal was a team composed of:
+
+- one developer
+- one product manager
+- one user researcher
+
+This structure distributes power more deliberately. The developer can focus on technical implementation and system design. The product manager can take responsibility for delivery, coordination, supplier management, disaster recovery, and organizational tooling. And the user researcher can protect the integrity of user needs, grounding decisions in research, accessibility testing, and data rather than intuition or convenience.
+
+This proposal isn’t theoretical. It’s influenced by civic tech fellowship models like Code for America, where small, cross-functional teams are designed to cover not just skills, but overlapping accountabilities. In those settings, the user researcher often acts as a counterweight to purely technical optimization, ensuring that “what can be built” doesn’t eclipse “what should be built.”
+
+What I’m really arguing here is that minimal teams make power dynamics more visible, not less. The question isn’t whether trade-offs will happen, it’s whether we design teams that acknowledge them explicitly.
+++ 14 Dec 2025 | permission inside a rule-free house | Field note on needing structural legitimacy to act at Newspeak House, and how marginalisation teaches you to seek cover.
+Field Note: Permission, Invisible Norms, and Acting Inside a "Free" System
+
+After sharing some of my feelings about disengagement and governance with people in the cohort, I found myself in an unexpected conversation about permission. (Well, Ed was responsible for bringing my hopes and dreams and discomfort with informal roles and expectations - but that's a side note)
+
+Newspeak House is designed as a space without fixed rules. Every year, the cohort is meant to define its own norms. We’re all peers. In theory, no one needs permission to act. In fact, many cohort members feel empowered by this - that they don't need anyone's permission, that they'll just do what they want. I really admire that!
+
+And yet, despite understanding the idea logically and wanting to be that person, I notice that I do need permission.
+
+What was difficult to convey is that don’t experience this as a lack of confidence. Although that is feedback that I receive constantly in corporate contexts. I know I can lead. I know I’m capable.
+
+But when it comes to starting programs, proposing policies, or changing how the house operates, I feel a strong pull toward structure: a document, a principle, a process I can point to. Something that legitimizes action.
+
+Part of this may come from my vocation. As an engineer, I’m comfortable with rules, systems, and explicit structure. Ambiguity can feel blocking rather than freeing.
+
+But I don’t think that’s the full story.
+
+I suspect this instinct is more deeply political. As someone who has experienced marginalization, I’ve learned through real consequences that acting without permission in the world often carries risk. In many systems, people like me are penalized more harshly for stepping outside informal or unspoken boundaries. Over time, that teaches you to seek cover: consensus, legitimacy, shared responsibility.
+
+What’s interesting is that this instinct disappears when harm or safety is at stake. In moments involving psychological safety or code-of-conduct violations, I don’t feel the need for permission. I act, because the moral imperative is clear. And I act because I have the experience to know to act in the best interests of the victim - I’ve done this before.
+
+But in cases of governance or experimentation, I hesitate, not because I don’t care - in fact I care a LOT, but because I’m still carrying the outside world into a space that claims to be free of it.
+
+This makes me wonder whether I’m still operating as if systemic oppression is present, even in a place intentionally designed to suspend it. And if that’s true, what does it mean for prefigurative politics? If we’re trying to model new forms of governance inside the house, but we arrive with deeply internalized norms shaped by unequal systems, how do we unlearn those things? Is the design of the course meant to challenge the invisible norms that we bring with us?
+
+Now I’m wondering how invisible histories or invisible norms shape behavior, even in spaces that imagine themselves as neutral. And before anyone says it - no space is ever truly neutral. Even in a space like Newspeak House, with the explict standard of being without rules and everyone can set rules - there are explicit structures of privelege (e.g the people who feel they can act w/o any structural legitimacy prove that).Is learning to act differently is part of the political education I came here for? Because if it is, and if I walk away from this year knowing when to ignore the structures that limit or oppress me - that would certainly be both political and wonderful.
+
+_originally posted on Dec 12, 2025_
+++ 15 Dec 2025 | shadow governance and unpaid labour | Field note on informal governance falling to whoever does the labour, and occupying a spokesperson role nobody officially recognises.
+Field Note: Shadow Governance
+
+I’ve expressed this in the retro document, but in some of the readings from the course material and in conversations with Ed, I’ve been thinking more about this. In groups like ours that reject formal authority and prefer informal structures, governance doesn’t just disappear, it sort of gets distributed to those who hold the most labor.
+
+Someone is still doing all the work - housekeeping, offering advice, legitimacy, managing ration club or the guest room, or lobbying. When that labor is informal, it often goes unacknowledged unless you see it happen (like someone putting away the dishes every day or running a workshop after you’ve been talking about a thing for ages), and it becomes “Shadow Governance”.
+
+What I’m noticing is that I occupy this role that doesn’t exist. I took it on naturally and I take full accountability for that - I articulate the different stakes and tensions that I hear from people, I lobby the faculty for procedural change and share the implicit conflicts before they happen, I try to warn the institution about frustration when it still feels early.
+
+I believe the group benefits from this work because it legitimizes the documentation that we as a group provide via other channels. This arguably the most political thing we’ve done - collected, synthesized and presented our feedback and demands. I did my best to try and socialize those demands with faculty that I trust - only today was I told that this is called “lobbying”.
+
+The group benefits from this work, but does not recognize it as an official role. At the time when the role was proposed, recognizing it led to several uncomfortable questions about who would have influence, who would have power over information, and why was that needed?
+
+I think this is also why… I take on a larger emotional cost when things go wrong. Not because the failure was in any way my fault, but because I implicitly try to hold the group together. This was painfully visible to me in the governance retro. When two people exited the process, I felt this collapse of my worst case scenario. I had a feeling this retrospective wouldn’t work - I tried to voice those concerns early. I had this instinct that the group needed cohesion and that would be tricky to resolve.
+
+As I’ve been reading some of the papers assigned to us in Six’s class, I’m learning that political theory focuses on formal authority. Our informal systems in the house depend on so much “integration labor” - work that keeps people from Exiting - because they feel they can't use their voice. I guess I felt responsible for (even though I’m actively trying not to do this) the coherence of the group and in turn, their experience with Ed, and in that moment, I could not find a way to repair it.
+
+Someone asked me today if I wanted to be spokesperson for recognition - and I felt a bit strange about that. Maybe that’s what it looks like from the outside to someone who doesn’t understand the concept of spokespersons. I already have that recognition broadly in the industry I work in. To assume that was my primary motivation feels wrong, in a sense.
+
+Being a spokesperson is like living on two islands and you being the bridge. Your role is to transfer as much information across the bridge in both directions as is needed. Too much information and you’ll cause chaos on either side. Too little information and there’s a loss of trust. And sometimes you make decisions to move information across in the best interest of either side. It’s a very tricky position to be in and I have a lot of experience doing it in the corporate sector.
+
+But a shadow spokesperson? That’s just framed as a personality aka “everyone likes her” or “she’s good at explaining” or “she’s just emotionally invested”- rather than understood as labor around governance. In reality, the work of translating so many inputs and then re-filtering them for the context between sub groups, is a process that preserves trust.
+
+_What happens when you try to legitimize a role inside a system that may not believe legitimacy itself exists?_
+++ 15 Dec 2025 | legitimacy of the governance module | Field note on cohort members refusing that any house rule could bind them, blocking real debate about policy design.
+---
+
+Field Note: On the legitimacy of the governance module
+
+This has been sitting with me since before the governance retrospective, but even more so since then that clarifies why I keep feeling “stuck”.
+
+When I talk about experiments in the governance module, especially the idea of temporarily assigning authority or playing with rules, I often hear some version of:
+
+“Even if you were dictator and there was a signed charter, why would we follow the rules?”
+
+It’s usually said in good faith, sometimes even in good faith debate. When I push on this, my allies in the house say, “well that’s life” or “well that’s politics”
+
+Is it? I’ve been trying to understand why this answer feels unsatisfying to me. This isn’t the politics that I came to practice at the house, this is the politics of convincing people that the legitimacy and value of a thing that I thought they already had bought into.
+
+I came into this fellowship believing that opting in meant opting into the governance module, that we were agreeing, as a collective, by the rules we would design, test, contest, and revise together. I thought that engagement, at the very least was required, not agreement. But other cohort members seem to have opted into a much narrower version of the fellowship: shared house, shared conversations, and this optional play in the sandbox that can’t ever _really_ constrain them.
+
+Those are very different constitutional assumptions.
+
+What I’m noticing is that we keep trying to debate _policies_ without ever settling what would make a rule binding in the first place. Every time a proposal is raised, the conversation snaps back to legitimacy: _why should this count? why should I care? why should I comply?_ That snap-back blocks the kind of political disagreement I actually want.
+
+I want people to fight me on implementation details, on scope, on enforcement, on harm. I want to argue about whether a digital ID at the door produces exclusion, or whether differentiated access rules create power in ways we don’t want. But instead of those debates, I keep encountering a deeper refusal: _the suggestion that no rule here could ever be binding, regardless of how it’s designed._
+
+Reading excerpts from _Max Weber, Economy and Society (authority & legitimacy)_ and _Elinor Ostrom, Governing the Commons_ has helped me name what feels off. Authority doesn’t persist because it’s declared - it persists because people _treat_ it as legitimate. Rules can only stay alive if people who follow them can shape them, when there are shared expectations, and when there are consequences to refusal. I’ve been told that the institution would support compliance to signed charters via forms of exclusion - but I don’t believe in that form of compliance. I would rather have people opt in somehow.
+
+That realization reframes a lot of the frustration I’ve been feeling. I’m trying to run experiments in a system that hasn’t decided whether it wants to be governable at all. The governance _experiments_ aren’t being rejected, they’re just not participating.
+
+That’s a valid choice, but it changes what this place is and it changes the way that the 3-4 of us who believe in the experiments will experience the fellowship as we understood it.
+
+Without that shared commitment to the legitimacy of the governance module, governance becomes this optional performance, this sandbox game that a few are playing in the house that has no real power or impact or authority. That lack of interest in the opportunity and space and resources we have been given to play around with, it actively demoralizes me.
+
+For those of us who came here believing this was a rare, unique space to test rules, norms, and systems with real stakes, that decision quietly redraws the boundaries of the fellowship itself - and I don’t know if I want to work within those limits.
+++ 16 Dec 2025 | multi-agent architecture and context limits | Field note asking whether legacy systems can be agent-legible, what agent-friendly architecture looks like, and how handoff should work.
+Field Note: Multi-Agent Systems, Architecture, and the Limits of Context
+
+After discussing team structure in Peyman's class on "Do we need developers?", we moved into a second question: *which parts of this work can be delegated to AI?*
+
+The framing that stuck with me was asking two questions:
+- What do I care about?
+- What could I work on with AI?
+
+Right now, the industry seems to be moving toward specialization through tools and agents. We chain different systems together, Figma for design and research, code-generation tools for backend or frontend work, analytics tools, QA tools sometimes all inside one platform (GitLab ;) ), sometimes stitched together across many. Functionally, this already feels like agent-to-agent or tool-to-tool collaboration, even if we don’t always name it that way.
+
+I know that we’re heading toward multi-agent specialization - not just many tools, but many agents with distinct roles, responsibilities, and domains.
+
+This raises a set of questions I've been thinking about:
+- If you have strong documentation, clean architecture, and well-written code, is that enough for agents to align with an existing system, especially one that’s 10+ years old?
+- Or do agent-friendly systems need to be designed differently from the start?
+- What does an agent-based architecture actually look like? Is it microservices? Component-based design? Something else?
+- How do we design for agent handoff rather than pockets of execution chained together?
+
+Right now, it feels like handoff is the missing piece. We have agents that can do impressive things on their islands of code, but less clarity on how responsibility, context, and intent move between them.
+
+There’s also a scaling problem here. As systems grow, context windows become a hard constraint. At some point, no single agent can “understand” the whole system. Does that mean agents are ultimately responsible only for their own islands of code, communicating through structured interfaces or protocols like MCP? And if so, how much coordination overhead does that introduce?
+
+I'm curious about these tensions as a result of Peyman's class, thinking about the in between of legacy systems and new architectures, between specialization and coherence, and between what we want agents to do and what context actually allows.
+++ 17 Dec 2025 | handoff is the hard part | Field note arguing execution is easy and systems dodge agent-to-agent handoff of intent by centralising it in orchestrators.
+Field Note: Multi-Agent Handoff and Context
+
+While presenting about agentic workflows with engineers at a large financial institution, the term that kept coming up in questions wasn’t _reasoning_ or _autonomy_. It was **handoff**.
+
+That caught my attention.
+
+By handoff, I don’t mean chaining prompts or passing outputs. I mean the transfer of state, intent, assumptions, and responsibility from one agent to another. Not just “here’s the result”, but “here’s why this work exists, what constraints matter, and what you now own”.
+
+Most multi-agent systems don’t really do that. They pass artifacts such as text, summaries, tool outputs and expect the next agent to infer the rest. That inference step is where things become fragile. At first this feels like a gap, but looking closer, it seems more like deliberate design.
+
+This is where context engineering keeps coming up for me, not as prompt tuning but as a systems constraint. As systems grow, no single agent can hold the full picture. Instead of trying to move full context, intent, and responsibility between agents, most systems centralize those things elsewhere.
+
+[Anthropic’s multi-agent research system](https://www.anthropic.com/engineering/multi-agent-research-system) is a useful example here. Their setup relies on an orchestrator agent to plan the work, decompose queries, spin up parallel researchers, and integrate the results. Intent, assumptions, and responsibility are held centrally and re-expressed at each step when they're passed to the next agent. Tools like LangGraph or Agent Squad also do so by centralizing intent and control rather than enabling agents to hand work to each other directly.
+
+So I guess the hard part of multi-agent systems isn’t getting agents to do work. Execution is the easy bit. The hard part is everything that happens _between_ agents. Rather than solving agent-to-agent handoff directly, today’s systems avoid it by routing all coordination through orchestrators as a central point.
+
+There’s a similar pattern with evaluation. Letting agents critique or evaluate other agents can scale quality control, and LLM-as-judge approaches will work well when they’re designed well. Evaluation only works because intent and constraints are held outside the agents themselves. Without that central context, evaluation risks optimizing for surface correctness rather than whether the system is actually doing the right thing.
+
+Protocols like MCP help standardize how agents access tools and shared state, but they don’t really solve handoff either. They make context accessible, not transferable. Intent, assumptions, and responsibility still live in orchestrators, glue code, or prompt conventions.
+
+I’m left with a few open questions:
+
+- What is the smallest amount of context that is actually needed to hand off from agent to agent?
+- Is centralized orchestration a temporary solution, are there alternatives?
+- Are there existing systems (or papers) that attempt agent-to-agent handoff of intent or ownership, and where do they break down in practice?
+- This makes me wonder whether some of the challenge behaviors in agentic systems may be happening in the orchestration layer.
+→ https://www.anthropic.com/engineering/multi-agent-research-system
+++ 19 Dec 2025 | when optimism feels like social risk | Field note on groups where critique becomes posture and hope reads as naivety, draining her sense of purpose.
+**Field Note: When Optimism Feels Like a Social Risk**
+
+This has been sitting with me for weeks. After conversations with Ed and faculty, it’s gotten sharper, but I’m still not sure what this experience really is, or whether it has political viability.
+
+There’s a thing that happens in groups that I care about where critique becomes the dominant point of conversation. Not critique as analysis or disagreement, but critique as posture, where the “system” we exist in whether that’s the cohort or an open source team, is fundamentally broken, the powers that be are “irredeemable” and nothing short of total rejection is acceptable.
+
+And I find that in groups like these, over time, there’s a hostility to hope.
+
+As someone who tries to cradle a tiny flame of optimism, I find it challenged as naivety. Attempts to contextualize, or to reason about what might still be possible, the opportunity space ahead of us, are met with suspicion or ridicule as a gut reaction.
+
+I’ve also encountered this in open source communities I’ve volunteered in. Once an “enemy” of sorts is established, it becomes a very tricky operation to propose any kind of compromise without looking complicit. But without compromise, nothing actually resolves. Volunteers get no closure. The community can’t move forward in a way that preserves the sustainability of either the people or the project.
+
+This dynamic seems to find me in every group, team, or company I’m part of (or perhaps it is a pattern that I find myself drawn to as a result of caring for the building of communities?) And it crushes my hope. Not because I disagree with the critique, I often share it, but because there’s no room left for action. There’s no space to be curious, to imagine moving forward, to repair, iterate, or make partial progress. The only acceptable stance seems to be collective fatalism.
+
+Most recently, I feel this in my sense of purpose in the fellowship. I’m here because I believe deeply in the vision, in building, testing, and intervening in systems and experiments that I know have failed me in the real world, and through that, learning politics by doing. But when optimism becomes socially risky, I start to feel like I don’t fit, like I need to shrink my hopes and ambitions to meet the moment.
+
+If I’m lucky, there are people who replenish my optimism, because they, too, feel unheard and feel the weight of the current political situation pressing on them. The Americans in the cohort, for example, share a kind of implicit understanding of purpose. They understand this political moment, sense that something is shifting, and feel called, like I do, to do more. Those conversations restore my energy and clarity. They remind me why I care and why I moved my entire life to be here. But when I feel replenished and return to conversations at the house, the group norm reasserts itself. I find myself grasping at the threads of hope I had so carefully braided earlier that week, or even earlier that day.
+
+What makes this especially difficult is that I care deeply about the individuals in this group. Their opinions and feelings matter to me. I want to stay engaged, and leaving feels like abandonment or like minimizing their pain. This in-between space is really a rocky road and I find myself feeling drained more often than I am replenished. I also don't want to withdraw entirely.
+
+In the past, I’ve only been “successful” in navigating this when I was given a clear charter of power. In open source, that meant asking maintainers to step away when their positions were no longer serving them or the project, especially when they were silencing newer, curious voices who wanted to work rather than only critique. In corporate environments, it meant reassigning responsibilities and holding people accountable for the work they were meant to do. In situations like this where I didn't have agency to change anything, I usually burned out trying to recapture my hope week after week and eventually left the organization.
+
+Maybe that’s the only way I know how to handle this. Or maybe there are other routes, working at the individual level, explicitly building a group of people who still have hope, and naming what’s happening out loud so we can refill each other’s energy intentionally.
+
+Being able to name this pattern feels important. If I can see it clearly, maybe I can build a skill for living with it or intervening without losing my hope next time.
+
+Open questions:
+
+•	How do groups reset norms once they’ve drifted this way?
+
+•	What are the early signs that you're headed this way?
+
+•	At what point does naming harm stop creating capacity and start eroding it?
+++ 29 Jan 2026 | Kimi swarms versus supervisor pattern | Mini field note: Kimi trains coordination via parallel-agent RL so collaboration emerges, unlike an explicit inspectable orchestrator.
+Field note (mini) - Kimi’s swarms vs the Supervisor pattern
+
+I’ve been reading a lot of the hype around Kimi’s “agent swarms” and got curious about how they’re different from the existing (and very widely used) supervisor / orchestrator pattern. As I understand it so far, the difference is less about having many agents and more about how coordination works.
+
+Kimi’s swarm is framed as a trainable orchestration via Parallel-Agent RL. Multiple agents act at the same time, and a reward signal trains how they divide work, share information, sequence actions, or override each other. Coordination isn’t written out as rules; it’s something that emerges from training, because certain collaboration patterns get higher rewards. Agents can be spawned dynamically, and control can shift between them, there isn’t a permanently fixed supervisor.
+
+In contrast, the supervisor pattern I’m familiar with has an explicit orchestrator (the controller) that decides tasks, splits them up, orders execution, and aggregates outputs from specialist agents. The coordination logic lives in code or prompts, and the other agents are mostly workers or tools. It’s a more inspectable setup (to a degree).
+
+What I think is “special” about Kimi’s swarm, at least in how it’s being framed, is that coordination itself is *learned*, not predefined. The agents learn how to work together, and in theory, the system can adapt its collaboration strategy across tasks without new orchestration code.
+
+Still very much a note-to-self! I need to read more and actually play with Kimi - lots of bookmarks to follow up on!
+++ 6 Feb 2026 | before managers, look at organizations | Field note on Laloux's red to teal paradigms, which management activities are really needed, and why permission-less cultures do not exist.
+Field Note: Before we come for Managers, we need to look at Organizations
+
+I suppose the purpose of this class session was "Do we still Managers?" and will AI replace them? I fully expected Peyman to present us with question early on. Instead, we dove into the meta a bit. Before we can really analyze the role of managers in organizations, need to talk about organizations themselves - and how they evolve (and sometimes don't).
+
+organizational paradigms
+
+In “[Reinventing Organizations](http://www.reinventingorganizations.com/?utm_source=newsletter&utm_medium=email&utm_campaign=work_week_41_2018_three_categories_of_human_organizations&utm_term=2018-10-12)”, author Frederic Laloux writes that “_[a]n organization cannot evolve beyond its leadership’s stage of [consciousness]._” He describes specific stages of organizational paradigms:
+
+- **Red** - organizations ruled with a absolute power, limited to the immediate reach and influence of their leader. Red organizations are often described as wolf packs or the mafia. Everyone is motivated by fear, change is management can happen through a change in power dynamics.
+- **Amber** - organizations with a top down conformist structure of power with rigid stages of management and hierarchies to pass down stable, replicable processes to large groups of people. Consider the Catholic Church or an army.
+- **Orange** - typical organizations that make decisions based on evidence, acting like machines - setting goals, breaking those into benchmarks or OKRS, and then working towards them. These goals can be driven by shareholder value for example. Most companies exist at this orange stage.
+- **Green** - a newer model for organizations that is values driven, with a culture of empowerment, multi stakeholders that share in decisions and benefits of those decisions. Individuals in these organizations are able to drive things forward.
+- **Teal** - is an evolutionary model for organizations - where everyone is a manager, and everyone has the autonomy and authority to fix issues themselves. Distributed, remote teams are in a key position to take advantage of this new model, because the architecture and real estate of a physical workspace can’t play into reinforcing a hierarchy.
+
+What struck me about this analysis of organizational paradigms was slotting in the organizations that I've worked for and reflecting on how they've moved along the scale - which is certainly not linear. Because in every organization, there are pockets of teal - where employees have autonomy and authority to act, vs pockets of red - where a VP might have absolute power, say, and control. I also considered the fact that organizations don't always evolve forward, they often regress.
+
+Under the pressure of the market, scarce resources, or industry's rapid change, even mature green organizations can slide back into tightly controlled, slower decision processes, and higher amounts of centralization. For example, towards an IPO, even the employees with the most autonomy might find themselves following beauocratic hierarchical processes due to compliance needs.
+
+A question that was posed in class was -  _**in a genuinely good culture or system, can you leave it up to people to decide what they should do?**_ this is an interesting one to think about in reference to AI agents and the future of work.
+
+organizational reshuffles
+
+Organisational reshuffles is also an interesting lens here. When structures change, people often _rethink the organisation itself,_ its values, its rules, what is actually allowed. That moment of ambiguity can feel destabilising, but it might also be one of the few times real reflection becomes possible. Space to rethink isn’t always a failure mode; sometimes it’s the point.
+
+activity - management activities
+
+We ran an activity in class: list “management activities” and then sort them into categories:
+
+things that don’t need management at all, things that are necessary and centralized, things that may be necessary depending on context, and things that aren’t necessary.
+
+The exercise quietly dismantled the idea that “management” is a single role. Instead, it’s a bundle of functions, some structural, some cultural, some political. And some bundles of tasks, we found over discussion, weren't even necessary for the manager to do.
+
+**Doesn’t have to be management**
+* Organising product
+* Project management (doesn’t need to be centralised)
+* Time allocation
+* Initiative / experimentation
+
+**Necessary and centralised**
+* Consensus mechanisms
+* Policy enforcement
+* Core strategy / value-setting (emerging core strategy / value team)
+
+**Can be necessary (context-dependent)**
+* Product management (depends on scale and cross-functionality)
+* Project management (varies by context)
+* Governance under scarcity
+* Resource prioritisation during limited resources or reshuffles
+
+**Not necessary**
+* Vision setting
+* “Corporate BS”
+
+This is where the fantasy of fully distributed, future-leaning teams started to fray. Many such models assume abundance: enough time, enough money, enough attention. In reality, teams operate under limited resources. You can decentralise how people allocate their time, but the _consensus mechanisms_ - what ultimately gets prioritised, funded, or enforced - often remain centralised. Scarcity pulls authority back toward the centre.
+
+Product and project management surfaced as examples. In theory, they could be decentralized. In practice, they rarely are, especially when dependencies stack up. Policy enforcement, even more so, tends to centralize by necessity. This isn’t a moral failure; it’s an organizational gravity well.
+
+culture vs process
+
+That tension showed up again in the discussion of culture versus process. Is it more important to have a handbook, or an open form of discussion? A static policy, or a living document? The more interesting framing wasn’t either/or, but _what the handbook actually does_. Handbooks are often ignored and yet they generate discussion. People argue with them, interpret them, feel constrained or protected by them. Their real value may lie less in compliance and more in the sense-making they provoke.
+
+Which leads to a harder question: **is there a level of discomfort we should be willing to tolerate in order to create the change we say we want?**
+
+Expense policies is another example. Clear rules can feel restrictive, but they also reduce ambiguity and unfairness. Looser, emergent norms can feel freer, but risk uneven application and hidden power. Is it possible to evolve policies that are flexible _and_ fair, freer in practice, without abandoning guidance or reasonableness?
+
+bias for action
+
+Wanting people to try things and learn from attempts isn’t enough. You have to make it _successful to try_. Bias for action turns out to be a skill, not a slogan and it has maturity levels. At its best, it looks like controlled experimentation, not reckless motion. It requires scaffolding.
+
+python vs C
+
+To illustrate this situation, let's take a look at two programming languages.
+
+Python encourages action: forgiving defaults, fast feedback, easy rollback.
+
+C demands precision, upfront correctness, and carries higher consequences for mistakes.
+
+Neither is inherently better (although you might find that enthusiasts disagree with this take) but they produce very different behaviors. Organizations, like languages, encode values into their constraints.
+
+Some conditions for a healthy bias-for-action culture are:
+
+- fast feedback mechanisms and rollback paths,
+- well-understood impact and blast radius,
+- frameworks for experimentation with explicit gates for lower risk,
+- and crucially, structure even in “permission-less” environments.
+
+permission-less cultures
+
+I probably need a whole separate field note on permission-less cultures, because I don't believe they exist - and it hit close to home. Trying to be action-oriented without clear boundaries often creates _more_ ambiguity, not less. Even anarchist systems have rules. “No permission needed” still requires shared understanding of limits.
+
+The phrase “go and act” came up repeatedly,  mostly as a warning. It doesn’t work. For many people, playing it safe is more natural, especially in civic or institutional contexts where failure carries reputational or moral weight. Even with frameworks in place, acting can feel risky.
+
+So the real challenge becomes perceptual: **how do you show people that the risk is actually small?** Could you test something in one year instead of three? Can you make reversibility visible? Signals matter and organizations are constantly sending them, often unintentionally.
+
+culture change takes time
+
+Finally, culture change takes time. It takes months for an organization to acclimate to a new culture and it happens very, very slowly. Institutional safety and psychological safety are distinct but intertwined. And that global contexts complicate everything  what feels safe, fast, or acceptable in one region may not in another.
+
+I left class with the sense that the real question isn’t whether we still need managers, but **what managers are actually for**. If autonomy is the goal, someone still has to design the conditions that make autonomy survivable. Goals, values, guardrails, feedback loops, this is the work that doesn’t disappear just because hierarchy does.
+
+In the next class, we will take a deeper look at the goals, values, and conditions for bias for action, empowerment - and whether managers are no longer needed if processes can be decentralized.
+→ http://www.reinventingorganizations.com/
+++ 7 Feb 2026 | growing up amongst my heroes | Field note on invisible civic tech labour in New York, and heroes who became peers, mentors and friends ten years later.
+Field Note: Growing up amongst my heroes
+
+Civic tech can be quite a small world in many ways and growing up amongst my heroes, was quite difficult. While I shared their ideals, inherited their jadedness, and was inspired by their hopes and dreams - I did not have the experience to follow them into the fight. Instead, I did what I knew best - the coding, the networking, the community building.
+
+I think back to the times that I volunteered at BetaNYC meetups or cleaned up after events Civic Hall. I was in charge of ordering the stickers for Microsoft Civic or picking up enough pizza for the Ambassadors program meetings. I coordinated multiple people, remembered the names of speakers, and at every hack night, checked in with people on the status of their projects.
+
+It wasn't until I came to Newspeak House and I've started to catch up with friends from across the industries that I've worked in that I realized how much of the work that I gave no credit to - because it felt invisible in terms of on paper achievements - was actually so useful and taught me all the variety and depth of skills that I can draw on now.
+
+And everyone's genuine enthusiasm - from the folks that I worked with on drupal community efforts, to the people that I organized civic hack nights with - all are so thrilled for this part of my life, that it really makes me feel both validated and inspired and honestly, full of hope for myself and what I want to achieve.
+
+Back then, I always felt that I could never catch up to my heroes. I always felt it was unfair, we often joked that it was, that I had inherited both their dreams and their jadedness _too_ early in my career, while I was still in college, and had to climb up the ranks before I could do the things that they were doing. And _still_ there was a part of me that was still so inspired that I continued to, despite the burnt out, go back to work in the public service.
+
+Ten years later,  my heroes are now my friends, my mentors, and my confidantes. They're no longer people that I once fan girled over after a conference talk or tried to impress on twitter - they're people who I've shared experiences with, talked deeply about issues with, and solved things together with. In so many ways, they are peers - even if they have many more years of experience than me.
+
+Perhaps because I now see them as humans and not as heroes that the perspective has changed. Or perhaps I see myself as competent and capable and able to stand alongside them, rather within their shadows.
+
+John said something interesting to me today and it was that perhaps, one's purpose in life, if not entirely legible internally, will only become legible externally after one's death - and perhaps that means the meaning was more complex - than someone perhaps, who has a clear meaning in life.
+
+And I wondered - ah, perhaps my measurement of success is having one clear thread - a singular purpose in life, by which all of my work and passion weave through. And because my actual purpose in life cannot be contained by a single thread, it doesn't meet my criteria of success.
+++ 7 Feb 2026 | Taiwan digital democracy, ten years later | Field note on meeting Audrey Tang in 2017, g0v, Open Culture Foundation, and being a bridge between systems.
+Ten years later, I'm still inspired by stories from Taiwan's digital democracy
+
+Two weeks ago, I was reviewing the Newspeak House calendar - and in an effort to curtail the loneliness of moving to a new city, I was selecting events that I might be interested in attending. The `Decode Taiwan Open Tech: Open source and civic tech meetup in London for latest communities updates from Taiwan` immediately caught my eye and as I expected, both g0v and Open Culture Foundation were mentioned in the description.
+
+This really took me back - and it further reinforced why this institution is so unique and brings together so many communities that overlap and do similar kinds of work.
+
+When I first started out in Civic Tech in New York City, I volunteered at Personal Democracy Forum for a ticket to the conference. I was often assigned the role of greeting and guiding speakers. In 2017, 2-3 years into my early journey of civic tech - I'd come in from Boston, where I was working for the Digital Team, to volunteer. And I had the explicit honor of greeting Audrey Tang, the then Digital Minister of Taiwan, and leading her to the speakers ready room. I was an absolute fan girl and the whole interaction was a blur.
+
+Later that day, sitting in the audience - in the gallery above where the volunteers got to look over the stage, I watched - mesmerized as Audrey Tang delivered her keynote - "STORIES FROM FROM THE FUTURE OF DEMOCRACY: TAIWAN" describing the digital ministry's efforts to pioneer "digital democracy", using polis for civic participation and strategies for combatting disinformation.
+
+I was absolutely enamored with the whole thing - from the digital ministry of taiwan to g0v and their decentralized governance for managing the community. In fact, I remember talking to some of the volunteers about wanting to move to Taiwan and join g0v (you know me, I follow the spark).
+
+I made a few friends at the conference who worked in g0v efforts and we kept in touch over the years, even when I dipped out of civic tech into the private sector and then resurfaced as a Code for Canada fellow.
+
+So it was really a walk down memory lane to see Taiwan on the schedule for Newspeak House. I reached out to the organizer of the event for a coffee chat - and they were delighted to meet, and even brought some of their friends.
+
+The coffee chat felt like we'd known each other for years. They asked about the fellowship and then shared some advice regarding research, narrowing scope, and finding your life's purpose. It was so interesting to hear about where the OCF sits - between the civil society, efforts like g0v, and the Digital Ministry.
+
+It reminded me of how I consider Developer Relations to be a bridge - between the product/engineers and the users/customers. And my job is being the runner, to carry information across from side to side, to translate it as best possible for the other side to be able to use of, to maintain the bridge so that they trust it enough to use it, and to make judgements about the urgency of relaying information. DevRel are basically spokespeople in governance, but they also carry so much of the product knowledge and technical expertise to be credible.
+
+Rosalind and I talked about the ambiguity of research and how sometimes in finding one's life's purpose, one must sometimes look to the function and not the theme. It may be that many people I admire know exactly what they want to do with lives, they know what theme they want to impact and they works towards that goal. Other forms of purpose are acceptable beyond themes, for example - perhaps my purpose is being a facilitator of projects and people, or a bridge between systems that do not understand each other.
+
+The visit from the Taiwan delegation gave me so much to think about because it presented a mirror to the past - a time where I was so excited about civic tech and knew very little, in contrast to now - where even though I understand the field and have made an impact, there's still so much more that I want to do.
+
+Stay tuned for a field note about their presentation and all the projects I learned about!
+++ 13 Feb 2026 | who taught us the rules | Draft field note on administrative burden, her father bending systems, sedimented legitimacy, and designing rules before they harden.
+(Rough Draft) Field Note: Reflecting on a Fellowship Where Rules Can Be Rewritten / Who Taught Us the Rules
+
+The first time that I noticed systems meant to support people in fact actually excluded them was the free lunch in elementary school. In first grade, trying to get a free lunch was a bureaucratic rollercoaster. I felt ashamed that my father had to prove his retirement status and income in order for me to be able to eat lunch at school because we could hardly afford lunch otherwise. So that chocolate milk I had every morning when I arrived, it weighed on me heavily because we had to earn it.
+
+Why are systems that are meant to support people so difficult to access?
+
+There is now research that calls this “administrative burden,” the idea that paperwork, verification requirements, and documentation act as gatekeeping mechanisms even in programs designed to support low income families. I did not have that language at the time. I only knew that something about it felt wrong.
+
+Certain systems make it harder for people to access services that they need. And because of the way they are built, people may not even attempt to advocate for themselves.
+
+This is just one of the patterns I have been reflecting on. Systems that I have observed over the years either include some people and exclude others, add friction to the process for the groups most in need, or create an intimidating process that adds too much cost.
+
+My parents were immigrants. They emigrated to Canada and then to the United States in the 1960s, and their perspective on how to interact with systems is so different from mine. My father, in particular, saw rules as flexible, power as attainable, and systems that meant to squash the hopes and ideals of immigrants as unnecessary to pay any mind to. He would bend or navigate around systems that didn't serve him.
+
+For example, he would sign me up for a private elementary school education, negotiate a scholarship that did not exist, and then use my academic abilities to prove it was worth it. He would convince, charm, and negotiate his way into rooms and doors that were historically closed for our people. Part of it was his ability to present as white passing and his British accent, which made him more palatable to the majority, but the bulk of it was his lived experience. Being the other in so many foreign countries gave him this innate confidence that he was owed power, owed a seat at the table, owed an audience.
+
+When it came to high school admissions, my neighborhood in Queens was zoned to one school. On paper, zoning looks neutral. In practice, school zones mirror housing segregation, and housing segregation mirrors income inequality. If you grow up in an underprivileged neighborhood, your local schools are likely to reflect that.
+
+My father was not fond of the assigned school, so we went to school board meetings to try and get an exception without much luck. He would not let this go. He continued to contact the school board and talk to related officials. One day, during the summer before the semester started, he dropped by the high school he wanted me to attend and ran into the new Principal on the grounds in a t shirt and shorts because he was not expecting to meet parents. They became friends. My father explained my situation and suggested that a letter from the Principal inviting me to the school would move the process out of the school board’s hands. He agreed. With that letter, I was enrolled in the school my dad wanted for me.
+
+The admissions process for Queens high schools seems neutral on paper, but it rewards insider knowledge. How to apply. Where to apply. Who advises you. What counts as merit. What paperwork and timing matter. What exceptions exist. Who knows about them.
+
+My parents, and my dad especially, saw this discrepancy clearly because they had to navigate systems repeatedly, first in Canada and then in the United States.
+
+I was different. I grew up in an era where Muslims were othered in society after 9/11. We were not welcome. I internalized rules as fixed and legitimate. To me, breaking the rules was not an option. There were consequences. My father and I often got into arguments about this. I watched him bend systems and get results. I cringed. I assumed he would be punished. He rarely was. He insisted I should do the same, but I had so much discomfort around bending the rules.
+
+Power shows up in small ways. Who gets access to information early. Who understands the process. Who has someone to ask. Who knows the real rules.
+
+Over time, I began to notice that most systems are layered. They are built on precedent and accumulated logic. They persist long after their original rationale. I learned recently about leaseholds in England and Wales, a medieval landholding structure that still shapes modern property ownership. A feudal remnant still determining who owns land and who holds time limited rights.
+
+That was when it struck me again. We live inside sediment. Layer upon layer of inherited logic.
+
+Which is why Newspeak House feels so strange and so special.
+
+Reflecting on these experiences makes me really appreciate the opportunity that the Newspeak House fellowship presents. A house with resources and faculty that we can utilize. We could govern it as a small country, with rules, policies, and processes. We could layer different systems, play prefigurative politics, and build the society that we want to see in the world.
+
+Why is this special?
+
+Because systems in the world exist with such layered inheritance and are hard to change precisely because they are stacked with years of precedent and rules. To change systems like retirement benefits, Medicare, school admissions, or immigration requires thinking out of the box, which is very difficult to do when you are overwhelmed within the system trying to get things done.
+
+Here, at least in theory, we are not bound by centuries of sediment.
+
+At Newspeak House, rules are not treated as fixed inheritance. The system resets every year without full knowledge of the previous systems. It is a space where rules can be created, contested, replaced. It is where you can analyze systems as systems and prototype alternatives because you have the space to design, test, and create better systems than the ones you have interfaced with in the real world.
+
+This feels so special and so unique because out in the real world we are always pushing against sedimented legitimacy.
+
+To change the world in any meaningful way, we need to be able to displace systems, to analyze, shake up, and create purposeful improvements that do not simply get absorbed by the old logic.
+
+The awards exercise is a smaller example of this. This is not about who wins the award. It is about building a system of evaluation. How do we decide, asynchronously and as a committee, what counts as impact and evidence. How do we encode our values into an algorithmic process, with or without AI. And then how do we publicly justify those decisions as part of the system we created to do these evaluations.
+
+The core of this for me, and the part that hits home the most, is the question of legitimacy.
+
+As a young girl, I took rules and systems and laws as the highest form of legitimacy possible. I did not believe they could be bent or modified or made an exception to. I watched my father break rules and somehow still get his way. Later in life, I watched senior officials and leadership do the same.
+
+New systems do not displace old ones simply by being better. They displace them by earning legitimacy.
+
+Most people spend their lives navigating institutions they did not build, arguing within rules they did not write. Here, we are being handed the chance to design systems before they harden.
+
+I sometimes wonder whether that feels different depending on how you grew up. If you were always comfortable inside systems, perhaps designing one does not feel radical. But if you grew up feeling governed by rules you could not bend, watching your family fight administrative friction just to access what was promised to them, then being handed the chance to create rules from scratch feels almost unreal.
+
+And even here, we default to precedent. We reproduce familiar hierarchies. We hesitate to truly unsettle inherited logic.
+
+Designing systems is heavier than criticizing them. It forces the question of authority. What gives us the right to decide what counts. What makes our process legitimate.
+
+This house gives us something rare. The space to practice constructing legitimacy intentionally. The question is whether we will recognize the opportunity in our hands before the time is up.
+++ 14 Feb 2026 | disagreeing with Koyaanisqatsi | Field note resisting the film's single moral arc, defending cars, planes and transit as immigrant mobility rather than alienation.
+Field Note: Reflecting on watching and disagreeing with Koyaanisqatsi
+
+Tonight, I attended a screening of _Koyaanisqatsi_ with a group at Newspeak House. The audience was mesmerized. Words like “so truthful,” “objective,” and “work of art” floated around the discussion circle afterwards. People were in awe. They admired the precision of the cuts, the rhythm of the music, and noted that while it used real footage, it still managed to create a plot.
+
+I felt something else.
+
+About ten minutes into the film, when the mountains panned into power lines, I almost laughed because at that point it was clear to me what the film was going to present. Before that, I had been curious about the transition and where we were headed. After that, I felt I understood the thesis.
+
+Shortly after, the music swells and we end on a family sitting on the sand at the beach, panning out to reveal a looming power plant behind them. I laughed quietly. Not because it was funny, and not to mock the craft, but because it felt like such an obvious rhetorical move.
+
+As the film continued, I noticed a pattern of selection. When it zoomed in on human faces, they were often wary, blank, or distrustful. There were one or two smiling faces, but they felt incidental. Whenever it showed technology or urban advancement, it paired those images with speed, fast-paced music, and an implication of alienation: people moving urgently through subway stations, streets, or factories.
+
+It was beautifully crafted. But I felt resistant to what it was trying to do.
+
+It felt as though the film was asking me to dehumanize these people, to see them as extensions of machines. That was difficult for me. I saw the women placing food onto factory belts sped up 10x and thought about how physically demanding that job must be. I saw people entering subways en masse and remembered how easily I could visit my parents from the city on weekends. I saw highways filled with cars meant to disillusion me, and thought about how, for immigrant families like mine, cars represented economic mobility and access.
+
+The film seemed to position these advances in ways that encouraged suspicion and critique, while I felt the reality was more nuanced. Have we polluted the earth through industrialism? Yes. But have we also created electronic wheelchairs, video calls, and transit systems that expand freedom and connection? Also yes.
+
+In the discussion, people insisted the film was neutral because it used real footage. What I felt was resistance.
+
+Does industrial modernity creates alienation? Yes, it does. Does acceleration destabilize life? Yes, it can. But there's so much more to it than just that - and the film curated one moral valence and held it without counterweight.
+
+While watching cars in factories, I thought of immigrant families who rely on those cars for mobility, for work, for better schools. While watching planes underscored by ominous music, I thought of reunions, migration, expanded worlds. The film abstracted humanity into masses; I hated that.
+
+In the discussion circle, I felt slightly off. Everyone was in awe of the artistry and the messaging. I briefly wondered whether I lacked artistic capacity. But I do respect the craft. I can appreciate the juxtapositions, the rhythm, the scale. It was an experience. I simply felt myself resisting the narrative from early on. Once I recognized the device with the power lines, I lost some ability to fall into the flow, and perhaps that dulled the awe.
+
+I don’t reject the film’s concerns. I reject the exclusivity. The film presents itself as truth. I disagree because it feels like only a slice of the whole story.
+
+Perhaps my resistance comes from an instinct toward the need for nuance - an unwillingness to accept a single moral arc when the reality of modern life feels so layered. If that means I struggle to surrender to narratives that compress nuance into verdict, then that too is part of how I see the world.
+++ 9 Mar 2026 | one-shot prompt surprise | Journal on a single prompt generating a whole functional Politech Awards ranking site, leaving her impressed but overwhelmed by lost control.
+Journal: One-shot prompt surprise - politech ranking project
+
+I wanted to build a UI for ranking projects for the Politech Awards that would allow users to rank the projects and generate Pull Requests. I used the following prompt - and it one-shotted a _whole_ site. It was fully functional and very cool - but made me stop and wonder - _is this what I wanted to build? This is a very overwhelming experience and there's no clear user journey._
+
+It was certainly a fascinating moment as I use a lot of agentic technology both in vibe engineering side projects and at work, with custom agents, models, and workflows - but I am generally really hesitant to relinquish full control.
+
+It was the first time that I felt simultaneously impressed and overwhelmed by the results!
+
+the prompt:
+
+Review https://github.com/nwspk/politech-awards-2026 and https://2025.newspeak.house/awards.
+
+Design an implementation plan for a new greenfield app: politech-projects-ranking-ui.
+
+Context:
+- Algorithm: the-algorithm.ts
+- Data: results.json, iterations.json, candidates.csv (321 projects)
+- Current site shows a single iteration (heuristic, rationale, top/bottom projects)
+
+Goal:
+Build a UI ranking system that publishes the official rankings and lets the cohort explore how rankings change based on values, priorities, and judgments.
+
+Core capabilities:
+- Show all projects with rank/score and iteration metadata
+- Allow switching between iterations
+- Let users adjust value weights/priorities and see rankings update live (no-code ranking builder)
+- Allow saving ranking snapshots
+- Public judging interface with pairwise comparisons and value sliders
+- Store judging data for later analysis (agreement, stated vs revealed preferences, cohort vs algorithm ranking)
+- “Projects I like” → recommend similar projects
+- Optional: infer values from a blog/profile and generate a ranking from those values
+- Support multiple preset viewpoints (different value weightings) and compare rankings
+
+Technical expectations:
+- Use results.json / iterations.json / candidates.csv as core data
+- Define TypeScript models for projects, rankings, iterations, judgments, and snapshots
+- Decide whether to fetch data from GitHub or sync locally
+- Separate read-only ranking UI from interactive judging features
+- Specify frontend, backend/BaaS, and storage
+
+Output:
+product architecture, MVP vs later phases, data model, backend plan, ranking logic approach, analytics design, stack recommendations, and key risks.
+
+the results
+
+https://arc.net/e/53C01F8A-F8AB-48CE-8C47-A4F14475BDFC
+
+ideas for next steps
+
+I would like to try and build a sequential user journey that builds from the simplest to more complex, such as:
+stage 1 - select keywords, see rankings
+stage 2 - select keywords, use slider, see rankings
+stage 3 - pairwise
+stage 4 - LLM inference from your existing blog posts or shared links
+stage 5 - something more deliberate
+stage 6 - if I can build something that allows people to edit the multi agent run like a flow builder and then submit a PR with some code that a dev can review + test, that would be so cool
++++ Field discussions
+++ 14 Dec 2025 | field notes room opens publicly | Fatima launches a public Matrix field-notes channel with open history so bots can read it and posts can be shared.
+welcome to my field notes channel! it took a few tries to get this right, but it's a public channel with history set to anyone - so it can be used by bots and shared with everyone 🎉
+
+*(some of these posts were from Nov 23 - Dec 12, but had to migrated from the previous, encrypted channel)*
+++ 14 Dec 2025 | Hannah Aubry and decentralised social platforms | Curiosity about Hannah's career path, plus Fatima's older Open Source Summit talk on Mastodon, Bluesky and decentralised protocols.
+I'm curious to see how this plays out and connect with Hannah about her plans! She was previously on their Board and has worked in Open Source and Developer Relations - so it's also interesting career path.
+
+https://www.linkedin.com/posts/hannahaubry_i-am-thrilled-to-share-the-news-that-i-joined-ugcPost-7396472394892091392-H1Nl
+
+2 years ago, I gave a talk at Open Source Summit called "Adapting to the New Era of Social Platforms in Open Source" exploring the explosion of Mastodon, Blue Sky / the pros and cons of decentralized social platforms and the protocols powering them
+It was still early and I didn't totally understand all the protocols at the time
+Then the hype died down and well people didn't pick up Mastodon as much as hoped..
+So I'm interested to see them invest in community!! And see if they're competing directly with some of the choices that other mainstream platforms are making (re data and privacy)
+https://www.youtube.com/watch?v=UEyRQWogbxk
+originally posted on Nov 20, 2025
+→ https://www.linkedin.com/posts/hannahaubry_i-am-thrilled-to-share-the-news-that-i-joined-ugcPost-7396472394892091392-H1Nl
+++ 14 Dec 2025 | homework from Matt Stempeck | Pick one interesting thing per Civic Tech Guide category; she flags open source AI, algo transparency, audits, AI literacy.
+Homework from Matt Stempeck
+
+Tell me about 1 thing you find interesting from each section in our next check-in. If you rule it out entirely, just skip it. https://app.civictech.guide/categories
+
+- ethical AI safety space (includes prosocial alternatives)
+- governance
+- public sector AI
+- **open source AI**
+- deepfakes
+- **algo transparency** - actively evolving area given difficulty of explainability
+- **audits**
+- **ai iteracy** - AI slop vs code slop
+
+_originally posted on Nov 20, 2025_
+→ https://app.civictech.guide/categories
+++ 14 Dec 2025 | homework from Six | Two readings: field-building and the epistemic culture of AI safety, and The Fallacy of AI Functionality.
+Homework from Six
+
+Field-building and the epistemic culture of AI safety
+(https://firstmonday.org/ojs/index.php/fm/article/view/13626)
+The Fallacy of AI Functionality (https://facctconference.org/static/pdfs_2022/facct22-3533158.pdf)
+
+_originally posted on Nov 20, 2025_
+→ https://firstmonday.org/ojs/index.php/fm/article/view/13626
+++ 14 Dec 2025 | cline-bench benchmarks real engineering problems | Cline's new benchmark initiative evaluates agents on real open-source repository work rather than lab puzzles, continuing their transparency commitment.
+https://cline.bot/blog/cline-bench-initiative
+
+Lots of enthusiasm around the release of cline-bench this week - the mission is to benchmark agents in real-world engineering problems and not lab puzzles. And only open source repositories are eligible.
+
+Cline's whole thing has always been open source and transparency - so it's great to see them committed to that.
+originally posted on Nov 21, 2025
+→ https://cline.bot/blog/cline-bench-initiative
+++ 14 Dec 2025 | CrowdStrike finds hidden AI-coded vulnerabilities | Research showing DeepSeek-R1 produces severely vulnerable code up to fifty percent more often on politically sensitive CCP topics.
+https://www.crowdstrike.com/en-us/blog/crowdstrike-researchers-identify-hidden-vulnerabilities-ai-coded-software/
+
+“However, we found that when DeepSeek-R1 receives prompts containing topics the Chinese Communist Party (CCP) likely considers politically sensitive, the likelihood of it producing code with severe security vulnerabilities increases by up to 50%."
+→ https://www.crowdstrike.com/en-us/blog/crowdstrike-researchers-identify-hidden-vulnerabilities-ai-coded-software/
+++ 14 Dec 2025 | community interest companies explained | Government guidance on CICs, learned via Fred's session on music, artists and open source; companies required to benefit community.
+https://www.gov.uk/government/publications/community-interest-companies-how-to-form-a-cic/community-interest-companies-guidance-chapters
+Learned about CIC from Fred’s session on music and artists and open source. Type of company that is required to benefit the community rather than make a profit
+→ https://www.gov.uk/government/publications/community-interest-companies-how-to-form-a-cic/community-interest-companies-guidance-chapters
+++ 14 Dec 2025 | Ed on CIC tradeoffs | Ed Saperia calls CICs a halfway house between company and charity, weaker on tax and funding, but publicly registered.
+Edward Saperia:
+
+sort of a halfway between a regular company and a charity
+
+generally considered less good because you don't get the same tax advantages and it's not eligible for lots of kinds of funding
+
+it's cool that there's a public register though
+++ 14 Dec 2025 | question: roles that aren't committees | Asks what non-committee role structures look like; Ed answers individual roles, because committees make responsibility unclear.
+what are some structures of roles that aren’t committees?
+
+_originally posted on Nov 23, 2025_
+
+Edward Saperia
+
+Individual roles!
+
+fatima
+
+Like a finite set of roles?
+For example
+
+“website maintainer”
+“ration club manager”
+Based on duties?
+Or more broad?
+
+Edward Saperia
+
+The idea of roles is that they make responsibility clear
+Committees don’t do that very well
+++ 14 Dec 2025 | Biden executive order 14110 | Links the 2023 order on safe, secure and trustworthy AI requiring developers to share safety testing results.
+[Safe, Secure, and Trustworthy Development and Use of Artificial Intelligence - Biden's order (Executive Order 14110)](https://www.federalregister.gov/documents/2023/11/01/2023-24283/safe-secure-and-trustworthy-development-and-use-of-artificial-intelligence):
+
+Issued in October 2023, this order aimed to create guidelines for responsible AI use in government, require developers to share safety testing results, and promote trustworthy AI.
+
+_originally posted on Nov 24, 2025_
+→ https://www.federalregister.gov/documents/2023/11/01/2023-24283/safe-secure-and-trustworthy-development-and-use-of-artificial-intelligence
+++ 14 Dec 2025 | anarchy reading list from Ed | Anarchic Agreements field guide to collective organising, plus Uri Gordon on anarchism and the politics of technology.
+reading on anarchy from Ed
+
+https://www.abebooks.co.uk/9781629639635/Anarchic-Agreements-Field-Guide-Collective-162963963X/plp
+https://theanarchistlibrary.org/library/uri-gordon-anarchism-and-the-politics-of-technology
+→ https://www.abebooks.co.uk/9781629639635/Anarchic-Agreements-Field-Guide-Collective-162963963X/plp
+++ 14 Dec 2025 | swiss cheese model for AI safety | arXiv taxonomy and reference architecture for multi-layered runtime guardrails around foundation-model agents, hard because agent behaviour is non-deterministic.
+[ Swiss Cheese Model for AI Safety](https://arxiv.org/abs/2408.02205): A Taxonomy and Reference Architecture for Multi-Layered Guardrails of Foundation Model Based Agents
+
+Researchers are exploring better ways to design guardrails to ensure that the runtime behavior of FM-based agents remains within specific boundaries. Nevertheless, designing effective runtime guardrails is challenging due to the agents' autonomous and non-deterministic behavior. The involvement of multiple pipeline stages and agent artifacts, such as goals, plans, tools, at runtime further complicates these issues.
+→ https://arxiv.org/abs/2408.02205
+++ 14 Dec 2025 | introduction to AI safety textbook | Shares the free online AI Safety, Ethics, and Society book as a foundational reference.
+[Introduction to AI Safety, Ethics, and Society](https://www.aisafetybook.com/)
+→ https://www.aisafetybook.com/
+++ 14 Dec 2025 | RL-learned context compression | Rajan's writeup on training Qwen to invent its own tenfold context compression so research agents can run for days.
+https://www.rajan.sh/llm-compression
+
+in order to have research agents that can run for days, we need context compaction
+
+i used RL to have LLMs naturally learn their own 10x compression! Qwen learned to pack more info per token (ie use Mandarin tokens, prune text)
+→ https://www.rajan.sh/llm-compression
+++ 14 Dec 2025 | NSF national AI research resource | Links the NAIRR focus area page on US public AI research infrastructure.
+https://www.nsf.gov/focus-areas/ai/nairr
+→ https://www.nsf.gov/focus-areas/ai/nairr
+++ 14 Dec 2025 | claude skill for concise output | Shares a community Claude skill file that constrains agents to concise output.
+https://github.com/NTCoding/claude-skillz/blob/main/concise-output/SKILL.md
+→ https://github.com/NTCoding/claude-skillz/blob/main/concise-output/SKILL.md
+++ 14 Dec 2025 | bitter lesson of LLM extensions | Sawyer Hood argues hand-rolled agent and plugin scaffolding collapses under complexity; models will learn to compose capabilities themselves.
+https://www.sawyerhood.com/blog/llm-extension
+
+“The Bitter Lesson of LLM Extensions” argues that as we bolt agents, tools, and plugins onto LLMs, the real “bitter lesson” is that most hand-rolled extension systems collapse under complexity, and the long-term win will be letting models themselves learn how to adapt and compose capabilities on the fly.
+→ https://www.sawyerhood.com/blog/llm-extension
+++ 14 Dec 2025 | New York algorithmic pricing law | New York's Algorithmic Pricing Disclosure Act took effect November 2025, requiring disclosure when personal data sets an individual's price.
+[New York’s Algorithmic Pricing Disclosure Law Takes Effect](https://www.kelleydrye.com/viewpoints/blogs/ad-law-access/new-yorks-algorithmic-pricing-disclosure-law-takes-effect)
+
+New York Attorney General Letitia James recently announced that on November 10, 2025, New York’s Algorithmic Pricing Disclosure Act (the ​“Act”) officially took effect. Codified at N.Y. Gen. Bus. Law § 349-a, the Act requires that companies making use of consumer-specific data to set prices clearly and inform consumers when those prices have been determined by an algorithm. It was enacted as part of New York’s omnibus budget bill, which also introduced other consumer protection measures, including amendments to the state’s Automatic Renewal Law that we covered in June. This measure reflects emerging legislative interest in addressing ​“surveillance pricing”, or individualized pricing practices that rely on personal data to adjust the cost of goods or services.
+→ https://www.kelleydrye.com/viewpoints/blogs/ad-law-access/new-yorks-algorithmic-pricing-disclosure-law-takes-effect
+++ 14 Dec 2025 | F-Secure on hidden online premiums | Explainer showing two shoppers can see different prices at the same moment based on device, postcode or location.
+[Surveillance Pricing Is Quietly Raising the Cost of Online Shopping](https://www.f-secure.com/en/partners/insights/surveillance-pricing-is-quietly-raising-the-cost-of-online-shopping)
+
+You may be paying a hidden premium when shopping online, determined not by what you buy or when you buy it, but by who you are. In fact, two people can look at the same product at the same moment yet see completely different prices—not because of sales, stock levels, or errors, but simply because one is shopping on a Mac, living in a particular zip code, or standing in a store's parking lot.
+
+That's the result of surveillance pricing, where online retailers use advanced data collection, predictive algorithms, and AI to profile shoppers, predict the maximum each person would be willing to pay, and set prices within milliseconds.
+→ https://www.f-secure.com/en/partners/insights/surveillance-pricing-is-quietly-raising-the-cost-of-online-shopping
+++ 14 Dec 2025 | Karpathy on Software 2.0 | Karpathy argues AI is best understood as a new computing paradigm automating digital information processing, easily automating what you can verify.
+[Software 2.0 easily automates what you can verify- Karpathy / x](https://x.com/karpathy/status/1990116666194456651)
+
+various historical precedents: electricity, industrial revolution, etc., I think the strongest analogy is that of AI as a new computing paradigm (Software 2.0) because both are…
+AI has been compared to various historical precedents: electricity, industrial revolution, etc., I think the strongest analogy is that of AI as a new computing paradigm (Software 2.0) because both are fundamentally about the automation of digital information processing.
+→ https://x.com/karpathy/status/1990116666194456651
+++ 14 Dec 2025 | Ed suggests algorithmic management | Ed points to algorithmic management, the ETUC trade union manual on negotiating the algorithm, and the Digital Statecraft manifesto.
+Readings/Advice from Edward Saperia
+
+You might be interested in "Algorithmic Management"
+
+Similar to surveillance algorithms, but with a focus on the rights of the people being managed
+
+Six will have things to say on this
+
+This kind of thing https://www.etuc.org/sites/default/files/publication/file/2025-09/Negotiating%20the%20Algorithm%20-%20Trade%20Union%20Manual_ETUC%20%28updated%29.pdf
+
+I'd also engage with the "AI in government" folks, ask Andreas will probably have suggestions for how to get plugged into this
+Also maybe go find out who these people are https://digitalstatecraft.academy/the_digital_statecraft_manifesto_v1-0/
+→ https://www.etuc.org/sites/default/files/publication/file/2025-09/Negotiating%20the%20Algorithm%20-%20Trade%20Union%20Manual_ETUC%20%28updated%29.pdf
+++ 14 Dec 2025 | Aadi shares tech and law syllabus | Cornell Tech/Law Colloquium plus an INFO1200 syllabus covering technology, law and surveillance curricula.
+reading  from Aadi
+
+- broader tech, law, and surveillance, curriculums (syllabus attached)
+- Tech/Law Colloquium – Exploring new developments at the intersection of law and information technology https://tlc.cis.cornell.edu/
+
+Syllabus-FA25-INFO1200-LEC001-DRAFT.pdf
+→ https://tlc.cis.cornell.edu/
+++ 14 Dec 2025 | Hirschman on exit and voice | Exit, Voice, and Loyalty as a framework for disengagement, silence and morale decay in collective projects.
+Albert O. Hirschman – Exit, Voice, and Loyalty https://www.hup.harvard.edu/books/9780674276604
+
+Provides a precise framework for understanding disengagement, silence, and morale decay in collective projects.
+→ https://www.hup.harvard.edu/books/9780674276604
+++ 14 Dec 2025 | Olson on collective action | The Logic of Collective Action explains why people rationally disengage from shared projects they believe in.
+Mancur Olson – The Logic of Collective Action
+https://www.hup.harvard.edu/books/9780674537514
+
+Explains why people rationally disengage from shared projects even when they believe in them.
+→ https://www.hup.harvard.edu/books/9780674537514
+++ 14 Dec 2025 | Scott on seeing like a state | Seeing Like a State on how simplified or rule-free systems erase lived experience and reproduce inequality.
+James C. Scott – Seeing Like a State
+https://yalebooks.yale.edu/book/9780300078152/seeing-like-a-state/
+
+Helps explain why simplified or “rule-free” systems often erase lived experience and reproduce inequality.
+→ https://yalebooks.yale.edu/book/9780300078152/seeing-like-a-state/
+++ 14 Dec 2025 | Matrix rooms must be unencrypted for bots | mstem and Ed advised to use public-to-space rooms with readable history, because bots cannot operate in encrypted channels.
+mstem: Edward Saperia - I think I finally fixed the channel issues. For bot related channels or notes like these, we should recommend `public to space` and `anyone can read history at anytime` instead of encrypted because bots can't run then.
+
+thank you!! :)
+++ 14 Dec 2025 | reread the Tyranny of Structurelessness | Alex Vince recommends revisiting Jo Freeman's essay with a new lens after the governance discussions.
+based on this, it might be good to read the Tyranny of Structurelessness with a new lens (as recommended by alex vince) https://www.jofreeman.com/joreen/tyranny.htm
+→ https://www.jofreeman.com/joreen/tyranny.htm
+++ 15 Dec 2025 | Arnstein's ladder of citizen participation | Arnstein's 1969 paper names informing, consultation and placation as tokenism, matching her sense of procedural futility.
+A LADDER OF CITIZEN PARTICIPATION, Sherry R. Arnstein
+https://www.historyofsocialwork.org/1969_ENG_Ladderofparticipation/1969%2C%20Arnstein%2C%20ladder%20of%20participation%2C%20original%20text%20OCR%20C.pdf
+
+What you’re calling procedural futility is basically: the process invites voice but doesn’t route it into consequential decisions. When people learn (even once or twice) that objections don’t change the plan, “participation” becomes a performance: you talk, the document grows, and then the authority proceeds as originally intended.
+
+That maps cleanly onto Arnstein’s ladder: rungs like Informing / Consultation / Placation are “tokenism” — people can “be heard,” but they lack power to ensure their views are heeded.
+→ https://www.historyofsocialwork.org/1969_ENG_Ladderofparticipation/1969%2C%20Arnstein%2C%20ladder%20of%20participation%2C%20original%20text%20OCR%20C.pdf
+++ 15 Dec 2025 | Nancy Fraser on rethinking recognition | Fraser shifts recognition from a cultural identity model to a status model removing institutional barriers to peer participation.
+Nancy Fraser, Rethinking Recognition
+https://newleftreview.org/issues/ii3/articles/nancy-fraser-rethinking-recognition
+
+Nancy Fraser’s approach to recognition is to shift from a culturalist interpretation of the Hegelian model based on the achievement of a positive self-image, to a Weberian model based on inclusion in an institutionalized status order. In what follows I am quoting from her May 2000 article in New Left Review, Rethinking Recognition. Here she contrasts the “identity model” of recognition underlying affirmative anti-sexism and anti-racism movements, for example, which aim to valorize group identity, to a “status model” whose aim is to remove institutional barriers to individual members of the group achieving participation as peers in the wider society.
+→ https://newleftreview.org/issues/ii3/articles/nancy-fraser-rethinking-recognition
+++ 15 Dec 2025 | three framing questions for system behaviour | Where model behaviour ends and system behaviour begins, what developers only think they control, and which failures evals miss.
+1. System boundaries
+
+Where does “model behavior” end and “system behavior” begin?
+
+What components introduce new attack or inference surfaces?
+
+2. Control illusion
+
+What do developers think they control?
+
+What actually controls outputs in practice?
+
+3. Evaluation blind spots
+
+Which failures are invisible to standard model evals?
+
+What would you need to log or instrument to even notice them?
+++ 17 Dec 2025 | Anthropic's multi-agent research system | Shares Anthropic's engineering writeup on their orchestrator-plus-parallel-researchers architecture.
+https://www.anthropic.com/engineering/multi-agent-research-system
+→ https://www.anthropic.com/engineering/multi-agent-research-system
+++ 17 Dec 2025 | question: failures between components | Chained RAG, agents, tools and evaluators each pass their own evals yet combine into hallucinations and reinforced mistakes.
+**Where do failures show up between components in multi agent systems, and why don’t our evals see them?**
+
+Modern systems chain RAG → agents → tools → evaluators and each component can pass it’s own evals. When combined, we see new behaviors like hallucinations, agents reinforcing each other’s mistakes, or harmful outcomes - that don’t appear in single tests. This makes it hard to detect failures.
+
+- Which existing eval methods fail to surface these behaviors, and why?
+- What kinds of stress tests would expose “reasonable locally, harmful globally” outcomes?
+++ 17 Dec 2025 | question: where sensitive inferences happen | Systems never trained on race, health or income still act as if they know them by combining ordinary signals.
+**Where in real AI systems do sensitive inferences actually happen, even when no model is explicitly trained to make them?**
+
+Many AI systems never store or predict sensitive traits like race, health status, or income. But they still end up *acting as if they know them*. This happens when systems combine ordinary signals across multiple steps.
+
+For example a system uses location, time of activity, and spending patterns to route someone into a higher-risk category. Or a content moderation pipeline combines language style, social connections, and past behavior to decide who gets flagged or deprioritized.
+
+This can be hard to detect because each step might look reasoable on it’s own or the inference is spread across retrieval and routing or existing checks aren’t focused on system level behavior.
+- Where does the system first start treating people differently based on those signals?
+- How could we test or log for indirect inference without requiring access to model internals?
+++ 18 Dec 2025 | Ed asks how to test supervisor pattern | Ed wonders how you would systematically test the shortcomings of the supervisor orchestration pattern.
+I wonder how you’d go about systematically testing the shortcomings of the supervisor pattern, do you have any ideas?
+++ 5 Jan 2026 | recursive language models manage context | Prime Intellect on storing inputs in Python and delegating to sub-agents instead of loading everything into the main context.
+https://www.primeintellect.ai/blog/rlm
+
+Recursive Language Models let agents manage massive context by storing inputs in Python and delegating work to sub-agents instead of loading everything into the main model's context—early tests show gains on long-context task (environments).
+→ https://www.primeintellect.ai/blog/rlm
+++ 12 Jan 2026 | building platforms above the loop | Work discussion on humans setting intent and constraints while AI generates, tests and validates, escalating only at decision points.
+Something we're discussing at work is how do we built platforms for AI that are "above the loop"
+
+The loop is currently how we build software:
+-  Humans still have to coordinate intent, break down the work, deal with agent failures, and set up the tasks.
+- Agents execute the tasks, but people decide when to stop or continue.
+
+Above the loop (I find is similar to the supervisor orchestration pattern) is when :
+- humans set intent, constraints, and direction
+- ai systems generate, test, revise, and validate changes - and only reach out to the human about decision points
+
+so instead of deciding every code change, the human is deciding "what should exist"
+
+it's very exciting to see this!
+++ 12 Jan 2026 | self-improving agents roundup | Yohei Nakajima's survey of academic projects where an agent edits and improves its own code or policies.
+https://yoheinakajima.com/better-ways-to-build-self-improving-ai-agents/
+academic projects where an agent edits and improves its own code or policies, not just responses.
+→ https://yoheinakajima.com/better-ways-to-build-self-improving-ai-agents/
+++ 12 Jan 2026 | are agent swarms actually better now | Ed is surprised swarm approaches never worked well; Fatima notes they make mess and only run on Claude Code.
+Ed Saperia: I've always been surprised that these don't get better results, but, maybe they do now
+
+Fatima: this was first released two weeks ago
+
+Ed Saperia: I mean, "things of this nature"
+
+Fatima: so this might be a resurgence of iterative loop ideas
+
+Fatima: it feels new to me(!) but i may not have been paying attention in the past few weeks
+
+Fatima: ahhh i think this might be different this time
+
+Fatima: but i may also be falling for the hype hehe
+
+Ed Saperia: there have been various "agent swarm" type things over the past couple of years
+
+Fatima: this is true!
+
+Ed Saperia: no I mean I expect they're getting better quickly
+
+Fatima: they seem to be
+
+Fatima: but they're also creating a lot of mess
+
+Ed Saperia: as I say, I am surprised they aren't good
+
+Fatima: plus they mostly only work with claude code at the moment
+
+Fatima: and i would need infinite tokens
+++ 12 Jan 2026 | ralph explained for idiots | Shares a joke thread explaining the ralph looping technique.
+https://x.com/agrimsingh/status/2010412150918189210
+ralph for idiots: the only explanation you need
+
+(is joke)
+→ https://x.com/agrimsingh/status/2010412150918189210
+++ 20 Jan 2026 | Slipstream protocol for agent communication | Hugging Face writeup on cutting agent communication costs by leveraging existing language rather than inventing a machine protocol.
+https://huggingface.co/blog/anthonym21/slipstream-for-agent-communication
+
+A new protocol called Slipstream offers a powerful and surprisingly counter-intuitive solution. It cuts through the noise to dramatically reduce communication costs and make large-scale agent systems economically viable. This article unpacks the most impactful takeaways from the research, revealing how the solution isn't to invent a new machine language, but to leverage the one we already have.
+
+this is very cool!
+→ https://huggingface.co/blog/anthonym21/slipstream-for-agent-communication
+++ 20 Jan 2026 | models reason as an internal committee | Paper showing reasoning models simulate persona-like internal dialogue; steering a surprise feature doubled accuracy. She is intrigued.
+https://arxiv.org/abs/2601.10825
+
+Researchers from Google, University of Chicago, and Santa Fe Institute show that LLMs like DeepSeek-R1 and QwQ-32B improve reasoning not by length alone but by simulating internal dialogues among diverse, persona-like perspectives. These models display more question-answering, disagreement, and reconciliation than instruction-tuned baselines. Steering a “surprise” discourse feature doubled reasoning accuracy, increasing activation of personality and expertise features. Reinforcement learning reinforced these behaviors, especially when models were fine-tuned on multi-agent dialogues, accelerating reasoning improvements. In short, the model is forming an internal committee to solve problems, echoing human cognition and group collaboration. That’s a leap in understanding both AI and possibly the nature of reasoning itself
+
+AN INTERNAL COMMITEEE
+
+Need to read this soon because I’m INTRIGUED
+→ https://arxiv.org/abs/2601.10825
+++ 26 Jan 2026 | Ed: council of experts is old | Ed notes council of experts has been a named prompting method for a while.
+“Council of Experts” has been a named method for a while I think
+++ 28 Jan 2026 | Clawdbot and Moltbot local agents | mstem shares the Verge report; Ed says the creator visited Newspeak House and suggests code club, mstem advises a VM.
+Matt Stempeck: https://www.theverge.com/report/869004/moltbot-clawdbot-local-ai-agent
+
+Ed Saperia: The creator of this was at NH last week
+
+Ed Saperia: We should probably be playing with it
+
+Ed Saperia: Maybe a good focus for code club on Monday
+
+Fatima: very cool!
+
+Matt Stempeck: play with it on a virtual machine, methinks
+
+Fatima: haha for sure
+
+Fatima: i only have my work laptop :P
+
+Matt Stempeck: i'm excited and terrified by these things
+
+Ed Saperia: they are certainly exciting and terrifying
+
+Ed Saperia: but if we're not the people to experiment with them then who is?
+
+Fatima: agreed!
+→ https://www.theverge.com/report/869004/moltbot-clawdbot-local-ai-agent
+++ 29 Jan 2026 | Ollama launch announcement | Shares Ollama's launch blog post.
+https://ollama.com/blog/launch
+→ https://ollama.com/blog/launch
+++ 29 Jan 2026 | Kimi K2.5 and agent swarms | Kimi's K2.5 release blog plus Simon Smith asking whether swarms plus Agent Skills scale across an enterprise.
+https://www.kimi.com/blog/kimi-k2-5.html
+
+https://x.com/_simonsmith/status/2016234897413964057
+
+I've been thinking about the best way to organize agents in step-by-step workflows where each agent has skills defined by Agent Skills file, and to then scale this across an enterprise. Today Kimi dropped its K2.5 model along with Agent Swarms, and I thought: could this be it?
+→ https://www.kimi.com/blog/kimi-k2-5.html
+++ 29 Jan 2026 | Simon Willison tests parallel planning | Gist testing Kimi's multi-agent planning claims by breaking a Datasette S3 upload plugin into ten parallel tasks.
+https://gist.github.com/simonw/ee2583b2eb5706400a4737f56d57c456
+
+As a more interesting test, I decided to exercise the claims around multi-agent planning with this prompt:
+
+I want to build a Datasette plugin that offers a UI to upload files to an S3 bucket and stores information about them in a SQLite table. Break this down into ten tasks suitable for execution by parallel coding agents.
+→ https://gist.github.com/simonw/ee2583b2eb5706400a4737f56d57c456
+++ 29 Jan 2026 | AI shopping tools raise pricing stakes | Tech Policy Press on big tech AI shopping agents raising the stakes for surveillance pricing laws.
+https://www.techpolicy.press/big-techs-ai-shopping-tools-raise-stakes-for-surveillance-pricing-laws/
+→ https://www.techpolicy.press/big-techs-ai-shopping-tools-raise-stakes-for-surveillance-pricing-laws/
+++ 29 Jan 2026 | Karpathy on the coherence threshold | Shares Karpathy's post about crossing into mostly supervising agents rather than writing code himself.
+https://x.com/karpathy/status/2015883857489522876
+→ https://x.com/karpathy/status/2015883857489522876
+++ 29 Jan 2026 | Clawdbot is the rebrand | Realises Clawdbot and Moltbot are the same viral open-source assistant that proactively messages you, and she missed it going viral.
+aha! this is Clawdbot rebranded!
+
+https://www.reddit.com/r/LocalLLM/comments/1qmrwxl/clawdbot_the_ai_assistant_that_actually_messages/
+
+Clawdbot is an open-source AI assistant (9K+ GitHub stars) with a different approach: it proactively messages you instead of waiting for prompts. If you've used Poke (or others), it works the same way, but is more configurable and obviously open-source. I might even cancel my subscription with Poke now.
+
+I was so busy with work things last week, I completely this missed this going viral!
+→ https://www.reddit.com/r/LocalLLM/comments/1qmrwxl/clawdbot_the_ai_assistant_that_actually_messages/
+++ 29 Jan 2026 | build tools that help people think | Sam Altman on human slop as well as AI slop, and building genuinely good brainstorming partners.
+try to build tools that help people think better
+
+Sam: It’s popular to talk about “AI slop,” but there’s also a huge amount of human-generated slop in the world. (swyx: we agree!) Coming up with genuinely good, new ideas is hard. I increasingly believe that we think at the limits of our tools, and that we should explicitly try to build tools that help people think better. [_From the Open AI town hall_](https://www.youtube.com/watch?v=Wpxv-8nG8ec&t=1179s)
+
+We can build really great brainstorming partners. There have been like three or four people in my life that I have consistently found every time I hang out with them, I leave with a lot of ideas. They’re people who are just really good at asking questions or giving you seeds to build on.
+→ https://www.youtube.com/watch?v=Wpxv-8nG8ec
+++ 29 Jan 2026 | swyx on the AI Paul Graham | Reflections arguing thought-partner agents fail as RAG on essays; a five percent accurate PG would still be valuable.
+Swyx's Reflections in SmolAi were really poignant, sharing them here to read again.
+
+**Reflections on “AI Paul Graham”**
+There are a few reactions I have here that I’ll fire off in quick succession:
+
+It’s nice to see him acknowledge that the potential of AI is not just in helping to attract more attention through generated images and videos and marketing text (AI GTM, the first question from the town hall), but also it should be used in raising the quality of product, because there is a lot of human-origin slop too!
+
+In many ways, Sam here is trying to bring in what YCombinator does for improving founder success to the general thought partnership capability of ChatGPT. Everyone could benefit from having their own personal YC Group Partner, on demand, no office hours. Much less having a PG-tier Partner. And yes, this is just the business form of the more general domain of advising and coaching, which probably everyone can benefit from if we knew how to make it good enough.
+
+Many, many people have tried to build an “AI Paul Graham” bot. These flopped because they mostly did RAG or finetunes on his essays. Information Retrieval isn’t what PG -does- for Sam. He challenges you, runs you through multiple internal world models and pattern matches of past learned experiences, filters through what he should say to elicit the best response out of you instead of simply blurting out what he thinks token by token, and raises your ambitions.
+
+For both model trainers and agent harness builders, it’s instructive to draw a spectrum from the poorest implementation to the most ambitious implementation you can think of, and think about the sequencing of intelligent feedback and pushback you need.
+
+It is too lazy to wait for the God Model to arrive to do all these, there are probably concrete thought partner jobs that can be broken out into Agent Skills and MCP tools and Multi-agent Swarms and other tricks of the AI Engineer trade.
+
+“Accuracy” for an AI PG is not 90%, not even 50% — even a 5% accurate PG is acceptable and valuable (and is probably reflective of most real life conversations with him - most questions or comments are NOT valuable, but a human filter on the comments will surface some very generative and out of distribution “seeds”). So this is a very scalable “throw shit at the wall” task where AI can act as mass generator and Humans can act as discriminator/judge, and our existence proof that high-miss-rate question generation is still useful is YCombinator and Sam’s personal experience.
+
+When faced with “AI as thought partner” I see a lot of parallels with the alignment problem, and I often think about the Weak-to-Strong Superalignment diagram:
+
+Where we are currently treating agents as a junior Software Engineer or “research intern” (this is certainly the relationship we have with ChatGPT or Prism today), we want to build the PG agent that is smarter than us, and perhaps the path there is to build smart agents for dumber people/usecases and then ladder up from there.
+++ 29 Jan 2026 | weak-to-strong generalization | Shares OpenAI's weak-to-strong superalignment work as a parallel to building thought partners smarter than us.
+https://openai.com/index/weak-to-strong-generalization/
+→ https://openai.com/index/weak-to-strong-generalization/
+++ 29 Jan 2026 | coding agent phase shift is real | Agentic coding loops are a step change but agents skip clarifying questions and edit unrelated files in established codebases.
+**Coding agent “phase shift” is real**
+
+but messy: Multiple posts reflect a step-change in practice: founders and engineers are increasingly running “agentic” coding loops, yet hitting new failure modes: agents that don’t ask clarifying questions, get “confused,” or edit unrelated files. [Mikhail Parakhin describes reaching the point where he can specify a scheduler and trust it to work, but still can’t let agents loose on established codebases due to collateral edits](https://substack.com/redirect/96882b75-d628-4d98-87ca-e28d6536c427?j=eyJ1IjoiMm5jaXEifQ.UVxyhsf-HdqTJcGLa9qNmFnHCmiz83YtfDe9Hjfqx5w). Andrew Karpathy [describes it as the threshold of coherence ](https://x.com/karpathy/status/2015883857489522876) -  said he went from writing 80% of his code manually to 80% via AI agents in just a few weeks and now he’s mostly programming in English and supervising machines. That’s a real shift in how we build software. What happens to the "10X engineer" - the ratio of productivity between the mean and the max engineer?
+++ 29 Jan 2026 | skills as a shared interface layer | Workflow logic moving from prompts into reusable skill files, via DeepLearning's course, LangChain and Hugging Face's upskill.
+**Skills are crystallizing into a shared interface layer:**
+A major theme is moving workflow logic out of prompts into reusable “skills” (files/folders of instructions, loaded on demand).
+- [Deep Learning launched an Agent Skills with Anthropic course](https://www.deeplearning.ai/short-courses/agent-skills-with-anthropic/)
+- LangChain is pushing “Skills” via progressive disclosure as lightweight, shareable units
+- [HF showcased “upskill”](https://t.co/phEVhVc0k5): convert strong-model traces into transferable skills, then evaluate impact
+→ https://www.deeplearning.ai/short-courses/agent-skills-with-anthropic/
+++ 29 Jan 2026 | context management for deep agents | As addressable task length grows, context management becomes critical to prevent context rot within finite memory.
+[Context Management for Deep Agents
+](https://x.com/masondrxy/status/2016548078346736014?s=20)
+As the addressable task length of AI agents continues to grow, effective context management becomes critical to prevent context rot and to manage LLMs' finite memory constraints.
+→ https://x.com/masondrxy/status/2016548078346736014
+++ 29 Jan 2026 | Yegge on software survival 3.0 | Shares Steve Yegge's essay; she later says she read it twice and is obsessed.
+Fatima: https://steve-yegge.medium.com/software-survival-3-0-97a2a6255f7b
+
+Ed Saperia: This is great
+
+Ed Saperia: good old yegge
+
+Fatima: I have read it twice
+
+Fatima: I am obsessed
+→ https://steve-yegge.medium.com/software-survival-3-0-97a2a6255f7b
+++ 31 Jan 2026 | local models on a Mac Studio | Shares a thread on running local models, because she wants Clawdbot running locally on her Mac Studio.
+https://x.com/krunkosaurus/status/2017125560988872979 - because I want to use local models on my Mac Studio for my clawdbot
+→ https://x.com/krunkosaurus/status/2017125560988872979
+++ 1 Feb 2026 | Clawdbot on DigitalOcean | Notes from running Clawdbot on DigitalOcean, praising the friendly chat UI but hitting API and skill limitations.
+notes playing around with Clawdbot on Digital Ocean via https://www.digitalocean.com/blog/moltbot-on-digitalocean
+
+- really interesting that they scaffolded a user friendly UI to chat with the bot
+
+some limitations in regards to the types of APIs you can use and the types of skills you can add
+→ https://www.digitalocean.com/blog/moltbot-on-digitalocean
+++ 2 Feb 2026 | two untagged link drops | Shares two x.com links with no commentary.
+https://x.com/pbteja1998/status/2017662163540971756?s=46
+
+https://x.com/francedot/status/2015178880215298557?s=46
+→ https://x.com/pbteja1998/status/2017662163540971756
+++ 4 Feb 2026 | ingesting Matrix into Onyx | Onyx lacks Matrix support but has an ingestion API; Ed says daily dumps would be easy, she worries about preserving context.
+Fatima: Onyx doesn’t seem to support matrix out of the box
+
+Ed Saperia: no but that would be a good project
+
+Fatima: true
+
+Fatima: they have an ingestion API
+
+Ed Saperia: grabbing all the matrix data every day and throwing it in will probably be very easy
+
+Fatima: yes
+
+Fatima: i was worried about preserving the context of chat/channel/person
+
+Ed Saperia: it comes as a big json file no? so it should be able to deal with that
+++ 5 Feb 2026 | Surge leaderboard | Shares the SurgeHQ model leaderboard.
+https://surgehq.ai/leaderboard
+→ https://surgehq.ai/leaderboard
+++ 12 Feb 2026 | GLM-5 scales for agentic tasks | GLM-5 grows to 744B parameters with sparse attention, targeting complex systems engineering and long-horizon agentic work.
+https://z.ai/blog/glm-5
+
+We are launching GLM-5, targeting complex systems engineering and long-horizon agentic tasks. Scaling is still one of the most important ways to improve the intelligence efficiency of Artificial General Intelligence (AGI). Compared to GLM-4.5, GLM-5 scales from 355B parameters (32B active) to 744B parameters (40B active), and increases pre-training data from 23T to 28.5T tokens. GLM-5 also integrates DeepSeek Sparse Attention (DSA), significantly reducing deployment cost while preserving long-context capacity.
+→ https://z.ai/blog/glm-5
+++ 13 Feb 2026 | political consciousness as perpetual quest | Shares Valerie Miller's paper on political consciousness.
+https://justassociates.org/wp-content/uploads/2022/02/political-consciousness-perpetual-quest-valarie-miller.pdf
+→ https://justassociates.org/wp-content/uploads/2022/02/political-consciousness-perpetual-quest-valarie-miller.pdf
+++ 14 Feb 2026 | MiniMax M25 release | Shares MiniMax's M25 announcement.
+https://www.minimax.io/news/minimax-m25
+→ https://www.minimax.io/news/minimax-m25
+++ 15 Feb 2026 | built a Matrix publisher bot | Bot fetches channel history, keeps emoji-tagged posts and threads, maps them to types and builds content.json as a reusable template.
+https://github.com/nwspk/matrix-publisher-bot
+
+built a matrix publisher bot that fetches the full message history of a channel, keeps only the emoji tagged posts and their threads, maps them to a type (`journal, link, field-note`) and crafts a `content.json` for the website. It's a "github template" so all fellows can use the template to generate their own fork and can adjust the content types for example.
+→ https://github.com/nwspk/matrix-publisher-bot
+++ 15 Feb 2026 | cohort site fellow landing pages | In-progress pull request rendering content.json into reading list, publications and explorations sections, vibe engineered and still buggy.
+https://github.com/nwspk/2025.newspeak.house/pull/37
+in progress build of individual landing pages on the cohort website that pull the data from the `content.json` of the matrix publisher bot and create a portfolio of the fellow's content. In my case, it follows the structure of the posts here:
+- *reading list* -> links + projects (or tools I'm interested in)
+- *publications* -> field notes + links to blog posts on substack
+- *explorations* -> questions + ideas
+
+need to test and debug a bit more as it was vibe engineered - and there's a few bugs I need to fix while keeping the functionality isolated enough that fellows can implement their own publisher + parser (within the site) for their pages.
+→ https://github.com/nwspk/2025.newspeak.house/pull/37
+++ 16 Feb 2026 | fran on awe and nuance | fran_galli notes a bias toward awe at modernist work that is just another conformity; Fatima still fixated on the neutrality guy.
+fran: Interesting to read your reflections! personally I find there is a bias sometimes to be in "awe" of modernist odd stuff that "does it differently" when maybe it is just another flavour of conformity. You reminded me of a BBC radio show doing political satire and they had this fake ad piece that was something like "Donate £10 today to teach a Gen Z the concept of nuance" ahahah I think it applies intergenerationally though
+
+Fatima: In hindsight, the man personally who ranted about “how objective and beautifully neutral the film was” occupied so much of my mind for hours later haha
+
+Fatima: I haven’t yet read any public critique of the movie
+++ 19 Feb 2026 | Ed on assuming someone built it | Ed finds it empowering to assume someone else has already done the thing.
+in some ways empowering to be able to assume someone else did the thing
+++ 2 Mar 2026 | Ed on imagination and prior art | Ed argues if you can assume someone already built your idea, imagination is the only limit on what you can bring forth.
+I mean, if you have an idea, and you can assume that someone will have done it already, there's no limit to what you can bring forth in the world if you have enough imagination :)
+++ 4 Mar 2026 | Yegge's Wasteland sequel | Steve Yegge's third instalment after Beads and Gas Town, on federated agent work systems.
+https://steve-yegge.medium.com/welcome-to-the-wasteland-a-thousand-gas-towns-a5eb9bc8dc1f
+
+Well, it's been a long 2 months, but it's finally here, the sequel to Gas Town. It's the third movie in my series: first Beads, then Gas Town, and now The Wasteland -- A Thousand Gas Towns. The biggest and best federated work system the world has ever seen.
+→ https://steve-yegge.medium.com/welcome-to-the-wasteland-a-thousand-gas-towns-a5eb9bc8dc1f
+++ 9 Mar 2026 | question: political calibration across models | After seeing Grok and Claude deliberate differently in awards iteration six, she asks whether RLHF political calibration generalises.
+from the results of our politech awards - iteration v6 - I've been wondering after seeing the deliberations from Grok vs Claude - does Sonnet 4's RLHF calibration around political statements and alignment exist in other models too. Will review the paper and then see if I can be inspired to test some of the models on the awards afterwards.
+++ 26 Mar 2026 | backlog of unwritten field notes | Lists twelve pieces she wants to write, including term reflections, clawclub, the birthday immigration system and sparkle bureaucracy.
+things I want to write about, but haven't gotten a chance!
+
+- first term reflections (in draft!)
+- second term reflections (must start!)
+- clawclub 1&2 and photos!
+- small vs big audiences and workshops
+- censorship + surveillance resistance comms workshop + game idea
+- lumina house takeover!
+- majority myth - book club with the author
+- the birthday immigration system!
+- data governance models and cow farmers!
+- what happens where there's transparency but no accountability
+- chalkboards and how we tell the world who we are - and why that's hard
+- sparkle bureaucracy
+++ 29 Mar 2026 | Gamithra suggests cohort agents | Project idea from Gamithra to run synthetic agents answering questions about the fellowship and prototypes at Ration Club.
+project idea from Gamithra - set up synthetic agents to answer questions about fellowship and prototypes at Ration Club so we can have fun :)
+++ 29 Mar 2026 | a group chat of mirror agents | Ed suggests putting an agent for every cohort member in one group chat; Aadi already asked to talk to his.
+Ed Saperia: you have an agent for everyone in the cohort now, you can have them all in a group chat and people can talk to them
+
+Fatima: Hahaha aadi asked to talk his mirror agent and now I really want to deploy it
+
+Ed Saperia: haha great idea
+++ 1 Apr 2026 | two untagged link drops | Shares two x.com links with no commentary.
+https://x.com/himanshustwts/status/2038924027411222533?s=46
+
+https://x.com/ellen_in_sf/status/2039098050837463504?s=46
+→ https://x.com/himanshustwts/status/2038924027411222533
+++ 1 Apr 2026 | the Claude Code source leak | Wants to play with the leaked Claude Code source, via Latent Space's writeup.
+gotto play around with the Claude code leak hehe
+https://www.latent.space/p/ainews-the-claude-code-source-leak
+→ https://www.latent.space/p/ainews-the-claude-code-source-leak
 
 +++2 Papers read
 + 14 Dec 2025 | HBS paper on dynamic pricing harm | Harvard Business School paper arguing pricing algorithms pose policy problems far broader than the collusion regulators currently focus on. | https://www.hbs.edu/ris/Publication%20Files/22-050_ec28aaca-2b94-477f-84e6-e8b58428ba43.pdf | Dynamic Pricing Algorithms, Consumer Harm, and Regulatory Response. Regulators and scholars have focused on pricing algorithms facilitating explicit and tacit collusion; the article argues the policy challenges are far broader than collusive conduct.
