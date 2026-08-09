@@ -2294,27 +2294,27 @@ gallery: 18
 
 *Because a network prototype is made of people.*
 
-- **Edward Saperia** — for a year-long thread of belief, and for looking at a border ritual at a birthday party and saying: that's Sparkle Bureaucracy.
-- **Hannah O'Rourke** — for being emotional support, for the pilot projects, and for repeatedly reminding me — through evidence — that legitimacy is constructed, not earned.
-- **Anouk Ruhaak** — for indulging me on the implications of AI even while hating it, for testing the limits of my agents, and for the adventure of hosting RightsUnCon.
-- **Six Silberman** — for the readings that made me weigh the pros and cons of technology, for treating me like an expert, and for implicitly answering the "why me."
-- **Andreas Varotsis** — for always collaborating on ideas and supporting Clawclub.
-- **Gamithra Marga** — for the cutting-edge ideas on the awards, and for all the cool things you've built that were so inspiring.
-- **Alexandra Ciocanel** — for the awards showcase, and for always being willing to support wild ideas and activations.
-- **Jamie Coombes** — for all the things we did for the amazing awards showcase!
-- **Francesca Galli** — for being the reason I was excited to run the Sparkle Border Authority at my birthday, and for always supporting my crazy ideas.
-- **Peyman Owladi** — for always giving me interesting things to consider in his classes, and for the flagship.
-- **Matt Stempeck** — for being the best mentor ever, for helping me figure out what I wanted to do, and for being excited about all that I do.
-- **Aadi Kulkarni** — for supporting Claw Club, discussing American politics, and always believing in me even when I didn't.
-- **James Moulding** — for helping me wrap my head around networks, for believing in the optimistical Sparkle Bureaucracy in its infancy, and for all the feedback and support.
-- **Chris Owen** — for writing our values statements on the first day together, supporting Prototype and Code Club, and building cool things.
-- **David Powell** — for being one for building community, and for building cool things together at Code Club.
-- **Huda Abdirahim** — for coming back to us! So we could brainstorm interesting projects and talk about the impact of technology.
-- **Asil Sidahmed** — for being an inspiration, for seeing what the others don't see, and for collaborating on ideas.
-- **Nick Botti** — for the feedback, the emotional support, and the deep debates on American politics and the implications of AI.
-- **Hoagy Davis-Digges** — for listening to me vent about all things legitimacy of the course, and being very kind about it.
-- **Zarinah Agnew** — for inspiring me to think about people, motivations, and what kind of impact I want in the communities I exist in.
-- **Alex Vince** — for the leadership sessions, and for being someone who can be relied on and collaborated with.
-- **John Evans** — for Matrix! And for the laughs, and for the +1 on technical things and ideas.
+- ✦ **Edward Saperia** — for a year-long thread of belief, and for looking at a border ritual at a birthday party and saying: that's Sparkle Bureaucracy.
+- ♥ **Hannah O'Rourke** — for being emotional support, for the pilot projects, and for repeatedly reminding me — through evidence — that legitimacy is constructed, not earned.
+- ♥ **Anouk Ruhaak** — for indulging me on the implications of AI even while hating it, for testing the limits of my agents, and for the adventure of hosting RightsUnCon.
+- ✿ **Six Silberman** — for the readings that made me weigh the pros and cons of technology, for treating me like an expert, and for implicitly answering the "why me."
+- ✦ **Andreas Varotsis** — for always collaborating on ideas and supporting Clawclub.
+- ✿ **Gamithra Marga** — for the cutting-edge ideas on the awards, and for all the cool things you've built that were so inspiring.
+- ✦ **Alexandra Ciocanel** — for the awards showcase, and for always being willing to support wild ideas and activations.
+- ✿ **Jamie Coombes** — for all the things we did for the amazing awards showcase!
+- ✦ **Francesca Galli** — for being the reason I was excited to run the Sparkle Border Authority at my birthday, and for always supporting my crazy ideas.
+- ✿ **Peyman Owladi** — for always giving me interesting things to consider in his classes, and for the flagship.
+- ♥ **Matt Stempeck** — for being the best mentor ever, for helping me figure out what I wanted to do, and for being excited about all that I do.
+- ♥ **Aadi Kulkarni** — for supporting Claw Club, discussing American politics, and always believing in me even when I didn't.
+- ✦ **James Moulding** — for helping me wrap my head around networks, for believing in the optimistical Sparkle Bureaucracy in its infancy, and for all the feedback and support.
+- ✿ **Chris Owen** — for writing our values statements on the first day together, supporting Prototype and Code Club, and building cool things.
+- ✦ **David Powell** — for being one for building community, and for building cool things together at Code Club.
+- ♥ **Huda Abdirahim** — for coming back to us! So we could brainstorm interesting projects and talk about the impact of technology.
+- ✿ **Asil Sidahmed** — for being an inspiration, for seeing what the others don't see, and for collaborating on ideas.
+- ✦ **Nick Botti** — for the feedback, the emotional support, and the deep debates on American politics and the implications of AI.
+- ✿ **Hoagy Davis-Digges** — for listening to me vent about all things legitimacy of the course, and being very kind about it.
+- ✦ **Zarinah Agnew** — for inspiring me to think about people, motivations, and what kind of impact I want in the communities I exist in.
+- ♥ **Alex Vince** — for the leadership sessions, and for being someone who can be relied on and collaborated with.
+- ✿ **John Evans** — for Matrix! And for the laughs, and for the +1 on technical things and ideas.
 
 (@todo lines still to come: Fred O'Brien · Tuna Acisu · Davit Jintcharadze · Emily Mayhew · Connor Dunlop · Theodore Keloglou · Sinead Doyle · Joshua Becker · Sam Ballard)
