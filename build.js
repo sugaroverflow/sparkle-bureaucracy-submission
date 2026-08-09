@@ -218,8 +218,8 @@ function renderBlocks(blocks) {
     if (b.k === "oli") { closeF(); closeL(); closeN(); closeQ(); ol.push("<li>" + inline(b.t) + "</li>"); continue; }
     if (b.k === "note") {
       closeL(); closeF(); closeO(); closeQ();
-      notes.push('<details class="fnote"><summary><span class="fn-d">' + inline(b.d) +
-        '</span><span class="fn-t">' + inline(b.title) + "</span></summary><p>" + inline(b.sum) + "</p></details>");
+      notes.push('<div class="fnote"><span class="fn-d">' + inline(b.d) +
+        '</span><div class="fn-b"><b>' + inline(b.title) + "</b><span>" + inline(b.sum) + "</span></div></div>");
       continue;
     }
     if (b.k === "qc") {
@@ -386,7 +386,7 @@ ${ANNOTATIONS ? `<link rel="stylesheet" href="/vendor/recogito.min.css">` : ""}
 [data-hue=gold]{--h:var(--gold);--hi:var(--gold-ink);--ht:var(--gold-tint)}
 
 *,*::before,*::after{box-sizing:border-box}
-html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+html{font-size:110%;-webkit-text-size-adjust:100%;scroll-behavior:smooth}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 body{margin:0;background:var(--midnight) url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="700" height="700"><g fill="%23ffffff"><circle cx="40" cy="60" r="1" opacity=".5"/><circle cx="180" cy="320" r="1.2" opacity=".35"/><circle cx="330" cy="90" r="1" opacity=".45"/><circle cx="520" cy="210" r="1.4" opacity=".3"/><circle cx="640" cy="470" r="1" opacity=".5"/><circle cx="90" cy="540" r="1.2" opacity=".35"/><circle cx="410" cy="620" r="1" opacity=".4"/><circle cx="260" cy="480" r="1" opacity=".3"/></g><text x="120" y="150" font-size="14" fill="%23FACC15" opacity=".35">✦</text><text x="560" y="120" font-size="11" fill="%23ffffff" opacity=".25">★</text><text x="60" y="420" font-size="12" fill="%232DD4BF" opacity=".3">✦</text><text x="470" y="360" font-size="16" fill="%23EC4899" opacity=".25">★</text><text x="620" y="640" font-size="12" fill="%23A855F7" opacity=".3">✦</text><text x="240" y="660" font-size="10" fill="%23ffffff" opacity=".2">★</text></svg>');
   color:var(--light);font:400 1.0625rem/1.62 var(--text);letter-spacing:-.006em}
@@ -447,6 +447,8 @@ code{font:400 .84em/1.3 var(--util);background:#17122c0f;padding:.16em .38em;bor
 .hero{padding-block:clamp(2.25rem,6vw,4rem) clamp(1.5rem,4vw,2.5rem)}
 .presub{font:600 .6875rem/1.4 var(--util);letter-spacing:.24em;text-transform:uppercase;
   color:var(--gold);margin:0 0 .6rem}
+.subname{font:900 clamp(1.15rem,2.6vw,1.7rem)/1.2 var(--display);letter-spacing:.16em;
+  text-transform:uppercase;color:var(--gold);margin:.2rem 0 1rem}
 .wordmark{font-size:clamp(2.7rem,10.5vw,6.8rem);line-height:.94;letter-spacing:-.046em;font-weight:900;
   margin:0 0 1.1rem;color:#fff}
 .wordmark span{display:block}
@@ -654,20 +656,14 @@ h2.bare{margin:2.4rem 0 1rem}
 
 /* ── field notes ─────────────────────────────────────────── */
 .fnotes{margin:1.3rem 0 1.8rem;max-width:56rem;border:2px solid var(--edge)}
-.fnote{border-bottom:1px solid var(--edge)}
+.fnote{display:grid;grid-template-columns:7.5rem minmax(0,1fr);gap:.8rem;align-items:baseline;
+  padding:.55rem .8rem;border-bottom:1px solid var(--edge)}
 .fnote:last-child{border-bottom:0}
-.fnote summary{cursor:pointer;list-style:none;display:grid;grid-template-columns:7.5rem minmax(0,1fr);
-  gap:.8rem;align-items:baseline;padding:.5rem .8rem}
-.fnote summary::-webkit-details-marker{display:none}
-.fnote summary:hover{background:#ffffff0d}
-.fn-d{font:600 .625rem/1.6 var(--util);letter-spacing:.08em;text-transform:uppercase;color:var(--gold)}
-.fn-t{font-size:.875rem;line-height:1.5;color:var(--light)}
-.fnote[open] summary{background:#ffffff0d}
-.fnote>p{margin:0;padding:.1rem .8rem .7rem 9.1rem;font-size:.875rem;line-height:1.55;color:var(--softlight)}
-@media(max-width:40rem){
-  .fnote summary{grid-template-columns:1fr;gap:.1rem}
-  .fnote>p{padding-left:.8rem}
-}
+.fnote:hover{background:#ffffff0d}
+.fn-d{font:600 .625rem/1.7 var(--util);letter-spacing:.08em;text-transform:uppercase;color:var(--gold)}
+.fn-b b{display:block;font-size:.875rem;line-height:1.45;color:var(--light);letter-spacing:-.01em}
+.fn-b span{display:block;font-size:.8125rem;line-height:1.5;color:var(--softlight);margin-top:.1rem}
+@media(max-width:40rem){.fnote{grid-template-columns:1fr;gap:.15rem}}
 
 /* ── open-question cards ─────────────────────────────────── */
 .qcards{display:grid;gap:1.1rem;grid-template-columns:repeat(auto-fill,minmax(min(100%,17rem),1fr));
@@ -683,11 +679,14 @@ h2.bare{margin:2.4rem 0 1rem}
 .qcard b{display:block;font-size:1rem;letter-spacing:-.018em;margin-bottom:.4rem}
 .qcard p{margin:0;font-size:.875rem;line-height:1.55}
 
-/* ── month roadmap cards ─────────────────────────────────── */
-.mroad{display:grid;gap:1.1rem;grid-template-columns:repeat(auto-fill,minmax(min(100%,16rem),1fr));
-  margin:1.6rem 0 2.2rem;max-width:66rem;align-items:start}
-.mcard{background:var(--paper);color:var(--ink);border:2px solid var(--ink);
+/* ── month roadmap timeline ──────────────────────────────── */
+.mroad{position:relative;display:grid;gap:1.4rem;max-width:46rem;
+  margin:1.6rem 0 2.4rem;padding-left:clamp(1.4rem,3vw,2.2rem)}
+.mroad::before{content:"";position:absolute;left:0;top:.6rem;bottom:.6rem;width:3px;background:var(--edge)}
+.mcard{position:relative;background:var(--paper);color:var(--ink);border:2px solid var(--ink);
   box-shadow:5px 5px 0 var(--h);padding:0 0 .9rem}
+.mcard::after{content:"";position:absolute;left:calc(-1 * clamp(1.4rem,3vw,2.2rem) - 6px);top:.85rem;
+  width:14px;height:14px;border-radius:50%;background:var(--h);border:3px solid var(--midnight)}
 .m-when{display:block;font:600 .625rem/1 var(--util);letter-spacing:.13em;text-transform:uppercase;
   background:var(--h);border-bottom:2px solid var(--ink);padding:.5rem .8rem;margin-bottom:.7rem}
 .mcard b{display:block;font-size:1rem;letter-spacing:-.018em;padding:0 .85rem;margin-bottom:.35rem}
@@ -696,6 +695,7 @@ h2.bare{margin:2.4rem 0 1rem}
 /* ── thank-you cards ─────────────────────────────────────── */
 #part-08 .bullets{display:grid;gap:1rem;grid-template-columns:repeat(auto-fill,minmax(min(100%,17rem),1fr));
   max-width:none;align-items:start}
+@media(min-width:64rem){#part-08 .bullets{grid-template-columns:repeat(3,1fr)}}
 #part-08 .bullets li{background:var(--paper);color:var(--ink);border:2px solid var(--ink);
   box-shadow:4px 4px 0 var(--h,var(--gold));padding:.95rem 1rem;margin:0;font-size:.875rem;
   line-height:1.55;transform:rotate(var(--rot,0deg))}
@@ -813,8 +813,8 @@ footer{border-top:2px solid var(--edge);background:#060919;color:#E7E4F4}
 <main id="annotatable">
 <header class="hero wrap" data-hue="magenta" id="part-00">
   <p class="eyebrow">Newspeak House · Political Technology Programme · Cohort 2025–26</p>
-  <p class="presub">Prototype Submission</p>
-  <h1 class="wordmark"><span>Sparkle</span><span class="b">Bureaucracy</span></h1>
+  <h1 class="wordmark"><span>Prototype</span><span class="b">Submission</span></h1>
+  <p class="subname">Sparkle Bureaucracy</p>
   ${missionBlocks.map((b, i) => `<p class="spine">${inline(b.t)}</p>`).join("\n  ")}
 
   <div class="permit">

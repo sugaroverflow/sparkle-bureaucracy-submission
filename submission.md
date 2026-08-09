@@ -2,7 +2,7 @@
 
 ## 00 | Setting the stage
 
-Sparkle Bureaucracy is a network of people using AI to prototype more optimistic futures. (@todo second mission sentence)
+For my 2025–2026 prototype at Newspeak House — London's college of political technology — I am submitting **Sparkle Bureaucracy**: a network of people using AI to prototype more optimistic futures. This site is the story of building it — the experiments, the events, the learning in public — and where it's headed.
 
 (@todo YouTube embed link for the video intro — recorded, upload pending)
 
@@ -454,7 +454,7 @@ Working in the open wasn't a publishing chore — it was the method. The thinkin
 
 #### Field notes
 
-Before the diary was a diary, it was a room: `field-notes: fatima`, public by design, with an explicit contract that anything posted could become public. **294 field notes · 15 arXiv papers · 10 external repos · ~30 tools logged.** The room's own marker taxonomy tells the story of a year's attention: 📔 field notes ×137, 🔗 links ×41, 📥 papers ×37, 💾 tools ×20, 💡 ideas ×15, ❓ questions ×4. The notes themselves, in order:
+Before the diary was a diary, it was a room: `field-notes: fatima`, public by design, with an explicit contract that anything posted could become public. **294 field notes · 15 arXiv papers · 10 external repos · ~30 tools logged.** The room's own marker taxonomy tells the story of a year's attention: 📔 field notes ×137, 🔗 links ×41, 📥 papers ×37, 💾 tools ×20, 💡 ideas ×15, ❓ questions ×4. The notes themselves, in order, by kind:
 
 + 14 Dec 2025 | field notes room opens publicly | Fatima launches a public Matrix field-notes channel with open history so bots can read it and posts can be shared.
 + 14 Dec 2025 | Mastodon hires for trust and safety | Field note on Mastodon hiring a Community Director focused on Trust and Safety to reflect its many communities' needs.
@@ -462,7 +462,6 @@ Before the diary was a diary, it was a room: `field-notes: fatima`, public by de
 + 14 Dec 2025 | homework from Matt Stempeck | Pick one interesting thing per Civic Tech Guide category; she flags open source AI, algo transparency, audits, AI literacy.
 + 14 Dec 2025 | homework from Six | Two readings: field-building and the epistemic culture of AI safety, and The Fallacy of AI Functionality.
 + 14 Dec 2025 | cline-bench benchmarks real engineering problems | Cline's new benchmark initiative evaluates agents on real open-source repository work rather than lab puzzles, continuing their transparency commitment.
-+ 14 Dec 2025 | idea: newsletters piped into Matrix | An app that forwards newsletters sent to a dedicated Gmail alias into her Matrix channel and eventually her blog.
 + 14 Dec 2025 | CrowdStrike finds hidden AI-coded vulnerabilities | Research showing DeepSeek-R1 produces severely vulnerable code up to fifty percent more often on politically sensitive CCP topics.
 + 14 Dec 2025 | community interest companies explained | Government guidance on CICs, learned via Fred's session on music, artists and open source; companies required to benefit community.
 + 14 Dec 2025 | Ed on CIC tradeoffs | Ed Saperia calls CICs a halfway house between company and charity, weaker on tax and funding, but publicly registered.
@@ -474,24 +473,11 @@ Before the diary was a diary, it was a room: `field-notes: fatima`, public by de
 + 14 Dec 2025 | RL-learned context compression | Rajan's writeup on training Qwen to invent its own tenfold context compression so research agents can run for days.
 + 14 Dec 2025 | NSF national AI research resource | Links the NAIRR focus area page on US public AI research infrastructure.
 + 14 Dec 2025 | claude skill for concise output | Shares a community Claude skill file that constrains agents to concise output.
-+ 14 Dec 2025 | tool: CLoD multi-model gateway | One API to 26 plus models with built-in programmable cost, safety and compliance controls.
-+ 14 Dec 2025 | tool: Labelbox data labelling | Labelbox labels data and evaluates models, tagging images, rating responses and transcribing audio for more accurate systems.
-+ 14 Dec 2025 | tool: Mira recording smart glasses | Glasses that record conversations and surface details through a private display, from the team behind the viral spy glasses.
 + 14 Dec 2025 | bitter lesson of LLM extensions | Sawyer Hood argues hand-rolled agent and plugin scaffolding collapses under complexity; models will learn to compose capabilities themselves.
-+ 14 Dec 2025 | HBS paper on dynamic pricing harm | Harvard Business School paper arguing pricing algorithms pose policy problems far broader than the collusion regulators currently focus on.
-+ 14 Dec 2025 | tool: CamelCamelCamel price tracking | Amazon price history tracker used in academic studies auditing Amazon's dynamic price changes.
-+ 14 Dec 2025 | tool: Keepa longitudinal price data | Keepa price tracker, used for longitudinal price analysis in algorithmic-pricing research.
 + 14 Dec 2025 | New York algorithmic pricing law | New York's Algorithmic Pricing Disclosure Act took effect November 2025, requiring disclosure when personal data sets an individual's price.
 + 14 Dec 2025 | surveillance pricing rabbit hole begins | Field note on a NYT opinion video about dynamic pricing that led her deep into individualised surveillance pricing harms.
 + 14 Dec 2025 | F-Secure on hidden online premiums | Explainer showing two shoppers can see different prices at the same moment based on device, postcode or location.
-+ 14 Dec 2025 | arXiv: EU and US pricing regulation | Comparative working paper on whether EU and US privacy law, DSA and DMA restrain online algorithmic pricing.
-+ 14 Dec 2025 | tool: Who Targets Me ad transparency | Political ad transparency tooling for individuals, academics and journalists; Ed notes it was built at Newspeak House.
-+ 14 Dec 2025 | idea: algorithmic pricing watchdog | A system that monitors retailers, scrapes prices and flags patterns suggesting personalised or dynamic pricing.
-+ 14 Dec 2025 | idea: dynamic pricing auditor | A tool simulating multiple personas across locations, devices and histories to test whether prices are adjusted unfairly.
-+ 14 Dec 2025 | idea: stalker pricing exposure | A tool that shows people how their personal data influences the price they are shown.
-+ 14 Dec 2025 | tool: Permission Slip | Shares the Permission Slip consumer data rights tool from the Civic Tech Guide.
 + 14 Dec 2025 | Karpathy on Software 2.0 | Karpathy argues AI is best understood as a new computing paradigm automating digital information processing, easily automating what you can verify.
-+ 14 Dec 2025 | arXiv: the RLHF trilemma | Paper formalising that representativeness, tractability and robustness cannot all hold at once, explaining RLHF pathologies via complexity bounds.
 + 14 Dec 2025 | Matt on research strategy | Mentoring notes on hosting small niche events, coffee chats, landscape analysis, expert interviews and mapping levers of change.
 + 14 Dec 2025 | spark test across AI subfields | Rates roughly twenty AI governance, technical and adjacent areas by personal spark; evals, RAG, agentic workflows and legibility score highest.
 + 14 Dec 2025 | three clusters of topics | Groups sparks into system-level evaluation and safety, governance as technical constraint, and AI access and alternatives.
@@ -502,9 +488,6 @@ Before the diary was a diary, it was a room: `field-notes: fatima`, public by de
 + 14 Dec 2025 | Hirschman on exit and voice | Exit, Voice, and Loyalty as a framework for disengagement, silence and morale decay in collective projects.
 + 14 Dec 2025 | Olson on collective action | The Logic of Collective Action explains why people rationally disengage from shared projects they believe in.
 + 14 Dec 2025 | Scott on seeing like a state | Seeing Like a State on how simplified or rule-free systems erase lived experience and reproduce inequality.
-+ 14 Dec 2025 | arXiv: cognitive orchestration via knowledge alignment | OSC paper on agents adapting communication by modelling collaborators' cognitive states, addressing coordination and context handoff.
-+ 14 Dec 2025 | arXiv: comprehensive review of AI agents | 2025 survey mapping the state of AI agents and multi-agent collaboration, specialisation and orchestration.
-+ 14 Dec 2025 | arXiv: communication-centric multi-agent survey | Beyond Self-Talk surveys how LLM agents communicate and coordinate, highlighting scalability, security and collaboration challenges.
 + 14 Dec 2025 | three person teams and power | Field note arguing a developer, product manager and user researcher distributes power better than stacking a team with developers.
 + 14 Dec 2025 | permission inside a rule-free house | Field note on needing structural legitimacy to act at Newspeak House, and how marginalisation teaches you to seek cover.
 + 14 Dec 2025 | Matrix rooms must be unencrypted for bots | mstem and Ed advised to use public-to-space rooms with readable history, because bots cannot operate in encrypted channels.
@@ -513,62 +496,42 @@ Before the diary was a diary, it was a room: `field-notes: fatima`, public by de
 + 15 Dec 2025 | Nancy Fraser on rethinking recognition | Fraser shifts recognition from a cultural identity model to a status model removing institutional barriers to peer participation.
 + 15 Dec 2025 | shadow governance and unpaid labour | Field note on informal governance falling to whoever does the labour, and occupying a spokesperson role nobody officially recognises.
 + 15 Dec 2025 | legitimacy of the governance module | Field note on cohort members refusing that any house rule could bind them, blocking real debate about policy design.
-+ 15 Dec 2025 | arXiv: eccentric automatic prompts | Testing sixty system message snippets across three models on GSM8K; positive-thinking prompts often help but results do not generalise.
 + 15 Dec 2025 | three framing questions for system behaviour | Where model behaviour ends and system behaviour begins, what developers only think they control, and which failures evals miss.
 + 16 Dec 2025 | multi-agent architecture and context limits | Field note asking whether legacy systems can be agent-legible, what agent-friendly architecture looks like, and how handoff should work.
 + 17 Dec 2025 | Anthropic's multi-agent research system | Shares Anthropic's engineering writeup on their orchestrator-plus-parallel-researchers architecture.
 + 17 Dec 2025 | handoff is the hard part | Field note arguing execution is easy and systems dodge agent-to-agent handoff of intent by centralising it in orchestrators.
-+ 17 Dec 2025 | bare arXiv paper drop | Shares arXiv 2001.00973 with no commentary.
 + 17 Dec 2025 | question: failures between components | Chained RAG, agents, tools and evaluators each pass their own evals yet combine into hallucinations and reinforced mistakes.
 + 17 Dec 2025 | question: where sensitive inferences happen | Systems never trained on race, health or income still act as if they know them by combining ordinary signals.
 + 18 Dec 2025 | Ed asks how to test supervisor pattern | Ed wonders how you would systematically test the shortcomings of the supervisor orchestration pattern.
 + 19 Dec 2025 | when optimism feels like social risk | Field note on groups where critique becomes posture and hope reads as naivety, draining her sense of purpose.
 + 5 Jan 2026 | recursive language models manage context | Prime Intellect on storing inputs in Python and delegating to sub-agents instead of loading everything into the main context.
-+ 12 Jan 2026 | tool: ralph-wiggum self-referential loop plugin | Claude Code plugin that keeps an agent iterating until defined conditions are met.
 + 12 Jan 2026 | building platforms above the loop | Work discussion on humans setting intent and constraints while AI generates, tests and validates, escalating only at decision points.
 + 12 Jan 2026 | self-improving agents roundup | Yohei Nakajima's survey of academic projects where an agent edits and improves its own code or policies.
-+ 12 Jan 2026 | tool: zeroshot multi-agent coordination engine | Planner, worker and validators in isolated contexts iterating until validators approve, with failures feeding the next internal loop.
 + 12 Jan 2026 | are agent swarms actually better now | Ed is surprised swarm approaches never worked well; Fatima notes they make mess and only run on Claude Code.
 + 12 Jan 2026 | ralph explained for idiots | Shares a joke thread explaining the ralph looping technique.
-+ 13 Jan 2026 | MIT recursive language model paper | Treats massive documents as a searchable database the model queries on demand instead of forcing everything into attention.
-+ 13 Jan 2026 | tool: minimal RLM implementation | Alex Zhang's stripped-down reference implementation of recursive language models.
-+ 14 Jan 2026 | bare arXiv paper drop | Shares arXiv 2601.04620 with no commentary.
 + 20 Jan 2026 | Slipstream protocol for agent communication | Hugging Face writeup on cutting agent communication costs by leveraging existing language rather than inventing a machine protocol.
 + 20 Jan 2026 | models reason as an internal committee | Paper showing reasoning models simulate persona-like internal dialogue; steering a surprise feature doubled accuracy. She is intrigued.
 + 26 Jan 2026 | Ed: council of experts is old | Ed notes council of experts has been a named prompting method for a while.
 + 28 Jan 2026 | Clawdbot and Moltbot local agents | mstem shares the Verge report; Ed says the creator visited Newspeak House and suggests code club, mstem advises a VM.
 + 29 Jan 2026 | Ollama launch announcement | Shares Ollama's launch blog post.
-+ 29 Jan 2026 | tool: Mistral Vibe | Shares Mistral's Vibe product page.
 + 29 Jan 2026 | Kimi swarms versus supervisor pattern | Mini field note: Kimi trains coordination via parallel-agent RL so collaboration emerges, unlike an explicit inspectable orchestrator.
 + 29 Jan 2026 | Kimi K2.5 and agent swarms | Kimi's K2.5 release blog plus Simon Smith asking whether swarms plus Agent Skills scale across an enterprise.
 + 29 Jan 2026 | Simon Willison tests parallel planning | Gist testing Kimi's multi-agent planning claims by breaking a Datasette S3 upload plugin into ten parallel tasks.
 + 29 Jan 2026 | AI shopping tools raise pricing stakes | Tech Policy Press on big tech AI shopping agents raising the stakes for surveillance pricing laws.
-+ 29 Jan 2026 | bare arXiv paper drop | Shares arXiv 2503.23037 with no commentary.
 + 29 Jan 2026 | Karpathy on the coherence threshold | Shares Karpathy's post about crossing into mostly supervising agents rather than writing code himself.
 + 29 Jan 2026 | Clawdbot is the rebrand | Realises Clawdbot and Moltbot are the same viral open-source assistant that proactively messages you, and she missed it going viral.
-+ 29 Jan 2026 | tool: WebArena agent benchmark | Shares the WebArena environment for benchmarking web agents.
-+ 29 Jan 2026 | tool: skills.sh registry | Shares skills.sh, a directory for agent skills.
 + 29 Jan 2026 | build tools that help people think | Sam Altman on human slop as well as AI slop, and building genuinely good brainstorming partners.
 + 29 Jan 2026 | swyx on the AI Paul Graham | Reflections arguing thought-partner agents fail as RAG on essays; a five percent accurate PG would still be valuable.
 + 29 Jan 2026 | weak-to-strong generalization | Shares OpenAI's weak-to-strong superalignment work as a parallel to building thought partners smarter than us.
 + 29 Jan 2026 | coding agent phase shift is real | Agentic coding loops are a step change but agents skip clarifying questions and edit unrelated files in established codebases.
 + 29 Jan 2026 | skills as a shared interface layer | Workflow logic moving from prompts into reusable skill files, via DeepLearning's course, LangChain and Hugging Face's upskill.
 + 29 Jan 2026 | context management for deep agents | As addressable task length grows, context management becomes critical to prevent context rot within finite memory.
-+ 29 Jan 2026 | tool: compound engineering plugin | Shares EveryInc's compound engineering plugin repository.
 + 29 Jan 2026 | Yegge on software survival 3.0 | Shares Steve Yegge's essay; she later says she read it twice and is obsessed.
-+ 31 Jan 2026 | tool: Claude supermemory | Supermemory builds episodic and static user profiles, injecting context and capturing memory snapshots, replacing her clunky manual knowledge docs.
-+ 31 Jan 2026 | idea: animal crossing for AI agents | A one-line idea for an Animal Crossing style world populated by AI agents.
 + 31 Jan 2026 | local models on a Mac Studio | Shares a thread on running local models, because she wants Clawdbot running locally on her Mac Studio.
 + 1 Feb 2026 | Clawdbot on DigitalOcean | Notes from running Clawdbot on DigitalOcean, praising the friendly chat UI but hitting API and skill limitations.
-+ 1 Feb 2026 | idea: agent that summarises the channel | An agent to summarise this Matrix channel, possibly via Onyx.
 + 2 Feb 2026 | two untagged link drops | Shares two x.com links with no commentary.
-+ 4 Feb 2026 | idea: bot tags matching fieldwork | A bot that reads the cohort knowledge production spreadsheet and tags people whose fieldwork matches.
-+ 4 Feb 2026 | idea: catch-up bot with knowledge graph | A bot that spots who has not read Matrix lately and offers a queryable knowledge graph and summary.
 + 4 Feb 2026 | ingesting Matrix into Onyx | Onyx lacks Matrix support but has an ingestion API; Ed says daily dumps would be easy, she worries about preserving context.
-+ 4 Feb 2026 | untagged tool link | Shares hydra.opiusai.com with no commentary.
 + 5 Feb 2026 | Surge leaderboard | Shares the SurgeHQ model leaderboard.
-+ 5 Feb 2026 | tool: nanobot | Shares HKUDS nanobot repository.
-+ 5 Feb 2026 | tool: SummonAIKit | Shares summonaikit.com.
 + 6 Feb 2026 | before managers, look at organizations | Field note on Laloux's red to teal paradigms, which management activities are really needed, and why permission-less cultures do not exist.
 + 7 Feb 2026 | growing up amongst my heroes | Field note on invisible civic tech labour in New York, and heroes who became peers, mentors and friends ten years later.
 + 7 Feb 2026 | Taiwan digital democracy, ten years later | Field note on meeting Audrey Tang in 2017, g0v, Open Culture Foundation, and being a bridge between systems.
@@ -576,35 +539,81 @@ Before the diary was a diary, it was a room: `field-notes: fatima`, public by de
 + 13 Feb 2026 | who taught us the rules | Draft field note on administrative burden, her father bending systems, sedimented legitimacy, and designing rules before they harden.
 + 13 Feb 2026 | political consciousness as perpetual quest | Shares Valerie Miller's paper on political consciousness.
 + 14 Feb 2026 | MiniMax M25 release | Shares MiniMax's M25 announcement.
-+ 14 Feb 2026 | tool: arena.ai code arena | Shares arena.ai in code modality.
 + 14 Feb 2026 | disagreeing with Koyaanisqatsi | Field note resisting the film's single moral arc, defending cars, planes and transit as immigrant mobility rather than alienation.
 + 15 Feb 2026 | built a Matrix publisher bot | Bot fetches channel history, keeps emoji-tagged posts and threads, maps them to types and builds content.json as a reusable template.
 + 15 Feb 2026 | cohort site fellow landing pages | In-progress pull request rendering content.json into reading list, publications and explorations sections, vibe engineered and still buggy.
 + 16 Feb 2026 | fran on awe and nuance | fran_galli notes a bias toward awe at modernist work that is just another conformity; Fatima still fixated on the neutrality guy.
-+ 19 Feb 2026 | idea: memory across agentic tools | Reading a tweet, she notes that memory portability between agentic tools is a real gap.
-+ 19 Feb 2026 | tool: memories.sh durable agent state | Durable local-first state and a TypeScript SDK for wiring memory into any LLM; she jokes someone already built her idea.
 + 19 Feb 2026 | Ed on assuming someone built it | Ed finds it empowering to assume someone else has already done the thing.
-+ 26 Feb 2026 | tool: agentprivacy.ai | Shares agentprivacy.ai.
-+ 26 Feb 2026 | tool: Inspect Scout | Shares Meridian Labs' inspect_scout evaluation tooling.
-+ 26 Feb 2026 | tool: openwork.software | Shares openwork.software.
 + 2 Mar 2026 | Ed on imagination and prior art | Ed argues if you can assume someone already built your idea, imagination is the only limit on what you can bring forth.
-+ 2 Mar 2026 | arXiv: LLMs discovering MARL algorithms | AlphaEvolve, an evolutionary coding agent, automatically discovers new multiagent learning algorithms beyond hand-tuned CFR and PSRO variants.
 + 4 Mar 2026 | Yegge's Wasteland sequel | Steve Yegge's third instalment after Beads and Gas Town, on federated agent work systems.
-+ 4 Mar 2026 | tool: LangWatch agent observability | OpenTelemetry-style platform to trace, simulate, evaluate and monitor agents end to end, with a closed eval loop and annotation queues.
 + 9 Mar 2026 | one-shot prompt surprise | Journal on a single prompt generating a whole functional Politech Awards ranking site, leaving her impressed but overwhelmed by lost control.
-+ 9 Mar 2026 | idea: portable agent customisations | A coworker notes it is hard to copy agent customisations across tools, or see how frontend engineers configure theirs.
-+ 9 Mar 2026 | idea: visual agent builder | A tool for visually constructing a multi-agent ecosystem that an agent then builds for you, inspired by Gas Town.
-+ 9 Mar 2026 | bare arXiv paper drop | Shares arXiv 2505.04171 with no commentary.
 + 9 Mar 2026 | question: political calibration across models | After seeing Grok and Claude deliberate differently in awards iteration six, she asks whether RLHF political calibration generalises.
-+ 9 Mar 2026 | idea: staged evaluation tiers for awards | Seven tiers from one LLM ranking implicitly to constitutional human editing, studying how values shape AI rankings as political tools.
-+ 10 Mar 2026 | idea: a house guide one-pager | Suggests a short house guide on the cohort website; Ed notes the example is for a coworking space.
-+ 10 Mar 2026 | idea: zapier for agent swarms | Wants visual orchestration for swarms, then finds aitable, dazl, deforge, mindpal, langflow and sim already doing it.
-+ 19 Mar 2026 | arXiv: corrigibility in multi-agent games | Shares a paper on corrigibility and alignment in multi agent games.
 + 26 Mar 2026 | backlog of unwritten field notes | Lists twelve pieces she wants to write, including term reflections, clawclub, the birthday immigration system and sparkle bureaucracy.
 + 29 Mar 2026 | Gamithra suggests cohort agents | Project idea from Gamithra to run synthetic agents answering questions about the fellowship and prototypes at Ration Club.
 + 29 Mar 2026 | a group chat of mirror agents | Ed suggests putting an agent for every cohort member in one group chat; Aadi already asked to talk to his.
 + 1 Apr 2026 | two untagged link drops | Shares two x.com links with no commentary.
 + 1 Apr 2026 | the Claude Code source leak | Wants to play with the leaked Claude Code source, via Latent Space's writeup.
+
+#### Ideas
+
++ 14 Dec 2025 | idea: newsletters piped into Matrix | An app that forwards newsletters sent to a dedicated Gmail alias into her Matrix channel and eventually her blog.
++ 14 Dec 2025 | idea: algorithmic pricing watchdog | A system that monitors retailers, scrapes prices and flags patterns suggesting personalised or dynamic pricing.
++ 14 Dec 2025 | idea: dynamic pricing auditor | A tool simulating multiple personas across locations, devices and histories to test whether prices are adjusted unfairly.
++ 14 Dec 2025 | idea: stalker pricing exposure | A tool that shows people how their personal data influences the price they are shown.
++ 31 Jan 2026 | idea: animal crossing for AI agents | A one-line idea for an Animal Crossing style world populated by AI agents.
++ 1 Feb 2026 | idea: agent that summarises the channel | An agent to summarise this Matrix channel, possibly via Onyx.
++ 4 Feb 2026 | idea: bot tags matching fieldwork | A bot that reads the cohort knowledge production spreadsheet and tags people whose fieldwork matches.
++ 4 Feb 2026 | idea: catch-up bot with knowledge graph | A bot that spots who has not read Matrix lately and offers a queryable knowledge graph and summary.
++ 19 Feb 2026 | idea: memory across agentic tools | Reading a tweet, she notes that memory portability between agentic tools is a real gap.
++ 9 Mar 2026 | idea: portable agent customisations | A coworker notes it is hard to copy agent customisations across tools, or see how frontend engineers configure theirs.
++ 9 Mar 2026 | idea: visual agent builder | A tool for visually constructing a multi-agent ecosystem that an agent then builds for you, inspired by Gas Town.
++ 9 Mar 2026 | idea: staged evaluation tiers for awards | Seven tiers from one LLM ranking implicitly to constitutional human editing, studying how values shape AI rankings as political tools.
++ 10 Mar 2026 | idea: a house guide one-pager | Suggests a short house guide on the cohort website; Ed notes the example is for a coworking space.
++ 10 Mar 2026 | idea: zapier for agent swarms | Wants visual orchestration for swarms, then finds aitable, dazl, deforge, mindpal, langflow and sim already doing it.
+
+#### Papers
+
++ 14 Dec 2025 | HBS paper on dynamic pricing harm | Harvard Business School paper arguing pricing algorithms pose policy problems far broader than the collusion regulators currently focus on.
++ 14 Dec 2025 | arXiv: EU and US pricing regulation | Comparative working paper on whether EU and US privacy law, DSA and DMA restrain online algorithmic pricing.
++ 14 Dec 2025 | arXiv: the RLHF trilemma | Paper formalising that representativeness, tractability and robustness cannot all hold at once, explaining RLHF pathologies via complexity bounds.
++ 14 Dec 2025 | arXiv: cognitive orchestration via knowledge alignment | OSC paper on agents adapting communication by modelling collaborators' cognitive states, addressing coordination and context handoff.
++ 14 Dec 2025 | arXiv: comprehensive review of AI agents | 2025 survey mapping the state of AI agents and multi-agent collaboration, specialisation and orchestration.
++ 14 Dec 2025 | arXiv: communication-centric multi-agent survey | Beyond Self-Talk surveys how LLM agents communicate and coordinate, highlighting scalability, security and collaboration challenges.
++ 15 Dec 2025 | arXiv: eccentric automatic prompts | Testing sixty system message snippets across three models on GSM8K; positive-thinking prompts often help but results do not generalise.
++ 17 Dec 2025 | bare arXiv paper drop | Shares arXiv 2001.00973 with no commentary.
++ 13 Jan 2026 | MIT recursive language model paper | Treats massive documents as a searchable database the model queries on demand instead of forcing everything into attention.
++ 14 Jan 2026 | bare arXiv paper drop | Shares arXiv 2601.04620 with no commentary.
++ 29 Jan 2026 | bare arXiv paper drop | Shares arXiv 2503.23037 with no commentary.
++ 2 Mar 2026 | arXiv: LLMs discovering MARL algorithms | AlphaEvolve, an evolutionary coding agent, automatically discovers new multiagent learning algorithms beyond hand-tuned CFR and PSRO variants.
++ 9 Mar 2026 | bare arXiv paper drop | Shares arXiv 2505.04171 with no commentary.
++ 19 Mar 2026 | arXiv: corrigibility in multi-agent games | Shares a paper on corrigibility and alignment in multi agent games.
+
+#### Tools
+
++ 14 Dec 2025 | tool: CLoD multi-model gateway | One API to 26 plus models with built-in programmable cost, safety and compliance controls.
++ 14 Dec 2025 | tool: Labelbox data labelling | Labelbox labels data and evaluates models, tagging images, rating responses and transcribing audio for more accurate systems.
++ 14 Dec 2025 | tool: Mira recording smart glasses | Glasses that record conversations and surface details through a private display, from the team behind the viral spy glasses.
++ 14 Dec 2025 | tool: CamelCamelCamel price tracking | Amazon price history tracker used in academic studies auditing Amazon's dynamic price changes.
++ 14 Dec 2025 | tool: Keepa longitudinal price data | Keepa price tracker, used for longitudinal price analysis in algorithmic-pricing research.
++ 14 Dec 2025 | tool: Who Targets Me ad transparency | Political ad transparency tooling for individuals, academics and journalists; Ed notes it was built at Newspeak House.
++ 14 Dec 2025 | tool: Permission Slip | Shares the Permission Slip consumer data rights tool from the Civic Tech Guide.
++ 12 Jan 2026 | tool: ralph-wiggum self-referential loop plugin | Claude Code plugin that keeps an agent iterating until defined conditions are met.
++ 12 Jan 2026 | tool: zeroshot multi-agent coordination engine | Planner, worker and validators in isolated contexts iterating until validators approve, with failures feeding the next internal loop.
++ 13 Jan 2026 | tool: minimal RLM implementation | Alex Zhang's stripped-down reference implementation of recursive language models.
++ 29 Jan 2026 | tool: Mistral Vibe | Shares Mistral's Vibe product page.
++ 29 Jan 2026 | tool: WebArena agent benchmark | Shares the WebArena environment for benchmarking web agents.
++ 29 Jan 2026 | tool: skills.sh registry | Shares skills.sh, a directory for agent skills.
++ 29 Jan 2026 | tool: compound engineering plugin | Shares EveryInc's compound engineering plugin repository.
++ 31 Jan 2026 | tool: Claude supermemory | Supermemory builds episodic and static user profiles, injecting context and capturing memory snapshots, replacing her clunky manual knowledge docs.
++ 4 Feb 2026 | untagged tool link | Shares hydra.opiusai.com with no commentary.
++ 5 Feb 2026 | tool: nanobot | Shares HKUDS nanobot repository.
++ 5 Feb 2026 | tool: SummonAIKit | Shares summonaikit.com.
++ 14 Feb 2026 | tool: arena.ai code arena | Shares arena.ai in code modality.
++ 19 Feb 2026 | tool: memories.sh durable agent state | Durable local-first state and a TypeScript SDK for wiring memory into any LLM; she jokes someone already built her idea.
++ 26 Feb 2026 | tool: agentprivacy.ai | Shares agentprivacy.ai.
++ 26 Feb 2026 | tool: Inspect Scout | Shares Meridian Labs' inspect_scout evaluation tooling.
++ 26 Feb 2026 | tool: openwork.software | Shares openwork.software.
++ 4 Mar 2026 | tool: LangWatch agent observability | OpenTelemetry-style platform to trace, simulate, evaluate and monitor agents end to end, with a closed eval loop and annotation queues.
 
 Three longer pieces grew out of the room's thinking:
 
@@ -730,15 +739,17 @@ Each event type does a different job, learned from what worked this year:
 
 | month | title | description |
 | --- | --- | --- |
-| August 2026 | Prototype assessment | This submission; the record freezes, the network doesn't. |
-| August 2026 | CTFG show & tell + CHEW blog | The owed outputs: demo Campaign Factory with Hannah at the Civic Tech Field Guide's vibe-code session, and finally write the Evaluation 2030 follow-up. |
-| September 2026 | AI agents for good — hackathon | The network's first event under its own banner: prototype a different future, with suggested civic topics and challenges. |
-| September 2026 | Oxfam GB workshop | Campaign Factory with Oxfam's campaign engagement team, co-run with Asil Sidahmed — the first institutional NGO engagement. |
-| September 2026 | Faculty flagship brainstorm | The flagship chosen with faculty against the written criteria: clearest civic community, smallest credible version, strongest evidence path. |
-| October 2026 | Demo night | Projects from the hackathon, plus anyone else with something to show. |
-| October 2026 | Lovelace brown-bag + team talks | The AI-optimism debate at Lovelace (Octavia Field Reid's invitation) and Paul Silcock's team session — the queued engagements become calendar. |
-| Autumn 2026 | Flagship: smallest credible run | The chosen experiment runs at its smallest honest size, evidence-first. |
-| Winter 2026 | The name decision | Whether "Sparkle Bureaucracy" is the network's name follows what the flagship becomes. |
+| Aug 2026 | Prototype assessment | This submission; the record freezes, the network doesn't. |
+| Aug–Sep 2026 | The owed outputs | Demo Campaign Factory with Hannah at the Civic Tech Field Guide's vibe-code session; write the Evaluation 2030 follow-up blog for CHEW. |
+| Sep 2026 | AI agents for good — hackathon | The network's first event under its own banner: prototype a different future, with suggested civic topics and challenges. |
+| Sep 2026 | Oxfam GB workshop | Campaign Factory with Oxfam's campaign engagement team, co-run with Asil Sidahmed — inbound from the Campaign Factory demo at the conference. |
+| Sep–Dec 2026 | Hack nights, monthly | The Clawclub rhythm under the network's own banner — build together, share what's new, bring hardware. |
+| Oct 2026 | Demo night | Projects from the hackathon, plus anyone else with something to show. |
+| Oct 2026 | Lovelace brown-bag + team talks | The Lovelace AI-optimism debate (an invitation that came out of the Evaluation 2030 keynote) and Paul Silcock's team session (from Agent Craft). |
+| Oct 2026 | Faculty flagship brainstorm | The flagship chosen with faculty against the written criteria: clearest civic community, smallest credible version, strongest evidence path. |
+| Nov–Dec 2026 | Flagship: smallest credible run | The chosen experiment runs at its smallest honest size, evidence-first. |
+| Dec 2026 | Winter social, built as an experience | The experiments are the social infrastructure — game night rules apply. |
+| Winter 2026–27 | The name decision | Whether "Sparkle Bureaucracy" stays the network's name follows what the flagship becomes. |
 
 #### The flagship — what it is, and why it matters
 
@@ -851,7 +862,7 @@ Run the flagship. The hackathon and demo night are booked intent; the faculty br
 
 ## 08 | Thank You
 
-gallery: 12
+gallery: 18
 
 *Because a network prototype is made of people.*
 
