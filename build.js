@@ -947,7 +947,7 @@ h3.bare{font-size:1.4rem;letter-spacing:-.026em;margin:2.4rem 0 1rem}
 
 /* ── gallery wall ────────────────────────────────────────── */
 .shots.gallery{grid-template-columns:repeat(auto-fill,minmax(min(100%,13rem),1fr));
-  grid-auto-rows:7rem;grid-auto-flow:dense;gap:.7rem;max-width:var(--col);margin:1.6rem 0}
+  grid-auto-rows:8rem;grid-auto-flow:dense;gap:.7rem;max-width:none;margin:1.6rem 0}
 .shots.gallery img{aspect-ratio:auto;height:100%;width:100%;object-fit:cover}
 .shots.gallery img:nth-child(6n+1){grid-column:span 2;grid-row:span 2}
 .shots.gallery img:nth-child(6n+4){grid-row:span 2}
