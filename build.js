@@ -1120,7 +1120,7 @@ ${ANNOTATIONS ? `<link rel="stylesheet" href="/vendor/recogito.min.css">` : ""}
         </div>
         <dl class="cap-field">
           <dt>Official introduction</dt>
-          <dd>Watch this first — a short introduction to this prototype and the story of how we got here.</dd>
+          <dd>I came to Newspeak House to find my life's purpose. This is the story of what I found, what I learned, how Sparkle Bureaucracy evolved over the year, and what's coming next.</dd>
         </dl>
       </div>
       <dl class="fields">

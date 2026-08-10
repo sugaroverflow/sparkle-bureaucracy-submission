@@ -2,7 +2,7 @@
 
 ## 00 | Setting the stage
 
-I came to Newspeak House to find my life's purpose. This is the story of what I found, what I learned, how Sparkle Bureaucracy evolved over the year, and what's coming next.
+For my 2025–2026 prototype at Newspeak House — London's College of Political Technology, I am submitting **Sparkle Bureaucracy**: a network of people using AI to prototype more optimistic futures. This site is the story of building it: the experiments, the events, the learning in public, lessons learned, and the roadmap of where it's headed. I've kept all the open questions and uncertainty in there as well - as that's part of the process!
 
 #### Where everything lives
 
