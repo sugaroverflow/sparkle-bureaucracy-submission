@@ -946,7 +946,7 @@ h3.bare{font-size:1.4rem;letter-spacing:-.026em;margin:2.4rem 0 1rem}
 #part-08 .bullets li:nth-child(5n+5){--h:var(--gold);--rot:-.35deg}
 
 /* ── gallery wall ────────────────────────────────────────── */
-.shots.gallery{grid-template-columns:repeat(auto-fill,minmax(min(100%,9rem),1fr));
+.shots.gallery{grid-template-columns:repeat(auto-fill,minmax(min(100%,13rem),1fr));
   grid-auto-rows:7rem;grid-auto-flow:dense;gap:.7rem;max-width:var(--col);margin:1.6rem 0}
 .shots.gallery img{aspect-ratio:auto;height:100%;width:100%;object-fit:cover}
 .shots.gallery img:nth-child(6n+1){grid-column:span 2;grid-row:span 2}
@@ -1116,11 +1116,11 @@ ${ANNOTATIONS ? `<link rel="stylesheet" href="/vendor/recogito.min.css">` : ""}
         <div class="window">
           ${VIDEO_EMBED
     ? `<iframe src="${VIDEO_EMBED}" title="Video introduction" allowfullscreen loading="lazy"></iframe>`
-    : `<div class="ph"><div class="play"></div><p>Official introduction<br>Recorded · embed pending</p></div>`}
+    : `<div class="ph"><div class="play"></div><p>Coming soon<br>Uploading</p></div>`}
         </div>
         <dl class="cap-field">
           <dt>Official introduction</dt>
-          <dd>To be viewed before the record</dd>
+          <dd>Watch this first — a short introduction to this prototype and the story of how we got here.</dd>
         </dl>
       </div>
       <dl class="fields">
