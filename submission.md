@@ -2,7 +2,7 @@
 
 ## 00 | Setting the stage
 
-For my 2025–2026 prototype at Newspeak House — London's College of Political Technology, I am submitting **Sparkle Bureaucracy**: a network of people using AI to prototype more optimistic futures. This site is the story of building it: the experiments, the events, the learning in public, lessons learned, and the roadmap of where it's headed. I've kept all the open questions and uncertainty in there as well - as that's part of the process!
+I came to Newspeak House to find my life's purpose. This is the story of what I found, what I learned, how Sparkle Bureaucracy evolved over the year, and what's coming next.
 
 #### Where everything lives
 
@@ -2302,4 +2302,3 @@ gallery: 18
 - ★ **Asil Sidahmed** — for teaching me about real political movements, the impact of technology, and the personal impacts of this fellowship!
 - ♥ **Matt Stempeck** — for being the best mentor ever, for helping me figure out what I want to do, and for being excited about the things I've built!
 - ❋ **Six Silberman** — for the readings that made me weigh the pros and cons of technology, for treating me like an expert, and for implicitly answering the "why me" with our conversations.
-
