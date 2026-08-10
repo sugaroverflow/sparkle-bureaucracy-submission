@@ -126,10 +126,11 @@ for (const ln of raw) {
   }
   if ((m = /^photos:\s*(\d+)/.exec(t)) && node && node.kind === "entry") { node.photos = +m[1]; continue; }
   if ((m = /^gallery:\s*(\d+)/.exec(t)) && !node) { P.gallery = +m[1]; continue; }
-  if ((m = /^-\s+\[x\]\s+(.*)$/i.exec(t))) {
+  if ((m = /^-\s+\[(x| )\]\s+(.*)$/i.exec(t))) {
     flushBuf();
-    if (node && node.kind === "crit") node.checks.push(m[1]);
-    else (drawer ? drawer.blocks : node ? node.blocks : P.blocks).push({ k: "li", t: m[1] });
+    const item = (m[1].trim() ? "" : "__OPEN__") + m[2];
+    if (node && node.kind === "crit") node.checks.push(item);
+    else (drawer ? drawer.blocks : node ? node.blocks : P.blocks).push({ k: "li", t: m[2] });
     continue;
   }
   if (/^\|/.test(t)) {
@@ -424,7 +425,9 @@ function renderEntry(e, i, partNum) {
 function renderCrit(c, i) {
   const hue = HUES[i % HUES.length];
   const checks = c.checks.length
-    ? '<ul class="checks">' + c.checks.map((x) => "<li>" + inline(x) + "</li>").join("") + "</ul>"
+    ? '<ul class="checks">' + c.checks.map((x) => x.startsWith("__OPEN__")
+        ? '<li class="unq">' + inline(x.slice(8)) + "</li>"
+        : "<li>" + inline(x) + "</li>").join("") + "</ul>"
     : "";
   return `<li class="crit" data-hue="${hue}">
   <div class="crit-mark"><span>${esc(c.num)}</span><i>criterion</i></div>
@@ -735,6 +738,7 @@ h3.bare{font-size:1.4rem;letter-spacing:-.026em;margin:2.4rem 0 1rem}
 .checks{list-style:none;margin:0 0 1rem;padding:0}
 .checks li{position:relative;padding-left:1.7rem;margin-bottom:.45rem;font-size:.9375rem;line-height:1.55}
 .checks li::before{content:"✓";position:absolute;left:0;top:0;font-weight:800;color:var(--aqua-ink)}
+.checks li.unq::before{content:"?";color:var(--hi);font-weight:900}
 
 /* ── tables ──────────────────────────────────────────────── */
 .tbl{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:1.3rem 0 1.9rem;

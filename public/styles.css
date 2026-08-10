@@ -256,6 +256,7 @@ h3.bare{font-size:1.4rem;letter-spacing:-.026em;margin:2.4rem 0 1rem}
 .checks{list-style:none;margin:0 0 1rem;padding:0}
 .checks li{position:relative;padding-left:1.7rem;margin-bottom:.45rem;font-size:.9375rem;line-height:1.55}
 .checks li::before{content:"✓";position:absolute;left:0;top:0;font-weight:800;color:var(--aqua-ink)}
+.checks li.unq::before{content:"?";color:var(--hi);font-weight:900}
 
 /* ── tables ──────────────────────────────────────────────── */
 .tbl{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:1.3rem 0 1.9rem;
