@@ -339,17 +339,24 @@ function renderBlocks(blocks) {
 }
 
 function galleryHtml(p) {
+  assetIndex.push(["thank-you", "Part 08 gallery wall"]);
+  const real = realPhotos("thank-you", "Thank you");
+  if (real.length) return '<div class="shots gallery">' + real.join("") + "</div>";
   let imgs = "";
   for (let k = 1; k <= p.gallery; k++) {
     const [bg, fg] = TINTS[k % TINTS.length];
     const txt = encodeURIComponent("Add photo " + k);
-    imgs += `<img src="https://placehold.co/900x700/${bg}/${fg}?text=${txt}" alt="Photo placeholder ${k}" loading="lazy" data-full="https://placehold.co/1600x1200/${bg}/${fg}?text=${txt}">`;
+    imgs += `<img src="https://placehold.co/900x700/${bg}/${fg}?text=${txt}" alt="photo placeholder ${k}" loading="lazy" data-full="https://placehold.co/1600x1200/${bg}/${fg}?text=${txt}">`;
   }
   return '<div class="shots gallery">' + imgs + "</div>";
 }
 
 function shots(entry, i) {
   if (!entry.photos) return "";
+  const slug = slugify(entry.title);
+  assetIndex.push([slug, entry.date + " — " + plain(entry.title)]);
+  const real = realPhotos(slug, entry.title);
+  if (real.length) return '<div class="shots">' + real.join("") + "</div>";
   const [bg, fg] = TINTS[i % TINTS.length];
   const label = plain(entry.title).replace(/[^A-Za-z0-9 ]/g, "").trim().split(/\s+/).slice(0, 4).join(" ");
   let imgs = "";
@@ -358,6 +365,26 @@ function shots(entry, i) {
     imgs += `<img src="https://placehold.co/800x500/${bg}/${fg}?text=${txt}" alt="${esc(plain(entry.title))} — photo ${k} (placeholder)" loading="lazy" data-full="https://placehold.co/1600x1000/${bg}/${fg}?text=${txt}">`;
   }
   return '<div class="shots">' + imgs + "</div>";
+}
+
+const IMG_EXTS = /\.(jpe?g|png|webp|gif|avif)$/i;
+const ASSETS = path.join(__dirname, "public", "assets");
+const assetIndex = [];
+function slugify(t) {
+  return plain(t).toLowerCase().replace(/['"\u2018\u2019\u201c\u201d]/g, "")
+    .replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "").slice(0, 42).replace(/-+$/, "");
+}
+function realPhotos(slug, title) {
+  const dir = path.join(ASSETS, slug);
+  try { fs.mkdirSync(dir, { recursive: true }); } catch (e) {}
+  try {
+    const keep = path.join(dir, ".gitkeep");
+    if (!fs.existsSync(keep)) fs.writeFileSync(keep, "");
+  } catch (e) {}
+  let files = [];
+  try { files = fs.readdirSync(dir).filter((f) => IMG_EXTS.test(f)).sort(); } catch (e) {}
+  return files.map((f, k) =>
+    `<img src="/assets/${slug}/${encodeURIComponent(f)}" alt="${esc(plain(title))} — photo ${k + 1}" loading="lazy" data-full="/assets/${slug}/${encodeURIComponent(f)}">`);
 }
 
 let serialCount = {};
@@ -1208,6 +1235,11 @@ ${ANNOTATIONS ? `<script src="/vendor/recogito.min.js"></script>
 fs.mkdirSync(path.dirname(OUT), { recursive: true });
 fs.writeFileSync(OUT, html);
 fs.writeFileSync(path.join(path.dirname(OUT), "styles.css"), CSS);
+try {
+  const rows = assetIndex.map(([s, d]) => "- `" + s + "/` — " + d).join("\n");
+  fs.writeFileSync(path.join(ASSETS, "README.md"),
+    "# Photo drop folders\n\nDrop images (jpg / png / webp / gif — not HEIC) into the matching folder.\nAny filenames work; they display sorted by name. The build uses real photos\nwhen a folder has any, placeholders otherwise.\n\n" + rows + "\n");
+} catch (e) {}
 const entryCount = contentParts.reduce((n, p) => n + p.blocks.filter((b) => b.kind === "entry").length, 0);
 console.log("mode:", MODE, "| parts:", parts.length, "| entries:", entryCount,
   "| markers:", flagLines.length, "| bytes:", html.length);
