@@ -613,6 +613,9 @@ code{font:400 .84em/1.3 var(--util);background:#17122c0f;padding:.16em .38em;bor
   padding:clamp(1.6rem,3.5vw,2.5rem) var(--pad) clamp(3rem,7vw,5rem)}
 
 .reading{max-width:var(--measure)}
+.reading.wide-ok{max-width:none;min-width:0}
+.reading.wide-ok>p,.reading.wide-ok>.bullets,.reading.wide-ok>.ord,
+.reading.wide-ok>blockquote{max-width:var(--measure)}
 h2{font-size:1.4rem;letter-spacing:-.026em;margin:0 0 .6rem;display:flex;gap:.65rem;align-items:baseline}
 h3.bare{font-size:1.4rem;letter-spacing:-.026em;margin:2.4rem 0 1rem}
 .bullets{list-style:none;padding:0;margin:0 0 1.05rem}
