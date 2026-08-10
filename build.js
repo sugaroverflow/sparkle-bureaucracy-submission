@@ -340,8 +340,9 @@ function renderBlocks(blocks) {
 }
 
 function galleryHtml(p) {
-  assetIndex.push(["thank-you", "Part 08 gallery wall"]);
-  const real = realPhotos("thank-you", "Thank you");
+  const folder = assetFolder("thank-you");
+  assetIndex.push([folder, "Part 08 gallery wall"]);
+  const real = realPhotos(folder, "Thank you");
   if (real.length) return '<div class="shots gallery">' + real.join("") + "</div>";
   let imgs = "";
   for (let k = 1; k <= p.gallery; k++) {
@@ -353,9 +354,9 @@ function galleryHtml(p) {
 }
 
 function shots(entry, i) {
-  const slug = slugify(entry.title);
-  assetIndex.push([slug, entry.date + " — " + plain(entry.title)]);
-  const real = realPhotos(slug, entry.title);
+  const folder = assetFolder(slugify(entry.title));
+  assetIndex.push([folder, entry.date + " — " + plain(entry.title)]);
+  const real = realPhotos(folder, entry.title);
   if (real.length) return '<div class="shots">' + real.join("") + "</div>";
   if (!entry.photos) return "";
   const [bg, fg] = TINTS[i % TINTS.length];
@@ -371,12 +372,44 @@ function shots(entry, i) {
 const IMG_EXTS = /\.(jpe?g|png|webp|gif|avif)$/i;
 const ASSETS = path.join(__dirname, "public", "assets");
 const assetIndex = [];
+const ASSET_DATE_PREFIXES = new Map([
+  ["content-co-creation-fridays", "2025-12-12"],
+  ["the-field-notes-room", "2025-12-14"],
+  ["code-club-prototype-club-prototype-coworki", "2026-02-02"],
+  ["decode-taiwan-open-tech-meetup", "2026-02-03"],
+  ["protocols-for-publishers-showcase-stakehol", "2026-02-04"],
+  ["clawclub-series-clawcon-london", "2026-02-17"],
+  ["a-bohm-dialogue-on-human-more-than-human-a", "2026-02-21"],
+  ["sparkle-border-authority-birthday-passport", "2026-03-11"],
+  ["lumina-house-takeover-of-ration-club", "2026-03-25"],
+  ["project-mirror-the-v1-v15-awards-pipeline", "2026-03-30"],
+  ["prototype-previews-sparkle-bureaucracy-mee", "2026-04-02"],
+  ["red-team-blue-team-at-ration-club", "2026-04-29"],
+  ["are-you-a-software-update-book-launch", "2026-04-30"],
+  ["rights-uncon", "2026-05-08"],
+  ["sparklebureaucracy-org-the-mailing-list", "2026-05-09"],
+  ["cohort-reunion-spy-edition-nhifa", "2026-05-13"],
+  ["the-majority-myth-book-launch", "2026-05-20"],
+  ["openclaw-101-workshop-for-campaign-lab", "2026-05-24"],
+  ["keynote-at-agent-craft-2026-invited-the-ag", "2026-06-12"],
+  ["keynote-at-chew-festival-invited-evaluatio", "2026-06-15"],
+  ["the-nine-experiment-idea-bank", "2026-06-19"],
+  ["timetable-topic-topic-forum", "2026-06-23"],
+  ["campaign-factory", "2026-07-12"],
+  ["conference-pulse", "2026-07-15"],
+  ["thank-you", "2026-08-10"],
+  ["the-ai-safety-study-group", "ongoing"],
+]);
 function slugify(t) {
   return plain(t).toLowerCase().replace(/['"\u2018\u2019\u201c\u201d]/g, "")
     .replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "").slice(0, 42).replace(/-+$/, "");
 }
-function realPhotos(slug, title) {
-  const dir = path.join(ASSETS, slug);
+function assetFolder(slug) {
+  const prefix = ASSET_DATE_PREFIXES.get(slug) || "undated";
+  return prefix + "-" + slug;
+}
+function realPhotos(folder, title) {
+  const dir = path.join(ASSETS, folder);
   try { fs.mkdirSync(dir, { recursive: true }); } catch (e) {}
   try {
     const keep = path.join(dir, ".gitkeep");
@@ -385,7 +418,7 @@ function realPhotos(slug, title) {
   let files = [];
   try { files = fs.readdirSync(dir).filter((f) => IMG_EXTS.test(f)).sort(); } catch (e) {}
   return files.map((f, k) =>
-    `<img src="/assets/${slug}/${encodeURIComponent(f)}" alt="${esc(plain(title))} — photo ${k + 1}" loading="lazy" data-full="/assets/${slug}/${encodeURIComponent(f)}">`);
+    `<img src="/assets/${folder}/${encodeURIComponent(f)}" alt="${esc(plain(title))} — photo ${k + 1}" loading="lazy" data-full="/assets/${folder}/${encodeURIComponent(f)}">`);
 }
 
 let serialCount = {};
@@ -902,7 +935,7 @@ h3.bare{font-size:1.4rem;letter-spacing:-.026em;margin:2.4rem 0 1rem}
 @media(min-width:58rem){#part-08 .bullets{columns:3}
   #part-08 .bullets li:nth-child(7n+1){font-size:.9375rem;padding:1.15rem 1.2rem}
   #part-08 .bullets li:nth-child(9n+5){font-size:.8125rem}}
-#part-08 .bullets li{display:block;break-inside:avoid;background:var(--paper);color:var(--ink);
+#part-08 .bullets li{display:inline-block;width:100%;break-inside:avoid;background:var(--paper);color:var(--ink);
   border:2px solid var(--ink);box-shadow:4px 4px 0 var(--h,var(--gold));padding:.95rem 1rem;
   margin:0 0 1rem;font-size:.875rem;line-height:1.55;transform:rotate(var(--rot,0deg))}
 #part-08 .bullets li::before{display:none}
@@ -1240,7 +1273,8 @@ fs.mkdirSync(path.dirname(OUT), { recursive: true });
 fs.writeFileSync(OUT, html);
 fs.writeFileSync(path.join(path.dirname(OUT), "styles.css"), CSS);
 try {
-  const rows = assetIndex.map(([s, d]) => "- `" + s + "/` — " + d).join("\n");
+  const rows = assetIndex.sort(([a], [b]) => a.localeCompare(b))
+    .map(([s, d]) => "- `" + s + "/` — " + d).join("\n");
   fs.writeFileSync(path.join(ASSETS, "README.md"),
     "# Photo drop folders\n\nDrop images (jpg / png / webp / gif — not HEIC) into the matching folder.\nAny filenames work; they display sorted by name. The build uses real photos\nwhen a folder has any, placeholders otherwise.\n\n" + rows + "\n");
 } catch (e) {}

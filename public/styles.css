@@ -420,7 +420,7 @@ h3.bare{font-size:1.4rem;letter-spacing:-.026em;margin:2.4rem 0 1rem}
 @media(min-width:58rem){#part-08 .bullets{columns:3}
   #part-08 .bullets li:nth-child(7n+1){font-size:.9375rem;padding:1.15rem 1.2rem}
   #part-08 .bullets li:nth-child(9n+5){font-size:.8125rem}}
-#part-08 .bullets li{display:block;break-inside:avoid;background:var(--paper);color:var(--ink);
+#part-08 .bullets li{display:inline-block;width:100%;break-inside:avoid;background:var(--paper);color:var(--ink);
   border:2px solid var(--ink);box-shadow:4px 4px 0 var(--h,var(--gold));padding:.95rem 1rem;
   margin:0 0 1rem;font-size:.875rem;line-height:1.55;transform:rotate(var(--rot,0deg))}
 #part-08 .bullets li::before{display:none}
