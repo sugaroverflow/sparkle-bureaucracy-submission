@@ -466,7 +466,7 @@ const CSS = `
   --display:"Inter",ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
   --text:var(--display);
   --util:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
-  --measure:clamp(34rem,46vw,44rem); --col:74rem; --pad:clamp(1rem,4vw,2.5rem); --wrap:96rem;
+  --measure:clamp(36rem,50vw,52rem); --col:100%; --pad:clamp(1rem,4vw,2.5rem); --wrap:96rem;
   --foil:linear-gradient(95deg,var(--magenta),var(--violet),var(--cyan),var(--aqua),var(--gold),var(--magenta));
 }
 [data-hue=magenta]{--h:var(--magenta);--hi:var(--magenta-ink);--ht:var(--magenta-tint)}
@@ -644,7 +644,7 @@ h3.bare{font-size:1.4rem;letter-spacing:-.026em;margin:2.4rem 0 1rem}
 .visa-serial{font:400 .625rem/1 var(--util);letter-spacing:.1em;color:#17122cb3}
 .visa-body{padding:1.1rem 1.2rem 1.3rem}
 .visa-body h3{font-size:1.25rem;letter-spacing:-.026em;margin:0 0 .7rem}
-.visa-body p{font-size:.9375rem;line-height:1.62;margin-bottom:.85rem;max-width:58rem}
+.visa-body p{font-size:.9375rem;line-height:1.62;margin-bottom:.85rem;max-width:var(--measure)}
 .visa-body .bullets li{font-size:.9375rem}
 .visa-body>*:last-child{margin-bottom:0}
 .visa-body .slip{font-size:.97rem;box-shadow:3px 3px 0 var(--h);margin:1.1rem 0}
@@ -653,7 +653,7 @@ h3.bare{font-size:1.4rem;letter-spacing:-.026em;margin:2.4rem 0 1rem}
 
 .reading.wide-ok>.efields{background:var(--paper);color:var(--ink);border:2px solid var(--ink);
   box-shadow:6px 6px 0 var(--h);padding:1rem 1.2rem;max-width:56rem}
-.efields{margin:1rem 0;display:grid;gap:0;max-width:56rem}
+.efields{margin:1rem 0;display:grid;gap:0;max-width:none}
 .efields>div{display:grid;grid-template-columns:10rem minmax(0,1fr);gap:0 1rem;
   padding:.5rem 0;border-top:2px solid var(--line)}
 .efields>div:last-child{border-bottom:2px solid var(--line)}
@@ -795,7 +795,7 @@ h3.bare{font-size:1.4rem;letter-spacing:-.026em;margin:2.4rem 0 1rem}
 .fnj.solo{margin:1rem 0;max-width:var(--col);color:var(--ink);box-shadow:5px 5px 0 var(--aqua)}
 .fnj.solo .fnj-head{background:var(--aqua);border-bottom:2px solid var(--ink)}
 .fnj.solo .fnj-head i{color:var(--ink);opacity:.75}
-.fnj.solo .fnj-body p{font-size:.9375rem;max-width:50rem}
+.fnj.solo .fnj-body p{font-size:.9375rem;max-width:var(--measure)}
 .fnj.solo a{color:var(--hi)}
 .fnotes{margin:1.3rem 0 1.8rem;max-width:56rem;border:2px solid var(--edge)}
 .fnote{display:grid;grid-template-columns:7.5rem minmax(0,1fr);gap:.8rem;align-items:baseline;
@@ -930,7 +930,7 @@ footer{border-top:2px solid var(--edge);background:#060919;color:#E7E4F4}
 
 
 /* ── inline drawer sections + decorations + sticker headings ── */
-.dsec{margin:1rem 0;border-left:4px solid var(--h);padding:.05rem 0 .05rem .95rem;max-width:58rem}
+.dsec{margin:1rem 0;border-left:4px solid var(--h);padding:.05rem 0 .05rem .95rem;max-width:var(--measure)}
 .dsec-l{display:block;font:600 .5625rem/1.7 var(--util);letter-spacing:.13em;text-transform:uppercase;
   color:var(--hi);margin-bottom:.3rem}
 .dsec p,.dsec li{font-size:.875rem;line-height:1.6}
