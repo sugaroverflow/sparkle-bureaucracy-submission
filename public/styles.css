@@ -14,7 +14,7 @@
   --display:"Inter",ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
   --text:var(--display);
   --util:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
-  --measure:clamp(34rem,46vw,46rem); --col:76rem; --pad:clamp(1rem,4vw,2.5rem); --wrap:96rem;
+  --measure:clamp(34rem,50vw,48rem); --col:58rem; --pad:clamp(1rem,4vw,2.5rem); --wrap:96rem;
   --foil:linear-gradient(95deg,var(--magenta),var(--violet),var(--cyan),var(--aqua),var(--gold),var(--magenta));
 }
 [data-hue=magenta]{--h:var(--magenta);--hi:var(--magenta-ink);--ht:var(--magenta-tint)}
@@ -99,7 +99,7 @@ code{font:400 .84em/1.3 var(--util);background:#17122c0f;padding:.16em .38em;bor
 .spine+.spine{font-size:.9375rem;color:var(--softlight)}
 
 .permit{position:relative;border:2px solid var(--ink);background:#fff;box-shadow:8px 8px 0 var(--magenta);
-  max-width:var(--col);overflow:hidden;margin-top:1.8rem}
+  max-width:68rem;overflow:hidden;margin-top:1.8rem}
 .permit>.foil{height:10px}
 .permit-grid{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);
   gap:clamp(1.1rem,3vw,2rem);padding:clamp(1.1rem,2.6vw,1.7rem)}
