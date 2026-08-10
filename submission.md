@@ -2,13 +2,11 @@
 
 ## 00 | Setting the stage
 
-For my 2025–2026 prototype at Newspeak House — London's college of political technology — I am submitting **Sparkle Bureaucracy**: a network of people using AI to prototype more optimistic futures. This site is the story of building it: the experiments, the events, the learning in public, and where I think it's headed. I've left the uncertain parts in, because they're most of what I actually learned.
-
-(@todo YouTube embed link for the video intro — recorded, upload pending)
+For my 2025–2026 prototype at Newspeak House — London's College of Political Technology — I am submitting **Sparkle Bureaucracy**: a network of people using AI to prototype more optimistic futures. This site is the story of building it: the experiments, the events, the learning in public, lessons learned, and the roadmap of where it's headed. I've kept all the open questions and uncertainty in there as well - as that's part of the process!
 
 #### Where everything lives
 
-| [Prototype diary template](https://docs.google.com/document/d/1SXbFwUmXxomZ4kC2LRUYoZ-_L1_ku1OkXP0RnMNmr6w/edit) | Corresponding section |
+| [Prototype diary template](https://docs.google.com/document/d/1SXbFwUmXxomZ4kC2LRUYoZ-_L1_ku1OkXP0RnMNmr6w/edit) | Corresponding section below |
 | --- | --- |
 | 1. Project Summary | Part 01 |
 | 2. Project Map — features, risks, dependencies | Parts 01 & 04; risk registers in the [complete record](https://github.com/sugaroverflow/sparkle-bureaucracy-site/blob/main/submission/sparkle-bureaucracy.md) |
@@ -24,98 +22,71 @@ For my 2025–2026 prototype at Newspeak House — London's college of political
 
 ## 01 | Introducing the project
 
-**One-sentence summary:** A network of people using AI to prototype more optimistic futures, run as an experiment lab — the network is the prototype, the experiments are its releases, the diary is the evidence.
+Sparkle Bureaucracy (SB) is a network of people using AI to prototype more optimisic futures. My prototype is the network itself and throughout the fellowship, I contributed to the programme, hosted events, designed and ran experiments, and interacted with different communities that have all led to refining and iterating on what this prototype and it's mission is.
 
-**Intended civic community:** Civic tech, tech for good, open source, govtech, and grassroots groups — the communities most at risk of being priced out of AI — starting with the ones already engaged: Campaign Lab, the charity evaluators, the Newspeak House cohort and its publics.
+It started out as a mission to prototype better organizational and service futures with the use of emerging technology, and pulled inspiration from all of my experience working with open source, civic tech, and governments. The name, "Sparkle Bureaucracy" stood for the dicohtomy between "bureaucracy" carrying the seriousness and "sparkle" carrying the delight. It was meant to lower the threat, make experimenting socially acceptable in an audience of people that might feel a bit risk averse, and create a space that felt like it was inviting the kind of thinking that inspires people to try new things.
 
-**Core user need:** An AI upskilling gap, especially around agents, closing on someone else's terms — skills that need translating before the window shuts.
+I started SB thinking that I wanted to run experiments on existing government services like passport renewals, DMV processes, voting in elections. I wanted to ask questions like *What does a better licence renewal process look like?* or *What does liquid democracy look like if the results are livestreamed while you can still change your vote?* To test this dream of running experiments that were poking fun at a real process, while also being reflective of the bureautcractic inequities, I ran an immigration scheme at my own birthday party - passports, visa types, credentials, and a checkpoint - and watched what happened. People were delighted to participate, they co-created fiction to go along with the narrative and inherently understood the game. They asked curious questions about the layers of the process -  *why were the visitor visas in black & white* or *why do some people have a priority privelege for cake?* and those questions reflected back to me that they understood the pieces of the bureaucratic process that I was trying to play with.
 
-**Core hypothesis:** Keep a procedure's institutional skeleton and change only its intent, and the encounter transforms — designed affect on real procedure builds civic capability. And translation beats evangelism: meet a community inside its own work and the gap closes where a talk wouldn't reach.
+While I was very much interested in running more experiments like these, I found that I was discovering a new gap in the communities that I was in - one that felt far more existential and important to me than better government services. The gap between people who use AI and the people who *understand* how it works.
 
-**Current version of the concept:** A network for closing the AI gap for civic communities — the fun thing is the method, the upskilling window is the moment, govtech is the horizon. Flagship decision queued with faculty.
+Growing up in New York City as the daughter of immigrants, I saw engineers and neuroscientists from abroad work as taxi drivers, start up gas stations, or grocery stories so that their children could have more opportunities in the US. Their skills were illegible to the system they'd migrated to. Some bureaucratic process had decided that no matter how smart they were, they credentials didn't count. I always believed that I just had to follow the rules and do my best - and that one day, that effort would be rewarded by the system. The reading I've done this year and been exposed to as a result of the programme has made me doubt that. And I've been reflecting back on watching those immigrants build education pipelines for their children to be legible to the system.
 
-I keep watching the gap widen between people with access to AI and people without it. Every month, the crossing costs more. That worries me more than anything else I worked on this year.
+I believe AI is going to make immigrants out of all of us. I don't believe it's going to take our jobs, but the widening gap between the people who actually understand how it works and the people who use it like a consumer technology is going to become dangerous. The wider that gap gets, the harder it will be cross it.
 
-Growing up in the US as the child of immigrants, I watched what happens to skilled people when a system can't read them. Neuroscientists and engineers worked at gas stations and drove taxis so their children could get educated in America. Their brains and training were the same. The paperwork made both illegible.
+We experienced this first-hand as a cohort with The Political Tech Awards - once we had ai agents in the evalation process, it became more and more difficult for other members of the cohort to engage in the exercise. I ended up becoming a conduit for agents - translating what people wanted to encode into the evaluation exercise - into the technology that we'd incorporated into the release. And then later, I took that a step further, I decided to build digital twins for each member of the cohort, to attempt and see if AI agents could infer their values based on their public record of work. The reaction to these twins was all across the board - from people who were absolutely horrified and requested full erasure of the record, to people who were bemused and interested in what the agent had discovered and documented about them and validated some of it's finding.
 
-I think AI is going to make immigrants out of all of us. I mean that as a process, not a metaphor: skills that no longer translate, credentials that no longer parse, and a crossing that gets more expensive to access, learn, and teach. People will be priced out, or knowledged out.
+Similarly, I found that my agents - and later agent factory - enabled me to build and test much quicker than the others and... creating applications started to feel trivial. The more important question was often *why am I building this?* and *What impact am I trying to have as a result of the thing I'm building?* I found myself building applications to show what was possible with agents - in hack night sessions at Code Club / Prototype Club, with open claw agents that supported what other people were looking for (scraping data, checking for vulnerabilities, finding people to invite to RightsUnCon), and in building social experiences for events.
 
-Sparkle Bureaucracy started with a much smaller bet: keep bureaucracy's procedural skeleton — the forms, the queues, the checkpoints, the stamps — and change only the intent, and the whole experience transforms.
+For example, when defining the Cohort 2024 x 2025 reunion event at Ration Club, I wondered how I could get the two cohorts to get to know each other, without someone explicitly asking the question *So what is your prototype about?* because if anyone from the 2025-2026 candidates heard that question, they'd likely shut down. So I designed a Spy Reunion game, built out a digital dashboard where people could submit clues, set up a visual tracker for the competition in the coat room - where people could see the live scores as they played. People marvelled at how quickly I'd built the app, but they also created entire game narratives themselves - like the impromptu interrogation room in the Classroom. Nearly all the conversations after the game was over were about (1) the technology and how I'd built the application, and (2) how it enabled so much community in an evening. It furthered my instinct that we *can* emerging technology like AI to enable what we believe is "Tech for Good".
 
-I picked the two words carefully. "Bureaucracy" carries the weight; it signals that something serious is happening here, which is not what people expect from a party trick. "Sparkle" says it doesn't have to be miserable. It lowers the threat, invites people in, and makes experimenting socially acceptable in rooms that are usually quite defensive about being experimented on. The working ratio has been on the record since the spring: **80% credible institution, 20% sparkle**. Underneath it sits the thing I actually care about long term, which is that digital access to good civic services is load-bearing for democracy. That's where the name came from.
+Throughout the year, I've tested this hypothesis in various ways. When OpenClaw hit popularity in January, I started hosting monthly hacknights - ClawClub to host people. I was genuinely excited to meet people, learn what they were working on, and get a lay of the land. Sometimes we sold out and more than 60 people arrived, and other times it was a core group fo 15 who were building and testing their agents. I learned a lot from that community about how people understand AI, how they use it, and whether they understand or even care about the implications of it.
 
-I came into the fellowship thinking I wanted to run experiments on things like DMVs. What does a better licence renewal process look like? What does liquid democracy look like if the results are livestreamed while you can still change your vote? Then I ran an immigration scheme at my own birthday — passports, visa types, credentials, checkpoints — and watched what happened. People co-created the fiction. Compliance felt like joining a story world. Even rejection felt narrative rather than punitive. Ed Saperia looked at it and said: *that's Sparkle Bureaucracy.*
+All of these communities in Newspeak Hall — the civic tech people, the emerging-technology builders, the RightsCon folks, the Protocols for Publishers summit, the vTaiwan delegation, the charity evaluators, the campaigners — helped me think and refine on who the community of people who use AI to build optimistic futures are.
 
-After that, the project kept widening. Honestly, I hadn't planned most of it. The cohort reunion became a spy game because nobody wanted to answer "how is your prototype going?" one more time, and it turned out that competition and games lowered the bar to social interaction more reliably than anything else I tried all year. When usable agent tooling arrived, I started Clawclub because testing it had genuinely excited me and I wanted other people to be excited with me. Sometimes ten people showed up. Sometimes sixty filled the hall.
+Those communities also changed the question. It stopped being only *How can bureaucracy feel different?*"* and became *Who gets to shape how AI impacts us?* So the problem statement, as it stands now: the state is failing in a lot of countries. AI offers an opportunity to fix some of that. We as technologists need to make sure the people working at the grassroots aren't left behind. And we can use AI to prototype and imagine a different future. It comes down to two questions anyone can ask. **What can I use AI for?** or **What can AI do for me?**
 
-Leading the fellowship's awards process then became Project Mirror and a fifteen-version evaluation pipeline, published change by change. That is where I hit the first hard ethical line of the year. Watching a cohort-mate reflect live on what it feels like to have an agent built from your public record taught me that **the inference is not consent**. That line now shapes everything the lab specifies about synthetic representation.
+The real pivot happened in the middle of July, at the AI & Campaigning conference where I built Campaign Factory. I'd been tasked with building something with agents that would help campaigners understand that agents were not just hype, but a real tool that they needed to consider. After lots of brainstorming, learning about the details of building out campaigns, and decomposing what I understood about AI agents into a visual and process oriented format - Campaign Factory was born. And it was so exciting to launch it at the conference and see everyone react to what a multi agent factory could do for them.
 
-All of these communities — the tech-for-good people, the emerging-technology builders, the RightsCon folks, the Protocols for Publishers summit, the vTaiwan delegation, the charity evaluators, the campaigners — helped me narrow down who I actually want to build for. I didn't arrive with that. I collected it.
+It was after the launch of Campaign Factory through faculty mentorship that I started to realize that *my* mission and what I cared about had changed. While better government services will always be important to me, SB being a bridge for those communities who won't have the access to understand, use, and thrive on prototyping with AI - is what feels crucial right now.
 
-Those communities also changed the question. It stopped being only "how can bureaucracy feel different?" and became "who gets to shape what AI becomes?" Suddenly skills need translating, credentials don't parse, and the people who cannot afford the translation fall behind. The communities that should be shaping this technology — civic tech, tech for good, open source, govtech, the grassroots — are the ones most at risk of being priced out of it.
-
-So the problem statement, as it stands now: the state is failing in a lot of countries. AI offers an opportunity to fix some of that. We as technologists need to make sure the people working at the grassroots aren't left behind. And we can use AI to prototype and imagine a different future.
-
-Getting there took a reckoning, and I've left it in the diary on purpose. In late July, some advice about how networks are born would not settle, so I spent a weekend working out why. I found my own loop. I had concealed the programme because I was afraid it would sound frivolous; that made the concept look vague, which earned me advice to go lighter, which made it feel more insubstantial, which made me more afraid. The programme was never missing. It was concealed. Naming the loop broke it.
-
-Then an hour with Hannah O'Rourke turned six months of thrash into something that resolved in an afternoon. There isn't one thing here. There are three, and they don't need collapsing.
-
-**The method** — playful games, rituals, and working prototypes that let people *feel* how a system works instead of being told about it. **The moment** — civic and political groups have an AI upskilling gap, especially around agents, and it's closing on someone else's terms; while the window is open, SB tests the newest technology and builds the bridge to the people who need it. **The horizon** — govtech.
-
-It comes down to two questions anyone can ask. **What can I use AI for?** And **what can AI do for me?**
-
-After a 100-case research sprint I also wrote down what counts, so I could be held to it:
-
-> **Sparkle is the designed charge in a consequential procedure: rules and power become possible to feel and understand, people gain meaningful room to participate, question, or act, and the encounter leaves behind civic capability rather than a decorative veneer.**
-
-The bar has four parts: an **institutional skeleton**, such as a queue, permit, court, ledger, or passport; an **affective re-skin** that is participatory and legible without pretending power has disappeared; **decision pressure**, where something is accepted, rejected, classified, delegated, or made contestable; and a **durable artifact**, such as a receipt, ledger, passport, constitution, or protocol that could harden into a reusable pattern. If an idea doesn't change who can act, how judgment is made, what becomes visible, or how a decision can be contested, it isn't strong enough yet.
-
-The question is no longer "which project is the prototype?" It is "what do these projects become together?" **The network is the prototype; the experiments are its releases; the diary is the evidence.** The experiments and activations are dated in Parts 02 and 03. The working artifacts are live: Sparkle Border Authority, Project Mirror and the V1–V15 awards pipeline, Campaign Factory, Conference Pulse, Topic, and the site and mailing list at [sparklebureaucracy.org](https://sparklebureaucracy.org). The open diary is [the complete record](https://github.com/sugaroverflow/sparkle-bureaucracy-site/blob/main/submission/sparkle-bureaucracy.md) — weekly entries, experiment cards with risks and ethics notes, engagement and prior-art logs, the research corpus, and the essays where I interrogated my own assumptions in public.
-
-By then, faculty were bringing me work: Topic for Ed, Conference Pulse from Hannah's written brief, and Campaign Factory against her provocation to make campaigners take agents seriously. Three commissions, dated in the commit history.
-
-One honest caveat, up front. The name "Sparkle Bureaucracy" may not survive the network's next phase. Making bureaucracy sparkle is my long-term horizon; the urgent work is the gap. What's being assessed here is the accumulated practice, the communities engaged, and the roadmap — a hackathon and demo night under the network's own banner, a flagship decision queued with faculty, and a rhythm I want to determine with the community rather than for it (Part 05).
+Getting here took so much more than I expected, and I'll let the diary be the evidence of that. It's important to note that I've always imagined myself as a builder - as someone who gains credibility from the artifacts that I produce, whether that's code or content. The underlying tension that has existed since the creation of Sparkle Bureaucracy is the idea that I can also be someone who creates a network or builds a new community around the thing that *I* believe is important. And fighting that imposter syndrome for nearly all of Term 2 and 3 was an absolute struggle, but I do believe that I've found something here that feels special enough to take forward.
 
 ## 02 | Experiments Log
 
-The experiments and projects, in the order they ran. Each entry records what I hypothesised, what happened, what it taught me, and what it changed — with the evidence, metrics, technical notes and feedback that belong to it in the drawers.
+This is a log of experiments, projects, and contributions to the fellowship that inspired the different iterations of Sparkle Bureauracy. I've included some the fields from the Prototype Diary template where they made sense.
 
 ### 14 Dec – 1 Apr | experiment | The field-notes room
 
 photos: 2
 
-Before any of the events: a public-by-design Matrix room, `field-notes: fatima`, with an explicit contract that anything posted could become public. 294 messages over three and a half months — me thinking out loud, with a handful of others dropping in. The rabbit holes weren't all on-mission, but power and AI kept surfacing: the surveillance-pricing investigation, shadow governance and needing permission in rule-light systems, AI system observability, agentic workflow risk. Fifteen arXiv papers, a dozen GitHub repos, the Civic Tech Field Guide, gov.uk.
+After a conversation with Ed about how I wanted to push myself to work in public, I created the public Matrix room, `field-notes: fatima`, to document everything from what I was reading, what I was inspired by, different ideas for what to build, and topics I was exploring. Reviewing the export of this channel after the year is over surfaces topis from power, power and AI: the surveillance-pricing investigation, shadow governance and needing permission in rule-light systems, AI system observability, agentic workflow risk. Fifteen arXiv papers, a dozen+ GitHub repos of AI projects, the Civic Tech Field Guide, gov.uk.
 
-**Hypothesis:** thinking in public, under an explicit consent contract, produces a research corpus a project can actually build on — a diary that starts before it knows it's a diary.
+**What happened:** I was nervous at first to let people see my work in progress, but the channel was a great way for people to engage with me on topics, to bring up things that I had written about, or share similar topics wiht me.
 
-**What happened:** when the room went quiet on 1 April, the export became the seed corpus. Every fragment went into the research inventory, and the raw export is preserved in the open diary.
+**What I learned:** Sharing the channel with the cohort earlier would've been a great exercise. What I never was able to do was publish the field notes publicly as they were happening.
 
-**What I learned:** the diary didn't start as a diary. It started as a room where I was thinking out loud in public, and I only worked out afterwards that working in the open is a capture method rather than a publishing chore.
-
-**Impact on next iteration:** the export seeded the research inventory, and the room's public-by-design contract became the diary's governance default.
+**impact on SB:** The year's research into all of these topics helped me refine my interests, keep tabs on what other people in the industry were building, and bring a political lens to the problems I was interested in - some of them were very "solve this for agents" but not political technology and so in the first term, that was an interesting tension to learn from.
 
 #### Evidence
 
 - 294 messages over three and a half months (the raw export logs 329 events including joins and edits), 205 of them in the December–January stretch.
 - The room's own marker taxonomy: 📔 field notes ×137 · 🔗 links ×41 · 📥 papers ×37 · 💾 tools ×20 · 💡 ideas ×15 · ❓ questions ×4.
-- 15 distinct arXiv papers, 10 external repos, ~30 tools and platforms logged — the corpus itemised in Part 04.
-- The librarian conversations with Matt Stempeck are in this room's export — the prior-art discipline started here.
+- 15 distinct arXiv papers, 10+ external repos, ~30 tools and platforms logged — the corpus itemised in Part 04.
 
 ### 11 Mar | experiment | Sparkle Border Authority: "Birthday Passports"
 
 photos: 4
 
-A full border-crossing ritual run live at my birthday — identity checks, purpose-of-visit declarations, secondary screening, visa classes with privileges, printed A6 visa stickers, checkpoints, admin overrides, and a live immigration stats dashboard ([the app](https://sparkle-border-authority.vercel.app/), still deployed). The language layer did more work than I expected: "sparkle compliance," "diplomatic glitter." Compliance felt like joining a story world, and people co-created the fiction rather than just submitting to it.
+On my birthday, I ran a full border crossing for people to enter the party  identity checks, purpose-of-visit declarations, secondary screening, visa classes with privileges, printed A6 visa stickers, checkpoints, admin overrides, and a live immigration stats dashboard ([the app](https://sparkle-border-authority.vercel.app/), still deployed). The language layer did more work than I expected: "sparkle compliance," "diplomatic glitter." Compliance felt like joining a story world, and people co-created the fiction which was really fun!
 
-**Hypothesis:** keep the entire procedural skeleton of a border regime and change only the intent, and the experience transforms — without losing rigour.
+**Hypothesis:** I wanted to see how a fun version of an exhausting bureaucractic ritual would impact the crowd and what the experience would be like.
 
-**Method:** a real intake → process → decision → artifact → handoff pipeline, run live on guests, with printed artifacts and an admin back office. A birthday is the safest sandbox I could think of for studying how authority feels, because the power is temporary and everyone has consented to it.
+**What happened:** Guests went through the full ritual and co-created the fiction. It was interesting to observe different reactions from people - how they leaned into the secondary screening, what parts of the process actually triggered them, the stories they told me about immigration and their passports as a result, and the different ways the hierarchy of "privelege" was discussed. People wondered if the different categories were randomly assigned, then asked me about it, and were surprised to learn that I had selected the priveleges that people received based on favoritism and that led to some fascinating discussions about power and equity.
 
-**What happened:** guests went through the full ritual and co-created the fiction. Ed Saperia saw it and said *that's Sparkle Bureaucracy* — which is where the name came from and where the bet stopped being theoretical.
+**What I learned:** A birthday felt like the safest sandbox I could think of for studying how authority feels, because the power is temporary and everyone has consented to it. Later, Ed remarked that birthdays are basically dictatorships and I agree with that take. Most were willing to play along since it was my special day.
 
-**What I learned:** same skeleton, different intent. The bet held. The part I didn't expect was rejection — I'd built the secondary-screening path assuming it would be the sour note of the evening, and instead people leaned into it, because being refused inside a story you're co-writing isn't the same as being refused.
-
-**Impact on next iteration:** the four-part experiment bar (skeleton, re-skin, decision pressure, durable artifact) is a generalisation of this event. What it was missing was a post-event ritual, and the spy reunion added that.
+**impact on SB:** The birthday immigration protocol was basically the launch of all ideas around Sparkle Bureaucracy, before the name of the project was even coined. As a result of the experiment, cohort + faculty came to me with ideas and explorations - which led to lots more experiments.
 
 > "That's Sparkle Bureaucracy." — Ed Saperia, on seeing Sparkle Border Authority
 
@@ -129,29 +100,26 @@ A full border-crossing ritual run live at my birthday — identity checks, purpo
 #### Evidence
 
 - The app remains deployed at [sparkle-border-authority.vercel.app](https://sparkle-border-authority.vercel.app/).
-- Printed A6 visa stickers as physical artifacts. (@todo photos: party, a printed visa, the kiosk screen, guest reactions)
+- Printed A6 visa stickers as physical artifacts in passport books that people took home with them.
+- **43 entries were filed** used the Border Authority app, generating around 87 border-entry interactions. This includes **16 Citizens** and about 26 visitor visas generated (there were some dupes and process restarts that were unaccounted for in the metrics).
 
 #### Feedback
 
-- Anouk Ruhaak (Prototype Previews): "Please open source the sparkle passport / visa!!" → it's open.
+- Anouk Ruhaak (Prototype Previews): "Please open source the sparkle passport / visa!!"
 
 ### 30 Mar | experiment | Project Mirror + the V1–V15 awards pipeline
 
 photos: 4
 
-At the end of the fellowship's open awards process, 321 political-technology projects had gone through a pipeline whose every version (V1–V15) was published on GitHub with the rationale for every change — from random scoring, through structured dossiers using Civic Tech Field Guide taxonomy, OpenAlex citations, and ProPublica financials, to values-as-constitutions and multi-jury agent systems. Rankings are political, and I wanted the trade-offs out where people could argue with them.
+At the end of our Political Tech Awards project, we'd evaluated 321 political projects through different types of rationale from random scoring to structured dossiers using Civic Tech Field Guide taxonomy, OpenAlex citations, and ProPublica financials, to values-as-constitutions and multi-jury agent systems.
 
-Project Mirror asked a different question: what if all 18 cohort members had been in the room? Eighteen synthetic evaluator constitutions inferred from public records — criteria plus value modifiers (boosts for community ownership and under-resourced civic contexts; reductions for VC funding; a popularity discount to counter LLM familiarity bias) — then a Borda-count grand jury with strategic reasoning enabled. Winner: Liquid Feedback, stable under every manipulation attempt (18-point lead, 13 deliberation arguments, no revisions).
+Project Mirror asked a different question: what if all 18 cohort members had been in the room? I wanted to see if AI agents could reliably study the public records of the cohort members and infer their values, ranking the projects in a way that they might have. So I built them all digital twins - a nine step multi agent pipeline that gathered all the data it could find on the person, verified it, put together a constitution for them, and then evaluated the projects, providing rationale at every step of the way. Several long nights and $500 later, I published all of my findings and then used the digital twins to rank the projets, leading up to our winner - Liquid Democracy, which given all the constitutions and evaluation criteria identified, makes a lot of sense for a group like ours.
 
 **Hypothesis:** publishing an evaluation algorithm version by version, with rationale, makes institutional judgment legible — and moves the argument from "trust us" to "argue with this specific choice."
 
-**Method:** fifteen published algorithm versions; constitutions describing evaluative stance, never claimed beliefs; value modifiers making normative assumptions inspectable; the audience running its own live ranking (QR-code criteria → agent-generated ranking) before seeing the committee's.
+**What I learned:** transparency isn't trust. Just because people's public record of work is out there doesn't give an agentic system consent to evaluate it. A few cohort members reacted very strongly to the use of their data and aggregation of something synthetic that seemed to represent them. I had to reiterate many times that Project Mirror was not a representation of my personal values or how I believed AI should be used, but an experiment to push the frontier of how AI *could* be used. It led to a lot of interesting debates about whether or not sythentic users can be used for good and what those use cases might be.
 
-**What happened:** the cohort got pulled in — Davit on values taxonomy, Gamithra's ITN/A framework, Alexandra on aggregation, Jamie on synthetic users, Fran building the People's Choice system with my support — and the showcase ran the full ritual live.
-
-**What I learned:** transparency isn't trust. It does make the trade-offs discussable, which is a smaller and more useful claim. The tension that has not gone anywhere came from watching Asil reflect live on what it feels like to have an agent built from your public record. It landed harder than anything else I built this year. The inference is not consent.
-
-**Impact on next iteration:** Mirror Commons is specified in the idea bank as the answer — synthetic stand-ins people manage themselves, with editable evaluator passports, red lines, expiry, and revocation. From estimating people, to people governing their own estimates.
+**impact on SB:** Project Mirror was one of the first technically complex multi agents systems that I built. Not only did I have to work with 18 concurrent agents, I had to consider verification loops, data integrity, and how these agents communicated with one another and made decisions. I learned a lot about how to design a system that requires agents and I was able to use those learnings in the talks that you'll read about later in the year.
 
 > "A little bittersweet, because these are synthetic representations. But I think where we are is the cusp of something… technology that keeps us in the judgment loop and lets us work together better." — from the Project Mirror closing reflection
 
@@ -166,11 +134,10 @@ Project Mirror asked a different question: what if all 18 cohort members had bee
 - The live awards site with the full V1–V15 history.
 - The showcase mechanic: the audience was handed the 321-project longlist and asked to rank it — *and to note how they were deciding* — before seeing the committee's method.
 - Winner Liquid Feedback: 18-point lead, 13 deliberation arguments, no manipulation that held.
-- Cohort contributions credited by name: Davit Jintcharadze (values taxonomy), Gamithra Marga (ITN/A framework), Alexandra Ciocanel (aggregation), Jamie Coombes (synthetic users), Francesca Galli (People's Choice, built with my support), Asil Sidahmed. (@todo the 18-agents-on-one-screen screenshot, a constitution excerpt)
 
 #### Feedback
 
-- Ed Saperia (26–27 Mar, awards eve): brand Clawclub as an SB event, run an SB calendar including other people's events — and the reassurance that "something sparkle bureaucracy themed" was enough → the showcase went ahead SB-coded, and calendar-as-curation entered the network strategy.
+- Multiple faculty members requested a digital twin as they were curious (a) what information could be inferred about them from their public record, and (b) what projects their agent would rank.
 - "Please build some for the team." — a manager, on hearing about synthetic evaluator agents.
 - Asil Sidahmed's live reflection at the showcase → the permanent ethical line, and the Mirror Commons spec.
 
@@ -178,23 +145,23 @@ Project Mirror asked a different question: what if all 18 cohort members had bee
 
 photos: 2
 
-A live team button game built for the Ration Club crowd ([nwspk/ration-club-button-game](https://github.com/nwspk/ration-club-button-game)) — the games-as-social-infrastructure thread again, tested in between the border ritual and the spy game.
+Alex Vince and I vibe coded this game as a social experiement at Ration Club one night in ten minutes and then went and tested it on everyone in the space. ([nwspk/ration-club-button-game](https://github.com/nwspk/ration-club-button-game)).
 
 **What it was:** a fast, live, two-team game for a room of guests.
 
-**What it taught:** the games thread reproduces. Play reliably gets people into interactions they'd have avoided if you'd called it networking. (@todo how the teams played out — one line)
+**What it taught:** this was a great way to see what the space for was - and how quickly you could prototype and test assumptions. The results of the game led to a lot of debates, on whether being on Red or Blue team was "better" and why it was better, including deep dives on fascism and morality. It surprised me that something *so* simple could be so political!
 
 ### 9–24 May | experiment | sparklebureaucracy.org + the mailing list
 
 photos: 2
 
-The website went from AI-generated design to real project: first build pass on 9 May, the Astro migration decision on 11 May (recorded in a decision doc, old version preserved), look-and-feel work, and the Buttondown mailing list going live behind a provider-adapter API on 24 May. "A mailing list and eventually an event series" was the network-building commitment I'd written in the diary. This is the point it became infrastructure.
+Finally launched the public presence of Sparkle Bureaucracy with a mailing list! "A mailing list and eventually an event series" was the network-building commitment I'd written in the diary. This is the point it became infrastructure.
 
 **What it was:** the network's public front door, and its first piece of owned infrastructure.
 
 **What happened:** live since May, redesigned in August around the problem statement and three registers, with the experiments and an interest register on the page.
 
-**What I learned:** infrastructure has failure modes you only find in the field. The signup form was silently blocking a real subscriber with "Suspicious activity detected," which turned out to be the mechanical explanation for weak conversion I'd been reaching for. Report the bug and the fix together.
+**What I learned:** you can't tell people you're working on an network if they don't have somewhere to follow along and subscribe. And surprisingly, a lot of people subscribed (35 total subscribers as of August 10 2026) - sometimes not even because they understood the network, but because they were at an event where I gave a talk or at one of the games I hosted.
 
 #### Technical
 
@@ -202,7 +169,7 @@ The website went from AI-generated design to real project: first build pass on 9
 
 #### Evidence
 
-- **15 mailing-list subscribers to date** — including Rosario Piazza, a data-and-AI policy researcher who joined after the Evaluation 2030 keynote.
+- **35 mailing-list subscribers to date** — including Rosario Piazza, a data-and-AI policy researcher who joined after the Evaluation 2030 keynote.
 - The bug, owned: Matt Stempeck reported the signup form blocking him ("Suspicious activity detected", ~21 Jul). Cause found (the embed endpoint's spam heuristics on server-proxied signups), form fixed, authenticated API path added.
 - Dr Eugenie Regan (August): "You are an inspiration, Fatima! I've shared your website with family and friends today!"
 
@@ -210,17 +177,15 @@ The website went from AI-generated design to real project: first build pass on 9
 
 photos: 4
 
-Nobody in my cohort wanted to answer "how is your prototype going?" one more time, so the reunion became a spy agency. The NHIFA Field Console: each player's mission revealed in-app, keyword guesses, handler bonus codes, submissions locked at 21:45, a paced reveal on the projector at 22:00 — while Director and Handler missions lived on paper, with printed dossier mini-zines and reset slips as physical artifacts.
+Nobody in my cohort wanted to answer "how is your prototype going?" one more time, so the reunion became a spy agency. The NHIFA Field Console was an application that revealed each player's mission to them, allowed them to submit keyword guesses and handler bonus codes. It also had a live "game tracker" screen which we set up in the coat room so the competition knew the scores as they were being awarded, which made everyone 10x more competitive. Players were also given physical notebooks to track their notes and brainstorm keywords.
 
-**Hypothesis:** networking reframed as a game — on the intake → process → decision → artifact → reveal skeleton — gets a fatigued cohort talking again.
+**Hypothesis:** networking reframed as a game was successfully able to get two cohorts to socialize with one another!
 
-**Method:** in-app mission reveals with a timed submission lock and a paced projector reveal; print pipeline for dossier mini-zines (A6-onto-A3 imposition); paper missions for the Director and Handlers.
+**What happened:** people competed, played their missions, and stayed for the reveal. Competition and games lower the bar to social interaction! And it also created space for people to be creative and set up their own narratives - like the interrogation room in the Classroom or the pair by pair swaps in the Terrace that occurred organically.
 
-**What happened:** people competed, played their missions, and stayed for the reveal. Competition and games lower the bar to social interaction, and this is the clearest run of that I have.
+**What I learned:** the spy game added the thing the border never had, which is a post-event ritual! People wanted to debrief the game, offer feedback, and hear more about how it went so I set up a post event page showcasing some metrics - like who was the fastest to submit codes or who got the most wrong.It really cool to see how the cohorts organically created competition and narratives of their own. It was also really great to receive feedback and get lots of questions about how "how did you build this so quickly" and get to tell them about my agents.
 
-**What I learned:** the spy game added the thing the border never had, which is a post-event ritual. Personal debrief cards on a debrief page in the days after extended the experience past the room, and that turned out to matter more than I'd assumed when I built it as a nice-to-have.
-
-**Impact on next iteration:** post-event rituals became part of the experiment grammar. The encounter should leave something behind, and so should the days after it.
+**impact on SB:** I learned that people love physical artifacts from social experiments, but they also love the data. They want to know *how* they performed in a game so tracking those metrics was valuable.
 
 #### Technical
 
@@ -228,57 +193,58 @@ Nobody in my cohort wanted to answer "how is your prototype going?" one more tim
 - Physical artifacts: dossier mini-zines via an A6-onto-A3 imposition pipeline, mission cards, reset slips, debrief cards.
 
 #### Evidence
-
-- (@todo dossier mini-zine photos, the Field Console, a mission card, a debrief card — check whether a debrief card can be reproduced with permission)
+- Roughly **38 people** used the NHIFA app — **28 fellow-agents (12 from cohort '24, 16 from '25)** plus **10 handlers** — generating an estimated 250 of 384 possible cover-identity guesses and around 40–50 bonus-code redemptions during the evening.
+- Weeks later, Francesca Galli forked the repository to run a similar game with her friends for a birthday party.
 
 ### 19–23 Jun | experiment | The nine-experiment idea bank
 
 photos: 1
 
-An experiment research sprint compared candidate first experiments and concluded: keep Sparkle Bureaucracy itself as the assessed prototype, and pick one public-facing flagship. Four days later the idea bank landed. Nine ranked candidates — Public Voice Customs, Mirror Commons, The Exception Window, Permission Passport Office, The Value Court, Claw Civil Service, Shadow Labour Claims Office, Liquid Mandate Assembly, Sparkle Border Field Kit — each specified to smallest-credible-run level, with artifacts, evidence lists, and named risks.
+The original concept of Sparkle Bureaucracy involved setting up experiments that challenged existing bureaucratic processes. There were 9 of these that I wantd to design: Public Voice Customs, Mirror Commons, The Exception Window, Permission Passport Office, The Value Court, Claw Civil Service, Shadow Labour Claims Office, Liquid Mandate Assembly, Sparkle Border Field Kit - each specified to smallest-credible-run level, with artifacts, evidence lists, and named risks.
 
-**What it was:** the network's release pipeline, written down before any of it runs. Nine experiments waiting for the next phase, filtered through the four-part bar.
+**What it taught:** Attempting to document these experiment ideas made me realize I wasn't really clear on what the lens of SB was and what I was trying to do with the network. Most of them felt like games, rather than activations.
 
-**What it taught:** specify the bar before choosing the work. If an idea doesn't change who can act, how judgment is made, what becomes visible, or how a decision can be contested, it isn't strong enough yet — and having that written down meant I could rank nine ideas without arguing with myself about each one.
-
-**Impact on next iteration:** the flagship decision sits with faculty rather than with me alone. That is a choice about who gets to decide, not something I forgot to finish.
+**impact on SB:** Because I also felt shy about sharing these experiment ideas in the open, they sat for a while without being published - and made me realize the mission of the network maybe wasn't aligned with my interests (or the new emerging gap that I was seeing and interested in)
 
 #### Feedback
 
 - Emily Mayhew's consultation question ("why is public consultation such a dull awful bureaucratic cold process?") fed Public Voice Customs and Mirror Commons' consent model in the idea bank.
 - Ed Saperia's artifact principle (28 Apr — "every interaction with SB should leave a durable artifact: a certificate, a key, a title") became the durable-artifact leg of the four-part bar.
 
-### 23 Jun | experiment | Topic (topic.forum)
+### 23 Jun | experiment | Timetable / Topic (topic.forum)
 
 photos: 3
 
-The same evening the idea bank landed, the **Topic** build kicked off with 43 commits in a day. Topic is collaborative forum software — propose topics, vote with hearts, share availability, shape a schedule together — "a Newspeak House × Sparkle Bureaucracy production," finished like a product through July with QA sprints, feeds, CI and docs.
+Ed reached out about a project idea that he had for managing the fellowships' course topics, sharing availability, and understanding students' interests. We worked together to go through his project specification brief and I took the task of architecting the build according to it. This was the first "Newspeak House × Sparkle Bureaucracy production," finished like a product through July with QA sprints, feeds, CI and docs.
 
 **What it was:** a faculty commission. Ed Saperia as product owner, the engineering and system design mine.
 
-**What happened:** deployed at topic.forum, hardened like a product through July.
+**What happened:** deployed at topic.forum, launching soon in Sept 2026!
 
-**What I learned:** a commission settles the legitimacy question before the work starts, and I hadn't understood how much of my energy that question was consuming until something arrived without it. Someone inside the institution wanted a specific capability, and it's dated in the commit history.
+**What I learned:** The traditional way of building something like this required a product owner and an engineer to work together, in sprints, defining each task and item as they went. With AI agents today, it was feasible for me to setup guardrails on the repository in regards to things like new functionality (don't rebuild large parts of the codebase), testing requirements (all new interactions require tests), and stability (certain parts of the authentication and environments are off limits) - and enable Ed as the product owner to engineer parts of the project himself. It was an interesting case study in bridging someone who knows a lot about AI and agents into someone who can vibe engineer their own project, within a sandbox controlled by a domain expert. A new style of consultation!
 
 #### Technical
 
 - 43 commits on day one, ~66 by 30 June; a further build wave 21–25 July (~37 commits) and a 32-commit QA sprint on 27 July (PRs #139–146).
+- All the faculty now have accounts on the platform (16 users!) and their topic content for the 2026-2027 year are in as well.
 
 ### 12–17 Jul | experiment | Campaign Factory
 
 photos: 4
 
-Built with Campaign Lab in an intense ten-day sprint — 122 commits, 62 of them on 15 July — against Hannah O'Rourke's brief: demo multi-agents, and make campaigners take agents seriously. Give [Campaign Factory](https://campaign-factory.vercel.app) a UK local or public-policy problem and a place, and it researches the decision route, maps power and pressure, proposes strategy and tactics, and drafts campaign materials — *showing the work as it happens*, with Hannah's campaign-building knowledge base embedded in the system. It demoed live at the AI & Campaigning Conference at Newspeak House on 16 July.
+This was built in a 3 day sprint with Hannah O'Rouke as the subject matter expert on campaigners. My task was to scare campaigners into realizing that AI agents were *real* and not hype. And in order to do so the application had to achieve two things - (1) it had to be relevant to them as an audience of campaigners and (2) it had to demonstrate multi agent factories in a way that could be understood by a non-technical and AI-averse audience.
 
-**Hypothesis:** meeting a community inside its own work — their problems, their vocabulary, their knowledge base embedded in the system — beats evangelism. And designed affect in a consequential procedure can be *commissioned*, not just asserted.
+Give [Campaign Factory](https://campaign-factory.vercel.app) a UK local or public-policy problem and a place, and it researches the decision route, maps power and pressure, proposes strategy and tactics, and drafts campaign materials — *showing the work as it happens*, with Hannah's campaign-building knowledge base embedded in the system. You can watch [the full experience that the audience had as a replay on the site.](https://campaign-factory.vercel.app/factory/replay/conference)
 
-**Method:** ten-day sprint in the partner's own GitHub organisation ([CampaignLab/campaign-factory](https://github.com/CampaignLab/campaign-factory)); multi-agent decomposition so the work is showable and replayable, because the architecture is doing the teaching.
+**Hypothesis:** meeting a community inside its own work — their problems, their vocabulary, their knowledge base embedded in the system has the biggest impact! Because of Hannah's influence, the output of the factory was credible enough to represent work that the audience recognized, which meant that the technical implications of agents landed it's mark.
 
-**What happened:** the room's verdict on the conference panel — "Agents: working tools or over-hyped?", with Hannah and Ed — came back 19 ballots: 9 *could be useful with work*, 7 *already useful and real*, 3 *just hype*. The week after, a free-access code went onto the house key so "bring your own API key" stopped being the price of admission, with a kill-switch as the safety valve. Campaign Lab sent Campaign Factory out in their newsletter.
+**Method:** 3-day sprint in the partner's own GitHub organisation ([CampaignLab/campaign-factory](https://github.com/CampaignLab/campaign-factory)); multi-agent decomposition so the work is showable and replayable, because the architecture is doing the teaching.
 
-**What I learned:** translation beats evangelism, and this is the run where I can say why rather than just assert it. The run also changed what I thought counted as sparkle. Sometimes it *removes* a ritual: the free-access code deleted a gate rather than decorating one. The sharpest question of the day came off the comment wall: how do we stop people's first experience being slop campaign plans? I don't have an answer yet. It is the quality bar Campaign Factory carries forward.
+**What happened:** the room's verdict on the conference panel — "Agents: working tools or over-hyped?", with Hannah and Ed — came back 19 ballots: 9 *could be useful with work*, 7 *already useful and real*, 3 *just hype*. The week after Campaign Lab sent Campaign Factory out in their newsletter.
 
-**Impact on next iteration:** "Campaign Factory, grown up" is a flagship candidate — already live, already partnered, already testimonialed — and the inbound pull it generated from Oxfam GB and the Civic Tech Field Guide is shaping the autumn calendar.
+**What I learned:**  This project changed what I thought counted as "sparkle". *How can I give people the experience of using a multi agent factory in a visual format?* was a difficult question to answer and to be honest, I'm not sure it was the best response so it requires more iteration. However, it was fascinating to see their reactions - to see what parts of the design they absorbed - whether they understood orchestration patterns or agent to agent handoffs or that the system didn't have to be linear, the way that interacting with an LLM often is.
+
+**impact on SB:** "Campaign Factory, grown up" is a flagship candidate — already live, already partnered, already testimonialed — and the inbound pull it generated from Oxfam GB and the Civic Tech Field Guide is shaping the roadmap. It also stuck a line in the stand after Project Mirror and made me realize that my interests in AI could influence the pivot that SB needed to take in order to be a bridge.
 
 > "Campaign Factory built for her what it would take her five months to research." — campaigner at the AI & Campaigning Conference (@todo get name/permission)
 
@@ -292,29 +258,31 @@ Built with Campaign Lab in an intense ten-day sprint — 122 commits, 62 of them
 
 #### Evidence
 
-- The 19-ballot panel vote, preserved in full in the record, with twelve live comments and two private organiser notes.
-- Inbound after the conference: **Abby Mason** (Campaign Engagement Manager, Oxfam GB) — "amazing to see the platform you have built" — requesting a team demo and Q&A; a September workshop is being organised with Asil Sidahmed. **Matt Stempeck + Daniel Mackisack** (Civic Tech Field Guide) offering theory-of-change material for the strategy section, asking to share it with coworkers "and then, the world," and inviting a CTFG vibe-code show & tell demo. Campaign Lab newslettered Campaign Factory to their list on 20 July.
+- 19 votes on the ballot on conference pulse.
+- **31 total campaigns** generated on the application.
+- Inbound after the conference: **Abby Mason** (Campaign Engagement Manager, Oxfam GB) — "amazing to see the platform you have built" — requesting a team demo and Q&A; a September workshop is being organised. - **Matt Stempeck + Daniel Mackisack** (Civic Tech Field Guide) offering Matt's theory-of-change app to embed into to the strategy section, asking to share it with coworkers "and then, the world," and inviting a CTFG vibe-code show & tell demo.
+- Campaign Lab newslettered Campaign Factory to their list on 20 July.
+
 
 #### Feedback
 
-- Hannah O'Rourke's Previews offer (2 Apr) — pilots, intros, and the pipresist.uk pointer — is the seed this whole arc grew from; she later co-built the problem statement (31 Jul).
-- The slop-campaign-plans question from the comment wall → logged as Campaign Factory's open quality bar.
+- Campaign Factory generates a lot of slop and that was a concern raised by the audience. For a tool like this to be useful, it needs a lot more fine tuning in the prompts and steps - and more user research as to what would be most efficient and helpful.
+- Questions around whether an LLM could generate the same thing - my testing has found that a ChatGPT or Claude on extra high reasoning or Deep Research mode could generate 10-15% percents of the brief at a time - however it would require separate conversations and manually carrying context over. Because this was a 19 agent pipeline, there were agents dedicated to research, verification, and handoff - so the context windows were shared.
+
 
 ### 15–16 Jul | experiment | Conference Pulse
 
 photos: 3
 
-The live companion for the AI & Campaigning Conference, built in parallel to a written brief from Hannah O'Rourke: schedule, anonymous per-panel comments, votes, an organiser dashboard, a big-screen room view. Nine sessions, live all day.
+The companion application for the AI & Campaigning Conference, built from a brief provided by Hannah. It included the live schedule, anonymous per-panel comments, an admin dashboard, a big-screen room view, LLM summary of incoming comments, and voting. Basically a custom slido for an event that had a very specific audience engagement.
 
-**Hypothesis:** an instrument that samples participation repeatedly, rather than once at the door, can see what a room is actually doing — including when it disengages.
+**Method:** built to the brief in the partner's organisation ([CampaignLab/conference-pulse](https://github.com/CampaignLab/conference-pulse)).
 
-**Method:** built to the brief in the partner's organisation ([CampaignLab/conference-pulse](https://github.com/CampaignLab/conference-pulse)); anonymous per-panel voting and comments so participation costs nothing.
+**What happened:** 240 votes, 263 comments, and 28 private feedback messages across nine sessions. And the instrument saw the room — the comments between 14:00 and 16:00 match independent complaints about heat and breaks. Disengagement was detected through participation data.
 
-**What happened:** 240 votes, 263 comments, and 28 private feedback messages across nine sessions. And the instrument saw the room — the comments between 14:00 and 16:00 match independent complaints about heat and breaks. Disengagement, detected through participation data.
+**What I learned:** We talk a lot in the industry about the rise of personal software, but I really do think that Conference Pulse was a valuable thing to build as it filled a very specific style of conference and engagement and worked well.
 
-**What I learned:** repeat participation is measurable, and I think it's the hardest evidence a civic tool can produce. And then the bit I'd rather not write down. 240 votes converted two people to the mailing list. Two. I assumed for weeks that the ask was wrong or the room wasn't that interested, and it turned out the form was silently rejecting real people — Matt reported it before I found it myself.
-
-**Impact on next iteration:** the fifth condition — can an experiment detect its own defectors? — comes from this instrument rather than from a whiteboard. And the 30-day data purge it nearly lost its own evidence to became the lab's capture discipline.
+**impact on SB:** Hannah's design of "hype or not" in her voting segment and the "incoming comments from the audience" while the LLM was summarizing created this "side" event during the talks. People were submitting comments to see how the LLM summary might change. Towards the end of the conference, someone even tried to prompt inject the application, which resulted in a lot of fun when it was unsuccessful and the LLM summarized "audience tried to prompt inject but failed". It's interesting how custom designed tools can create organic interactions that weren't planned as part of the conference (or even expected given the topic/schedule)
 
 #### Technical
 
@@ -323,78 +291,72 @@ The live companion for the AI & Campaigning Conference, built in parallel to a w
 
 #### Evidence
 
-- From the production database (16 July, nine sessions): **240 votes · 263 comments · 28 private feedback messages · 67 unique voting devices** (a floor on reach, not attendance — nobody who only watched the projector is counted).
+- From the production database (16 July, nine sessions): **240 votes · 263 comments · 28 private feedback messages · 67 unique voting devices**
 - **Retention: 49 of 67 voters (73%) voted in two or more panels**; 25 in five or more; three in all eight with voting open.
 
-### Feb–Jul | experiment | The Claw agents
-
-photos: 2
-
-Built inside the Clawclub community: Moltbook interactions, penpals, research and analysis pipelines — playful multi-agent systems with real outputs.
-
-**What it was:** whimsical and instrumented agents on the same technical substrate.
-
-**What it taught:** whimsy and rigour run on the same substrate. The playful agents generated real social engagement, the research agents generated real evidence, and it was the same base underneath both — which is the strongest argument I have that the 80/20 ratio is a method and not a tone.
 
 ## 03 | Events Log
 
-The convening, the encounters, and the invited talks — where the network got built, and where the method met other communities. Series are dated from their first event.
+In addition to experiments and projects, I also contributed to events. Throughout hosting these events and talks, I was able to talk to lots of people and communities about AI, how they used it, what they felt about it, and identify the different opportunities in which SB could support them in that journey.
 
 ### 2 Feb | convening | Code Club → Prototype Club → Prototype Coworking Day
 
 photos: 3
 
-Code Club came to me from the previous cohort and the institution, and I ran it every other week from 2 February: soliciting workshops people actually wanted, themed sessions on trending topics, discussing and building together. Over the year it evolved with the cohort's needs — **Code Club** (2 Feb – 16 Mar) → **Prototype Club** (from 13 Apr) → **Prototype Coworking Day** (17 Jul, the day after the AI & Campaigning Conference, reshaped around what the cohort needed as prototypes came due).
+I inherited Code Club from the institution and ran it every other weeks from February. At first, we had workshops and themed sessions where we debated trending topics and technology. Later, it evolved to meet the cohort's need's — **Code Club** (2 Feb – 16 Mar) → **Prototype Club** (from 13 Apr) → **Prototype Coworking Day**.
 
-**What it taught:** Ed named something on 14 April that I had missed from inside it: Prototype Club was itself an SB project. I had been building the thing and the cohort at the same time. (@todo themed-session list, attendance range)
+**What it taught:** Ed named something on 14 April that I had missed from inside it: Prototype Club was itself an SB project. I had been building the thing and the cohort at the same time.
 
 ### 4–5 Feb | encounter | Protocols for Publishers — showcase + stakeholder summit
 
 photos: 2
 
-A two-day showcase and stakeholder summit at the house, and one of the Hall communities that helped me narrow down what my own community should be.
+A two-day showcase and stakeholder summit at the house, and one of the communities in Newspeak Hall that helped me narrow down what my own community should be.
 
-**What it taught:** democracy dies when truth is behind a paywall and misinformation is free.
+**What it taught:** "Democracy dies when truth is behind a paywall and misinformation is free." The journalists and technologists at the PfP meetup have strong sentiments against AI, the use of AI, and the implications of it. And as someone who is an AI optimist, it's always good to get exposure to the ways that AI is negatively impacting other industries. And what the arguments against using it are.
 
-### Feb | encounter | The vTaiwan delegation at the Hall
+### Feb | encounter | Decode Taiwan Open Tech meetup
 
 photos: 1
 
-I met the delegation in the Hall. The encounter keeps recurring through the whole record: Ed's brand session, the prior-art log, and the roadmap all lean on it. (@todo confirm the date — likely the 3 Feb "Decode Taiwan Open Tech" meetup)
+I have long been a fan of the vTaiwan movement, they're a demonstration of all the things that I believe to be true and inspiring about civic tech - so meeting them at Newspeak Hall felt like a growing up story in so many ways. It was great to see the realistic 10 year journey, how they've dealt with changes in government and bureaucractic blockers to change. And how they've made their mission of co-creating possible and practical through the use of technology.
 
-**What it taught:** vTaiwan gave me the movement-plus-tool precedent: co-creation around bureaucratic change, held by a community and made practical through software. The roadmap still leans on it.
+**What it taught:** vTaiwan continues to be a movement, one might even call it a network of technologists and policy people who have a shared mission that they care about. The many tools that they've deployed, either through the government or through collaboration with open source communities are citizen facing and respond to the needs of their people. It's a model for a civic tech movement that has been very successful and it was great to get a behind the scenes picture of what worked and what didn't work and hear from them about their challenges and successes.
+
+It was also really heartwarming because around this time, I told them I wasn't sure what I was going to do with my prototype - and after our 3 hour long coffee chat, they all wished me well and said that they knew SB would be so great! And that was something I reminded myself of when I had the worst of the imposter syndrome in regards to starting a movement. They were some of the first "subscribers" in that way!
 
 ### 17 Feb | convening | Clawclub (series) + Clawcon London
 
 photos: 4
 
-The first hack night started in response to the sudden arrival of usable agent tooling. I'd been testing openclaw in ways that excited me, and I wanted other people to be excited with me. The series ran through the spring — sometimes 10–12 people, sometimes 60 filling the hall, building, sharing, occasionally selling each other hardware — and on 8 April it became a conference for a day: Clawcon London, co-organised. The Claw agents grew out of this community.
+I started ClawClub because I wanted to be in rooms with people who were building with OpenClaw and wanted to know how they were building and what they were creating. The monthly series ran through the spring and included anywhere from 15 to 60 people filling the hall, building, sharing, occasionally selling each other hardware (lol). As a result of the legitimacy that I gained from hosting the meetup, I was able to get in touch with the crew of the (now) Open Claw Foundation and become a co-organizer for bringing ClawCon from SF to London - audience of 800!
 
-**What it taught:** convene around the moment. When the tooling arrived, the community became the bridge. (@todo one artifact built at a club night, Clawclub #2 and #4 notes)
+**What it taught:** Hannah always reminds me that "Legitimacy is constructed" and I truly saw this via ClawClub. What began as a meetup where I wanted to meet like minded people working on things led to multiple keynote and collaboration opportunities for me in London. It gave me a lot of confidence to the "why me" question of Sparkle Bureaucracy and I started to feel that maybe I *was* the right person to start a new thing.
 
 ### 21 Feb | encounter | A Bohm Dialogue on human, more-than-human, and artificial intelligences
 
 photos: 1
 
-A dialogue session on AI and intelligences, at the Thinking Gym.
+A dialogue session on AI and intelligences that was faciliated via Bohm dialogue. It was around 20 strangers in a room discussing AI and human cognition. I was so flabbergasted by the discussions, I had to leave early.
 
-**What it taught:** people truly do not understand AI, and personify it to a degree that enrages me. I also learned something about myself that night, which is that showing up as the technical expert can make people insecure enough to get defensive and stop hearing me. The bridge has to lower the temperature before it can translate anything.
+**What it taught:** People truly do not understand AI, and personify it to a degree that enrages me. I also learned something about myself that night, which is that showing up as the technical expert can make people insecure enough to get defensive and stop hearing me. This was valuable in validating the "Sparkle" in Sparkle Bureaucracy, because that would lower the bar and make this network approacheable.
 
 ### 25 Mar | convening | Lumina House takeover of Ration Club
 
 photos: 2
 
-Cross-community collaboration, and social choreography at scale. Not a software project — a demonstration that the convening instinct works outside technical contexts, and an early data point for the alliance-building strategy.
+Cross-community collaboration, and social choreography at scale. The organizers of Lumina House reached to get to know us better and I organized a takeover so we could blend the two communities. It was quoted to be one of "the best ration clubs ever" and community members who generally avoid the event dropped in and enjoyed themselves, which I think is the highest praise for an organizer.
 
-**What it taught:** different communities talk about the same things in completely different languages, so cross-pollination is a skill the network needs rather than a nice side effect. Something about the "why me" question also landed. The people I look up to are ML and AI researchers who know far more than I do. But for some of the people around me, I am the closest thing to that they have. I don't think that means the imposter syndrome is resolved. I think that is what being the bridge means.
+
+**What it taught:** Different communities talk about the same things in completely different languages, so cross-pollination is a skill the network needs rather than a nice side effect! Something about the "why me" question also landed. The people I look up to are ML and AI researchers who know far more than I do. But for some of the people around me, I am the closest thing to that they have. I don't think that means the imposter syndrome is resolved. I think that is what being the *bridge* means.
 
 ### 2 Apr | talk | Prototype Previews: Sparkle Bureaucracy meets the faculty
 
 photos: 2
 
-The fellowship's checkpoint, and the framing's first encounter with the faculty (pitch at 21:50). The same morning, the field-notes export had become the diary repo — research inventory, sensemaking map, synthesis, and a README rewritten six times in one afternoon until it was in my voice — so the pitch arrived with a record behind it.
+Checkpoint! This was the faculty's first official encounter with Sparkle Bureaucracy. I pitched it as the original - a network of people prototyping organizational and service futures. I talked about my experiences with bureaucracy and working in government - and how I was convinced that better government services were needed. I was hesitant about where this was going, because the movement wasn't entirely clear to me either, but the feedback was overwhelmingly positive.
 
-**What it taught:** every piece of feedback below got a response, tracked to an action in the faculty-feedback tracker. This night set half the year's threads in motion, and the Campaign Lab partnership grew directly out of it.
+**What it taught:** Every piece of feedback below got a response, tracked to an action in the faculty-feedback tracker. This night set half the year's threads in motion and I believe it led to many of the conversations that resulted in the experiments and projects above.
 
 #### Feedback
 
@@ -402,55 +364,65 @@ The fellowship's checkpoint, and the framing's first encounter with the faculty 
 - Matt Stempeck: "an experiment lab for imagining how emerging tech can change the way our systems work without abandoning them" — the phrase the prototype grew into. Also his: "if you can't dance it's not my revolution."
 - Hannah O'Rourke: intros to AI-in-gov and optimistic-narratives people; MP-office applications from casework; "we will have people up for piloting things"; pointed at Campaign Lab's [pipresist.uk](https://pipresist.uk/) — the seed of everything that followed with them — and offered help with evaluation frameworks.
 - Chris Owen prescribed *Radical Help* → read ("we architected our systems poorly and can radically re-imagine them"). Emily Mayhew asked why public consultation is "such a dull awful bureaucratic cold process" → folded into the synthetic-voice experiment cards. Anouk Ruhaak demanded the sparkle passport be open-sourced → it is.
-- James Moulding: "I liked optimistical." → the word stays. Sinead Doyle: "I really enjoy the aesthetic of your slides ✨" (Ed: "you are basically the target audience for this project").
+- James Moulding: "I liked optimistical." → the word stays.
+- Sinead Doyle: "I really enjoy the aesthetic of your slides ✨" (Ed: "you are basically the target audience for this project").
 
 ### 30 Apr | encounter | "Are You a Software Update?" book launch
 
 photos: 1
 
-A book launch at the house, and a sharper edge on the warning pattern I'd been seeing in the research.
+A book launch at the house that presented a much sharper edge to pattern I'd been seeing in my experiences at AI meetups in London.
 
-**What it taught:** not all forms of power announce themselves. Infrastructure built for scale carries a totalising logic and there's a fascist tendency in it, which is uncomfortable to sit with when you're building the friendly version of something. Friendliness at scale still needs recourse.
+**What it taught:** Not all forms of power announce themselves. Infrastructure built for scale carries a totalising logic and there's a fascist tendency in it, which is uncomfortable to sit with when you're building the friendly version of something. I started to think about why movements were helpful when the systems were controlled by a few frontier labs.
 
 ### 8 May | convening | Rights UnCon
 
 photos: 2
 
-The RightsCon-adjacent unconference at the Hall, hosted with Anouk Ruhaak — another of the communities that helped me narrow what SB's own community should be. (@todo blurb + session notes)
+The RightsCon-adjacent unconference at the Hall, hosted with Anouk Ruhaak in two days when RightsCon was cancelled due to China's interference. It was a thrilling experience, we used agents to identify organizations and people that we should invite to the conference, built out the schedule in a brainstorming session, and threw a whole event together in a matter of days. Legitimacy is truly constructed!
+
+**What it taught:** The digital rights community is one that I've known of within civic tech circles, but had not gotten much exposure to. On the scale of AI-averse to AI-optimist, most of the attendees were even further down to AI-averse than the technology journalists! Like many of the communities mentioned in this diary, the digital rights people helped me validate and adjust the scale. They are a community that I care a lot about, but one that will be tricky to involve in any SB movement without a more thoughtful approach around the use and implications of AI. But for that reason - a very helpful exposure!
+
 
 ### 20 May | encounter | "The Majority Myth" book launch
 
 photos: 1
 
-Met the author, Edmund Lewis Maklouf, at his launch at the house. He found SB really interesting — very much needed if people are going to get better government services — and pointed me at the immigrant mindset the literature calls the model minority myth: the belief that if you do good, work hard, and follow the rules, you'll be noticed and rewarded.
+Met the author, Edmund Lewis Maklouf, before his book launch at the house. He found SB really interesting — very much needed if people are going to get better government services — and pointed me at the immigrant mindset the literature calls the model minority myth: the belief that if you do good, work hard, and follow the rules, you'll be noticed and rewarded.
 
-**What it taught:** it made me ask what my true motivations for this project actually are. I'm still sitting with that one.
+**What it taught:** it made me ask what my true motivations for this project actually are. I'm still sitting with that one because it's a heavy one. It made realize that I often wait for the letter of the law to give me permission and a sandbox to play experiments in, but the lesson of Newspeak House is the opposite - and I'm still convincing myself of that.
 
-### 24 May | talk | OpenClaw 101, for Campaign Lab
+### 24 May | talk | OpenClaw 101 workshop, for Campaign Lab
 
 photos: 2
 
-A workshop run for Campaign Lab — "agents, skills, factories, and the future of AI workflows" ([the deck](https://github.com/sugaroverflow/openclaw101-workshop)) — and the hack-night teaching thread made formal. This was the partnership before it became Campaign Factory and Conference Pulse in July.
+Invited to run a workshop for Campaign Lab on OpenClaw including agents, skills, factories, and the future of AI workflows. ([The slide deck](https://github.com/sugaroverflow/openclaw101-workshop)).
 
-**What it taught:** the translation model in miniature. Meet a community inside its own work, show what the tools can do, and build with them rather than at them.
+**What it taught:** Getting everyone set up on using Open Claw reminded me how frontier these tools really are (the setup was so finicky) and that it really does take a domain expert to be able to get people up and running. It was also really interesting to discuss with people what their use cases were - which is something I enjoyed at ClawClub as well, and is something that I'd like to implement in SB's hack nights.
 
 ### 12 Jun | talk | Keynote at Agent Craft 2026 (invited): "The Agent Hype Is Real. So Is the Mess"
 
 photos: 2
 
-The translation work for a general audience at the "AI for the Rest of Us" day — enthusiasm and honesty in the same talk, and the framing arc I keep teaching: **prompt → system → loops**. Two invitations followed. Tom Fieldman of mySociety offered experiment ideas and an introduction to a practitioner using AI agents to fill out government forms. Paul Silcock, a CTO building production AI agents, called the framing "so valuable" and asked me to present to his team.
+I was invited to give a keynote to kick off the first [Agent Craft 2026 conference](https://luma.com/AgentCraft2026), organized by AI for the Rest of Us, a community designed for everyone to learn about AI. The talk requested as a field report - the organizers were interested in the lessons learned from building and testing with agents in the wild.
 
-**What it taught:** the translation arc scales past civic rooms. Prompt → system → loops lands with deeply technical audiences too, and invitations follow when it does.
+After the launch of this talk, I received multiple opportunities to speak at conferences later this year! Tom Fieldman of mySociety offered experiment ideas and an introduction to a practitioner using AI agents to fill out government forms. Paul Silcock, a CTO building production AI agents, called the framing "so valuable" and asked me to present to his team.
+
+**What it taught:** This was the debut of my instincts on where the industry is headed and where AI fluency needs to go. The framing arc of this keynote was that people had to move from **prompt → system → loops** to be able to effectively use multi agent tools. When it landed so well with the audience, even I was a bit surprised! This audience consisted of people who are somewhat to mid technical - and not necessarily engineers or builders - and so the language required to tell them about this shift from prompts to systems was somewhat technical, but moreso than the language I used at the OpenClaw workshop for campaigners. These different engagements have allowed me to tell the same story of where AI is going in different ways for different audiences - and that has been really interesting to help SB's mission evolve.
 
 ### 15 Jun | talk | Keynote at CHEW Festival (invited): "Evaluation 2030"
 
 photos: 2
 
-The keynote that opened the charity evaluators' festival: shift from prompt-based to systems-based thinking before agents arrive — articulate your work as a system first, so when vendors show up selling things, you know where agents actually fit. (Dated 15 June per the organisers' own email. An earlier diary entry said 11 June and the record corrected itself, which is provenance working the way it should.)
+I received this opportunity through Ed's introduction. The CHEW Festival team attended our Awards showcase, so they had seen my work with Project Mirror. What they were most interested in was getting their audience up to speed with where multi agent systems were headed. Michelle Man, head of CHEW, provided all the context I needed (much like Hannah did for the Campaigners) to map my ideas to something that would feel relevant to the audience and their day to day workload.
 
-Fifteen people lined up afterwards to tell me their specific stories and where they could implement agents. Over the following two months, Michelle Man, the festival organiser, wrote three times asking for a follow-up blog — attendees "continued to hear great feedback" and kept requesting more. Two other things followed: Octavia Field Reid invited a Lovelace brown-bag on AI optimism in debate with their researchers, and Rosario Piazza, a data-and-AI policy researcher, joined the mailing list.
+I kicked off the conference, challenging people to shift their thinking from prompt-based to systems-based before agents arrive.
 
-**What it taught:** demand outlives the room. Fifteen queued stories, three blog invitations, and two onward conversions say the evaluators' gap is real, and that the systems-before-vendors message meets it where it actually is.
+> articulate your work as a system first, so when vendors show up selling things, you know where agents actually fit.
+
+15+ people lined up afterwards to tell me their specific stories and where they could implement agents. Over the following two months, Michelle Man, the festival organiser, reached out asking for a blog because they "continued to hear great feedback" and attendees were requesting more information. Octavia Field Reid also invited me to do a brown-bag at the Ada Lovelace Institute to debate her researchers on AI optimism, which felt very Sparkle Bureaucracy coded.
+
+**What it taught:** This was another type of audience and their reactions helped me validate my instinct on the gap between those just use AI as consumers and those that build it.
 
 ### 12 Dec → weekly | convening | Content Co-Creation Fridays
 
@@ -458,25 +430,27 @@ photos: 2
 
 Co-founded with Francesca Galli, with Matt Stempeck's sponsorship, because I was inspired to work in the open and wanted company doing it. A weekly "shut up & write"-style focus session at the house for faculty and fellowship candidates: set a goal, pick focused or collaborative mode, check in on progress — research write-ups, blog posts, decks, demo scripts, videos ([Luma](https://luma.com/o7t15995)).
 
-**What it taught:** the working-in-public method, made into a shared weekly ritual. (@todo how many sessions ran, one thing that shipped out of it)
+**What it taught:** the working-in-public method, made into a shared weekly ritual. I wish I was able to ship more of the things that I wrote, but imposter syndrome is such a drag.
 
 ### ongoing | convening | The AI safety study group
 
 photos: 1
 
-A reading-and-discussion group on AI safety materials, with people from neighbouring institutions invited in. (@todo dates/cadence, reading list)
+A reading-and-discussion group on AI safety materials, with people from neighbouring institutions invited in. We met monthly, designed the readings, and had in depth discussions challenging our understanding on the different topics and fields intervowen in AI safety.
 
-**What it taught:** considering the implications is a practice with a cadence rather than a disclaimer at the end of a talk. It's the counterweight that keeps all the building honest.
+**What it taught:** considering the implications of AI safety amongst peers also learning and readig the same material is valuable because it lowers the bar as compared to discussing it with experts. I wasn't aware of many of the influences of the movement and also didn't realize how much I already knew about good evaluations.
 
-### Note
+### Note!
 
-Not every contribution to the house belongs under the Sparkle Bureaucracy umbrella, and I've drawn that line on purpose: organizing **Funding 101 for Civic & Political Tech** with Georgia Bullen (7 April); organizing the **PoliTech Awards committee meetings** (the evaluation methodology and Project Mirror are SB; the committee logistics were house service); co-hosting the **Censorship & Surveillance Resistant Comms** discussion with Nicholas Botti (1 March). They're named here once because they're part of building the cohort, but claiming them as the project would inflate it.
+Not every contribution to the fellowship inspired Sparkle Bureaucracy or impacted my thinking around the AI gap. Some of the more civic tech aligned contributions were left out from this diary as they were iterations towards things I found important and interesting - but perhaps not aligned with the mission as clearly. For example organizing **Funding 101 for Civic & Political Tech** with Georgia Bullen (7 April); organizing the **PoliTech Awards committee meetings** (the evaluation methodology and Project Mirror are SB; the committee logistics were house service); co-hosting the **Censorship & Surveillance Resistant Comms** discussion with Nicholas Botti (1 March).
 
 ## 04 | Learning in Public
 
-Working in the open was the method, not a publishing chore I did afterwards. The thinking that shaped the experiments happened in a public Matrix room, in essays where I interrogated my own assumptions, in a mentor thread that ran all year, and in a research corpus built case by case. This part is that record.
+My challenge to myself was to do all of my learning in public, and while my field notes channel was public to the cohort, it wasn't public to the world. In this very expansive section of the diary, you will find a record of the discussions in my matrix channel, to the papers and tools I researched, and the little essays I wrote when I was reflecting on the course, on AI, and governance.
 
-#### Field notes
+Not all of this is relevant to the current output of the prototype, but functions more as a diary. You'd probably find the field note journals most interesting - they're organized by title of the essay.
+
+#### Fatima's Field Channel
 
 Before the diary was a diary, it was a room: `field-notes: fatima`, public by design, with an explicit contract that anything posted could become public. **294 field notes · 15 arXiv papers · 10 external repos · ~30 tools logged.** The room's own marker taxonomy tells the story of a year's attention: 📔 field notes ×137, 🔗 links ×41, 📥 papers ×37, 💾 tools ×20, 💡 ideas ×15, ❓ questions ×4. The notes themselves, in order, by kind:
 
@@ -598,7 +572,7 @@ https://www.gov.uk/government/publications/community-interest-companies-how-to-f
 Learned about CIC from Fred’s session on music and artists and open source. Type of company that is required to benefit the community rather than make a profit
 → https://www.gov.uk/government/publications/community-interest-companies-how-to-form-a-cic/community-interest-companies-guidance-chapters
 ++ 14 Dec 2025 | Ed on CIC tradeoffs | Ed Saperia calls CICs a halfway house between company and charity, weaker on tax and funding, but publicly registered.
-Edward Saperia:
+Ed Saperia:
 
 sort of a halfway between a regular company and a charity
 
@@ -610,7 +584,7 @@ what are some structures of roles that aren’t committees?
 
 _originally posted on Nov 23, 2025_
 
-Edward Saperia
+Ed Saperia
 
 Individual roles!
 
@@ -624,7 +598,7 @@ For example
 Based on duties?
 Or more broad?
 
-Edward Saperia
+Ed Saperia
 
 The idea of roles is that they make responsibility clear
 Committees don’t do that very well
@@ -686,7 +660,7 @@ various historical precedents: electricity, industrial revolution, etc., I think
 AI has been compared to various historical precedents: electricity, industrial revolution, etc., I think the strongest analogy is that of AI as a new computing paradigm (Software 2.0) because both are fundamentally about the automation of digital information processing.
 → https://x.com/karpathy/status/1990116666194456651
 ++ 14 Dec 2025 | Ed suggests algorithmic management | Ed points to algorithmic management, the ETUC trade union manual on negotiating the algorithm, and the Digital Statecraft manifesto.
-Readings/Advice from Edward Saperia
+Readings/Advice from Ed Saperia
 
 You might be interested in "Algorithmic Management"
 
@@ -725,7 +699,7 @@ https://yalebooks.yale.edu/book/9780300078152/seeing-like-a-state/
 Helps explain why simplified or “rule-free” systems often erase lived experience and reproduce inequality.
 → https://yalebooks.yale.edu/book/9780300078152/seeing-like-a-state/
 ++ 14 Dec 2025 | Matrix rooms must be unencrypted for bots | mstem and Ed advised to use public-to-space rooms with readable history, because bots cannot operate in encrypted channels.
-mstem: Edward Saperia - I think I finally fixed the channel issues. For bot related channels or notes like these, we should recommend `public to space` and `anyone can read history at anytime` instead of encrypted because bots can't run then.
+mstem: Ed Saperia - I think I finally fixed the channel issues. For bot related channels or notes like these, we should recommend `public to space` and `anyone can read history at anytime` instead of encrypted because bots can't run then.
 
 thank you!! :)
 ++ 14 Dec 2025 | reread the Tyranny of Structurelessness | Alex Vince recommends revisiting Jo Freeman's essay with a new lens after the governance discussions.
@@ -2077,15 +2051,17 @@ Three longer pieces grew out of that room's thinking:
 
 - **The resistance is information** (26 Jul) — the essay where I found my own loop. *"I know I can build something worthy of attention. I do not yet trust that my way of seeing is itself worthy of attention."* Naming it broke it.
 - **How networks are born — and second thoughts** — the session with Ed and James on mission, taste, and letting people show up, and then the weekend where the advice wouldn't settle.
-- **What I actually care about** (31 Jul) — the hour with Hannah that turned six months of thrash into the three registers and the two questions.
+- **What I actually care about** (31 Jul) — the hour with Hannah that turned six months of different iterations and imposter syndrome into a new missio statement.
 
 #### Mentorship
 
-<!-- OMITTED from this pass at your instruction — write this one yourself. -->
+In the Prototype Diary template, there's a section to acknowledge faculty mentorship and feedback. There is truly too much to document. In so many discussions after events, in 1:1 meetings, in the late nights after ration club - I found myself learning, growing, challenged, and inspired. Even the times that I felt shy talking about Sparkle Bureaucracy itself because I wasn't sure what it really was or what I was building - people engaged me on the different parts of the mission or on ai agents or factories or things they were building and wanted my opinion on.
+
+If pairwork had survived this cohort, there would be more documentation here. But while this is the lightest part of the diary, it's one of the more irreplaceable parts of the experience.
 
 #### The bookshelf
 
-*A few chapters into each so far — inspiration doesn't require completion. The field-notes rows I met only in excerpts.*
+I haven't finished all these books yet, but these are some of the recommendations from the faculty and cohort that really influenced all of the ways I've been thinking about this project - and I wanted to share that here.
 
 | Book | From | What I learned |
 | --- | --- | --- |
@@ -2106,7 +2082,7 @@ Three longer pieces grew out of that room's thinking:
 
 #### Prior art
 
-Both librarian check-ins with Matt Stempeck were completed — the conversations are in the field-notes export — and the prior-art work ran all year: a dedicated log, then a 100-case research sprint across six lanes. The consolidated table follows; rows marked *(field notes)* were discovered in the Matrix room.
+Librarian check-ins with Matt Stempeck resulted in a collection of prior art - projects that were interesting as I explored different directions with SB. I also ran a 100-case research sprint with agents across multiple lanes to consolidate SB-aligned projects or movements.
 
 | Project | What it does | What I'm learning from it | How SB differs or is influenced by |
 | --- | --- | --- | --- |
@@ -2146,19 +2122,6 @@ Both librarian check-ins with Matt Stempeck were completed — the conversations
 
 #### Inspirations
 
-**The constellation** — ten projects I'm inspired by: *Papers, Please* · Models All the Way Down · New World Summit · Project Re:form · JustFix · Haqdarshak · OpenCRVS · Buurtzorg · vTaiwan · the Habermas Machine.
-
-What the hundred cases taught, distilled:
-
-- Affect is broader than delight.
-- Status is affective infrastructure.
-- Sparkle may remove a ritual rather than decorate it.
-- Technology often works best behind a trusted person, not as the sole civic interface.
-- Staff relief is useful evidence — but it is not evidence that a resident felt heard.
-- The clearest warning pattern is affective legitimacy without recourse.
-
-**The movements lane** — each with its ingredient of sparkle:
-
 | Movement | Ingredient of sparkle |
 | --- | --- |
 | [Glitter Revolution](https://en.wikipedia.org/wiki/Glitter_Revolution) (#NoMeCuidanMeViolan) | Material that behaves politically — the affective device physically marks power and survives as a distributed visual language |
@@ -2170,31 +2133,35 @@ What the hundred cases taught, distilled:
 | [Women of Liberia Mass Action for Peace](https://en.wikipedia.org/wiki/Women_of_Liberia_Mass_Action_for_Peace) | Symbol that escalates into leverage — a counter-uniform connects witness to negotiation pressure |
 | Hīkoi mō te Tiriti / the parliamentary haka | Living protocol confronting official procedure — embodied authority meets a precise legislative document |
 
-And the warning study: Holograms for Freedom (Spain, 2015) — technological spectacle while bodies risked sanction. Spectacle is not participation.
 
 ## 05 | The Roadmap
 
-I'm still figuring out what this grows into, and I want to say that plainly rather than apologetically. What I do know is what I care about, and the roadmap is built from that. There are three things here and they don't need collapsing. The **method** — playful, working experiments that let people feel how systems work — is what the network does. The **moment** — the AI upskilling window closing on civic communities on someone else's terms — is why it has to happen now. The **horizon** — govtech, digital access to good civic services as load-bearing for democracy — is where it's all pointed. Everything below serves at least one of the three.
+I'm still figuring out where this goes!
 
-I kept asking which product I should grow. The year's evidence gave me a better question: what practice keeps these communities pulling the work forward? The experiments that landed did so inside communities that had already decided they wanted to be in the room — the cohort, the Clawclub regulars, Campaign Lab, the charity evaluators. I never had one tool hunting for users. I had a practice that engaged communities through experiments. The community formed around that practice before the network had a landing page, which, going by the advice in the diary, is how networks are born.
+What I do know and I've articulated across the experiments, events, and reflections above is *what I care about* and *what I hope this network will do for people in communities that do good*. This roadmap is built off those assumptions, but like all things will iterate!
 
-#### The rhythm — what the network runs, and why
+There are a few things I can document so far that are important:
 
-Each event type does a different job, and I've learned which from what worked this year:
+1. The **moment** — the AI /fluency/gap/ window closing on civic communities on someone else's terms
+2. The **method** — playful, working experiments that let people feel how systems work and how this technology can help/harm/impact.
+3. The **horizon** — using emerging technology to impact civic services
 
-- **Hackathon → demo night** is the anchor cycle: build together around suggested civic topics, then show the work. It's Clawclub's lesson made regular — convene around the moment, and the building *is* the community.
-- **Socials built as experiences** (2× a year — game nights, Xmas, summer): the Birthday Passports and spy-reunion lesson. Games lower the bar to social interaction, so the experiments are the social infrastructure rather than entertainment between the real work.
-- **Hear-from-experts sessions** — one domain at a time, when new things ship. The translation model from the keynotes: meet each community inside its own work.
-- **Problem discovery** — gatherings that bring in people *with problems*, not technologists: cross-pollination, coffee chats. The network's intake ritual, so the work starts from real civic needs.
-- **An organiser to hold the rhythm** — running the playbook from the mentor record: small, high-density events over big panels; a public calendar that curates the ecosystem; "easy yes" asks; a portfolio that includes other people's work.
+#### The rhythm of the network
 
+From my experience running events and engaging with communities, this year:
+
+- **Hackathon → demo night** is the anchor cycle: build together around suggested civic topics, then show the work. It's Clawclub's made regular where people can convene around a big moment, and the building together is what creates the sense of the community.
+- **Socials built as experiences** (2× a year — game nights, Xmas, summer): the Birthday Passports and spy-reunion lesson. Games lower the bar to social interaction, so the experiments are the social infrastructure rather than entertainment between the real work. And they also allow me and other organizers to showcase the power of newer technology tools as a case study.
+- **Hear-from-experts sessions** — one domain at a time for a specific audience.
+- **Problem discovery** — gatherings that bring in people *with problems*, not technologists: cross-pollination, coffee chats. The network's intake ritual, so the work starts from real civic needs. Inspired by CFA brigade hack nights.
+-
 #### The map
 
 | month | title | description |
 | --- | --- | --- |
-| Aug 2026 | Prototype assessment | This submission; the record freezes, the network doesn't. |
+| Aug 2026 | Prototype assessment | This submission! |
 | Late Aug 2026 | Campaign Factory demo at CTFG | The vibe-code show & tell at the Civic Tech Field Guide, with Hannah. |
-| Aug 2026 | CHEW follow-up blog | The Evaluation 2030 write-up the festival has asked for three times. |
+| Aug 2026 | CHEW follow-up blog | The Evaluation 2030 write-up the festival has asked for a write-up 3 times. |
 | Sep 2026 | AI agents for good — hackathon | The network's first event under its own banner: prototype a different future, with suggested civic topics and challenges. |
 | Sep 2026 | Oxfam GB workshop | Campaign Factory with Oxfam's campaign engagement team, co-run with Asil Sidahmed — inbound from the Campaign Factory demo at the conference. |
 | Sep–Dec 2026 | Hack nights, monthly | The Clawclub rhythm under the network's own banner — build together, share what's new, bring hardware. |
@@ -2207,77 +2174,75 @@ Each event type does a different job, and I've learned which from what worked th
 
 #### Open questions carried forward
 
-? The name | "Sparkle Bureaucracy" may not be the network's next-phase name. The mission is settled even if the label isn't, and the rename decision follows the flagship decision.
-? The flagship | The network needs one tangible artifact that headlines it — its pol.is, in the vTaiwan analogy — and it's a credibility decision as much as a product one. Candidates from the Hannah session: reimagining grant-making · Campaign Factory, grown up · a game · "What can AI do for me?" as a product. Behind them sit the nine specified experiments. Chosen with faculty, against the criteria already written.
-? The seven founder questions | Left open by the research sprint on purpose. Is emerging technology part of sparkle's definition or just its current material? Can moral discomfort count as sparkle? Must power be transferred, or is making it legible enough?
-? The horizon | Govtech. The window work of the next year builds the network and the credibility the horizon work will need.
-? Partners & sponsors | Named potentials, public in the diary since April: Faculty · TPXimpact · Creative Bureaucracy Festival · Studio Sanshin · OneTeamGov · MHCLG Local AI · Google.org · Knight Foundation · James Plunkett / Kinship Works · UKAuthority.
+? The name | "Sparkle Bureaucracy" seems to have outgrown the mission, but the name still feels special. I think a renaming is important to reflect the shift from redesigning service futures to prototyping optimistic futures with AI, but I don't know what this will be called yet.
+? The flagship | As a builder, I really want to have a flagship project - a tangible artifact that headlines the network like  pol.is for vTaiwan as an analogy. Candidates include working further on Campaign Factory, building something gov adjacent, or Peyman's idea to build "What Can AI for me?" as a product that traces your work and then gives you ways to optimize with AI.
+? Partners & sponsors | There are lots of potential cross collaboration opportunities with networks that have similar overlay in how they work and communicate: Faculty.AI · AI Builders · Creative Bureaucracy Festival · AL for the Rest of Us · MHCLG Local AI · Google.org · James Plunkett / Kinship Works · UKAuthority.
 
 ## 06 | Addressing the criteria
 
-Sparkle Bureaucracy is not a single tool with a user base, and this submission doesn't pretend it is. This submission makes one claim: **the network is the prototype, the experiments are its releases, and the diary is the evidence.** The module guidance prioritises judgement, commitment, and creativity demonstrated over time through open working practices. The open diary documents those week by week, including the weeks where I questioned the whole thing.
+Sparkle Bureaucracy is not a single tool with a user base and a scoped community, but it is an original contirbution to the field of political technology - because it carves out a space for a community that doesn't already exist with a mission to building things together a with a certain type of optimisic energy.
 
 ### 1 | Political technology fit
 
-- [x] Can be reasonably added to the Civic Tech Field Guide — the prior-art log already frames the entry; librarian question queued
-- [x] Used or tested by civic/political/public sector communities — Campaign Lab, charity evaluators, Oxfam GB, the cohort, Ration Club
+- [x] Can be reasonably added to the Civic Tech Field Guide
+- [x] Used or tested by civic/political/public sector communities — Campaign Lab, charity evaluators, Oxfam GB (future), the cohort, Ration Club community
 - [x] Infrastructural, used by multiple groups — the lab serves multiple civic communities rather than one
 
-The lab's artifacts are civic and political technology end to end: Sparkle Border Authority (bureaucratic ritual as live software), Project Mirror and the open V1–V15 awards pipeline (participatory evaluation of 321 political-tech projects), Campaign Factory (campaign strategy research for UK civic problems), Conference Pulse (live conference participation), Topic (community scheduling and forum software).
-
-**Where I may have missed:** the Civic Tech Field Guide entry still isn't in. The prior-art work frames it and the librarian check-ins happened, so this one is on me rather than on the process. It's on the near-term roadmap.
+The lab's artifacts are civic and political technology end to end: [Sparkle Border Authority](https://github.com/sugaroverflow/sparkle-border-authority) (bureaucratic ritual as live software), [Project Mirror and the open V1–V15 awards pipeline](https://github.com/nwspk/politech-awards-2026/blob/main/docs/project-mirror-v2/methodology.md) (participatory evaluation of 321 political-tech projects), [Campaign Factory](https://campaign-factory.vercel.app/factory/replay/conference) (campaign strategy research for UK civic problems), [Conference Pulse (live conference participation)](https://campaign-lab-conference-pulse.vercel.app/), [Topic](https://github.com/sugaroverflow/timetable) (community scheduling and forum software).
 
 ### 2 | Public web presence
 
-- [x] Live URL — [sparklebureaucracy.org](https://sparklebureaucracy.org) with a live mailing list since 24 May
-- [x] Clear documentation — the complete open diary in the [site repo](https://github.com/sugaroverflow/sparkle-bureaucracy-site)
+- [x] Live URL — [sparklebureaucracy.org](https://sparklebureaucracy.org) with a live mailing list since 24 May with 35 subscribers.
+- [x] Clear documentation — this microsite, and the full lore is available in the [site repo](https://github.com/sugaroverflow/sparkle-bureaucracy-site)
 - [x] What is being assessed is visible online — live deployed prototypes (SBA, Campaign Factory, the awards site, topic.forum) and this submission page itself
 
 ### 3 | Original work
 
-- [x] Original features described — every prototype named above is original work, built during the fellowship, in public
-- [x] Contributes something substantial — nine deployed applications, four lab experiments run, nine specified to smallest-credible-run level
-- [x] Prior-art adaptation documented — collaborations credited (Campaign Lab on Campaign Factory; cohort contributions to the awards pipeline named individually)
+- [x] Original features described
+- [x] Contributes something substantial
+- [x] Prior-art adaptation documented
 
 ### 4 | Not obsolete
 
 - [x] Meaningfully different from similar tools — **designed affect on top of real procedure, AI-native, aimed at the upskilling window, with under-resourced civic contexts as a stated boost**
 - [x] Evidence of learning from previous attempts — the 100-case corpus classifies neighbours as exemplars, ancestors, infrastructure-awaiting-sparkle, and warning cases
-- [x] Avoids the category's predictable failure patterns — the prior-art research names them (affective legitimacy without recourse, cute-washing coercion, exception theatre) and designs against them explicitly
-- [x] Librarian check-ins — both completed; the conversations with Matt Stempeck are in the field-notes export
+- [ ] Avoids the category's predictable failure patterns
+- [x] Librarian check-ins — both completed; the conversations with Matt Stempeck are in the field-notes
 
-The full prior-art table and inspirations constellation live in Part 04, so non-redundancy is demonstrated by taxonomy rather than asserted.
+The full prior-art table and inspirations constellation live in Part 04.
 
-**Where I may have missed:** a fair number of the prior-art rows I discovered in the field notes carry a name, a link, and one line of analysis. The deep comparisons cover the curated constellation, not the whole sweep. I'd rather say that than pretend a hundred cases got equal attention.
+**Where I may have missed:** It's hard to say that a network avoids predictable failure patterns - because I have't launched the demo nights and community itself. However, I have avoided some predictable failure patterns in the designs of the experiments and events like ClawClub and Prototype Club (for example, adapting to the needs of the cohort as a audience, by making the club private rather than open to the public which was causing dissent and discomfort).
 
 ### 5 | Evidence of use
 
-- [x] Testimonials — distributed through this page's entries, in the Evidence drawers where they were earned
+- [x] Testimonials — distributed with each of the experiments and events
 - [x] Metrics — in the entries they belong to: Conference Pulse production data and the 19-ballot vote (16 Jul), Clawclub attendance (17 Feb), 321 projects and the 18-point Borda result (30 Mar), commit histories throughout
-- [x] Activity logs — the engagement log, the commit histories, the open diary
-- [x] Community validation — inbound, unprompted pull (16 Jul and 15 Jun entries)
+- [x] Activity logs — the engagement log, the commit histories, the open diary on github
+- [ ] Community validation
 
-Evidence of use usually asks, "who used the tool?" That is the wrong unit here. The evidence is **communities engaging through experiments.** Ration Club guests went through a live border ritual and co-created the fiction. The cohort was inside Project Mirror, ran its own live ranking, and played the spy reunion. Clawclub filled the hall. Campaign Lab co-built Campaign Factory, ran it at their conference, and subsidises free access. Fifteen charity evaluators queued after a keynote, and the festival wrote three times for more. The pull then began without prompting: Oxfam GB requested a team demo, the Civic Tech Field Guide invited demos, and people from mySociety and a production-agents company asked to continue the work.
+Evidence of use usually asks, "who used the tool?" and I can report that on a tool by tool usage. Applied to the network, however, community valiation is tricky. There are people across the different communities that I've built with, given talks to, or engaged with - with whom the mission of the network has resonated very strongly, so perhaps that *is* community validation.
+
+If the evidence is, instead, **communities engaging through experiments.** Ration Club guests went through a live border ritual and co-created the fiction. The cohort was inside Project Mirror, ran its own live ranking, and played the spy reunion. Clawclub filled the hall. Campaign Lab co-built Campaign Factory, ran it at their conference, and subsidises free access. 15+ charity evaluators queued after a keynote, and the festival organizer has requested a blog write up 3 times. Oxfam GB requested a team demo, the Civic Tech Field Guide invited demos, and a CTO from an agents company suggested a demo to his team. So maybe this is just the beginning of what Sparkle Bureaucracy will inspire!
 
 > On **Campaign Factory**: "Amazing to see the platform you have built." — Abby Mason, Campaign Engagement Manager, Oxfam GB
 
 > On **sparklebureaucracy.org**: "You are an inspiration, Fatima! I've shared your website with family and friends today!" — Dr Eugenie Regan
 
-**Where I may have missed:** an instrument used 240 times on conference day converted two people to the mailing list. The form was silently rejecting real signups, which I found and fixed, and the list stands at 15 — honest and small. Participant evidence for Birthday Passports was never preserved at all; the record admits it, and the capture discipline I have now came out of that failure. And the lab's own panel returned the day's most measured verdict rather than its most emphatic. Sixteen of nineteen on the useful side is real. It isn't a standing ovation, and I don't want to present it as one.
+**Where I may have missed:** Participant evidence and feedback for Birthday Passports was never preserved at all. Most of the experiments did not explicitly request feedback or capture user experiences, so a lot of the lessons learned are anecdotal and could have been more *data driven*. In the future, even for the social experiments, I should build in some kind of feedback loop similar to what we did at the end of the Politech Awards Showcase.
 
 ### 6 | Methodological soundness
 
-- [x] Foreseeable failure modes identified — every candidate experiment carries hypothesis, method, evidence-to-collect, risks, ethics notes, and faculty questions
-- [x] Approach adapted based on those risks — the June experiment bar, the July rethink documented in public, the free-access accessibility fix, the signup-bug fix
-- [x] No clear predictable reason for failure remains — the category's predictable failure is a vibe with no programme, and the dated record answers it: the activations ran, nine experiments are specified, one flagship decision is queued with faculty
+- [x] Foreseeable failure modes identified
+- [ ] Approach adapted based on those risks
+- [ ] No clear predictable reason for failure remains — the category's predictable failure is a vibe with no program
 
-Expert critique is logged with responses, and every piece of Prototype Previews feedback got an action. The record shows the approach adapting, and the diary's own infrastructure runs as a monitored experiment with a human approval gate. It even corrects itself: the CHEW keynote date was fixed from 11 to 15 June when the organisers' email contradicted the diary.
-
-**Where I may have missed:** the governance experiments produced a lot of process and sometimes very little outcome. The sensemaking map says so in as many words. I want to be careful about how I explain that, because the reason wasn't that I ran them badly — it was that the room's legitimacy was structurally unsettled. I diagnosed that in my field notes on 15 December and acted on it in term two, when I moved the centre of gravity outward. The CHEW follow-up blog is still owed after three invitations, and demand is evidence, but an unanswered invitation is a miss. And the most honest thinking of the year, the governance and community writing, went unpublished until the diary merge in August.
+**Where I may have missed:** It was nearly impossible to run the experiments I designed in the house, because of the cohort's resistance to prefigurative politics and because the legitimacy of the course was structurally in question for most of the year. As early as December 15, you can see in my field journal, that I started to move my center of gravity outward - started hosting ClawClub and organizing external takeovers. However, all of my engagements were pieces of a whole - and while they were iterative and helped me come to the new mission of SB, they weren't planned in the way that testing an application would - so I don't know how to answer these criteria.
 
 ## 07 | Final Reflection
 
 #### What I set out to do
+
+
 
 I set out to find my mission and test one bet: that you can keep bureaucracy's procedural skeleton, change only the intent, and transform the experience. I came in with DMV experiments and livestreamed liquid democracy in mind. I expected to spend the year making bureaucratic processes sparkle.
 
@@ -2319,27 +2284,33 @@ gallery: 18
 
 *Because a network prototype is made of people.*
 
-- ✦ **Edward Saperia** — for a year-long thread of belief, and for looking at a border ritual at a birthday party and saying: that's Sparkle Bureaucracy.
-- ♥ **Hannah O'Rourke** — for being emotional support, for the pilot projects, and for repeatedly reminding me — through evidence — that legitimacy is constructed, not earned.
-- ♥ **Anouk Ruhaak** — for indulging me on the implications of AI even while hating it, for testing the limits of my agents, and for the adventure of hosting RightsUnCon.
-- ✿ **Six Silberman** — for the readings that made me weigh the pros and cons of technology, for treating me like an expert, and for implicitly answering the "why me."
-- ✦ **Andreas Varotsis** — for always collaborating on ideas and supporting Clawclub.
-- ✿ **Gamithra Marga** — for the cutting-edge ideas on the awards, and for all the cool things you've built that were so inspiring.
-- ✦ **Alexandra Ciocanel** — for the awards showcase, and for always being willing to support wild ideas and activations.
-- ✿ **Jamie Coombes** — for all the things we did for the amazing awards showcase!
-- ✦ **Francesca Galli** — for being the reason I was excited to run the Sparkle Border Authority at my birthday, and for always supporting my crazy ideas.
-- ✿ **Peyman Owladi** — for always giving me interesting things to consider in his classes, and for the flagship.
-- ♥ **Matt Stempeck** — for being the best mentor ever, for helping me figure out what I wanted to do, and for being excited about all that I do.
-- ♥ **Aadi Kulkarni** — for supporting Claw Club, discussing American politics, and always believing in me even when I didn't.
-- ✦ **James Moulding** — for helping me wrap my head around networks, for believing in the optimistical Sparkle Bureaucracy in its infancy, and for all the feedback and support.
-- ✿ **Chris Owen** — for writing our values statements on the first day together, supporting Prototype and Code Club, and building cool things.
-- ✦ **David Powell** — for being one for building community, and for building cool things together at Code Club.
-- ♥ **Huda Abdirahim** — for coming back to us! So we could brainstorm interesting projects and talk about the impact of technology.
-- ✿ **Asil Sidahmed** — for being an inspiration, for seeing what the others don't see, and for collaborating on ideas.
-- ✦ **Nick Botti** — for the feedback, the emotional support, and the deep debates on American politics and the implications of AI.
+- ★ **Ed Saperia** - for seeing the entire vision of Sparkle Bureaucracy from the start and being so genuiinely excited about all that it could be that it actually scared me.
+- ♥ **Hannah O'Rourke** — for being emotional support, for the pilot projects, and for repeatedly reminding me — through evidence — that legitimacy is constructed, not earned!
+- ♥ **Anouk Ruhaak** — for indulging me on the implications of AI even while hating it, for testing the limits of my agents, and for the adventure of creating and hosting a whole conference in two days.
+- ❋ **Six Silberman** — for the readings that made me weigh the pros and cons of technology, for treating me like an expert, and for implicitly answering the "why me" with our conversations.
+- ✨ **Andreas Varotsis** — for always collaborating on ideas, discussing the latest AI trends, and for supporting ClawClub initiatives.
+- ✦ **Gamithra Marga** — for inspiring and collaborating with on the awards project LLM pipelines!
+- ✿ **Alexandra Ciocanel** — for sending over things that aligned with Sparkle Bureaucracy and for organizing the AI safety study group and discussions!
+- ★ **Jamie Coombes** — for all the things we did for the amazing awards showcase!
+- ✨ **Francesca Galli** — for being the reason I was confident and excited to run the Sparkle Border Authority at my birthday, and for always joining in on my crazy adventures!
+- ❋ **Peyman Owladi** — for giving me so much to debate about in your module and for your ideas around what SB's flagship project could be.
+- ♥ **Matt Stempeck** — for being the best mentor ever, for helping me figure out what I want to do, and for being excited about the things I've built!
+- ♥ **Aadi Kulkarni** — for supporting ClawClub and always believing in me even when I couldn't believe in myself.
+- ♥ **James Moulding** — for helping me wrap my head around networks, for believing in the optimistical Sparkle Bureaucracy when even I wasn't sure what it was, and for all the feedback and support!
+- ✦ **Chris Owen** — for all the tech discussions and debates about AI and for supporting Prototype and Code Club!
+- ✿ **David Powell** — for being someone that cared about communities, supporting all of my (weird) initiatives and experiments, and providing feedback!
+- ♥ **Huda Abdirahim** — for coming back to us so we could brainstorm interesting projects and talk about the impact of AI!
+- ★ **Asil Sidahmed** — for teaching me about real political movements, the impact of technology, and the personal impacts of this fellowship!
+- ❋ **Nick Botti** — for the feedback, the emotional support, and the deep debates on American politics and the implications of AI!
 - ✿ **Hoagy Davis-Digges** — for listening to me vent about all things legitimacy of the course, and being very kind about it.
-- ✦ **Zarinah Agnew** — for inspiring me to think about people, motivations, and what kind of impact I want in the communities I exist in.
-- ♥ **Alex Vince** — for the leadership sessions, and for being someone who can be relied on and collaborated with.
-- ✿ **John Evans** — for Matrix! And for the laughs, and for the +1 on technical things and ideas.
+- ✨ **Zarinah Agnew** — for inspiring me to think about people, motivations, and what kind of impact I want in the communities I exist in.
+- ♥ **Alex Vince** — for the leadership sessions, for being someone I could rely on, and for the ways that you challenged me to try new things!
+- ★ **Theo Keloglou** — for reminding me over and over again that the most important thing to consider was my personal mission and how it aligned it with my work - and for believing I should be a CEO?!
+- ✿ **Joshua Becker** —
+- ❋ **Sam Bellard** - for
+- ✨ **Sinead Doyle** - for
+- ✦ **Connor Dunlop** - for
+- ★ **Emily Mayhew** - for
+- ✿ **Fred O'Brien** — for
+- ✨ **Tuna Acisu** — for
 
-(@todo lines still to come: Fred O'Brien · Tuna Acisu · Davit Jintcharadze · Emily Mayhew · Connor Dunlop · Theodore Keloglou · Sinead Doyle · Joshua Becker · Sam Ballard)
