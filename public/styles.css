@@ -164,6 +164,7 @@ code{font:400 .84em/1.3 var(--util);background:#17122c0f;padding:.16em .38em;bor
 .reading.wide-ok{max-width:none;min-width:0}
 .reading.wide-ok>p,.reading.wide-ok>.bullets,.reading.wide-ok>.ord,
 .reading.wide-ok>blockquote{max-width:var(--measure)}
+.reading.wide-ok>.tbl{max-width:var(--col)}
 h2{font-size:1.4rem;letter-spacing:-.026em;margin:0 0 .6rem;display:flex;gap:.65rem;align-items:baseline}
 h3.bare{font-size:1.4rem;letter-spacing:-.026em;margin:2.4rem 0 1rem}
 .bullets{list-style:none;padding:0;margin:0 0 1.05rem}
@@ -414,10 +415,9 @@ h3.bare{font-size:1.4rem;letter-spacing:-.026em;margin:2.4rem 0 1rem}
 }
 
 /* ── thank-you cards ─────────────────────────────────────── */
-#part-08 .bullets{columns:1;column-gap:1rem;max-width:none}
+#part-08 .bullets{columns:1;column-gap:1rem;max-width:var(--col)}
 @media(min-width:44rem){#part-08 .bullets{columns:2}}
-@media(min-width:58rem){#part-08 .bullets{columns:3}}
-@media(min-width:72rem){#part-08 .bullets{columns:4}
+@media(min-width:58rem){#part-08 .bullets{columns:3}
   #part-08 .bullets li:nth-child(7n+1){font-size:.9375rem;padding:1.15rem 1.2rem}
   #part-08 .bullets li:nth-child(9n+5){font-size:.8125rem}}
 #part-08 .bullets li{display:block;break-inside:avoid;background:var(--paper);color:var(--ink);
