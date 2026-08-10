@@ -352,11 +352,11 @@ function galleryHtml(p) {
 }
 
 function shots(entry, i) {
-  if (!entry.photos) return "";
   const slug = slugify(entry.title);
   assetIndex.push([slug, entry.date + " — " + plain(entry.title)]);
   const real = realPhotos(slug, entry.title);
   if (real.length) return '<div class="shots">' + real.join("") + "</div>";
+  if (!entry.photos) return "";
   const [bg, fg] = TINTS[i % TINTS.length];
   const label = plain(entry.title).replace(/[^A-Za-z0-9 ]/g, "").trim().split(/\s+/).slice(0, 4).join(" ");
   let imgs = "";
