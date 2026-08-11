@@ -2,7 +2,9 @@
 
 ## 00 | Setting the stage
 
-For my 2025–2026 prototype at Newspeak House — London College of Political Technology, I am submitting **Sparkle Bureaucracy**: a network of people using AI to prototype more optimistic futures. This site is the story of building it: the experiments, the events, the learning in public, lessons learned, and the roadmap of where it's headed. I've kept all the open questions and uncertainty in there as well - as that's part of the process!
+For my 2025–2026 prototype at Newspeak House — London College of Political Technology, I am submitting **Sparkle Bureaucracy**: a network of people using AI to prototype more optimistic futures.
+
+This site is the story of building it: the experiments, the events, the learning in public, lessons learned, and the roadmap of where it's headed. I've kept all the open questions and uncertainty in there as well - as that's part of the process!
 
 #### Where everything lives
 

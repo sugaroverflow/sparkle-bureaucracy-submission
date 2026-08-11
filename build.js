@@ -438,8 +438,6 @@ function renderEntry(e, i, partNum) {
   const fbs = e.drawers.filter((d) => !/^(Technical|Evidence)$/i.test(d.title));
   let drawers = fbs.map((d) =>
     '<details class="drawer"><summary>' + esc(d.title) + '</summary><div class="din">' + renderBlocks(d.blocks) + "</div></details>").join("");
-  if (!fbs.length && partNum === "02")
-    drawers = '<details class="drawer"><summary>Feedback</summary><div class="din"><p>None captured in the record yet — highlight anything on this card to leave yours.</p></div></details>';
   return `<article class="visa" data-hue="${hue}" style="--rot:${rot}deg" id="${ser.toLowerCase().replace(/\//g, "-")}">
   <header><span class="visa-date">${inline(e.date)} <i>2026</i></span><span class="vbadge">${esc(e.type)}</span><span class="visa-serial">${ser}</span></header>
   <div class="visa-body">
