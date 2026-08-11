@@ -2290,13 +2290,13 @@ gallery: 18
 - ❋ **Sam Bellard** - for taking care of us, being around the house and offering your expertise.
 - ✿ **David Powell** — for being someone that cared about communities, supporting all of my (weird) initiatives and experiments, and providing feedback!
 - ♥ **Huda Abdirahim** — for coming back to us so we could brainstorm interesting projects and talk about the impact of AI!
-- ✨ **Sinead Doyle** - for being interested in the design of sparkle bureaucracy and for all the interesting discussions in your module!
+- ★ **Sinead Doyle** - for being interested in the design of sparkle bureaucracy and for all the interesting discussions in your module!
 - ✦ **Chris Owen** — for all the tech discussions and debates about AI and for supporting Prototype and Code Club!
 - ❋ **Nick Botti** — for the feedback, the emotional support, and the deep debates on American politics and the implications of AI!
 - ★ **Theo Keloglou** — for reminding me over and over again that the most important thing to consider was my personal mission and how it aligned with my work - and for believing I should be a CEO?!
-- ✨ **Zarinah Agnew** — for inspiring me to think about people, motivations, and what kind of impact I want in the communities I exist in.
+- ❋ **Zarinah Agnew** — for inspiring me to think about people, motivations, and what kind of impact I want in the communities I exist in.
 - ★ **Jamie Coombes** — for all the things we did for the amazing awards showcase!
-- ✨ **Tuna Acisu** — for supporting the bday dictatorship and reminding me that perfection is not the goal!
+- ✿ **Tuna Acisu** — for supporting the bday dictatorship and reminding me that perfection is not the goal!
 - ♥ **Alex Vince** — for the leadership sessions, for being someone I could rely on, and for the ways that you challenged me to try new things!
 - ★ **Emily Mayhew** - for the late night discussions and debates on political lenses and life experiences.
 - ★ **Asil Sidahmed** — for teaching me about real political movements, the impact of technology, and the personal impacts of this fellowship!
