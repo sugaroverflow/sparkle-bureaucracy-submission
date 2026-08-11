@@ -2254,7 +2254,7 @@ gallery: 18
 - ✿ **Joshua Becker** — for the long thoughtful email exchanges and for always looking out for me!
 - ✿ **Fred O'Brien** — for creating a community of technology journalists that I could observe, learn from, and have interesting discussions with!
 - ★ **Andreas Varotsis** — for always collaborating on ideas, discussing the latest AI trends, and for supporting ClawClub initiatives.
-- ♥ **Aadi Kulkarni** — for supporting ClawClub and always believing in me even when I couldn't believe in myself.
+- ♥ **Aadi Kulkarni** — for supporting ClawClub, hacking together, and always believing in me!
 - ♥ **Hannah O'Rourke** — for being emotional support, for the pilot projects, and for repeatedly reminding me — through evidence — that legitimacy is constructed, not earned!
 - ❋ **Peyman Owladi** — for giving me so much to debate about in your module and for your ideas around what SB's flagship project could be.
 - ★ **Ed Saperia** - for seeing the entire vision of Sparkle Bureaucracy from the start and being so genuinely excited about all that it could be that it actually scared me.
