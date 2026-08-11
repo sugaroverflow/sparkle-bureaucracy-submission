@@ -2282,7 +2282,7 @@ gallery: 18
 - ✿ **Hoagy Davis-Digges** — for listening to me vent about all things legitimacy of the course, and being very kind about it.
 - ✿ **Joshua Becker** — for the long thoughtful email exchanges and for always looking out for me!
 - ✿ **Fred O'Brien** — for creating a community of technology journalists that I could observe, learn from, and have interesting discussions with!
-- ✨ **Andreas Varotsis** — for always collaborating on ideas, discussing the latest AI trends, and for supporting ClawClub initiatives.
+- ★ **Andreas Varotsis** — for always collaborating on ideas, discussing the latest AI trends, and for supporting ClawClub initiatives.
 - ♥ **Aadi Kulkarni** — for supporting ClawClub and always believing in me even when I couldn't believe in myself.
 - ♥ **Hannah O'Rourke** — for being emotional support, for the pilot projects, and for repeatedly reminding me — through evidence — that legitimacy is constructed, not earned!
 - ❋ **Peyman Owladi** — for giving me so much to debate about in your module and for your ideas around what SB's flagship project could be.
