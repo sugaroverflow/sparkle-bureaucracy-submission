@@ -17,7 +17,7 @@ const PERMIT = [
   ["Activations run", "20+"],
   ["Period of validity", "Feb – Aug 2026"],
   ["Project URL", '<a href="https://sparklebureaucracy.org">sparklebureaucracy.org</a>', "wide"],
-  ["Relevant mentors", "Ed Saperia · Hannah O'Rourke · James Moulding · Anouk Ruhaak", "wide"],
+  ["Relevant experiments", "Sparkle Border Authority · Campaign Factory · Timetable · ClawClub", "wide"],
 ];
 
 /* Inline annotations (RecogitoJS, self-hosted in public/vendor/). */
