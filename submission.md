@@ -1991,37 +1991,6 @@ And even here, we default to precedent. We reproduce familiar hierarchies. We he
 Designing systems is heavier than criticizing them. It forces the question of authority. What gives us the right to decide what counts. What makes our process legitimate.
 
 This house gives us something rare. The space to practice constructing legitimacy intentionally. The question is whether we will recognize the opportunity in our hands before the time is up.
-++ 14 Feb 2026 | disagreeing with Koyaanisqatsi | Field note resisting the film's single moral arc, defending cars, planes and transit as immigrant mobility rather than alienation.
-Field Note: Reflecting on watching and disagreeing with Koyaanisqatsi
-
-Tonight, I attended a screening of _Koyaanisqatsi_ with a group at Newspeak House. The audience was mesmerized. Words like “so truthful,” “objective,” and “work of art” floated around the discussion circle afterwards. People were in awe. They admired the precision of the cuts, the rhythm of the music, and noted that while it used real footage, it still managed to create a plot.
-
-I felt something else.
-
-About ten minutes into the film, when the mountains panned into power lines, I almost laughed because at that point it was clear to me what the film was going to present. Before that, I had been curious about the transition and where we were headed. After that, I felt I understood the thesis.
-
-Shortly after, the music swells and we end on a family sitting on the sand at the beach, panning out to reveal a looming power plant behind them. I laughed quietly. Not because it was funny, and not to mock the craft, but because it felt like such an obvious rhetorical move.
-
-As the film continued, I noticed a pattern of selection. When it zoomed in on human faces, they were often wary, blank, or distrustful. There were one or two smiling faces, but they felt incidental. Whenever it showed technology or urban advancement, it paired those images with speed, fast-paced music, and an implication of alienation: people moving urgently through subway stations, streets, or factories.
-
-It was beautifully crafted. But I felt resistant to what it was trying to do.
-
-It felt as though the film was asking me to dehumanize these people, to see them as extensions of machines. That was difficult for me. I saw the women placing food onto factory belts sped up 10x and thought about how physically demanding that job must be. I saw people entering subways en masse and remembered how easily I could visit my parents from the city on weekends. I saw highways filled with cars meant to disillusion me, and thought about how, for immigrant families like mine, cars represented economic mobility and access.
-
-The film seemed to position these advances in ways that encouraged suspicion and critique, while I felt the reality was more nuanced. Have we polluted the earth through industrialism? Yes. But have we also created electronic wheelchairs, video calls, and transit systems that expand freedom and connection? Also yes.
-
-In the discussion, people insisted the film was neutral because it used real footage. What I felt was resistance.
-
-Does industrial modernity creates alienation? Yes, it does. Does acceleration destabilize life? Yes, it can. But there's so much more to it than just that - and the film curated one moral valence and held it without counterweight.
-
-While watching cars in factories, I thought of immigrant families who rely on those cars for mobility, for work, for better schools. While watching planes underscored by ominous music, I thought of reunions, migration, expanded worlds. The film abstracted humanity into masses; I hated that.
-
-In the discussion circle, I felt slightly off. Everyone was in awe of the artistry and the messaging. I briefly wondered whether I lacked artistic capacity. But I do respect the craft. I can appreciate the juxtapositions, the rhythm, the scale. It was an experience. I simply felt myself resisting the narrative from early on. Once I recognized the device with the power lines, I lost some ability to fall into the flow, and perhaps that dulled the awe.
-
-I don’t reject the film’s concerns. I reject the exclusivity. The film presents itself as truth. I disagree because it feels like only a slice of the whole story.
-
-Perhaps my resistance comes from an instinct toward the need for nuance - an unwillingness to accept a single moral arc when the reality of modern life feels so layered. If that means I struggle to surrender to narratives that compress nuance into verdict, then that too is part of how I see the world.
-
 Three longer pieces grew out of that room's thinking:
 
 - **The resistance is information** (26 Jul) — the essay where I found my own loop. *"I know I can build something worthy of attention. I do not yet trust that my way of seeing is itself worthy of attention."* Naming it broke it.
