@@ -182,7 +182,7 @@ for (const ln of raw) {
 flushBuf();
 
 /* ══════════════ render helpers ══════════════ */
-const HUE_BY_TYPE = { experiment: "magenta", talk: "violet", convening: "aqua", encounter: "cyan" };
+const HUE_BY_TYPE = { experiment: "magenta", project: "violet", event: "aqua", documentation: "cyan", keynote: "gold" };
 const HUES = ["magenta", "violet", "aqua", "cyan", "gold"];
 const mrz = (l) => ((l.toUpperCase().replace(/[^A-Z0-9<]/g, "<") + "<".repeat(48)).slice(0, 48)).replace(/</g, "&lt;");
 const TINTS = [["FFE7F1", "A80C59"], ["F2E8FF", "5F27AE"], ["D8FAF4", "07766A"], ["DDF6FD", "08657B"], ["FFF2D2", "7E5900"]];
