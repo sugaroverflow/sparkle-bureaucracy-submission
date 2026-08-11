@@ -5,7 +5,7 @@ const path = require("path");
 const SRC = path.join(__dirname, "submission.md");
 const OUT = path.join(__dirname, "public", "index.html");
 const RECORD = "https://github.com/sugaroverflow/sparkle-bureaucracy-site/blob/main/submission/sparkle-bureaucracy.md";
-const VIDEO_EMBED = "https://www.youtube.com/embed/lVAsovQV6mA"; /* YouTube embed URL, e.g. https://www.youtube.com/embed/XXXX */
+const VIDEO_EMBED = "https://www.youtube.com/embed/TqWur0LYh5w"; /* YouTube embed URL, e.g. https://www.youtube.com/embed/XXXX */
 const SERIAL = "SB/NWSPK/2026/01";
 const SUBMIT_DATE = "10 Aug 2026";
 
