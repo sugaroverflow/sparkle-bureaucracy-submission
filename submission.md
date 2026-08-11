@@ -2253,15 +2253,17 @@ gallery: 18
 - ✿ **Hoagy Davis-Digges** — for listening to me vent about all things legitimacy of the course, and being very kind about it.
 - ✿ **Joshua Becker** — for the long thoughtful email exchanges and for always looking out for me!
 - ✿ **Fred O'Brien** — for creating a community of technology journalists that I could observe, learn from, and have interesting discussions with!
+- ❋ **Davit Jintcharadze** — thank you for your contributions to the awards projects!
 - ★ **Andreas Varotsis** — for always collaborating on ideas, discussing the latest AI trends, and for supporting ClawClub initiatives.
 - ♥ **Aadi Kulkarni** — for supporting ClawClub, hacking together, and always believing in me!
 - ♥ **Hannah O'Rourke** — for being emotional support, for the pilot projects, and for repeatedly reminding me — through evidence — that legitimacy is constructed, not earned!
 - ❋ **Peyman Owladi** — for giving me so much to debate about in your module and for your ideas around what SB's flagship project could be.
 - ★ **Ed Saperia** - for seeing the entire vision of Sparkle Bureaucracy from the start and being so genuinely excited about all that it could be that it actually scared me.
-- ❋ **Sam Bellard** - for taking care of us, being around the house and offering your expertise.
+- ❋ **Sam Ballard** - for taking care of us, being around the house and offering your expertise.
 - ✿ **David Powell** — for being someone that cared about communities, supporting all of my (weird) initiatives and experiments, and providing feedback!
 - ♥ **Huda Abdirahim** — for coming back to us so we could brainstorm interesting projects and talk about the impact of AI!
 - ★ **Sinead Doyle** - for being interested in the design of sparkle bureaucracy and for all the interesting discussions in your module!
+- ★ **John Evans** — for setting us up with matrix and always asking good questions!
 - ✦ **Chris Owen** — for all the tech discussions and debates about AI and for supporting Prototype and Code Club!
 - ❋ **Nick Botti** — for the feedback, the emotional support, and the deep debates on American politics and the implications of AI!
 - ★ **Theo Keloglou** — for reminding me over and over again that the most important thing to consider was my personal mission and how it aligned with my work - and for believing I should be a CEO?!
