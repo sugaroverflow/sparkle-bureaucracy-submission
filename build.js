@@ -1205,6 +1205,9 @@ ${ANNOTATIONS ? `<aside class="vbook" id="vbook" aria-label="Prototype feedback 
       lb.close();
     }
   });
+  document.addEventListener('keydown',function(ev){
+    if(ev.key==='Escape'&&lb.open){ev.preventDefault();lb.close();}
+  });
 })();
 </script>
 ${ANNOTATIONS ? `<script src="/vendor/recogito.min.js"></script>
