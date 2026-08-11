@@ -1995,7 +1995,7 @@ Three longer pieces grew out of that room's thinking:
 
 - **The resistance is information** (26 Jul) — the essay where I found my own loop. *"I know I can build something worthy of attention. I do not yet trust that my way of seeing is itself worthy of attention."* Naming it broke it.
 - **How networks are born — and second thoughts** — the session with Ed and James on mission, taste, and letting people show up, and then the weekend where the advice wouldn't settle.
-- **What I actually care about** (31 Jul) — the hour with Hannah that turned six months of different iterations and imposter syndrome into a new missio statement.
+- **What I actually care about** (31 Jul) — the hour with Hannah that turned six months of different iterations and imposter syndrome into a new mission statement.
 
 #### Mentorship
 
