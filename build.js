@@ -627,12 +627,12 @@ code{font:400 .84em/1.3 var(--util);background:#17122c0f;padding:.16em .38em;bor
   border-top:.5rem solid transparent;border-bottom:.5rem solid transparent}
 .vfacade{position:absolute;inset:0;width:100%;height:100%;padding:0;border:0;background:var(--midnight);cursor:pointer;display:block}
 .vfacade img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-.vplay{position:absolute;top:50%;left:50%;width:4.4rem;height:4.4rem;border-radius:50%;
+.vplay{position:absolute;top:50%;right:1.6rem;width:4.4rem;height:4.4rem;border-radius:50%;
   background:var(--foil);background-size:200%;border:2px solid var(--ink);box-shadow:3px 3px 0 var(--ink);
-  display:grid;place-content:center;transform:translate(-50%,-50%) rotate(-4deg);transition:transform .18s}
+  display:grid;place-content:center;transform:translateY(-50%) rotate(-4deg);transition:transform .18s}
 .vplay::after{content:"";width:0;height:0;margin-left:.3rem;border-left:1.05rem solid var(--midnight);
   border-top:.65rem solid transparent;border-bottom:.65rem solid transparent}
-.vfacade:hover .vplay,.vfacade:focus-visible .vplay{transform:translate(-50%,-50%) scale(1.1) rotate(5deg)}
+.vfacade:hover .vplay,.vfacade:focus-visible .vplay{transform:translateY(-50%) scale(1.1) rotate(5deg)}
 .cap-field{margin:.75rem 0 0;padding-top:.55rem;border-top:2px solid var(--line)}
 .cap-field dt{margin:0 0 .18rem;font:600 .5625rem/1.4 var(--util);letter-spacing:.14em;
   text-transform:uppercase;color:var(--magenta-ink)}
