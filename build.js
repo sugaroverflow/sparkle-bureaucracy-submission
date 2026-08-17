@@ -1093,6 +1093,8 @@ const html = `<!DOCTYPE html>
 <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,300..900;1,14..32,300..700&display=swap" rel="stylesheet">
 ${ANNOTATIONS ? `<link rel="stylesheet" href="/vendor/recogito.min.css">` : ""}
 <link rel="stylesheet" href="/styles.css?v=${CSSHASH}">
+<script defer src="https://sugaroverflow-analytics.up.railway.app/script.js" data-website-id="557d5065-c656-455d-917d-a8791371addf"></script>
+<script defer src="https://sugaroverflow-analytics.up.railway.app/recorder.js" data-website-id="557d5065-c656-455d-917d-a8791371addf"></script>
 </head>
 <body>
 <a class="skip" href="#part-01">Skip to content</a>
@@ -1125,7 +1127,7 @@ ${ANNOTATIONS ? `<link rel="stylesheet" href="/vendor/recogito.min.css">` : ""}
     : `<div class="ph"><div class="play"></div><p>Coming soon<br>Uploading</p></div>`}
         </div>
         <dl class="cap-field">
-          <dt>Official introduction</dt>
+          <dt>Official introduction video</dt>
           <dd>I came to Newspeak House to find my life's purpose. This is the story of what I found, what I learned, how Sparkle Bureaucracy evolved over the year, and what's coming next.</dd>
         </dl>
       </div>
@@ -1223,6 +1225,35 @@ ${ANNOTATIONS ? `<aside class="vbook" id="vbook" aria-label="Prototype feedback 
     f.allowFullscreen=true;
     vf.parentNode.replaceChild(f,vf);
   });
+
+  /* umami reading signals: one read-section event per section after 10s in view, plus scroll-depth milestones */
+  var READ_MS=10000,dwell={},since={},done={},titles={};
+  function track(n,d){if(window.umami)umami.track(n,d);}
+  function credit(id,t){if(since[id]>0){dwell[id]=(dwell[id]||0)+(t-since[id]);}
+    if(!done[id]&&(dwell[id]||0)>=READ_MS){done[id]=true;track('read-section',{section:id,title:titles[id]});}}
+  var rio=new IntersectionObserver(function(es){
+    var t=performance.now();
+    es.forEach(function(e){var id=e.target.id;
+      if(e.isIntersecting){since[id]=document.hidden?-1:t;}
+      else{credit(id,t);since[id]=0;}});
+  },{threshold:.2});
+  document.querySelectorAll('section.part, header.hero').forEach(function(s){
+    titles[s.id]=(s.querySelector('.part-title')||s.querySelector('h1,h2')||{textContent:s.id}).textContent.trim().slice(0,60);
+    rio.observe(s);});
+  setInterval(function(){var t=performance.now();
+    for(var id in since)if(since[id]>0){credit(id,t);since[id]=t;}},5000);
+  document.addEventListener('visibilitychange',function(){
+    var t=performance.now();
+    for(var id in since){
+      if(document.hidden&&since[id]>0){credit(id,t);since[id]=-1;}
+      else if(!document.hidden&&since[id]===-1){since[id]=t;}}});
+  var dSent={};
+  addEventListener('scroll',function(){
+    var d=document.documentElement,max=d.scrollHeight-window.innerHeight;
+    var pct=max>0?window.scrollY/max*100:100;
+    [25,50,75,100].forEach(function(m){
+      if(pct>=m&&!dSent[m]){dSent[m]=true;track('scroll-depth',{depth:m+'%'});}});
+  },{passive:true});
 })();
 </script>
 ${ANNOTATIONS ? `<script src="/vendor/recogito.min.js"></script>

@@ -1993,11 +1993,6 @@ And even here, we default to precedent. We reproduce familiar hierarchies. We he
 Designing systems is heavier than criticizing them. It forces the question of authority. What gives us the right to decide what counts. What makes our process legitimate.
 
 This house gives us something rare. The space to practice constructing legitimacy intentionally. The question is whether we will recognize the opportunity in our hands before the time is up.
-Three longer pieces grew out of that room's thinking:
-
-- **The resistance is information** (26 Jul) — the essay where I found my own loop. *"I know I can build something worthy of attention. I do not yet trust that my way of seeing is itself worthy of attention."* Naming it broke it.
-- **How networks are born — and second thoughts** — the session with Ed and James on mission, taste, and letting people show up, and then the weekend where the advice wouldn't settle.
-- **What I actually care about** (31 Jul) — the hour with Hannah that turned six months of different iterations and imposter syndrome into a new mission statement.
 
 #### Mentorship
 
@@ -2011,18 +2006,18 @@ I haven't finished all these books yet, but these are some of the recommendation
 
 | Book | From | What I learned |
 | --- | --- | --- |
-| [*The Utopia of Rules*](https://en.wikipedia.org/wiki/The_Utopia_of_Rules) — David Graeber | Anouk Ruhaak | The canonical SB text by title alone — Graeber's "dead zones of the imagination" are exactly what sparkle attacks: the bet that forms, queues and stamps can carry play and meaning instead of dread. Half the project's name answers this book. |
-| [*Radical Help*](https://www.hilarycottam.com/) — Hilary Cottam | Chris Owen | "We architected our systems poorly and can radically re-imagine them." Relational welfare is the humane baseline: proof the civic encounter can be redesigned without any technology at all — SB's AI-native work has to at least clear that bar. |
-| *Incorruptible* — Eric Ries | Theodore Keloglou (also the house Book Club's pick, 16 Jun) | How institutions keep their integrity while changing — the question every SB experiment puts to the ritual it re-skins: what must not bend when the intent changes? |
-| *Who Thought This Was a Good Idea?* — Alyssa Mastromonaco | Hannah O'Rourke | Operations as care: the unglamorous staffwork that makes big rooms function. The mission-cards, reset-slips and print-pipeline end of SB is this book's territory. |
-| [*The Employees*](https://en.wikipedia.org/wiki/The_Employees) — Olga Ravn | Six Silberman | A crew reviewing their coexistence with their objects and with each other — the strangeness of working alongside non-human colleagues, read while building agent crews of my own. |
-| *The Majority Myth* — Edmund Lewis Maklouf | Met the author at his launch (20 May) | The model-minority thread: what are my true motivations for this project? Still sitting with it |
-| [*Seeing Like a State*](https://en.wikipedia.org/wiki/Seeing_Like_a_State) — James C. Scott | Field notes, 14 Dec — excerpts | Why simplified, "legible" systems erase lived experience and reproduce inequality — the seed of the legibility-and-bureaucracy lane, and the ancestor of the skeleton-versus-intent bet |
-| [*Exit, Voice, and Loyalty*](https://en.wikipedia.org/wiki/Exit,_Voice,_and_Loyalty) — Albert O. Hirschman | Field notes, 14 Dec — excerpts | The precise frame for disengagement, silence and morale decay in collective projects — the cohort question, named |
-| [*The Logic of Collective Action*](https://en.wikipedia.org/wiki/The_Logic_of_Collective_Action) — Mancur Olson | Field notes, 14 Dec — excerpts | Why people rationally disengage from shared projects they believe in — read the week the cohort's disengagement first stung |
-| [*Reinventing Organizations*](https://en.wikipedia.org/wiki/Frederic_Laloux) — Frédéric Laloux | Field notes, 6 Feb — excerpts | The red-to-teal paradigms behind "what are managers actually for" — and why permission-less cultures don't exist: even anarchist systems have rules |
-| *Anarchic Agreements* | Ed Saperia — field notes, 14 Dec; excerpts | A field guide to collective organising without formal authority — read against the house's own rule-light design |
-| ["The Tyranny of Structurelessness"](https://www.jofreeman.com/joreen/tyranny.htm) — Jo Freeman | Alex Vince (a re-read, with a new lens) | Structureless groups don't escape power — they hide it. The essay behind the shadow-governance field note, and half the argument for why the lab writes its rules down |
+| [*The Utopia of Rules*](https://en.wikipedia.org/wiki/The_Utopia_of_Rules) by David Graeber | Anouk Ruhaak | Graeber calls bureaucracy a "dead zone of the imagination" and that's exactly what the sparkle is meant to undo - I'm betting that forms, queues, and stamps can carry play and meaning instead of dread. Half of the project's name is an answer to this book. |
+| [*Radical Help*](https://www.hilarycottam.com/) by Hilary Cottam | Chris Owen | We architected our systems poorly and we can radically re-imagine them! Cottam shows the civic encounter can be redesigned without any technology at all, and SB's AI-native work has to at least clear that bar. |
+| *Incorruptible* by Eric Ries | Theodore Keloglou (also the house Book Club's pick, 16 Jun) | How institutions keep their integrity while they change. Every SB experiment asks the same thing of the ritual it re-skins - *what must not bend when the intent changes?* |
+| *Who Thought This Was a Good Idea?* by Alyssa Mastromonaco | Hannah O'Rourke | Operations as care! The unglamorous staffwork that makes big rooms function. The mission-cards, reset-slips, and print-pipeline side of SB lives in this book's territory. |
+| [*The Employees*](https://en.wikipedia.org/wiki/The_Employees) by Olga Ravn | Six Silberman | A crew reflecting on how they coexist with their objects and with each other. I read this while building agent crews of my own, so the strangeness of working alongside non-human colleagues felt very familiar. |
+| *The Majority Myth* by Edmund Lewis Maklouf | Met the author at his launch (20 May) | The model-minority thread made me ask *what are my true motivations for this project?* Still sitting with it. |
+| [*Seeing Like a State*](https://en.wikipedia.org/wiki/Seeing_Like_a_State) by James C. Scott | Field notes, 14 Dec (excerpts) | Why simplified, "legible" systems erase lived experience and reproduce inequality. This was the seed of the legibility-and-bureaucracy lane, and the ancestor of the skeleton-versus-intent bet. |
+| [*Exit, Voice, and Loyalty*](https://en.wikipedia.org/wiki/Exit,_Voice,_and_Loyalty) by Albert O. Hirschman | Field notes, 14 Dec (excerpts) | Hirschman gave me the language for disengagement, silence, and morale decay in collective projects. This book named the cohort question for me. |
+| [*The Logic of Collective Action*](https://en.wikipedia.org/wiki/The_Logic_of_Collective_Action) by Mancur Olson | Field notes, 14 Dec (excerpts) | Why people rationally disengage from shared projects they believe in. I read this the week the cohort's disengagement first stung. |
+| [*Reinventing Organizations*](https://en.wikipedia.org/wiki/Frederic_Laloux) by Frédéric Laloux | Field notes, 6 Feb (excerpts) | The red-to-teal paradigms behind *what are managers actually for?* It also convinced me that permission-less cultures don't exist - even anarchist systems have rules. |
+| *Anarchic Agreements* | Ed Saperia (field notes, 14 Dec, excerpts) | A field guide to collective organising without formal authority. I read it against the house's own rule-light design. |
+| ["The Tyranny of Structurelessness"](https://www.jofreeman.com/joreen/tyranny.htm) by Jo Freeman | Alex Vince (a re-read, with a new lens) | Structureless groups don't escape power, they hide it. This essay is behind the shadow-governance field note, and it's half the argument for why the lab writes its rules down. |
 
 #### Prior art
 
@@ -2244,34 +2239,34 @@ gallery: 18
 
 *Because a network prototype is made of people.*
 
-- ♥ **James Moulding** — for helping me wrap my head around networks, for believing in the optimistical Sparkle Bureaucracy when even I wasn't sure what it was, and for all the feedback and support!
 - ✨ **Francesca Galli** — for being the reason I was confident and excited to run the Sparkle Border Authority at my birthday, and for always joining in on my crazy adventures!
-- ✿ **Alexandra Ciocanel** — for sending over things that aligned with Sparkle Bureaucracy and for organizing the AI safety study group and discussions!
-- ♥ **Anouk Ruhaak** — for indulging me on the implications of AI even while hating it, for testing the limits of my agents, and for the adventure of creating and hosting a whole conference in two days.
-- ✦ **Connor Dunlop** - for being supportive of experiments and sharing your expertise on AI policy.
-- ✦ **Gamithra Marga** — for inspiring and collaborating with me on the awards project LLM pipelines!
-- ✿ **Hoagy Davis-Digges** — for listening to me vent about all things legitimacy of the course, and being very kind about it.
+- ★ **Ed Saperia** - for seeing the entire vision of Sparkle Bureaucracy from the start and being so genuinely excited about all that it could be that it actually scared me.
+- ♥ **Hannah O'Rourke** — for being emotional support, for the pilot projects, and for repeatedly reminding me — through evidence — that legitimacy is constructed, not earned!
+- ★ **Asil Sidahmed** — for teaching me about real political movements, the impact of technology, and the personal impacts of this fellowship!
+- ♥ **Aadi Kulkarni** — for supporting ClawClub, hacking together, and always believing in me!
+- ✿ **David Powell** — for being someone that cared about communities, supporting all of my (weird) initiatives and experiments, and providing feedback!
+- ♥ **James Moulding** — for helping me wrap my head around networks, for believing in the optimistical Sparkle Bureaucracy when even I wasn't sure what it was, and for all the feedback and support!
+- ❋ **Zarinah Agnew** — for inspiring me to think about people, motivations, and what kind of impact I want in the communities I exist in.
+- ★ **Theo Keloglou** — for reminding me over and over again that the most important thing to consider was my personal mission and how it aligned with my work - and for believing I should be a CEO?!
+- ♥ **Matt Stempeck** — for being the best mentor ever, for helping me figure out what I want to do, and for being excited about the things I've built!
+- ★ **Sinead Doyle** - for being interested in the design of sparkle bureaucracy and for all the interesting discussions in your module!
 - ✿ **Joshua Becker** — for the long thoughtful email exchanges and for always looking out for me!
+- ❋ **Nick Botti** — for the feedback, the emotional support, and the deep debates on American politics and the implications of AI!
+- ♥ **Anouk Ruhaak** — for indulging me on the implications of AI even while hating it, for testing the limits of my agents, and for the adventure of creating and hosting a whole conference in two days.
+- ✦ **Chris Owen** — for all the tech discussions and debates about AI and for supporting Prototype and Code Club!
+- ❋ **Sam Ballard** - for taking care of us, being around the house and offering your expertise.
+- ✿ **Tuna Acisu** — for supporting the bday dictatorship and reminding me that perfection is not the goal!
+- ★ **Andreas Varotsis** — for always collaborating on ideas, discussing the latest AI trends, and for supporting ClawClub initiatives.
+- ♥ **Huda Abdirahim** — for coming back to us so we could brainstorm interesting projects and talk about the impact of AI!
 - ✿ **Fred O'Brien** — for creating a community of technology journalists that I could observe, learn from, and have interesting discussions with!
 - ❋ **Davit Jintcharadze** — thank you for your contributions to the awards projects!
-- ★ **Andreas Varotsis** — for always collaborating on ideas, discussing the latest AI trends, and for supporting ClawClub initiatives.
-- ♥ **Aadi Kulkarni** — for supporting ClawClub, hacking together, and always believing in me!
-- ♥ **Hannah O'Rourke** — for being emotional support, for the pilot projects, and for repeatedly reminding me — through evidence — that legitimacy is constructed, not earned!
-- ❋ **Peyman Owladi** — for giving me so much to debate about in your module and for your ideas around what SB's flagship project could be.
-- ★ **Ed Saperia** - for seeing the entire vision of Sparkle Bureaucracy from the start and being so genuinely excited about all that it could be that it actually scared me.
-- ❋ **Sam Ballard** - for taking care of us, being around the house and offering your expertise.
-- ✿ **David Powell** — for being someone that cared about communities, supporting all of my (weird) initiatives and experiments, and providing feedback!
-- ♥ **Huda Abdirahim** — for coming back to us so we could brainstorm interesting projects and talk about the impact of AI!
-- ★ **Sinead Doyle** - for being interested in the design of sparkle bureaucracy and for all the interesting discussions in your module!
-- ★ **John Evans** — for setting us up with matrix and always asking good questions!
-- ✦ **Chris Owen** — for all the tech discussions and debates about AI and for supporting Prototype and Code Club!
-- ❋ **Nick Botti** — for the feedback, the emotional support, and the deep debates on American politics and the implications of AI!
-- ★ **Theo Keloglou** — for reminding me over and over again that the most important thing to consider was my personal mission and how it aligned with my work - and for believing I should be a CEO?!
-- ❋ **Zarinah Agnew** — for inspiring me to think about people, motivations, and what kind of impact I want in the communities I exist in.
-- ★ **Jamie Coombes** — for all the things we did for the amazing awards showcase!
-- ✿ **Tuna Acisu** — for supporting the bday dictatorship and reminding me that perfection is not the goal!
-- ♥ **Alex Vince** — for the leadership sessions, for being someone I could rely on, and for the ways that you challenged me to try new things!
+- ✦ **Gamithra Marga** — for inspiring and collaborating with me on the awards project LLM pipelines!
 - ★ **Emily Mayhew** - for the late night discussions and debates on political lenses and life experiences.
-- ★ **Asil Sidahmed** — for teaching me about real political movements, the impact of technology, and the personal impacts of this fellowship!
-- ♥ **Matt Stempeck** — for being the best mentor ever, for helping me figure out what I want to do, and for being excited about the things I've built!
+- ✿ **Alexandra Ciocanel** — for sending over things that aligned with Sparkle Bureaucracy and for organizing the AI safety study group and discussions!
 - ❋ **Six Silberman** — for the readings that made me weigh the pros and cons of technology, for treating me like an expert, and for implicitly answering the "why me" with our conversations.
+- ♥ **Alex Vince** — for the leadership sessions, for being someone I could rely on, and for the ways that you challenged me to try new things!
+- ★ **John Evans** — for setting us up with matrix and always asking good questions!
+- ✿ **Hoagy Davis-Digges** — for listening to me vent about all things legitimacy of the course, and being very kind about it.
+- ❋ **Peyman Owladi** — for giving me so much to debate about in your module and for your ideas around what SB's flagship project could be.
+- ✦ **Connor Dunlop** - for being supportive of experiments and sharing your expertise on AI policy.
+- ★ **Jamie Coombes** — for all the things we did for the amazing awards showcase!
